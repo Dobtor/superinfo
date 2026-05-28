@@ -20,3 +20,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Local server folder
+server/
