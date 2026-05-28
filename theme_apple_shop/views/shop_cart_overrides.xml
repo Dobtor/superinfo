@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Cart line — inject PTAV breakdown pills beneath the product name on
+        /shop/cart for Mac products only. Non-Mac lines are unaffected.
+
+        Uses <record model="ir.ui.view"> directly instead of <template>
+        shorthand: theme_ prefixed modules have their <template> elements
+        routed to the theme.ir.ui.view staging table, which is invisible
+        to request.render() until the theme is applied.
+    -->
+    <record id="cart_line_apple_specs" model="ir.ui.view">
+        <field name="name">Apple-style Mac spec breakdown in cart</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.cart_line_product_link"/>
+        <field name="arch" type="xml">
+            <xpath expr="//a" position="after">
+                <t t-if="line.product_id.product_tmpl_id.is_mac_product">
+                    <ul class="apple-spec-list">
+                        <t t-foreach="line.product_id.product_template_attribute_value_ids"
+                           t-as="ptav">
+                            <li class="spec-item">
+                                <span class="spec-label" t-esc="ptav.attribute_id.name + ':'"/>
+                                <span class="spec-value" t-esc="ptav.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>

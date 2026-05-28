@@ -1,0 +1,67 @@
+// ============================================
+// Apple Shop — design tokens
+// ============================================
+
+// Typography (SF Pro fallback chain)
+$apple-font-display: -apple-system, "SF Pro Display", "BlinkMacSystemFont",
+                     "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
+                     "Noto Sans TC", sans-serif;
+$apple-font-text:    -apple-system, "SF Pro Text", "BlinkMacSystemFont",
+                     "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
+                     "Noto Sans TC", sans-serif;
+
+// Colours (Apple system)
+$apple-black:       #1d1d1f;
+$apple-white:       #ffffff;
+$apple-gray-1:      #f5f5f7;
+$apple-gray-2:      #e8e8ed;
+$apple-gray-3:      #d2d2d7;
+$apple-gray-4:      #86868b;
+$apple-gray-5:      #6e6e73;
+$apple-gray-6:      #515154;
+$apple-blue:        #0066cc;
+$apple-blue-hover:  #0051a5;
+$apple-red:         #e30000;
+$apple-bg-page:     #ffffff;
+$apple-bg-section:  #f5f5f7;
+
+// Spacing rhythm (8 / 12 / 16 / 24 / 32 / 48 / 64 / 96)
+$apple-sp-xxs: 4px;
+$apple-sp-xs:  8px;
+$apple-sp-sm:  12px;
+$apple-sp-md:  16px;
+$apple-sp-lg:  24px;
+$apple-sp-xl:  32px;
+$apple-sp-2xl: 48px;
+$apple-sp-3xl: 64px;
+$apple-sp-4xl: 96px;
+
+// Radii
+$apple-radius-sm: 8px;
+$apple-radius-md: 12px;
+$apple-radius-lg: 18px;
+$apple-radius-xl: 24px;
+$apple-radius-pill: 980px;
+
+// Easing
+$apple-ease-default: cubic-bezier(0.42, 0, 0.58, 1);
+$apple-ease-fast:    cubic-bezier(0.32, 0.72, 0, 1);
+$apple-ease-spring:  cubic-bezier(0.4, 1.4, 0.6, 1);
+
+// Shadows
+$apple-shadow-card:    0 4px 12px rgba(0, 0, 0, 0.08);
+$apple-shadow-card-hv: 0 12px 28px rgba(0, 0, 0, 0.14);
+$apple-shadow-modal:   0 24px 60px rgba(0, 0, 0, 0.25);
+
+// Breakpoints
+$apple-bp-mobile: 767px;
+$apple-bp-tablet: 991px;
+$apple-bp-desktop: 1199px;
+
+// Z-index
+$apple-z-localnav:     50;
+$apple-z-subnav:       60;
+$apple-z-sticky-panel: 40;
+$apple-z-cta-mobile:   80;
+$apple-z-drawer:       100;
+$apple-z-backdrop:     90;

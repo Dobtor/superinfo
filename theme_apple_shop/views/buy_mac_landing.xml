@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        /shop/category/mac (and any descendant tagged mac_role='root')
+        renders this template via AppleShop._render_mac_landing.
+
+        Region structure:
+          .pageBanner          — hero with OUR / MAC text
+          .localnav            — sticky tabs (anchors)
+          #section-models      — 8 mac model cards (carousel)
+          #section-explore     — explore tiles
+          #section-details     — quick-info tiles
+          #section-store       — Apple Store Pro section
+          #section-students    — education pricing
+          #section-buy         — reassurance cards
+    -->
+    <!--
+        Use <record model="ir.ui.view"> directly: <template> shorthand on
+        modules with theme_ prefix is auto-routed to theme.ir.ui.view
+        (theme staging table), invisible to request.render() until the
+        theme is applied to a website. Going via ir.ui.view skips staging.
+    -->
+    <record id="buy_mac_landing" model="ir.ui.view">
+        <field name="name">Apple Mac Landing</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.buy_mac_landing</field>
+        <field name="arch" type="xml">
+        <t t-name="theme_apple_shop.buy_mac_landing">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <main class="apple-mac-landing">
+
+                    <!-- ① Hero banner -->
+                    <section class="pageBanner">
+                        <div class="container">
+                            <h1 class="hero-title">選購 Mac</h1>
+                            <p class="hero-subtitle">找到適合你的款式。</p>
+                        </div>
+                    </section>
+
+                    <!-- ② Localnav (sticky on scroll) -->
+                    <nav class="localnav" aria-label="Mac landing sections">
+                        <div class="container">
+                            <ul class="localnav-list">
+                                <li><a href="#section-models">各種機型</a></li>
+                                <li><a href="#section-explore">探索與購買</a></li>
+                                <li><a href="#section-details">對比與比較</a></li>
+                                <li><a href="#section-store">Apple Store</a></li>
+                                <li><a href="#section-students">學生</a></li>
+                                <li><a href="#section-buy">放心購買</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- ③ Models — 8 cards horizontal scroll -->
+                    <section class="section-models" id="section-models">
+                        <div class="container">
+                            <h2 class="section-title">各種機型</h2>
+                            <p class="section-subtitle">挑選你的款式。</p>
+
+                            <div class="models-track-wrap">
+                                <button type="button" class="track-prev" aria-label="Previous">
+                                    <span class="triangle"/>
+                                </button>
+                                <div class="models-track">
+                                    <t t-foreach="mac_models" t-as="model">
+                                        <article class="model-card">
+                                            <t t-if="model.mac_landing_order &lt; 15">
+                                                <span class="badge-new">NEW</span>
+                                            </t>
+                                            <div class="model-card-image">
+                                                <img t-if="model.mac_hero_image"
+                                                     t-attf-src="/web/image/product.public.category/#{model.id}/mac_hero_image"
+                                                     t-att-alt="model.name"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="model-card-name" t-esc="model.name"/>
+                                            <p class="model-card-tagline" t-esc="model.mac_tagline or ''"/>
+                                            <p class="model-card-price">
+                                                <t t-esc="model.mac_starting_price"
+                                                   t-options="{'widget': 'monetary',
+                                                                'display_currency': model.mac_currency_id}"/>
+                                                <span class="price-suffix">起</span>
+                                            </p>
+                                            <div class="model-card-actions">
+                                                <a t-attf-href="/shop/category/#{slug(model)}"
+                                                   class="btn-secondary">深入了解</a>
+                                                <t t-set="first_prod"
+                                                   t-value="request.env['product.template'].sudo().search([
+                                                       ('public_categ_ids', '=', model.id),
+                                                       ('is_published', '=', True),
+                                                   ], limit=1)"/>
+                                                <a t-if="first_prod"
+                                                   t-attf-href="/shop/#{slug(first_prod)}"
+                                                   class="btn-primary">選購</a>
+                                            </div>
+                                        </article>
+                                    </t>
+                                </div>
+                                <button type="button" class="track-next" aria-label="Next">
+                                    <span class="triangle"/>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ④ Explore tiles -->
+                    <section class="section-explore" id="section-explore">
+                        <div class="container">
+                            <h2 class="section-title">探索情境，選購最合身的 Mac。</h2>
+                            <div class="tile-grid grid-3">
+                                <div class="tile">
+                                    <h3>哪一款 Mac 適合你？</h3>
+                                    <p>對比所有 Mac 機型。</p>
+                                </div>
+                                <div class="tile">
+                                    <h3>從 iPhone 升級，也能令人驚艷</h3>
+                                    <p>了解 Apple 智慧家庭如何銜接。</p>
+                                </div>
+                                <div class="tile">
+                                    <h3>Apple Intelligence</h3>
+                                    <p>內建專為你設計的智慧 — 文字、影像和溝通。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ⑤ Details tiles -->
+                    <section class="section-details" id="section-details">
+                        <div class="container">
+                            <h2 class="section-title">詳細資訊。決定後再放心入手。</h2>
+                            <div class="tile-grid grid-3">
+                                <div class="tile small">
+                                    <span class="kicker">採購指南</span>
+                                    <p>決定哪款適合您的最佳購機方式</p>
+                                </div>
+                                <div class="tile small">
+                                    <span class="kicker">付款計畫</span>
+                                    <p>0 利率分期付款 — 最長 12 個月</p>
+                                </div>
+                                <div class="tile small">
+                                    <span class="kicker">送貨</span>
+                                    <p>免費 Apple 標準送達。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ⑥ Apple Store Pro -->
+                    <section class="section-store" id="section-store">
+                        <div class="container">
+                            <h2 class="section-title">Apple Store 親選方案 — 選擇您的最佳合身。</h2>
+                        </div>
+                    </section>
+
+                    <!-- ⑦ Students -->
+                    <section class="section-students" id="section-students">
+                        <div class="container">
+                            <h2 class="section-title">校園購機 — Mac 的學生家長。</h2>
+                        </div>
+                    </section>
+
+                    <!-- ⑧ Reassurance cards -->
+                    <section class="section-buy" id="section-buy">
+                        <div class="container">
+                            <h2 class="section-title">決定後，請放心購買。</h2>
+                            <div class="reassurance-grid">
+                                <div class="rc-card">
+                                    <h3>免費標準送達</h3>
+                                    <p>所有訂單無最低金額。</p>
+                                </div>
+                                <div class="rc-card">
+                                    <h3>14 天免費退款</h3>
+                                    <p>不滿意嗎？輕鬆退回。</p>
+                                </div>
+                                <div class="rc-card">
+                                    <h3>0% 分期付款</h3>
+                                    <p>免年費分期付款。</p>
+                                </div>
+                                <div class="rc-card">
+                                    <h3>14 天免費退款</h3>
+                                    <p>14 天免費退款條款適用。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
+        </t>
+        </t>
+        </field>
+    </record>
+</odoo>

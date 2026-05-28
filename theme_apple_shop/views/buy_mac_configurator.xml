@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        /shop/<mac-product> — Apple-fidelity configurator.
+
+        Markup mirrors apple.com/tw/shop/buy-mac/mac-mini's right panel:
+          - <h2 class="rs-mac-bfe-step-header"> with main + as-subheading spans
+          - .form-selector-row > .form-selector-label > .row > .column.left + .column.right
+          - .rc-decisionsection help card after each fieldset
+          - 專業 App: 2 separate fieldsets (FCP / Logic Pro) each with h3
+          - Trade In: radio + expandable drawer with 郵遞區號 input
+          - Summary panel: header at top, NT$X 起 large, 繼續 button, 收藏/分享
+
+        Uses <record model="ir.ui.view"> directly to bypass theme staging.
+    -->
+    <record id="buy_mac_configurator" model="ir.ui.view">
+        <field name="name">Apple Mac Configurator</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.buy_mac_configurator</field>
+        <field name="arch" type="xml">
+        <t t-name="theme_apple_shop.buy_mac_configurator">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <main class="apple-configurator"
+                      t-att-data-base-price="product.list_price"
+                      t-att-data-product-tmpl-id="product.id"
+                      t-att-data-color-attr-id="product.mac_color_attribute_id.id or ''"
+                      t-att-data-exclusion-table="exclusion_table"
+                      t-att-data-currency-id="product.currency_id.id"
+                      t-att-data-currency-symbol="product.currency_id.symbol">
+
+                    <!-- Sticky sub-nav with breadcrumb -->
+                    <nav class="configurator-subnav" aria-label="Configurator subnav">
+                        <div class="container">
+                            <ol class="breadcrumb">
+                                <li><a href="/shop">商店</a></li>
+                                <li><a href="/shop/category/mac">Mac</a></li>
+                                <li class="active" t-esc="product.name"/>
+                            </ol>
+                        </div>
+                    </nav>
+
+                    <section class="configurator-grid">
+                        <div class="container">
+                            <h1 class="config-h1" t-esc="'購買 ' + product.name"/>
+
+                            <div class="grid-2">
+
+                                <!-- ─── LEFT: image + thumbs + swatch ───────────────── -->
+                                <div class="config-image-area">
+                                    <div class="image-stage">
+                                        <img class="main-image"
+                                             t-attf-src="/web/image/product.template/#{product.id}/image_1024"
+                                             t-att-alt="product.name"/>
+                                    </div>
+
+                                    <div class="thumb-row" role="tablist">
+                                        <t t-set="gallery" t-value="product.product_template_image_ids.sorted(lambda i: i.sequence)"/>
+                                        <t t-if="gallery">
+                                            <button type="button" class="thumb active" aria-label="主圖"
+                                                    t-att-data-image-url="'/web/image/product.template/' + str(product.id) + '/image_1024'">
+                                                <img t-attf-src="/web/image/product.template/#{product.id}/image_256" alt="主圖"/>
+                                            </button>
+                                            <t t-foreach="gallery" t-as="img">
+                                                <button type="button" class="thumb"
+                                                        t-att-aria-label="'視角 ' + str(img_index + 2)"
+                                                        t-att-data-image-url="'/web/image/product.image/' + str(img.id) + '/image_1024'">
+                                                    <img t-attf-src="/web/image/product.image/#{img.id}/image_256"
+                                                         t-att-alt="'thumb ' + str(img_index + 2)"/>
+                                                </button>
+                                            </t>
+                                        </t>
+                                    </div>
+
+                                    <t t-if="product.mac_color_attribute_id">
+                                        <t t-set="color_line"
+                                           t-value="product.attribute_line_ids.filtered(
+                                                lambda l: l.attribute_id == product.mac_color_attribute_id)"/>
+                                        <t t-if="color_line">
+                                            <div class="color-swatches" role="radiogroup" aria-label="顏色">
+                                                <t t-foreach="color_line.product_template_value_ids" t-as="cptav">
+                                                    <button type="button" class="swatch" role="radio"
+                                                            t-att-aria-checked="'true' if cptav in default_ptavs else 'false'"
+                                                            t-att-aria-label="cptav.name"
+                                                            t-att-data-ptav-id="cptav.id"
+                                                            t-att-data-attribute-id="cptav.attribute_id.id"
+                                                            t-att-style="'background-color: ' + (cptav.product_attribute_value_id.html_color or '#888')"
+                                                            t-att-data-image-url="'/web/image/product.template/' + str(product.id) + '/image_1024'"/>
+                                                </t>
+                                            </div>
+                                            <p class="color-name">
+                                                <span class="kicker">顏色 —</span>
+                                                <span class="active-color-name">
+                                                    <t t-foreach="color_line.product_template_value_ids" t-as="cptav">
+                                                        <t t-if="cptav in default_ptavs" t-esc="cptav.name"/>
+                                                    </t>
+                                                </span>
+                                            </p>
+                                        </t>
+                                    </t>
+                                </div>
+
+                                <!-- ─── RIGHT: sticky panel ─────────────────────── -->
+                                <aside class="config-panel rf-bfe-column-right" id="config-panel"
+                                       aria-label="商品配置面板">
+                                    <div class="rf-bfe-selectionarea">
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- Attribute fieldsets (chip / mem / storage / ethernet) -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <t t-foreach="attribute_lines" t-as="line">
+                                            <t t-set="attr" t-value="line.attribute_id"/>
+
+                                            <!-- Skip color (rendered as swatches in left column) -->
+                                            <t t-if="attr == product.mac_color_attribute_id"/>
+                                            <t t-else="">
+                                                <div t-attf-class="rf-bfe-step rf-bfe-dimension #{'rf-bfe-first-step' if line_first else ''}"
+                                                     t-attf-data-section="step-#{attr.id}">
+                                                    <fieldset class="rc-dimension rf-bfe-product-dimension-group"
+                                                              t-att-data-attribute-id="attr.id">
+                                                        <legend>
+                                                            <h2 class="rs-mac-bfe-step-header typography-eyebrow">
+                                                                <span t-esc="attr.apple_group_label or attr.name + '。'"/>
+                                                                <t t-if="attr.apple_subheading">
+                                                                    <span class="as-subheading" t-esc="attr.apple_subheading"/>
+                                                                </t>
+                                                            </h2>
+                                                        </legend>
+
+                                                        <div class="rc-dimension-selector-group form-selector-group">
+                                                            <t t-foreach="line.product_template_value_ids" t-as="ptav">
+                                                                <t t-set="val" t-value="ptav.product_attribute_value_id"/>
+                                                                <t t-set="is_default" t-value="ptav in default_ptavs"/>
+                                                                <t t-set="starting_price" t-value="product.list_price + ptav.price_extra"/>
+
+                                                                <div t-attf-class="rc-dimension-selector-row form-selector #{'is-selected' if is_default else ''}">
+                                                                    <input type="radio"
+                                                                           class="form-selector-input ptav-input"
+                                                                           t-attf-name="ptav-attr-#{attr.id}"
+                                                                           t-attf-id="ptav-#{ptav.id}"
+                                                                           t-att-checked="is_default or None"
+                                                                           t-att-data-ptav-id="ptav.id"
+                                                                           t-att-data-attribute-id="attr.id"
+                                                                           t-att-data-price-extra="ptav.price_extra"
+                                                                           t-att-data-display-name="val.name"/>
+                                                                    <label class="form-selector-label"
+                                                                           t-attf-for="ptav-#{ptav.id}">
+                                                                        <span class="row">
+                                                                            <span class="column form-selector-left-col rf-bfe-selector-left-col">
+                                                                                <span class="form-selector-title">
+                                                                                    <t t-esc="val.name"/>
+                                                                                    <t t-if="val.apple_description">
+                                                                                        <div class="form-label-small" t-esc="val.apple_description"/>
+                                                                                    </t>
+                                                                                </span>
+                                                                                <t t-if="val.apple_sub_label">
+                                                                                    <span class="form-label-small rf-bfe-selector-attrtext" t-esc="val.apple_sub_label"/>
+                                                                                </t>
+                                                                            </span>
+                                                                            <span class="column form-selector-right-col rf-bfe-selector-right-col">
+                                                                                <t t-if="attr.apple_price_display == 'starting'">
+                                                                                    <span class="form-label-small">
+                                                                                        <span class="price-point price-point-fullPrice-comparative">
+                                                                                            <span>
+                                                                                                <t t-esc="starting_price"
+                                                                                                   t-options="{'widget': 'monetary',
+                                                                                                                'display_currency': product.currency_id}"/>
+                                                                                            </span>
+                                                                                            起
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </t>
+                                                                                <t t-elif="attr.apple_price_display == 'extra' and ptav.price_extra > 0">
+                                                                                    <span class="form-label-small">
+                                                                                        +<t t-esc="ptav.price_extra"
+                                                                                            t-options="{'widget': 'monetary',
+                                                                                                          'display_currency': product.currency_id}"/>
+                                                                                    </span>
+                                                                                </t>
+                                                                            </span>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                            </t>
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <!-- Decision support card (help link below fieldset) -->
+                                                    <t t-if="attr.apple_decision_header">
+                                                        <div class="rf-bfe-decision-support">
+                                                            <div class="rc-decisionsection as-util-relatedlink">
+                                                                <div class="rc-decisionsection-details">
+                                                                    <div class="rc-decisionsection-info">
+                                                                        <div class="rc-decisionsection-header" t-esc="attr.apple_decision_header"/>
+                                                                        <div class="rc-decisionsection-desc" t-esc="attr.apple_decision_desc or ''"/>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="rc-decisionsection-button"
+                                                                        t-attf-aria-label="#{attr.apple_decision_header}">
+                                                                    <span class="visuallyhidden">顯示更多資訊</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </t>
+                                        </t>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- 專業 App。讓 Mac 實現更多精彩。 -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <t t-set="software_products"
+                                           t-value="optional_products.filtered(lambda p: p.apple_panel_section == 'software')"/>
+                                        <t t-if="software_products">
+                                            <div class="rf-bfe-step rf-bfe-pre-software">
+                                                <h2 class="rs-mac-bfe-step-header typography-eyebrow">
+                                                    <span>專業 App。</span>
+                                                    <span class="as-subheading">讓 Mac 實現更多精彩。</span>
+                                                </h2>
+                                                <div class="rf-bfe-dimension-subheader">
+                                                    <p class="typography-body-reduced-tight">
+                                                        你的全新 Mac 隨附 Apple Creator Studio 的三個月免額外付費試用，
+                                                        這項多合一訂閱服務包含 Final Cut Pro、Logic Pro、Pixelmator Pro
+                                                        等強大 app，以及更多精彩功能。
+                                                        <a href="#" class="rs-info-link">進一步了解
+                                                            <span class="visuallyhidden">進一步了解 - Creator Studio</span>
+                                                        </a>
+                                                    </p>
+                                                    <p class="typography-body-reduced-tight">
+                                                        你也可以根據偏好，選購獨立的 Final Cut Pro 和 Logic Pro 預先安裝版本。
+                                                    </p>
+                                                </div>
+
+                                                <t t-foreach="software_products" t-as="sw">
+                                                    <div class="rf-bfe-pre-software-group-container">
+                                                        <fieldset class="rc-dimension rf-bfe-pre-software-group rf-bfe-product-dimension-group">
+                                                            <legend>
+                                                                <h3 class="rf-bfe-pre-software-title" t-esc="sw.name"/>
+                                                            </legend>
+                                                            <div class="rc-dimension-selector-group form-selector-group">
+
+                                                                <div class="rc-dimension-selector-row form-selector is-selected">
+                                                                    <input type="radio"
+                                                                           class="form-selector-input optional-toggle-input"
+                                                                           t-attf-name="software-#{sw.id}"
+                                                                           t-attf-id="software-#{sw.id}-no"
+                                                                           value="0" checked="checked"
+                                                                           t-att-data-product-id="sw.id"
+                                                                           data-price="0"/>
+                                                                    <label class="form-selector-label"
+                                                                           t-attf-for="software-#{sw.id}-no">
+                                                                        <span class="row">
+                                                                            <span class="column form-selector-left-col">
+                                                                                <span class="form-selector-title">不用了，謝謝</span>
+                                                                            </span>
+                                                                            <span class="column form-selector-right-col"/>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="rc-dimension-selector-row form-selector">
+                                                                    <input type="radio"
+                                                                           class="form-selector-input optional-toggle-input optional-input"
+                                                                           t-attf-name="software-#{sw.id}"
+                                                                           t-attf-id="software-#{sw.id}-yes"
+                                                                           value="1"
+                                                                           t-att-data-product-id="sw.id"
+                                                                           t-att-data-price="sw.list_price"
+                                                                           t-att-data-display-name="sw.name"/>
+                                                                    <label class="form-selector-label"
+                                                                           t-attf-for="software-#{sw.id}-yes">
+                                                                        <span class="row">
+                                                                            <span class="column form-selector-left-col">
+                                                                                <span class="form-selector-title">好，請預先安裝在我的 Mac 上</span>
+                                                                            </span>
+                                                                            <span class="column form-selector-right-col">
+                                                                                <span class="form-label-small">
+                                                                                    +<t t-esc="sw.list_price"
+                                                                                        t-options="{'widget': 'monetary',
+                                                                                                      'display_currency': product.currency_id}"/>
+                                                                                </span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+
+                                                                <t t-if="sw.apple_license_url">
+                                                                    <div class="rf-bfe-pre-software-license-link">
+                                                                        <a t-att-href="sw.apple_license_url" target="_blank" rel="noopener"
+                                                                           class="icon icon-after icon-external">
+                                                                            <span>查看授權協議</span>
+                                                                            <span class="a11y" t-esc="sw.name"/>
+                                                                            <span class="a11y">(以新視窗開啟)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </t>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </t>
+
+                                                <div class="rf-bfe-decision-support rf-bfe-pre-software-decisionsupport">
+                                                    <div class="rc-decisionsection as-util-relatedlink">
+                                                        <div class="rc-decisionsection-details">
+                                                            <div class="rc-decisionsection-info">
+                                                                <div class="rc-decisionsection-header">
+                                                                    這些預先安裝的創意工具能做些什麼？
+                                                                </div>
+                                                                <div class="rc-decisionsection-desc">
+                                                                    探索這些強大的專業 app 如何助你大展創意。
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="button" class="rc-decisionsection-button"
+                                                                aria-label="這些預先安裝的創意工具能做些什麼？">
+                                                            <span class="visuallyhidden">顯示更多資訊</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- 配件 (multi-select checkboxes) -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <t t-set="accessory_products"
+                                           t-value="optional_products.filtered(lambda p: p.apple_panel_section == 'accessory')"/>
+                                        <t t-if="accessory_products">
+                                            <div class="rf-bfe-step rf-bfe-dimension">
+                                                <fieldset class="rc-dimension rf-bfe-product-dimension-group">
+                                                    <legend>
+                                                        <h2 class="rs-mac-bfe-step-header typography-eyebrow">
+                                                            <span>配件。</span>
+                                                            <span class="as-subheading">完善你的桌面。</span>
+                                                        </h2>
+                                                    </legend>
+                                                    <div class="rc-dimension-selector-group form-selector-group">
+                                                        <t t-foreach="accessory_products" t-as="acc">
+                                                            <div class="rc-dimension-selector-row form-selector">
+                                                                <input type="checkbox"
+                                                                       class="form-selector-input optional-input"
+                                                                       t-attf-id="acc-#{acc.id}"
+                                                                       t-att-data-product-id="acc.id"
+                                                                       t-att-data-price="acc.list_price"
+                                                                       t-att-data-display-name="acc.name"/>
+                                                                <label class="form-selector-label"
+                                                                       t-attf-for="acc-#{acc.id}">
+                                                                    <span class="row">
+                                                                        <span class="column form-selector-left-col">
+                                                                            <span class="form-selector-title" t-esc="acc.name"/>
+                                                                            <t t-if="acc.description_sale">
+                                                                                <span class="form-label-small" t-esc="acc.description_sale"/>
+                                                                            </t>
+                                                                        </span>
+                                                                        <span class="column form-selector-right-col">
+                                                                            <span class="form-label-small">
+                                                                                +<t t-esc="acc.list_price"
+                                                                                    t-options="{'widget': 'monetary',
+                                                                                                  'display_currency': product.currency_id}"/>
+                                                                            </span>
+                                                                        </span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </t>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- AppleCare+ -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <t t-set="applecare_products"
+                                           t-value="optional_products.filtered(lambda p: p.apple_panel_section == 'applecare')"/>
+                                        <t t-if="applecare_products">
+                                            <div class="rf-bfe-step rf-bfe-dimension">
+                                                <fieldset class="rc-dimension rf-bfe-product-dimension-group">
+                                                    <legend>
+                                                        <h2 class="rs-mac-bfe-step-header typography-eyebrow">
+                                                            <span>AppleCare+ for Mac。</span>
+                                                            <span class="as-subheading">意外的最佳保護。</span>
+                                                        </h2>
+                                                    </legend>
+                                                    <div class="rc-dimension-selector-group form-selector-group">
+                                                        <t t-foreach="applecare_products" t-as="ac">
+                                                            <div class="rc-dimension-selector-row form-selector">
+                                                                <input type="checkbox"
+                                                                       class="form-selector-input optional-input"
+                                                                       t-attf-id="ac-#{ac.id}"
+                                                                       t-att-data-product-id="ac.id"
+                                                                       t-att-data-price="ac.list_price"
+                                                                       t-att-data-display-name="ac.name"/>
+                                                                <label class="form-selector-label"
+                                                                       t-attf-for="ac-#{ac.id}">
+                                                                    <span class="row">
+                                                                        <span class="column form-selector-left-col">
+                                                                            <span class="form-selector-title" t-esc="ac.name"/>
+                                                                            <t t-if="ac.description_sale">
+                                                                                <span class="form-label-small" t-esc="ac.description_sale"/>
+                                                                            </t>
+                                                                        </span>
+                                                                        <span class="column form-selector-right-col">
+                                                                            <span class="form-label-small">
+                                                                                +<t t-esc="ac.list_price"
+                                                                                    t-options="{'widget': 'monetary',
+                                                                                                  'display_currency': product.currency_id}"/>
+                                                                            </span>
+                                                                        </span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </t>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- Apple Trade In 換購方案 -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <div class="rf-bfe-step rf-bfe-tradeup">
+                                            <div class="rf-bfe-tradeup-header">
+                                                <h2 class="typography-eyebrow">
+                                                    <span>Apple Trade In 換購方案。</span>
+                                                    <span class="rf-bfe-tradeup-subheader typography-eyebrow">
+                                                        換購全新 Mac，獲享折抵優惠
+                                                        <sup class="as-footnote footnote">
+                                                            <span class="visuallyhidden">註腳</span>①
+                                                        </sup>
+                                                        。
+                                                    </span>
+                                                </h2>
+                                            </div>
+
+                                            <fieldset class="rc-dimension">
+                                                <div class="rc-dimension-selector-group form-selector-group">
+
+                                                    <div class="rc-dimension-selector-row form-selector">
+                                                        <input type="radio"
+                                                               class="form-selector-input tradein-input"
+                                                               id="tradein-join"
+                                                               name="tradein-choice" value="join"/>
+                                                        <label class="form-selector-label" for="tradein-join">
+                                                            <span class="row row-logical">
+                                                                <span class="form-selector-left-col rf-tradeupselector-left-col">
+                                                                    <span class="form-selector-title">加入換購方案</span>
+                                                                    <span class="form-label-small rf-tradeupselector-subheader">
+                                                                        只須回答幾個問題，即可取得估價。
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- Drawer (郵遞區號 input) — JS toggles .open class -->
+                                                    <div class="rf-tradeupinline-drawer" hidden="hidden">
+                                                        <div class="rf-tradeupinline-pincode">
+                                                            <h3 class="rf-tradeupinline-module-header">
+                                                                <span>檢查你的郵遞區號。</span>
+                                                            </h3>
+                                                            <p class="rf-tradeupinline-module-desc">
+                                                                查看你的所在地區是否提供「Apple Trade In 換購方案」。
+                                                                請注意，換購方案不適用於離島地區。
+                                                            </p>
+                                                            <div class="form-textbox form-textbox-with-button">
+                                                                <label for="tradein-postal" class="form-textbox-label">郵遞區號</label>
+                                                                <input id="tradein-postal" type="text" maxlength="5"
+                                                                       autocomplete="postal-code"
+                                                                       class="form-textbox-input tradein-postal"
+                                                                       aria-label="郵遞區號"/>
+                                                                <button type="button" class="form-textbox-button tradein-apply" disabled="disabled">
+                                                                    <span>套用</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="rc-dimension-selector-row form-selector is-selected">
+                                                        <input type="radio"
+                                                               class="form-selector-input tradein-input"
+                                                               id="tradein-none"
+                                                               name="tradein-choice" value="none"
+                                                               checked="checked"/>
+                                                        <label class="form-selector-label" for="tradein-none">
+                                                            <span class="row row-logical">
+                                                                <span class="form-selector-left-col rf-tradeupselector-left-col">
+                                                                    <span class="form-selector-title">無換購</span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
+                                            <div class="rf-bfe-decision-support">
+                                                <div class="rc-decisionsection as-util-relatedlink">
+                                                    <div class="rc-decisionsection-details">
+                                                        <div class="rc-decisionsection-info">
+                                                            <div class="rc-decisionsection-header">
+                                                                Trade In 換購方案如何運作？
+                                                            </div>
+                                                            <div class="rc-decisionsection-desc">
+                                                                了解這次購買如何透過換購方案獲享折抵優惠，或選擇將你的裝置免費回收。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="rc-decisionsection-button"
+                                                            aria-label="Trade In 換購方案如何運作？">
+                                                        <span class="visuallyhidden">顯示更多資訊</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- Summary panel (header + price + 繼續 + 收藏/分享) -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <div class="rf-bfe-summary">
+                                            <div class="rf-bfe-summary-section">
+                                                <h2 class="rf-bfe-summary-header">
+                                                    <span t-esc="'全新 ' + product.name + '，等你駕馭。'"/>
+                                                </h2>
+                                                <div class="rf-bfe-summary-subheader">由你訂製，專屬於你。</div>
+
+                                                <div class="rf-bfe-summary-border-bottom"/>
+
+                                                <div class="rf-bfe-summary-price-content">
+                                                    <div class="rf-bfe-summary-price">
+                                                        <div class="as-price-currentprice">
+                                                            <span class="price-point price-point-fullPrice-comparative">
+                                                                <span class="bag-total" data-display="total"
+                                                                      t-esc="product.list_price"
+                                                                      t-options="{'widget': 'monetary',
+                                                                                    'display_currency': product.currency_id}"/>
+                                                                起
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="rf-bfe-summary-button-box">
+                                                    <button type="button"
+                                                            class="button button-block rc-summary-button-height add-to-bag"
+                                                            aria-label="繼續">
+                                                        <span class="btn-label">繼續</span>
+                                                        <span class="btn-spinner" aria-hidden="true"/>
+                                                    </button>
+                                                </div>
+
+                                                <div class="rf-bfe-summary-buttons-container">
+                                                    <div class="rf-saveditem-content">
+                                                        <h3 class="rf-saveditem-content-header">仍在考慮？</h3>
+                                                        <div class="rf-saveditem-content-description">
+                                                            收藏你所有的配置供日後使用，也能與好友分享。
+                                                        </div>
+                                                    </div>
+                                                    <div class="rf-saveditem-buttons-container">
+                                                        <button type="button" class="rf-saveditem-button" aria-label="收藏">
+                                                            <span class="rs-icon rs-icon-bookmark" aria-hidden="true">🔖</span>
+                                                            <span>收藏</span>
+                                                        </button>
+                                                        <button type="button" class="rf-shareitem-button" aria-label="分享">
+                                                            <span class="rs-icon rs-icon-share" aria-hidden="true">↗</span>
+                                                            <span>分享</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Compare table -->
+                    <section class="config-compare" t-if="compare_specs">
+                        <div class="container">
+                            <h2 class="section-title">規格一覽</h2>
+                            <table class="compare-table">
+                                <tbody>
+                                    <t t-foreach="compare_specs" t-as="spec">
+                                        <tr>
+                                            <th t-esc="spec.label"/>
+                                            <td><span t-field="spec.value" t-options="{'widget': 'text'}"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Reassurance footer -->
+                    <section class="config-reassurance">
+                        <div class="container">
+                            <div class="reassurance-grid">
+                                <div class="rc-card"><h3>免費送達</h3><p>標準免運費，14 天內送達。</p></div>
+                                <div class="rc-card"><h3>14 天免費退款</h3><p>不滿意 14 天內可退款。</p></div>
+                                <div class="rc-card"><h3>專業協助</h3><p>Apple 專家一對一即時客服。</p></div>
+                                <div class="rc-card"><h3>付款計畫</h3><p>0% 分期付款最長 12 個月。</p></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Cart drawer -->
+                    <aside class="cart-drawer" role="dialog" aria-modal="true"
+                           aria-label="購物袋" hidden="hidden">
+                        <header class="drawer-header">
+                            <h2>已加入購物袋</h2>
+                            <button type="button" class="drawer-close" aria-label="關閉">×</button>
+                        </header>
+                        <div class="drawer-body">
+                            <p class="drawer-empty">購物袋目前是空的。</p>
+                        </div>
+                        <footer class="drawer-footer">
+                            <a href="/shop/cart" class="btn-secondary">查看購物袋</a>
+                            <a href="/shop/checkout" class="btn-primary">結帳</a>
+                        </footer>
+                    </aside>
+                    <div class="drawer-backdrop" hidden="hidden"/>
+
+                </main>
+            </div>
+        </t>
+        </t>
+        </field>
+    </record>
+</odoo>

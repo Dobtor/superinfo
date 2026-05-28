@@ -1,0 +1,211 @@
+{
+  "mac_categories": {
+    "macbook-neo": {
+      "xml_id": "theme_apple_shop.categ_macbook_neo",
+      "hero": "static/src/img/mac/macbook-neo/card.jpg"
+    },
+    "macbook-air": {
+      "xml_id": "theme_apple_shop.categ_macbook_air",
+      "hero": "static/src/img/mac/macbook-air/card.jpg"
+    },
+    "macbook-pro": {
+      "xml_id": "theme_apple_shop.categ_macbook_pro",
+      "hero": "static/src/img/mac/macbook-pro/card.jpg"
+    },
+    "imac": {
+      "xml_id": "theme_apple_shop.categ_imac",
+      "hero": "static/src/img/mac/imac/card.jpg"
+    },
+    "mac-mini": {
+      "xml_id": "theme_apple_shop.categ_mac_mini",
+      "hero": "static/src/img/mac/mac-mini/card.jpg"
+    },
+    "mac-studio": {
+      "xml_id": "theme_apple_shop.categ_mac_studio",
+      "hero": "static/src/img/mac/mac-studio/card.jpg"
+    },
+    "studio-display": {
+      "xml_id": "theme_apple_shop.categ_studio_display",
+      "hero": "static/src/img/mac/studio-display/card.jpg"
+    },
+    "studio-display-xdr": {
+      "xml_id": "theme_apple_shop.categ_studio_display_xdr",
+      "hero": "static/src/img/mac/studio-display-xdr/card.jpg"
+    }
+  },
+  "mac_products": {
+    "macbook-neo": {
+      "xml_id": "theme_apple_shop.prod_macbook_neo",
+      "image_1920": "static/src/img/mac/macbook-neo/main.jpg"
+    },
+    "macbook-air": {
+      "xml_id": "theme_apple_shop.prod_macbook_air",
+      "image_1920": "static/src/img/mac/macbook-air/main.jpg"
+    },
+    "macbook-pro": {
+      "xml_id": "theme_apple_shop.prod_macbook_pro",
+      "image_1920": "static/src/img/mac/macbook-pro/main.jpg"
+    },
+    "imac": {
+      "xml_id": "theme_apple_shop.prod_imac",
+      "image_1920": "static/src/img/mac/imac/main.jpg"
+    },
+    "mac-mini": {
+      "xml_id": "theme_apple_shop.prod_mac_mini",
+      "image_1920": "static/src/img/mac/mac-mini/main.jpg"
+    },
+    "mac-studio": {
+      "xml_id": "theme_apple_shop.prod_mac_studio",
+      "image_1920": "static/src/img/mac/mac-studio/main.jpg"
+    },
+    "studio-display": {
+      "xml_id": "theme_apple_shop.prod_studio_display",
+      "image_1920": "static/src/img/mac/studio-display/main.jpg"
+    },
+    "studio-display-xdr": {
+      "xml_id": "theme_apple_shop.prod_studio_display_xdr",
+      "image_1920": "static/src/img/mac/studio-display-xdr/main.jpg"
+    }
+  },
+  "accessories": {
+    "magic_mouse": {
+      "xml_id": "theme_apple_shop.prod_magic_mouse",
+      "image_1920": "static/src/img/accessories/magic_mouse.jpg"
+    },
+    "magic_trackpad": {
+      "xml_id": "theme_apple_shop.prod_magic_trackpad",
+      "image_1920": "static/src/img/accessories/magic_trackpad.jpg"
+    },
+    "magic_keyboard": {
+      "xml_id": "theme_apple_shop.prod_magic_keyboard",
+      "image_1920": "static/src/img/accessories/magic_keyboard.jpg"
+    },
+    "magic_keyboard_touchid": {
+      "xml_id": "theme_apple_shop.prod_magic_keyboard_touchid",
+      "image_1920": "static/src/img/accessories/magic_keyboard_touchid.jpg"
+    },
+    "final_cut_pro": {
+      "xml_id": "theme_apple_shop.prod_final_cut_pro",
+      "image_1920": "static/src/img/accessories/final_cut_pro.jpg"
+    },
+    "logic_pro": {
+      "xml_id": "theme_apple_shop.prod_logic_pro",
+      "image_1920": "static/src/img/accessories/logic_pro.jpg"
+    },
+    "applecare": {
+      "xml_id": "theme_apple_shop.prod_applecare_mac",
+      "image_1920": "static/src/img/accessories/applecare.jpg"
+    }
+  },
+  "color_swatches": {
+    "silver": {
+      "xml_id": "theme_apple_shop.attr_val_color_silver",
+      "apple_image": "static/src/img/swatches/macbook-neo-silver.png"
+    },
+    "blush": {
+      "xml_id": "theme_apple_shop.attr_val_color_blush",
+      "apple_image": "static/src/img/swatches/macbook-neo-blush.png"
+    },
+    "citrus": {
+      "xml_id": "theme_apple_shop.attr_val_color_citrus",
+      "apple_image": "static/src/img/swatches/macbook-neo-citrus.png"
+    },
+    "indigo": {
+      "xml_id": "theme_apple_shop.attr_val_color_indigo",
+      "apple_image": "static/src/img/swatches/macbook-neo-indigo.png"
+    }
+  },
+  "landing": {
+    "hero": "static/src/img/site/mac-og.jpg"
+  },
+  "thumbs": {
+    "macbook-neo": {
+      "product_xml_id": "theme_apple_shop.prod_macbook_neo",
+      "images": [
+        "static/src/img/mac/macbook-neo/thumb-1.jpg",
+        "static/src/img/mac/macbook-neo/thumb-2.jpg",
+        "static/src/img/mac/macbook-neo/thumb-3.jpg",
+        "static/src/img/mac/macbook-neo/thumb-4.jpg",
+        "static/src/img/mac/macbook-neo/thumb-5.jpg",
+        "static/src/img/mac/macbook-neo/thumb-6.jpg"
+      ]
+    },
+    "macbook-air": {
+      "product_xml_id": "theme_apple_shop.prod_macbook_air",
+      "images": [
+        "static/src/img/mac/macbook-air/thumb-1.jpg",
+        "static/src/img/mac/macbook-air/thumb-2.jpg",
+        "static/src/img/mac/macbook-air/thumb-3.jpg",
+        "static/src/img/mac/macbook-air/thumb-4.jpg",
+        "static/src/img/mac/macbook-air/thumb-5.jpg",
+        "static/src/img/mac/macbook-air/thumb-6.jpg"
+      ]
+    },
+    "macbook-pro": {
+      "product_xml_id": "theme_apple_shop.prod_macbook_pro",
+      "images": [
+        "static/src/img/mac/macbook-pro/thumb-1.jpg",
+        "static/src/img/mac/macbook-pro/thumb-2.jpg",
+        "static/src/img/mac/macbook-pro/thumb-3.jpg",
+        "static/src/img/mac/macbook-pro/thumb-4.jpg",
+        "static/src/img/mac/macbook-pro/thumb-5.jpg",
+        "static/src/img/mac/macbook-pro/thumb-6.jpg"
+      ]
+    },
+    "imac": {
+      "product_xml_id": "theme_apple_shop.prod_imac",
+      "images": [
+        "static/src/img/mac/imac/thumb-1.jpg",
+        "static/src/img/mac/imac/thumb-2.jpg",
+        "static/src/img/mac/imac/thumb-3.jpg",
+        "static/src/img/mac/imac/thumb-4.jpg",
+        "static/src/img/mac/imac/thumb-5.jpg",
+        "static/src/img/mac/imac/thumb-6.jpg"
+      ]
+    },
+    "mac-mini": {
+      "product_xml_id": "theme_apple_shop.prod_mac_mini",
+      "images": [
+        "static/src/img/mac/mac-mini/thumb-1.jpg",
+        "static/src/img/mac/mac-mini/thumb-2.jpg",
+        "static/src/img/mac/mac-mini/thumb-3.jpg",
+        "static/src/img/mac/mac-mini/thumb-4.jpg",
+        "static/src/img/mac/mac-mini/thumb-5.jpg",
+        "static/src/img/mac/mac-mini/thumb-6.jpg"
+      ]
+    },
+    "mac-studio": {
+      "product_xml_id": "theme_apple_shop.prod_mac_studio",
+      "images": [
+        "static/src/img/mac/mac-studio/thumb-1.jpg",
+        "static/src/img/mac/mac-studio/thumb-2.jpg",
+        "static/src/img/mac/mac-studio/thumb-3.jpg",
+        "static/src/img/mac/mac-studio/thumb-4.jpg",
+        "static/src/img/mac/mac-studio/thumb-5.jpg",
+        "static/src/img/mac/mac-studio/thumb-6.jpg"
+      ]
+    },
+    "studio-display": {
+      "product_xml_id": "theme_apple_shop.prod_studio_display",
+      "images": [
+        "static/src/img/mac/studio-display/thumb-1.jpg",
+        "static/src/img/mac/studio-display/thumb-2.jpg",
+        "static/src/img/mac/studio-display/thumb-3.jpg",
+        "static/src/img/mac/studio-display/thumb-4.jpg",
+        "static/src/img/mac/studio-display/thumb-5.jpg",
+        "static/src/img/mac/studio-display/thumb-6.jpg"
+      ]
+    },
+    "studio-display-xdr": {
+      "product_xml_id": "theme_apple_shop.prod_studio_display_xdr",
+      "images": [
+        "static/src/img/mac/studio-display-xdr/thumb-1.jpg",
+        "static/src/img/mac/studio-display-xdr/thumb-2.jpg",
+        "static/src/img/mac/studio-display-xdr/thumb-3.jpg",
+        "static/src/img/mac/studio-display-xdr/thumb-4.jpg",
+        "static/src/img/mac/studio-display-xdr/thumb-5.jpg",
+        "static/src/img/mac/studio-display-xdr/thumb-6.jpg"
+      ]
+    }
+  }
+}

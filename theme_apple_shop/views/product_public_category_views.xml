@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add Apple-specific fields to product.public.category form -->
+    <record id="product_public_category_form_apple" model="ir.ui.view">
+        <field name="name">product.public.category.form.apple</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Apple Mac Landing">
+                    <group>
+                        <field name="mac_role"/>
+                        <field name="mac_subtitle" placeholder="桌上型 / 筆記型"/>
+                        <field name="mac_tagline" placeholder="為輕巧而生"/>
+                        <field name="mac_landing_order"/>
+                    </group>
+                    <group>
+                        <field name="mac_starting_price" readonly="1"/>
+                        <field name="mac_currency_id" invisible="1"/>
+                    </group>
+                </group>
+                <group string="Hero Image">
+                    <field name="mac_hero_image" widget="image" nolabel="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

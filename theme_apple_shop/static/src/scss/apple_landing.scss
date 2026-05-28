@@ -1,0 +1,377 @@
+// ============================================
+// /shop/category/mac — Apple landing
+// ============================================
+
+.apple-mac-landing {
+    background: $apple-bg-page;
+    color: $apple-black;
+    font-family: $apple-font-text;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 $apple-sp-xl;
+    }
+
+    // ─── ① Hero banner ──────────────────────────────
+    .pageBanner {
+        background: $apple-bg-section;
+        padding: $apple-sp-3xl 0 $apple-sp-2xl;
+        text-align: center;
+
+        .hero-title {
+            font-family: $apple-font-display;
+            font-size: 64px;
+            line-height: 1.05;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin: 0 0 $apple-sp-md;
+
+            @media (max-width: $apple-bp-mobile) { font-size: 40px; }
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            line-height: 1.4;
+            color: $apple-gray-5;
+            margin: 0;
+
+            @media (max-width: $apple-bp-mobile) { font-size: 17px; }
+        }
+    }
+
+    // ─── ② Localnav ─────────────────────────────────
+    .localnav {
+        position: sticky;
+        top: 0;
+        z-index: $apple-z-localnav;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+
+        .localnav-list {
+            display: flex;
+            gap: $apple-sp-xl;
+            list-style: none;
+            margin: 0;
+            padding: $apple-sp-md 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+
+            li a {
+                white-space: nowrap;
+                font-size: 14px;
+                color: $apple-black;
+                text-decoration: none;
+                transition: color 200ms $apple-ease-default;
+
+                &:hover { color: $apple-blue; }
+            }
+        }
+    }
+
+    // ─── ③ Models carousel ──────────────────────────
+    .section-models {
+        padding: $apple-sp-3xl 0;
+
+        .section-title {
+            font-family: $apple-font-display;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin: 0 0 $apple-sp-xs;
+        }
+        .section-subtitle {
+            font-size: 17px;
+            color: $apple-gray-5;
+            margin: 0 0 $apple-sp-xl;
+        }
+
+        .models-track-wrap {
+            position: relative;
+        }
+
+        .models-track {
+            display: flex;
+            gap: $apple-sp-md;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            padding: $apple-sp-xs 0 $apple-sp-md;
+            &::-webkit-scrollbar { display: none; }
+        }
+
+        .model-card {
+            flex: 0 0 280px;
+            scroll-snap-align: start;
+            background: $apple-bg-section;
+            border-radius: $apple-radius-lg;
+            padding: $apple-sp-xl $apple-sp-lg;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            transition: transform 400ms $apple-ease-default,
+                        box-shadow 400ms $apple-ease-default;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: $apple-shadow-card-hv;
+
+                .model-card-image img { transform: scale(1.05); }
+            }
+
+            .badge-new {
+                position: absolute;
+                top: $apple-sp-md;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 12px;
+                color: $apple-blue;
+                font-weight: 700;
+                letter-spacing: 1px;
+                animation: zoomIn 300ms $apple-ease-spring;
+            }
+
+            .model-card-image {
+                flex: 0 0 180px;
+                margin: $apple-sp-lg 0 $apple-sp-md;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                    transition: transform 500ms $apple-ease-default;
+                }
+            }
+
+            .model-card-name {
+                font-family: $apple-font-display;
+                font-size: 24px;
+                font-weight: 600;
+                margin: 0 0 $apple-sp-xs;
+            }
+            .model-card-tagline {
+                font-size: 14px;
+                color: $apple-gray-5;
+                margin: 0 0 $apple-sp-sm;
+                min-height: 20px;
+            }
+            .model-card-price {
+                font-size: 14px;
+                margin: 0 0 $apple-sp-md;
+
+                .price-suffix {
+                    color: $apple-gray-5;
+                    margin-left: 2px;
+                }
+            }
+
+            .model-card-actions {
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                gap: $apple-sp-xs;
+            }
+        }
+
+        .track-prev, .track-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $apple-white;
+            border: 1px solid $apple-gray-3;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: opacity 200ms;
+
+            &.disabled { opacity: 0.3; pointer-events: none; }
+            &:hover { background: $apple-gray-1; }
+
+            .triangle {
+                width: 0; height: 0;
+                border-style: solid;
+            }
+        }
+        .track-prev {
+            left: -20px;
+            .triangle {
+                border-width: 6px 8px 6px 0;
+                border-color: transparent $apple-black transparent transparent;
+            }
+        }
+        .track-next {
+            right: -20px;
+            .triangle {
+                border-width: 6px 0 6px 8px;
+                border-color: transparent transparent transparent $apple-black;
+            }
+        }
+    }
+
+    // ─── ④ Tile sections ─────────────────────────────
+    .section-explore, .section-details {
+        padding: $apple-sp-3xl 0;
+
+        .section-title {
+            font-family: $apple-font-display;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0 0 $apple-sp-xl;
+        }
+
+        .tile-grid {
+            display: grid;
+            gap: $apple-sp-md;
+
+            &.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+            @media (max-width: $apple-bp-tablet) {
+                &.grid-3 { grid-template-columns: 1fr; }
+            }
+
+            .tile {
+                background: $apple-bg-section;
+                border-radius: $apple-radius-lg;
+                padding: $apple-sp-xl;
+                min-height: 280px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                transition: transform 400ms $apple-ease-default;
+
+                &:hover { transform: translateY(-2px); }
+                &.small { min-height: 180px; }
+
+                .kicker {
+                    font-size: 12px;
+                    color: $apple-blue;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: $apple-sp-xs;
+                }
+
+                h3 {
+                    font-family: $apple-font-display;
+                    font-size: 24px;
+                    margin: 0 0 $apple-sp-xs;
+                }
+                p {
+                    font-size: 17px;
+                    color: $apple-gray-5;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .section-store, .section-students {
+        padding: $apple-sp-3xl 0;
+        background: $apple-bg-section;
+
+        .section-title {
+            font-family: $apple-font-display;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    // ─── ⑥ Reassurance grid ─────────────────────────
+    .section-buy {
+        padding: $apple-sp-3xl 0;
+
+        .section-title {
+            font-family: $apple-font-display;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0 0 $apple-sp-xl;
+        }
+
+        .reassurance-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: $apple-sp-md;
+
+            @media (max-width: $apple-bp-tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: $apple-bp-mobile) {
+                grid-template-columns: 1fr;
+            }
+
+            .rc-card {
+                background: $apple-bg-section;
+                border-radius: $apple-radius-md;
+                padding: $apple-sp-lg;
+                text-align: center;
+
+                h3 {
+                    font-family: $apple-font-display;
+                    font-size: 17px;
+                    margin: 0 0 $apple-sp-xs;
+                }
+                p {
+                    font-size: 14px;
+                    color: $apple-gray-5;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    // ─── Buttons ─────────────────────────────────────
+    .btn-primary {
+        display: inline-block;
+        background: $apple-blue;
+        color: $apple-white !important;
+        padding: 8px 20px;
+        border-radius: $apple-radius-pill;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: background-color 200ms $apple-ease-default;
+
+        &:hover { background: $apple-blue-hover; }
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        background: transparent;
+        color: $apple-blue !important;
+        padding: 8px 20px;
+        border-radius: $apple-radius-pill;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid $apple-blue;
+        cursor: pointer;
+        transition: all 200ms $apple-ease-default;
+
+        &:hover {
+            background: $apple-blue;
+            color: $apple-white !important;
+        }
+    }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: translateX(-50%) scale(0.5); }
+    to { opacity: 1; transform: translateX(-50%) scale(1); }
+}

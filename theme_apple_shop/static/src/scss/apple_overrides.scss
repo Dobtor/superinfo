@@ -1,0 +1,17 @@
+// ============================================
+// Minor overrides — Odoo's default header/footer chrome on Apple pages
+// ============================================
+
+// Hide Odoo breadcrumb on Apple pages (we render our own subnav)
+.apple-mac-landing,
+.apple-configurator {
+    .o_wsale_apply_layout > nav,
+    > nav.o_wsale_apply_layout {
+        display: none;
+    }
+}
+
+// Body background for Apple pages
+body.apple-mode {
+    background: $apple-bg-page;
+}
