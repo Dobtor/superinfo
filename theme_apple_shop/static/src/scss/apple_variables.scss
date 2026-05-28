@@ -1,8 +1,8 @@
 // ============================================
-// Apple Shop — design tokens
+// Frost — design tokens
 // ============================================
 
-// Typography (SF Pro fallback chain)
+// ─── Typography ────────────────────────────────
 $apple-font-display: -apple-system, "SF Pro Display", "BlinkMacSystemFont",
                      "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
                      "Noto Sans TC", sans-serif;
@@ -10,22 +10,36 @@ $apple-font-text:    -apple-system, "SF Pro Text", "BlinkMacSystemFont",
                      "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
                      "Noto Sans TC", sans-serif;
 
-// Colours (Apple system)
-$apple-black:       #1d1d1f;
-$apple-white:       #ffffff;
-$apple-gray-1:      #f5f5f7;
-$apple-gray-2:      #e8e8ed;
-$apple-gray-3:      #d2d2d7;
-$apple-gray-4:      #86868b;
-$apple-gray-5:      #6e6e73;
-$apple-gray-6:      #515154;
-$apple-blue:        #0066cc;
-$apple-blue-hover:  #0051a5;
-$apple-red:         #e30000;
-$apple-bg-page:     #ffffff;
-$apple-bg-section:  #f5f5f7;
+// ─── Core colours ──────────────────────────────
+$apple-black:        #0f172a;   // slate-900
+$apple-white:        #ffffff;
+$apple-gray-1:       rgba(255, 255, 255, 0.80);  // glass surface
+$apple-gray-2:       rgba(15, 23, 42, 0.07);     // divider
+$apple-gray-3:       rgba(15, 23, 42, 0.12);     // border
+$apple-gray-4:       #94a3b8;                    // placeholder (slate-400)
+$apple-gray-5:       #64748b;                    // secondary text (slate-500)
+$apple-gray-6:       #475569;                    // label text (slate-600)
+$apple-blue:         #3b82f6;   // sky blue — primary accent
+$apple-blue-hover:   #2563eb;   // blue-600
+$apple-purple:       #6366f1;   // indigo — secondary accent
+$apple-red:          #ef4444;
+$apple-bg-page:      #f8faff;   // cool white page bg
+$apple-bg-section:   #f0f4fe;   // slightly more blue section bg
 
-// Spacing rhythm (8 / 12 / 16 / 24 / 32 / 48 / 64 / 96)
+// ─── Glass effect tokens ───────────────────────
+$apple-glass-bg:     rgba(255, 255, 255, 0.80);
+$apple-glass-bg-md:  rgba(255, 255, 255, 0.90);
+$apple-glass-border: rgba(15, 23, 42, 0.08);
+$apple-glass-blur:   16px;
+$apple-glass-hover:  rgba(255, 255, 255, 0.95);
+
+// ─── Glow / shadow effects ─────────────────────
+$apple-glow-sm:      0 0 12px rgba(59, 130, 246, 0.18);
+$apple-glow-md:      0 0 24px rgba(59, 130, 246, 0.22);
+$apple-glow-lg:      0 0 40px rgba(59, 130, 246, 0.15);
+$apple-glow-purple:  0 0 20px rgba(99, 102, 241, 0.20);
+
+// ─── Spacing rhythm ────────────────────────────
 $apple-sp-xxs: 4px;
 $apple-sp-xs:  8px;
 $apple-sp-sm:  12px;
@@ -36,29 +50,29 @@ $apple-sp-2xl: 48px;
 $apple-sp-3xl: 64px;
 $apple-sp-4xl: 96px;
 
-// Radii
-$apple-radius-sm: 8px;
-$apple-radius-md: 12px;
-$apple-radius-lg: 18px;
-$apple-radius-xl: 24px;
+// ─── Radii ─────────────────────────────────────
+$apple-radius-sm:   8px;
+$apple-radius-md:   12px;
+$apple-radius-lg:   18px;
+$apple-radius-xl:   24px;
 $apple-radius-pill: 980px;
 
-// Easing
-$apple-ease-default: cubic-bezier(0.42, 0, 0.58, 1);
+// ─── Easing ────────────────────────────────────
+$apple-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
 $apple-ease-fast:    cubic-bezier(0.32, 0.72, 0, 1);
 $apple-ease-spring:  cubic-bezier(0.4, 1.4, 0.6, 1);
 
-// Shadows
-$apple-shadow-card:    0 4px 12px rgba(0, 0, 0, 0.08);
-$apple-shadow-card-hv: 0 12px 28px rgba(0, 0, 0, 0.14);
-$apple-shadow-modal:   0 24px 60px rgba(0, 0, 0, 0.25);
+// ─── Shadows ───────────────────────────────────
+$apple-shadow-card:    0 4px 24px rgba(15, 23, 42, 0.07), inset 0 1px 0 #ffffff;
+$apple-shadow-card-hv: 0 12px 40px rgba(59, 130, 246, 0.14), inset 0 1px 0 #ffffff;
+$apple-shadow-modal:   0 20px 60px rgba(15, 23, 42, 0.14), inset 0 1px 0 #ffffff;
 
-// Breakpoints
-$apple-bp-mobile: 767px;
-$apple-bp-tablet: 991px;
+// ─── Breakpoints ───────────────────────────────
+$apple-bp-mobile:  767px;
+$apple-bp-tablet:  991px;
 $apple-bp-desktop: 1199px;
 
-// Z-index
+// ─── Z-index ───────────────────────────────────
 $apple-z-localnav:     50;
 $apple-z-subnav:       60;
 $apple-z-sticky-panel: 40;

@@ -184,24 +184,6 @@
                                                             </t>
                                                         </div>
                                                     </fieldset>
-
-                                                    <!-- Decision support card (help link below fieldset) -->
-                                                    <t t-if="attr.apple_decision_header">
-                                                        <div class="rf-bfe-decision-support">
-                                                            <div class="rc-decisionsection as-util-relatedlink">
-                                                                <div class="rc-decisionsection-details">
-                                                                    <div class="rc-decisionsection-info">
-                                                                        <div class="rc-decisionsection-header" t-esc="attr.apple_decision_header"/>
-                                                                        <div class="rc-decisionsection-desc" t-esc="attr.apple_decision_desc or ''"/>
-                                                                    </div>
-                                                                </div>
-                                                                <button type="button" class="rc-decisionsection-button"
-                                                                        t-attf-aria-label="#{attr.apple_decision_header}">
-                                                                    <span class="visuallyhidden">顯示更多資訊</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </t>
                                                 </div>
                                             </t>
                                         </t>
@@ -369,151 +351,6 @@
                                         </t>
 
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-                                        <!-- AppleCare+ -->
-                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-                                        <t t-set="applecare_products"
-                                           t-value="optional_products.filtered(lambda p: p.apple_panel_section == 'applecare')"/>
-                                        <t t-if="applecare_products">
-                                            <div class="rf-bfe-step rf-bfe-dimension">
-                                                <fieldset class="rc-dimension rf-bfe-product-dimension-group">
-                                                    <legend>
-                                                        <h2 class="rs-mac-bfe-step-header typography-eyebrow">
-                                                            <span>AppleCare+ for Mac。</span>
-                                                            <span class="as-subheading">意外的最佳保護。</span>
-                                                        </h2>
-                                                    </legend>
-                                                    <div class="rc-dimension-selector-group form-selector-group">
-                                                        <t t-foreach="applecare_products" t-as="ac">
-                                                            <div class="rc-dimension-selector-row form-selector">
-                                                                <input type="checkbox"
-                                                                       class="form-selector-input optional-input"
-                                                                       t-attf-id="ac-#{ac.id}"
-                                                                       t-att-data-product-id="ac.id"
-                                                                       t-att-data-price="ac.list_price"
-                                                                       t-att-data-display-name="ac.name"/>
-                                                                <label class="form-selector-label"
-                                                                       t-attf-for="ac-#{ac.id}">
-                                                                    <span class="row">
-                                                                        <span class="column form-selector-left-col">
-                                                                            <span class="form-selector-title" t-esc="ac.name"/>
-                                                                            <t t-if="ac.description_sale">
-                                                                                <span class="form-label-small" t-esc="ac.description_sale"/>
-                                                                            </t>
-                                                                        </span>
-                                                                        <span class="column form-selector-right-col">
-                                                                            <span class="form-label-small">
-                                                                                +<t t-esc="ac.list_price"
-                                                                                    t-options="{'widget': 'monetary',
-                                                                                                  'display_currency': product.currency_id}"/>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                                </label>
-                                                            </div>
-                                                        </t>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </t>
-
-                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-                                        <!-- Apple Trade In 換購方案 -->
-                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-                                        <div class="rf-bfe-step rf-bfe-tradeup">
-                                            <div class="rf-bfe-tradeup-header">
-                                                <h2 class="typography-eyebrow">
-                                                    <span>Apple Trade In 換購方案。</span>
-                                                    <span class="rf-bfe-tradeup-subheader typography-eyebrow">
-                                                        換購全新 Mac，獲享折抵優惠
-                                                        <sup class="as-footnote footnote">
-                                                            <span class="visuallyhidden">註腳</span>①
-                                                        </sup>
-                                                        。
-                                                    </span>
-                                                </h2>
-                                            </div>
-
-                                            <fieldset class="rc-dimension">
-                                                <div class="rc-dimension-selector-group form-selector-group">
-
-                                                    <div class="rc-dimension-selector-row form-selector">
-                                                        <input type="radio"
-                                                               class="form-selector-input tradein-input"
-                                                               id="tradein-join"
-                                                               name="tradein-choice" value="join"/>
-                                                        <label class="form-selector-label" for="tradein-join">
-                                                            <span class="row row-logical">
-                                                                <span class="form-selector-left-col rf-tradeupselector-left-col">
-                                                                    <span class="form-selector-title">加入換購方案</span>
-                                                                    <span class="form-label-small rf-tradeupselector-subheader">
-                                                                        只須回答幾個問題，即可取得估價。
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-
-                                                    <!-- Drawer (郵遞區號 input) — JS toggles .open class -->
-                                                    <div class="rf-tradeupinline-drawer" hidden="hidden">
-                                                        <div class="rf-tradeupinline-pincode">
-                                                            <h3 class="rf-tradeupinline-module-header">
-                                                                <span>檢查你的郵遞區號。</span>
-                                                            </h3>
-                                                            <p class="rf-tradeupinline-module-desc">
-                                                                查看你的所在地區是否提供「Apple Trade In 換購方案」。
-                                                                請注意，換購方案不適用於離島地區。
-                                                            </p>
-                                                            <div class="form-textbox form-textbox-with-button">
-                                                                <label for="tradein-postal" class="form-textbox-label">郵遞區號</label>
-                                                                <input id="tradein-postal" type="text" maxlength="5"
-                                                                       autocomplete="postal-code"
-                                                                       class="form-textbox-input tradein-postal"
-                                                                       aria-label="郵遞區號"/>
-                                                                <button type="button" class="form-textbox-button tradein-apply" disabled="disabled">
-                                                                    <span>套用</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="rc-dimension-selector-row form-selector is-selected">
-                                                        <input type="radio"
-                                                               class="form-selector-input tradein-input"
-                                                               id="tradein-none"
-                                                               name="tradein-choice" value="none"
-                                                               checked="checked"/>
-                                                        <label class="form-selector-label" for="tradein-none">
-                                                            <span class="row row-logical">
-                                                                <span class="form-selector-left-col rf-tradeupselector-left-col">
-                                                                    <span class="form-selector-title">無換購</span>
-                                                                </span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-
-                                            <div class="rf-bfe-decision-support">
-                                                <div class="rc-decisionsection as-util-relatedlink">
-                                                    <div class="rc-decisionsection-details">
-                                                        <div class="rc-decisionsection-info">
-                                                            <div class="rc-decisionsection-header">
-                                                                Trade In 換購方案如何運作？
-                                                            </div>
-                                                            <div class="rc-decisionsection-desc">
-                                                                了解這次購買如何透過換購方案獲享折抵優惠，或選擇將你的裝置免費回收。
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <button type="button" class="rc-decisionsection-button"
-                                                            aria-label="Trade In 換購方案如何運作？">
-                                                        <span class="visuallyhidden">顯示更多資訊</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <!-- Summary panel (header + price + 繼續 + 收藏/分享) -->
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <div class="rf-bfe-summary">
@@ -547,25 +384,6 @@
                                                         <span class="btn-spinner" aria-hidden="true"/>
                                                     </button>
                                                 </div>
-
-                                                <div class="rf-bfe-summary-buttons-container">
-                                                    <div class="rf-saveditem-content">
-                                                        <h3 class="rf-saveditem-content-header">仍在考慮？</h3>
-                                                        <div class="rf-saveditem-content-description">
-                                                            收藏你所有的配置供日後使用，也能與好友分享。
-                                                        </div>
-                                                    </div>
-                                                    <div class="rf-saveditem-buttons-container">
-                                                        <button type="button" class="rf-saveditem-button" aria-label="收藏">
-                                                            <span class="rs-icon rs-icon-bookmark" aria-hidden="true">🔖</span>
-                                                            <span>收藏</span>
-                                                        </button>
-                                                        <button type="button" class="rf-shareitem-button" aria-label="分享">
-                                                            <span class="rs-icon rs-icon-share" aria-hidden="true">↗</span>
-                                                            <span>分享</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
 
@@ -592,17 +410,14 @@
                         </div>
                     </section>
 
-                    <!-- Reassurance footer -->
-                    <section class="config-reassurance">
-                        <div class="container">
-                            <div class="reassurance-grid">
-                                <div class="rc-card"><h3>免費送達</h3><p>標準免運費，14 天內送達。</p></div>
-                                <div class="rc-card"><h3>14 天免費退款</h3><p>不滿意 14 天內可退款。</p></div>
-                                <div class="rc-card"><h3>專業協助</h3><p>Apple 專家一對一即時客服。</p></div>
-                                <div class="rc-card"><h3>付款計畫</h3><p>0% 分期付款最長 12 個月。</p></div>
+                    <!-- Key features -->
+                    <t t-if="product.description_ecommerce">
+                        <section class="config-features">
+                            <div class="container">
+                                <div class="features-body" t-field="product.description_ecommerce"/>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </t>
 
                     <!-- Cart drawer -->
                     <aside class="cart-drawer" role="dialog" aria-modal="true"

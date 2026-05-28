@@ -1,5 +1,5 @@
 // ============================================
-// Cart drawer + Mac product spec breakdown in cart
+// Cart drawer + Mac product spec breakdown in cart (Tech Glass)
 // ============================================
 
 .apple-configurator {
@@ -12,9 +12,12 @@
         bottom: 0;
         width: 420px;
         max-width: 100vw;
-        background: $apple-white;
+        background: rgba(242, 244, 255, 0.95);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
         z-index: $apple-z-drawer;
-        box-shadow: $apple-shadow-modal;
+        box-shadow: -8px 0 40px rgba(100, 100, 180, 0.14);
         transform: translateX(100%);
         transition: transform 400ms $apple-ease-fast;
         display: flex;
@@ -32,20 +35,31 @@
 
             h2 {
                 font-family: $apple-font-display;
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 600;
                 margin: 0;
+                color: $apple-white;
             }
             .drawer-close {
-                background: none;
-                border: none;
-                font-size: 24px;
+                background: $apple-glass-bg;
+                border: 1px solid $apple-glass-border;
+                border-radius: 50%;
+                width: 30px; height: 30px;
+                font-size: 18px;
                 line-height: 1;
                 color: $apple-gray-5;
                 cursor: pointer;
-                padding: 4px 8px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 200ms;
 
-                &:hover { color: $apple-black; }
+                &:hover {
+                    color: $apple-white;
+                    background: $apple-glass-hover;
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
             }
         }
 
@@ -53,11 +67,13 @@
             flex: 1;
             overflow-y: auto;
             padding: $apple-sp-md $apple-sp-xl;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,0.15) transparent;
 
             .drawer-empty {
                 text-align: center;
                 color: $apple-gray-5;
-                font-size: 14px;
+                font-size: 13px;
                 padding: $apple-sp-3xl 0;
             }
 
@@ -72,6 +88,7 @@
 
                 .cart-line-image {
                     background: $apple-bg-section;
+                    border: 1px solid $apple-glass-border;
                     border-radius: $apple-radius-sm;
                     padding: $apple-sp-xs;
                     display: flex;
@@ -83,22 +100,24 @@
 
                 .cart-line-info {
                     .cart-line-name {
-                        font-weight: 500;
-                        font-size: 14px;
+                        font-weight: 600;
+                        font-size: 13px;
                         margin: 0 0 $apple-sp-xxs;
+                        color: $apple-white;
                     }
                     .cart-line-spec {
                         list-style: none;
                         margin: 0 0 $apple-sp-xs;
                         padding: 0;
-                        font-size: 12px;
+                        font-size: 11px;
                         color: $apple-gray-5;
 
                         li::before { content: "• "; margin-right: 2px; }
                     }
                     .cart-line-price {
-                        font-weight: 500;
-                        font-size: 14px;
+                        font-weight: 600;
+                        font-size: 13px;
+                        color: $apple-gray-6;
                     }
                 }
             }
@@ -118,18 +137,25 @@
                 border-radius: $apple-radius-pill;
                 text-decoration: none;
                 font-size: 14px;
-                font-weight: 500;
-                transition: background-color 200ms;
+                font-weight: 600;
+                transition: all 200ms;
             }
             .btn-primary {
                 background: $apple-blue;
-                color: $apple-white !important;
-                &:hover { background: $apple-blue-hover; }
+                color: $apple-bg-page !important;
+                &:hover {
+                    background: $apple-blue-hover;
+                    box-shadow: 0 0 16px rgba(59, 130, 246, 0.28);
+                }
             }
             .btn-secondary {
-                background: $apple-bg-section;
-                color: $apple-black !important;
-                &:hover { background: $apple-gray-2; }
+                background: $apple-glass-bg;
+                border: 1px solid $apple-glass-border;
+                color: $apple-white !important;
+                &:hover {
+                    background: $apple-glass-hover;
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
             }
         }
     }
@@ -137,7 +163,9 @@
     .drawer-backdrop {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         z-index: $apple-z-backdrop;
         opacity: 0;
         transition: opacity 300ms $apple-ease-default;
@@ -152,39 +180,45 @@
         bottom: $apple-sp-xl;
         left: 50%;
         transform: translateX(-50%) translateY(80px);
-        background: rgba(29, 29, 31, 0.92);
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid $apple-glass-border;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         color: $apple-white;
         padding: $apple-sp-sm $apple-sp-md;
         border-radius: $apple-radius-pill;
-        font-size: 14px;
+        font-size: 13px;
         z-index: $apple-z-drawer + 10;
         opacity: 0;
         transition: transform 300ms $apple-ease-default,
-                    opacity 300ms $apple-ease-default;
+                    opacity   300ms $apple-ease-default;
 
         &.show {
             transform: translateX(-50%) translateY(0);
             opacity: 1;
         }
-        &.error { background: $apple-red; }
+        &.error {
+            background: rgba(255, 82, 82, 0.20);
+            border-color: rgba(255, 82, 82, 0.40);
+        }
     }
 }
 
 // ─── Cart page: PTAV breakdown ─────────────────
-// (rendered on /shop/cart for Mac products)
 .cart-line .apple-spec-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 11px;
     color: $apple-gray-5;
 
     .spec-item {
-        background: $apple-bg-section;
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
         padding: 2px 8px;
         border-radius: $apple-radius-pill;
     }
-    .spec-label { color: $apple-gray-4; margin-right: 4px; }
-    .spec-value { color: $apple-black; }
+    .spec-label { color: $apple-gray-4; margin-right: 3px; }
+    .spec-value { color: $apple-white; }
 }

@@ -7,13 +7,18 @@ Conditionally branches on Mac category / Mac product:
 - everything else           → super() to Odoo defaults
 """
 import json
+import logging
 
 from odoo import http
 from odoo.http import request
 from odoo.addons.website_sale.controllers.main import WebsiteSale
+from odoo.addons.website_sale.controllers.combo_configurator import WebsiteSaleComboConfiguratorController
+from odoo.addons.website_sale.controllers.product_configurator import WebsiteSaleProductConfiguratorController
+
+_logger = logging.getLogger(__name__)
 
 
-class AppleShop(WebsiteSale):
+class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfiguratorController, WebsiteSale):
 
     # ─── helpers ───────────────────────────────────────────────────
 
@@ -27,6 +32,20 @@ class AppleShop(WebsiteSale):
             return False
         return bool(product.exists()) and product.is_mac_product
 
+    # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
+
+    @http.route(
+        ['/shop/category/mac'],
+        type='http', auth='public', methods=['GET'], website=True,
+    )
+    def mac_category_landing(self, **kwargs):
+        mac_root = request.env.ref(
+            'theme_apple_shop.categ_mac', raise_if_not_found=False
+        )
+        if mac_root:
+            return self._render_mac_landing(mac_root)
+        return request.redirect('/shop')
+
     # ─── /shop and /shop/category/<categ> ──────────────────────────
 
     @http.route()
@@ -36,24 +55,21 @@ class AppleShop(WebsiteSale):
         if self._is_mac_categ(category):
             return self._render_mac_landing(category)
 
-        # Plain /shop with no filter and no search → default to Apple Mac
-        # landing (this module is a Mac sample shop, so the natural shop
-        # entry IS the buy-mac page). Drops through to Odoo defaults if
-        # user supplied search/price filters.
+        # Plain /shop with no filter → Mac landing with generic title
         if (not category and not search
                 and not min_price and not max_price and not page):
             mac_root = request.env.ref(
                 'theme_apple_shop.categ_mac', raise_if_not_found=False
             )
             if mac_root:
-                return self._render_mac_landing(mac_root)
+                return self._render_mac_landing(mac_root, page_title='極電資訊商店')
 
         return super().shop(
             page=page, category=category, search=search,
             min_price=min_price, max_price=max_price, ppg=ppg, **post,
         )
 
-    def _render_mac_landing(self, mac_root):
+    def _render_mac_landing(self, mac_root, page_title='選購 Mac'):
         Categ = request.env['product.public.category']
         models = Categ.search([
             ('parent_id', '=', mac_root.id),
@@ -63,6 +79,7 @@ class AppleShop(WebsiteSale):
             'mac_root': mac_root,
             'mac_models': models,
             'main_object': mac_root,
+            'page_title': page_title,
         })
 
     # ─── /shop/<product> ───────────────────────────────────────────

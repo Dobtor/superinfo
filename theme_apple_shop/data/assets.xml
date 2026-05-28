@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asset_primary_variables" model="ir.asset">
+        <field name="name">Apple Shop Primary Variables</field>
+        <field name="bundle">web.assets_primary_variables</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_primary_variables.scss</field>
+        <field name="directive">prepend</field>
+    </record>
+
+    <record id="asset_variables" model="ir.asset">
+        <field name="name">Apple Shop Variables</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_variables.scss</field>
+        <field name="directive">prepend</field>
+    </record>
+
+    <record id="asset_theme_defaults" model="ir.asset">
+        <field name="name">Apple Shop Theme Defaults</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_theme_defaults.scss</field>
+    </record>
+
+    <record id="asset_landing" model="ir.asset">
+        <field name="name">Apple Shop Landing SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_landing.scss</field>
+    </record>
+
+    <record id="asset_configurator_scss" model="ir.asset">
+        <field name="name">Apple Shop Configurator SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_configurator.scss</field>
+    </record>
+
+    <record id="asset_cart" model="ir.asset">
+        <field name="name">Apple Shop Cart SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_cart.scss</field>
+    </record>
+
+    <record id="asset_overrides" model="ir.asset">
+        <field name="name">Apple Shop Overrides SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_overrides.scss</field>
+    </record>
+
+    <record id="asset_shop_trust" model="ir.asset">
+        <field name="name">Apple Shop Trust Features SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_shop_trust.scss</field>
+    </record>
+
+    <record id="asset_landing_js" model="ir.asset">
+        <field name="name">Apple Shop Landing JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_landing.js</field>
+    </record>
+
+    <record id="asset_configurator_js" model="ir.asset">
+        <field name="name">Apple Shop Configurator JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_configurator.js</field>
+    </record>
+
+    <record id="asset_image_carousel" model="ir.asset">
+        <field name="name">Apple Shop Image Carousel JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_image_carousel.js</field>
+    </record>
+
+    <record id="asset_cart_drawer" model="ir.asset">
+        <field name="name">Apple Shop Cart Drawer JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_cart_drawer.js</field>
+    </record>
+
+    <record id="asset_compare_table" model="ir.asset">
+        <field name="name">Apple Shop Compare Table JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_compare_table.js</field>
+    </record>
+</odoo>

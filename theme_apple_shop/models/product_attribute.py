@@ -52,11 +52,6 @@ class ProductAttribute(models.Model):
              "'starting' shows base+price_extra as an absolute 'X 起' (used for chip); "
              "'none' shows nothing per-option (price is rolled into the summary total).",
     )
-    apple_decision_header = fields.Char(
-        string="Decision-Support Header",
-        translate=True,
-        help="Header for the help card below the fieldset, e.g. '需要協助選擇晶片嗎？'",
-    )
     apple_decision_desc = fields.Char(
         string="Decision-Support Description",
         translate=True,

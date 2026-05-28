@@ -1,19 +1,11 @@
 // ============================================
-// Apple Theme — global element defaults
+// Tech Glass — global element defaults
 // ============================================
-// Site-wide rules that polish Bootstrap's defaults to match Apple's
-// design language: pill buttons, smooth focus rings, clean form fields,
-// consistent typographic scale.
-//
-// These rules apply to EVERY page (home, shop, blog, contact ...).
+// Site-wide rules applied to EVERY page.
+// Depends on apple_primary_variables (Bootstrap vars) being loaded first.
 
-// !default fallbacks for non-Bootstrap tokens that apple_primary_variables.scss
-// declares. If that file made it into web.assets_primary_variables (theme is
-// active, ir.asset records intact), it set these and !default leaves them
-// alone. If it failed to load (asset registry partial), these literal fallbacks
-// keep the compile alive instead of taking down the entire bundle.
-$headings-letter-spacing:  -0.005em !default;
-$card-box-shadow:          0 4px 12px rgba(0, 0, 0, 0.08) !default;
+$headings-letter-spacing: -0.025em !default;
+$card-box-shadow:         0 8px 32px rgba(0, 0, 0, 0.45) !default;
 
 // ─── Body ─────────────────────────────────────
 body {
@@ -24,16 +16,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "ss01" 1, "ss02" 1;  // SF Pro stylistic sets
 }
 
-// ─── Typographic scale (Apple-style) ───────────
-h1, .h1 { font-size: 3rem;     line-height: 1.05; }   // 48px
-h2, .h2 { font-size: 2rem;     line-height: 1.1;  }   // 32px
-h3, .h3 { font-size: 1.5rem;   line-height: 1.2;  }   // 24px
-h4, .h4 { font-size: 1.25rem;  line-height: 1.3;  }   // 20px
-h5, .h5 { font-size: 1rem;     line-height: 1.4;  }   // 16px
-h6, .h6 { font-size: 0.875rem; line-height: 1.5;  }   // 14px
+// ─── Typographic scale ─────────────────────────
+h1, .h1 { font-size: 3rem;     line-height: 1.05; }
+h2, .h2 { font-size: 2rem;     line-height: 1.1;  }
+h3, .h3 { font-size: 1.5rem;   line-height: 1.2;  }
+h4, .h4 { font-size: 1.25rem;  line-height: 1.3;  }
+h5, .h5 { font-size: 1rem;     line-height: 1.4;  }
+h6, .h6 { font-size: 0.875rem; line-height: 1.5;  }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -61,11 +52,11 @@ small, .small {
 a {
     color: $link-color;
     text-decoration: none;
-    transition: color 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
+        text-decoration: none;
     }
 
     &:focus-visible {
@@ -75,7 +66,7 @@ a {
     }
 }
 
-// ─── Buttons (override Bootstrap .btn-* with pill + Apple feel) ──
+// ─── Buttons ───────────────────────────────────
 .btn {
     font-family: $font-family-base;
     font-weight: $btn-font-weight;
@@ -86,37 +77,41 @@ a {
 
     &:focus-visible {
         outline: none;
-        box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.30);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
     }
 }
 
 .btn-primary {
     background-color: $primary;
     border-color: $primary;
-    color: #fff;
+    color: #ffffff;
+    font-weight: 600;
 
     &:hover, &:focus {
         background-color: $link-hover-color;
         border-color: $link-hover-color;
-        color: #fff;
+        color: #ffffff;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.30);
     }
     &:disabled, &.disabled {
-        background-color: lighten($primary, 25%);
-        border-color: lighten($primary, 25%);
-        color: #fff;
-        opacity: 0.65;
+        background-color: rgba(59, 130, 246, 0.30);
+        border-color: transparent;
+        color: rgba(240, 240, 248, 0.50);
+        opacity: 1;
+        box-shadow: none;
     }
 }
 
 .btn-secondary {
     background-color: transparent;
-    border-color: $primary;
-    color: $primary;
+    border-color: $secondary;
+    color: $secondary;
 
     &:hover, &:focus {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $secondary;
+        border-color: $secondary;
         color: #fff;
+        box-shadow: 0 0 16px rgba(168, 85, 247, 0.40);
     }
 }
 
@@ -127,24 +122,33 @@ a {
 
     &:hover, &:focus {
         background-color: $primary;
-        color: #fff;
+        color: #ffffff;
+        box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
     }
 }
 
 .btn-light {
-    background-color: $light;
-    border-color: $light;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-color: rgba(255, 255, 255, 0.12);
     color: $body-color;
+    backdrop-filter: blur(8px);
 
-    &:hover { background-color: darken($light, 4%); border-color: darken($light, 4%); }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.20);
+    }
 }
 
 .btn-dark {
-    background-color: $dark;
-    border-color: $dark;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.10);
+    color: $body-color;
+    backdrop-filter: blur(8px);
 
-    &:hover { background-color: lighten($dark, 8%); border-color: lighten($dark, 8%); }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.10);
+        border-color: rgba(255, 255, 255, 0.16);
+    }
 }
 
 .btn-link {
@@ -156,7 +160,6 @@ a {
     &:hover { color: $link-hover-color; text-decoration: underline; }
 }
 
-// Icon-only / round buttons
 .btn-round {
     border-radius: 50%;
     width: 40px;
@@ -167,7 +170,7 @@ a {
     justify-content: center;
 }
 
-// ─── Form controls ──────────────────────────────
+// ─── Form controls ─────────────────────────────
 .form-control,
 .form-select {
     font-family: $font-family-base;
@@ -177,20 +180,22 @@ a {
     border: 1px solid $input-border-color;
     background-color: $input-bg;
     color: $input-color;
-    transition: border-color 200ms cubic-bezier(0.42, 0, 0.58, 1),
-                box-shadow 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    backdrop-filter: blur(4px);
+    transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow   200ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus {
         border-color: $input-focus-border-color;
         box-shadow: $input-focus-box-shadow;
         outline: 0;
+        background-color: rgba(255, 255, 255, 0.09);
     }
 
     &::placeholder { color: $input-placeholder-color; }
 
     &:disabled {
-        background-color: $light;
-        opacity: 0.6;
+        background-color: rgba(255, 255, 255, 0.03);
+        opacity: 0.5;
     }
 }
 
@@ -206,7 +211,8 @@ a {
 }
 
 .form-check-input {
-    border-color: $input-border-color;
+    border-color: rgba(255, 255, 255, 0.20);
+    background-color: rgba(255, 255, 255, 0.06);
     border-radius: 4px;
 
     &:checked {
@@ -221,9 +227,11 @@ a {
 
 // ─── Cards ─────────────────────────────────────
 .card {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: $card-border-radius;
     background: $card-bg;
+    backdrop-filter: blur($apple-glass-blur);
+    -webkit-backdrop-filter: blur($apple-glass-blur);
     box-shadow: $card-box-shadow;
     overflow: hidden;
 }
@@ -235,6 +243,7 @@ a {
 .card-title {
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
+    color: $body-color;
 }
 
 // ─── Tables ────────────────────────────────────
@@ -245,7 +254,7 @@ a {
     th {
         font-weight: 600;
         color: $body-color;
-        background: $light;
+        background: rgba(255, 255, 255, 0.04);
         border-color: $table-border-color;
     }
     td { vertical-align: middle; }
@@ -253,13 +262,16 @@ a {
 
 // ─── Modal ─────────────────────────────────────
 .modal-content {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: $modal-content-border-radius;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65);
 }
 
 .modal-header {
-    border-bottom: 1px solid $table-border-color;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
     padding: 1rem 1.5rem;
 }
 
@@ -267,9 +279,12 @@ a {
 
 // ─── Dropdown ──────────────────────────────────
 .dropdown-menu {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: $dropdown-border-radius;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.50);
     padding: 0.5rem;
 
     .dropdown-item {
@@ -277,9 +292,10 @@ a {
         padding: 0.5rem 0.875rem;
         color: $body-color;
         font-size: 0.9375rem;
+        background: transparent;
 
         &:hover, &:focus {
-            background: $dropdown-link-hover-bg;
+            background: rgba(0, 0, 0, 0.07);
             color: $primary;
         }
     }
@@ -301,56 +317,57 @@ a {
         transition: all 200ms;
 
         &:hover {
-            background: $light;
+            background: rgba(0, 0, 0, 0.07);
             color: $primary;
         }
     }
     .active .page-link {
         background: $primary;
-        color: #fff;
+        color: #ffffff;
         border-color: $primary;
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.30);
     }
     .disabled .page-link {
-        color: $border-color;
+        color: rgba(255, 255, 255, 0.20);
         background: transparent;
     }
 }
 
 // ─── Alerts ────────────────────────────────────
 .alert {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: $alert-border-radius;
     padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
 }
 
 // ─── Horizontal rule ───────────────────────────
 hr {
     border: 0;
-    border-top: 1px solid $table-border-color;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
     opacity: 1;
     margin: 1.5rem 0;
 }
 
 // ─── Selection ─────────────────────────────────
 ::selection {
-    background: rgba(0, 102, 204, 0.18);
+    background: rgba(59, 130, 246, 0.15);
     color: $body-color;
 }
 
 // ─── Scrollbars (WebKit) ───────────────────────
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); }
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    &:hover { background: rgba(0, 0, 0, 0.35); }
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    &:hover { background: rgba(0, 0, 0, 0.30); }
 }
 
 // ─── Reduced motion ────────────────────────────
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;

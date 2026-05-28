@@ -21,8 +21,6 @@
             <field name="apple_group_label">晶片。</field>
             <field name="apple_subheading">各款強大選項任你選擇。</field>
             <field name="apple_price_display">starting</field>
-            <field name="apple_decision_header">需要協助選擇晶片嗎？</field>
-            <field name="apple_decision_desc">比較各個選項，看看哪一款最適合你。</field>
         </record>
         <record id="attr_val_chip_m4" model="product.attribute.value">
             <field name="name">M4 晶片</field>
@@ -62,8 +60,6 @@
             <field name="apple_group_label">記憶體。</field>
             <field name="apple_subheading">選擇適合的容量。</field>
             <field name="apple_price_display">none</field>
-            <field name="apple_decision_header">不確定需要多少記憶體？</field>
-            <field name="apple_decision_desc">了解統一記憶體，看看哪一種最適合你使用 Mac 的方式。</field>
         </record>
         <record id="attr_val_mem_8" model="product.attribute.value">
             <field name="name">8GB</field>
@@ -110,8 +106,6 @@
             <field name="apple_group_label">儲存裝置。</field>
             <field name="apple_subheading">選擇需要的儲存空間大小。</field>
             <field name="apple_price_display">none</field>
-            <field name="apple_decision_header">不確定需要多少儲存空間？</field>
-            <field name="apple_decision_desc">了解 SSD 儲存裝置，看看哪一種最適合你使用 Mac 的方式。</field>
         </record>
         <record id="attr_val_storage_256" model="product.attribute.value">
             <field name="name">256GB</field>
@@ -211,8 +205,6 @@
             <field name="apple_group_label">乙太網路。</field>
             <field name="apple_subheading">選取速度。</field>
             <field name="apple_price_display">none</field>
-            <field name="apple_decision_header">需要協助選擇乙太網路速度嗎？</field>
-            <field name="apple_decision_desc">比較各個選項，並探索哪一種最適合你使用 Mac 的方式。</field>
         </record>
         <record id="attr_val_ether_1g" model="product.attribute.value">
             <field name="name">Gigabit 乙太網路</field>
