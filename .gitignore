@@ -1,0 +1,22 @@
+# Odoo files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Package archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs/Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
