@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        /shop/category/mac (and any descendant tagged mac_role='root')
+        renders this template via AppleShop._render_mac_landing.
+
+        Region structure:
+          .pageBanner          — hero with OUR / MAC text
+          .localnav            — sticky tabs (anchors)
+          #section-models      — 8 mac model cards (carousel)
+          #section-explore     — explore tiles
+          #section-details     — quick-info tiles
+          #section-store       — Apple Store Pro section
+          #section-students    — education pricing
+          #section-buy         — reassurance cards
+    -->
+    <!--
+        Use <record model="ir.ui.view"> directly: <template> shorthand on
+        modules with theme_ prefix is auto-routed to theme.ir.ui.view
+        (theme staging table), invisible to request.render() until the
+        theme is applied to a website. Going via ir.ui.view skips staging.
+    -->
+    <record id="buy_mac_landing" model="ir.ui.view">
+        <field name="name">Apple Mac Landing</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.buy_mac_landing</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.buy_mac_landing">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <main class="apple-mac-landing">
+                            <div id="oe_structure_buy_mac_landing_1" class="oe_structure oe_empty" />
+
+                            <!-- ① Hero banner -->
+                            <section class="pageBanner">
+                                <div class="container">
+                                    <h1 class="hero-title" t-esc="page_title or '選購 Mac'"/>
+                                    <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合身的 Mac。</p>
+                                </div>
+                            </section>
+
+                            <!-- ② Localnav (sticky on scroll) -->
+                            <nav class="localnav" aria-label="Mac landing sections">
+                                <div class="container">
+                                    <ul class="localnav-list">
+                                        <li>
+                                            <a href="#section-models">各種機型</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-explore">選購情境</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-details">教育優惠</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-store">校園體驗中心</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-students">校園採購方案</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-buy">放心購買</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <!-- ③ Models — 8 cards horizontal scroll -->
+                            <section class="section-models" id="section-models">
+                                <div class="container">
+                                    <h2 class="section-title">各種機型</h2>
+                                    <p class="section-subtitle">挑選你的款式。</p>
+
+                                    <div class="models-track-wrap">
+                                        <button type="button" class="track-prev"
+                                            aria-label="Previous">
+                                            <span class="triangle" />
+                                        </button>
+                                        <div class="models-track">
+                                            <t t-foreach="mac_models" t-as="model">
+                                                <article class="model-card">
+                                                    <t t-if="model.mac_landing_order &lt; 15">
+                                                        <span class="badge-new">NEW</span>
+                                                    </t>
+                                                    <div class="model-card-image">
+                                                        <img t-if="model.mac_hero_image"
+                                                            t-attf-src="/web/image/product.public.category/#{model.id}/mac_hero_image"
+                                                            t-att-alt="model.name"
+                                                            loading="lazy" />
+                                                    </div>
+                                                    <h3 class="model-card-name" t-esc="model.name" />
+                                                    <p class="model-card-tagline"
+                                                        t-esc="model.mac_tagline or ''" />
+                                                    <p class="model-card-price">
+                                                        <t t-esc="model.mac_starting_price"
+                                                            t-options="{'widget': 'monetary',
+                                                                'display_currency': model.mac_currency_id}" />
+                                                        <span class="price-suffix">起</span>
+                                                    </p>
+                                                    <div class="model-card-actions">
+                                                        <a
+                                                            t-attf-href="/shop/category/#{slug(model)}"
+                                                            class="btn-secondary">深入了解</a>
+                                                        <t t-set="first_prod"
+                                                            t-value="request.env['product.template'].sudo().search([
+                                                       ('public_categ_ids', '=', model.id),
+                                                       ('is_published', '=', True),
+                                                   ], limit=1)" />
+                                                        <a t-if="first_prod"
+                                                            t-attf-href="/shop/#{slug(first_prod)}"
+                                                            class="btn-primary">選購</a>
+                                                    </div>
+                                                </article>
+                                            </t>
+                                        </div>
+                                        <button type="button" class="track-next" aria-label="Next">
+                                            <span class="triangle" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- ④ Explore tiles -->
+                            <section class="section-explore" id="section-explore">
+                                <div class="container">
+                                    <h2 class="section-title">找到最適合你使用情境的 Mac</h2>
+                                    <div class="tile-grid grid-3">
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/macbook-air/card.jpg"
+                                                    alt="個人選機" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <h3>個人選機</h3>
+                                                <p>從輕薄的 MacBook Air 到高效能的 Mac
+                                                    Pro，比較所有機型，找出最符合你工作與創作需求的選擇。</p>
+                                            </div>
+                                        </div>
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/imac/card.jpg"
+                                                    alt="學校集中採購" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <h3>學校集中採購</h3>
+                                                <p>一次購置 10
+                                                    台以上享有教育批量優惠。極電資訊提供從詢價、報價到交機的一站式服務，減輕學校行政負擔。</p>
+                                            </div>
+                                        </div>
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/mac-studio/card.jpg"
+                                                    alt="Jamf Pro 部署與管理" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <h3>Jamf Pro 部署與管理</h3>
+                                                <p>作為 Jamf Elite 經銷商，極電資訊協助學校完成 MDM 設定、Apple School
+                                                    Manager 建置，讓每台 Mac 上線即可使用。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- ⑤ Details tiles -->
+                            <section class="section-details" id="section-details">
+                                <div class="container">
+                                    <h2 class="section-title">教育優惠，讓每一分預算都用在刀口上</h2>
+                                    <div class="tile-grid grid-3">
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/macbook-neo/card.jpg"
+                                                    alt="教育優惠價" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <span class="kicker">教育優惠價</span>
+                                                <p>學生、教職員、學校及政府機關均可申請 Apple 教育專屬定價，享有比一般零售更優惠的採購條件。</p>
+                                            </div>
+                                        </div>
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/macbook-air/card.jpg"
+                                                    alt="分期付款" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <span class="kicker">分期付款</span>
+                                                <p>0% 利率分期，最長 12 個月。減輕個人或學校的一次性採購壓力，讓科技更普及。</p>
+                                            </div>
+                                        </div>
+                                        <div class="tile tile-img-card">
+                                            <div class="tile-img">
+                                                <img
+                                                    src="/theme_apple_shop/static/src/img/mac/mac-mini/card.jpg"
+                                                    alt="免費配送到府" loading="lazy" />
+                                            </div>
+                                            <div class="tile-body">
+                                                <span class="kicker">免費配送到府</span>
+                                                <p>全台免運費標準配送。學校大量採購亦可安排集中交機與開箱設定服務。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- ⑥ 校園體驗中心（取代 Apple Store 親選） -->
+                            <section class="section-store" id="section-store">
+                                <div class="container">
+                                    <div class="section-header">
+                                        <h2 class="section-title">極電校園體驗中心</h2>
+                                        <p class="section-subtitle">親自體驗，再做決定</p>
+                                    </div>
+
+                                    <div class="tile-grid grid-3">
+                                        <!-- 師大據點 -->
+                                        <div class="tile">
+                                            <div class="tile-header">
+                                                <span class="kicker kicker-secondary">師大據點</span>
+                                                <h3 class="tile-title">國立臺灣師範大學</h3>
+                                            </div>
+
+                                            <p class="tile-description">
+                                                位於師大校園內，提供在校師生一對一選購諮詢、現場試用及教育優惠認證服務。
+                                            </p>
+
+                                            <div class="map-wrapper">
+                                                <iframe
+                                                    width="100%"
+                                                    height="250"
+                                                    style="border:0; border-radius: 8px;"
+                                                    loading="lazy"
+                                                    allowfullscreen=""
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8324947656897!2d121.52912742346915!3d25.01888867667044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a939829d5fb5%3A0x8e4b4d4e4d4d4d4d!2z5pil56S-5a6c6Zy454Gy!5e0!3m2!1szh-TW!2stw!4v1234567890">
+                                                </iframe>
+                                            </div>
+                                        </div>
+
+                                        <!-- 世新據點 -->
+                                        <div class="tile">
+                                            <div class="tile-header">
+                                                <span class="kicker kicker-secondary">世新據點</span>
+                                                <h3 class="tile-title">世新大學</h3>
+                                            </div>
+
+                                            <p class="tile-description">
+                                                服務世新師生與周邊社區，提供 Mac、iPad 完整產品線展示，以及 Jamf 裝置管理示範。
+                                            </p>
+
+                                            <div class="map-wrapper">
+                                                <iframe
+                                                    width="100%"
+                                                    height="250"
+                                                    style="border:0; border-radius: 8px;"
+                                                    loading="lazy"
+                                                    allowfullscreen=""
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8324947656897!2d121.5291275!3d25.0588089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5e0000d7777%3A0x7777777777777777!2z5Y2X5Y2h5a6c!5e0!3m2!1szh-TW!2stw!4v1234567890">
+                                                </iframe>
+                                            </div>
+                                        </div>
+
+                                        <!-- 線上諮詢 -->
+                                        <div class="tile">
+                                            <div class="tile-header">
+                                                <span class="kicker kicker-secondary">電話諮詢</span>
+                                                <h3 class="tile-title">無法親訪？電話諮詢。</h3>
+                                            </div>
+
+                                            <p class="tile-description">
+                                                無論個人選機或學校採購規劃，極電資訊的顧問團隊隨時為你解答。
+                                            </p>
+
+                                            <div class="tile-cta mt-auto">
+                                                <a href="tel:+886212345678" class="btn btn-primary">
+                                                    電話諮詢</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <!-- ⑦ 校園採購方案 -->
+                            <section class="section-students" id="section-students">
+                                <div class="container">
+                                    <div class="section-header">
+                                        <p class="section-subtitle">校園採購方案</p>
+                                        <h2 class="section-title">從個人到整間教室，我們都有辦法</h2>
+                                    </div>
+                                    <div class="students-grid">
+                                        <div class="students-col">
+                                            <span class="col-label">個人教育優惠</span>
+                                            <h3 class="col-title">學生 &amp; 教職員</h3>
+                                            <p>憑學生證或教職員證即可享有 Apple 官方教育定價，搭配極電資訊的選購顧問服務，讓你買對、買好。</p>
+                                        </div>
+                                        <div class="students-col">
+                                            <span class="col-label">機構批量採購</span>
+                                            <h3 class="col-title">學校 &amp; 政府機關</h3>
+                                            <p>專為學校、縣市政府與教育局設計的採購流程：統一報價、政府電子採購平台下單、集中交機與部署，全程一手包辦。</p>
+                                        </div>
+                                        <div class="students-col">
+                                            <span class="col-label">政策採購的最佳夥伴</span>
+                                            <h3 class="col-title">生生用平板計畫</h3>
+                                            <p>
+                                                極電資訊長期配合教育部「生生用平板」及程式教育政策，具備豐富的政府採購資格與執行經驗，是學校信賴的長期夥伴。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- ⑧ Reassurance cards -->
+                            <section class="section-buy" id="section-buy">
+                                <div class="container">
+                                    <h2 class="section-title">買 Mac，選極電資訊，買得安心</h2>
+                                    <div class="reassurance-grid">
+                                        <div class="rc-card">
+                                            <h3>Apple 原廠授權</h3>
+                                            <p>Apple 優質教育合作夥伴，所有產品均為原廠公司貨，附完整保固。</p>
+                                        </div>
+                                        <div class="rc-card">
+                                            <h3>教育優惠認證</h3>
+                                            <p>協助學生、教師及學校完成教育身份認證，確保享有最優惠的合法定價。</p>
+                                        </div>
+                                        <div class="rc-card">
+                                            <h3>專業部署支援</h3>
+                                            <p>Jamf Elite 認證工程師提供 MDM 設定、Apple School Manager
+                                                建置及到校安裝服務。</p>
+                                        </div>
+                                        <div class="rc-card">
+                                            <h3>售後持續陪伴</h3>
+                                            <p>購機後提供裝置管理培訓、軟體安裝協助，35 年深耕教育市場，不只賣機器，更是長期夥伴。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div id="oe_structure_buy_mac_landing_2" class="oe_structure oe_empty" />
+                        </main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

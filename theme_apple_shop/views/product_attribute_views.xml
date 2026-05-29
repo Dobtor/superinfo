@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Add Apple-specific fields to product.attribute form.
+        product.attribute.value is edited inline inside product.attribute.value_ids
+        list — we extend that list view (`product.product_attribute_value_list`)
+        to expose apple_description / apple_sub_label / apple_image / apple_price_display.
+    -->
+    <record id="product_attribute_form_apple" model="ir.ui.view">
+        <field name="name">product.attribute.form.apple</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.product_attribute_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='display_type']" position="after">
+                <field name="apple_section_order"/>
+                <field name="apple_group_label" placeholder="晶片。各款強大選項任你選擇。"/>
+                <field name="apple_help_text" placeholder="(optional) Help popover content"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Add Apple fields to attribute-value list (inline editor under attribute form) -->
+    <record id="product_attribute_value_list_apple" model="ir.ui.view">
+        <field name="name">product.attribute.value.list.apple</field>
+        <field name="model">product.attribute.value</field>
+        <field name="inherit_id" ref="product.product_attribute_value_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="apple_sub_label" optional="hide"/>
+                <field name="apple_description" optional="hide"/>
+                <field name="apple_price_display" optional="hide"/>
+                <field name="apple_image" widget="image" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

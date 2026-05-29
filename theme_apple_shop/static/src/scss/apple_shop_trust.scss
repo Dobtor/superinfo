@@ -1,0 +1,261 @@
+// ============================================
+// /shop — Trust strip & trust features sections
+// ============================================
+
+// ─── ① Compact trust strip (above product grid) ────────────
+.as-trust-strip {
+    background: linear-gradient(90deg, #f0f4fe 0%, #f8faff 50%, #f0f4fe 100%);
+    border-bottom: 1px solid $apple-glass-border;
+    padding: $apple-sp-sm 0;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 $apple-sp-xl;
+    }
+
+    .as-trust-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $apple-sp-xl;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $apple-bp-mobile) {
+            gap: $apple-sp-md;
+        }
+    }
+
+    .as-trust-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: $apple-gray-6;
+        white-space: nowrap;
+    }
+
+    .as-trust-check {
+        color: $apple-blue;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1;
+    }
+}
+
+// ─── ② Full trust features (below product grid) ────────────
+.as-trust-features {
+    padding: $apple-sp-3xl 0 $apple-sp-2xl;
+    background: $apple-bg-page;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 $apple-sp-xl;
+    }
+
+    // Section header
+    .as-trust-header {
+        text-align: center;
+        margin-bottom: $apple-sp-2xl;
+
+        .as-kicker-upper {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            color: $apple-blue;
+            margin: 0 0 $apple-sp-xs;
+        }
+
+        h2 {
+            font-family: $apple-font-display;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: $apple-black;
+            margin: 0;
+
+            @media (max-width: $apple-bp-mobile) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    // ─── 3×2 feature card grid ─────────────────────────
+    .as-feat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $apple-sp-md;
+        margin-bottom: $apple-sp-2xl;
+
+        @media (max-width: $apple-bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $apple-bp-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .as-feat-card {
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
+        border-radius: $apple-radius-lg;
+        padding: $apple-sp-xl;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: transform 300ms $apple-ease-default,
+            border-color 300ms $apple-ease-default,
+            box-shadow 300ms $apple-ease-default;
+
+        &:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.25);
+            box-shadow: $apple-shadow-card-hv;
+        }
+    }
+
+    .as-feat-kicker {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: $apple-blue;
+        background: rgba(59, 130, 246, 0.08);
+        padding: 3px 10px;
+        border-radius: $apple-radius-pill;
+
+        &--light {
+            background: rgba(255, 255, 255, 0.20);
+            color: rgba(255, 255, 255, 0.95);
+        }
+    }
+
+    .as-feat-title {
+        font-family: $apple-font-display;
+        font-size: 18px;
+        font-weight: 600;
+        color: $apple-black;
+        margin: $apple-sp-xs 0 $apple-sp-sm;
+        letter-spacing: -0.01em;
+    }
+
+    .as-feat-card p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: $apple-gray-5;
+        margin: 0;
+    }
+
+    // ─── B2B procurement CTA banner ────────────────────
+    .as-b2b-cta {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 60%, #6366f1 100%);
+        border-radius: $apple-radius-xl;
+        padding: $apple-sp-2xl $apple-sp-2xl;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $apple-sp-xl;
+        margin-bottom: $apple-sp-2xl;
+
+        @media (max-width: $apple-bp-tablet) {
+            flex-direction: column;
+            text-align: center;
+            padding: $apple-sp-xl;
+        }
+    }
+
+    .as-b2b-text {
+        h3 {
+            font-family: $apple-font-display;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: $apple-sp-xs 0 $apple-sp-sm;
+            letter-spacing: -0.02em;
+
+            @media (max-width: $apple-bp-mobile) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.80);
+            margin: 0;
+            max-width: 520px;
+        }
+    }
+
+    .as-b2b-action {
+        flex-shrink: 0;
+    }
+
+    .as-btn-cta {
+        display: inline-block;
+        background: #fff;
+        color: $apple-blue !important;
+        padding: 12px 28px;
+        border-radius: $apple-radius-pill;
+        text-decoration: none !important;
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: all 200ms $apple-ease-default;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+    }
+
+    // ─── Partner brand logo wall ────────────────────────
+    .as-brand-wall {
+        text-align: center;
+        padding-top: $apple-sp-xl;
+        border-top: 1px solid $apple-glass-border;
+    }
+
+    .as-brand-wall-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $apple-gray-4;
+        margin: 0 0 $apple-sp-lg;
+    }
+
+    .as-brand-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $apple-sp-sm;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .as-brand-chip {
+        display: inline-block;
+        padding: $apple-sp-xs $apple-sp-lg;
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
+        border-radius: $apple-radius-pill;
+        font-size: 13px;
+        font-weight: 500;
+        color: $apple-gray-6;
+        letter-spacing: 0.02em;
+        transition: all 200ms $apple-ease-default;
+
+        &:hover {
+            border-color: rgba(59, 130, 246, 0.30);
+            color: $apple-blue;
+            background: rgba(59, 130, 246, 0.05);
+        }
+    }
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Injects trust/credibility sections into buy_mac_landing
+        (the template rendered at /zh_TW/shop and /shop/category/mac).
+
+        1. .as-trust-strip  — compact 5-badge bar injected after .pageBanner
+        2. .as-trust-features — 6 feature cards + B2B CTA + brand wall
+           injected after #section-buy (end of page, above oe_structure_2)
+    -->
+    <record id="shop_trust_features" model="ir.ui.view">
+        <field name="name">Apple Shop — trust features on buy_mac_landing</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="theme_apple_shop.buy_mac_landing"/>
+        <field name="arch" type="xml">
+
+            <!-- ① Trust strip — right after the hero banner -->
+            <xpath expr="//section[hasclass('pageBanner')]" position="after">
+                <div class="as-trust-strip">
+                    <div class="container">
+                        <ul class="as-trust-list">
+                            <li class="as-trust-item">
+                                <span class="as-trust-check" aria-hidden="true">✓</span>
+                                <span>35 年 Apple 授權經銷商</span>
+                            </li>
+                            <li class="as-trust-item">
+                                <span class="as-trust-check" aria-hidden="true">✓</span>
+                                <span>Jamf Elite 認證</span>
+                            </li>
+                            <li class="as-trust-item">
+                                <span class="as-trust-check" aria-hidden="true">✓</span>
+                                <span>臺北兩間校園體驗中心</span>
+                            </li>
+                            <li class="as-trust-item">
+                                <span class="as-trust-check" aria-hidden="true">✓</span>
+                                <span>官方認證工程師</span>
+                            </li>
+                            <li class="as-trust-item">
+                                <span class="as-trust-check" aria-hidden="true">✓</span>
+                                <span>LINE / Email / Messenger 客服</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </xpath>
+
+            <!-- ② Full trust features — after the existing reassurance section -->
+            <xpath expr="//section[hasclass('section-buy')]" position="after">
+                <section class="as-trust-features" id="as-trust-features">
+                    <div class="container">
+
+                        <!-- Section header -->
+                        <div class="as-trust-header">
+                            <p class="as-kicker-upper">為什麼選擇極電資訊</p>
+                            <h2>購機首選，35 年深耕不只是口號</h2>
+                        </div>
+
+                        <!-- ─── 六大信賴保證 (Features 1–6) ─────────── -->
+                        <div class="as-feat-grid">
+
+                            <!-- 1. 35年品牌 -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">品牌信賴</span>
+                                <h3 class="as-feat-title">自 1990 年深耕逾 35 年</h3>
+                                <p>超過三十五年的 Apple 授權經銷商，是您最值得信賴的購機夥伴。</p>
+                            </div>
+
+                            <!-- 2. Jamf Elite -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">專業認證</span>
+                                <h3 class="as-feat-title">Jamf Elite 認證經銷商</h3>
+                                <p>Apple 設備大量部署與 MDM 管理的專業首選，學校 IT 採購的信任夥伴。</p>
+                            </div>
+
+                            <!-- 3. 校園體驗中心 -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">實體門市</span>
+                                <h3 class="as-feat-title">師大 &amp; 世新校園體驗中心</h3>
+                                <p>臺北兩間校園門市，親臨體驗、諮詢、維修一站搞定，猶豫也能安心決定。</p>
+                            </div>
+
+                            <!-- 4. 認證工程師 -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">工程師團隊</span>
+                                <h3 class="as-feat-title">Apple / Jamf Pro 認證工程師</h3>
+                                <p>多位官方認證工程師隨時為您服務，專業能力有憑有據，售後不用擔心。</p>
+                            </div>
+
+                            <!-- 5. 軟硬體諮詢 + 教育訓練 -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">全程服務</span>
+                                <h3 class="as-feat-title">軟硬體諮詢與教育訓練</h3>
+                                <p>從選機、部署到售後教育訓練，客製化服務讓科技真正落地在你的學習與工作中。</p>
+                            </div>
+
+                            <!-- 6. 多元聯絡管道 -->
+                            <div class="as-feat-card">
+                                <span class="as-feat-kicker">即時客服</span>
+                                <h3 class="as-feat-title">LINE / Email / Messenger</h3>
+                                <p>有問題隨時找得到我們。三大通路快速回覆，不讓你空等。</p>
+                            </div>
+
+                        </div>
+
+                        <!-- ─── Feature 7: 學校/機構採購 CTA ─────────── -->
+                        <div class="as-b2b-cta">
+                            <div class="as-b2b-text">
+                                <span class="as-feat-kicker as-feat-kicker--light">企業 &amp; 學校採購</span>
+                                <h3>Mac 教室 · iPad 大量部署 · BYOD 計畫</h3>
+                                <p>學校或機構採購需求？我們擁有豐富的共契 BOT、Mac 教室建置與
+                                    iPad 大量部署執行經驗，全程協助從詢價到交機。</p>
+                            </div>
+                            <div class="as-b2b-action">
+                                <a href="/contactus" class="as-btn-cta">聯絡採購專員</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

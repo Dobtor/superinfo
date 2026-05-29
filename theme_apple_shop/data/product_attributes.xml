@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Apple-style product attributes.
+
+        Six attributes drive the configurator. Each carries:
+        - display_type: radio_card (chip), color (color), radio (others)
+        - apple_section_order: order in the right panel (lower first)
+        - apple_group_label: legend text shown above the group
+        Values carry apple_description / apple_sub_label / apple_price_display
+        for richer card display.
+    -->
+    <data noupdate="1">
+
+        <!-- ① 晶片 (Chip) — radio_card with starting-price display -->
+        <record id="attr_chip" model="product.attribute">
+            <field name="name">晶片</field>
+            <field name="display_type">radio_card</field>
+            <field name="create_variant">dynamic</field>
+            <field name="apple_section_order">10</field>
+            <field name="apple_group_label">晶片。</field>
+            <field name="apple_subheading">各款強大選項任你選擇。</field>
+            <field name="apple_price_display">starting</field>
+        </record>
+        <record id="attr_val_chip_m4" model="product.attribute.value">
+            <field name="name">M4 晶片</field>
+            <field name="attribute_id" ref="attr_chip"/>
+            <field name="sequence">10</field>
+            <field name="apple_description">澎湃的效能表現，幾乎可助你從容駕馭所有想做的工作。</field>
+            <field name="apple_sub_label">10 核心 CPU、10 核心 GPU、16 核心神經網路引擎</field>
+        </record>
+        <record id="attr_val_chip_m4_pro" model="product.attribute.value">
+            <field name="name">M4 Pro 晶片</field>
+            <field name="attribute_id" ref="attr_chip"/>
+            <field name="sequence">20</field>
+            <field name="apple_description">擁有所有 M4 具備的先進技術，但威力更增強，可駕馭更繁重的任務。</field>
+            <field name="apple_sub_label">12 核心 CPU、16 核心 GPU、16 核心神經網路引擎</field>
+        </record>
+        <record id="attr_val_chip_m4_max" model="product.attribute.value">
+            <field name="name">M4 Max 晶片</field>
+            <field name="attribute_id" ref="attr_chip"/>
+            <field name="sequence">30</field>
+            <field name="apple_description">為高階用戶與創作者打造的極致效能。</field>
+            <field name="apple_sub_label">14 核心 CPU、32 核心 GPU、16 核心神經網路引擎</field>
+        </record>
+        <record id="attr_val_chip_m3" model="product.attribute.value">
+            <field name="name">M3 晶片</field>
+            <field name="attribute_id" ref="attr_chip"/>
+            <field name="sequence">40</field>
+            <field name="apple_description">高效能與長續航的優異組合。</field>
+            <field name="apple_sub_label">8 核心 CPU、10 核心 GPU、16 核心神經網路引擎</field>
+        </record>
+
+        <!-- ② 記憶體 (Memory) — radio, no per-option price -->
+        <record id="attr_memory" model="product.attribute">
+            <field name="name">記憶體</field>
+            <field name="display_type">radio</field>
+            <field name="create_variant">dynamic</field>
+            <field name="apple_section_order">20</field>
+            <field name="apple_group_label">記憶體。</field>
+            <field name="apple_subheading">選擇適合的容量。</field>
+            <field name="apple_price_display">none</field>
+        </record>
+        <record id="attr_val_mem_8" model="product.attribute.value">
+            <field name="name">8GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">10</field>
+        </record>
+        <record id="attr_val_mem_16" model="product.attribute.value">
+            <field name="name">16GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">20</field>
+        </record>
+        <record id="attr_val_mem_24" model="product.attribute.value">
+            <field name="name">24GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">30</field>
+        </record>
+        <record id="attr_val_mem_32" model="product.attribute.value">
+            <field name="name">32GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">40</field>
+        </record>
+        <record id="attr_val_mem_48" model="product.attribute.value">
+            <field name="name">48GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">50</field>
+        </record>
+        <record id="attr_val_mem_64" model="product.attribute.value">
+            <field name="name">64GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">60</field>
+        </record>
+        <record id="attr_val_mem_128" model="product.attribute.value">
+            <field name="name">128GB</field>
+            <field name="attribute_id" ref="attr_memory"/>
+            <field name="sequence">70</field>
+        </record>
+
+        <!-- ③ 儲存裝置 (Storage) — radio, no per-option price -->
+        <record id="attr_storage" model="product.attribute">
+            <field name="name">儲存裝置</field>
+            <field name="display_type">radio</field>
+            <field name="create_variant">dynamic</field>
+            <field name="apple_section_order">30</field>
+            <field name="apple_group_label">儲存裝置。</field>
+            <field name="apple_subheading">選擇需要的儲存空間大小。</field>
+            <field name="apple_price_display">none</field>
+        </record>
+        <record id="attr_val_storage_256" model="product.attribute.value">
+            <field name="name">256GB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">10</field>
+        </record>
+        <record id="attr_val_storage_512" model="product.attribute.value">
+            <field name="name">512GB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">20</field>
+        </record>
+        <record id="attr_val_storage_1tb" model="product.attribute.value">
+            <field name="name">1TB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">30</field>
+        </record>
+        <record id="attr_val_storage_2tb" model="product.attribute.value">
+            <field name="name">2TB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">40</field>
+        </record>
+        <record id="attr_val_storage_4tb" model="product.attribute.value">
+            <field name="name">4TB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">50</field>
+        </record>
+        <record id="attr_val_storage_8tb" model="product.attribute.value">
+            <field name="name">8TB</field>
+            <field name="attribute_id" ref="attr_storage"/>
+            <field name="sequence">60</field>
+        </record>
+
+        <!-- ④ 顏色 (Color) — color -->
+        <record id="attr_color" model="product.attribute">
+            <field name="name">顏色</field>
+            <field name="display_type">color</field>
+            <field name="create_variant">always</field>
+            <field name="apple_section_order">5</field>
+            <field name="apple_group_label">顏色。選擇你喜歡的色調。</field>
+        </record>
+        <record id="attr_val_color_silver" model="product.attribute.value">
+            <field name="name">銀色</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#E3E4E5</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="attr_val_color_starlight" model="product.attribute.value">
+            <field name="name">星光</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#F0E5D2</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="attr_val_color_midnight" model="product.attribute.value">
+            <field name="name">午夜</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#191970</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="attr_val_color_space_gray" model="product.attribute.value">
+            <field name="name">太空灰</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#5C5C5C</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="attr_val_color_space_black" model="product.attribute.value">
+            <field name="name">深空黑</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#1A1A1A</field>
+            <field name="sequence">50</field>
+        </record>
+        <!-- MacBook Neo exclusive colours (matches reference Apple swatch images) -->
+        <record id="attr_val_color_blush" model="product.attribute.value">
+            <field name="name">蜜桃粉</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#F4C7BC</field>
+            <field name="sequence">60</field>
+        </record>
+        <record id="attr_val_color_citrus" model="product.attribute.value">
+            <field name="name">柑橘黃</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#F6C76C</field>
+            <field name="sequence">70</field>
+        </record>
+        <record id="attr_val_color_indigo" model="product.attribute.value">
+            <field name="name">靛藍</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#4D5779</field>
+            <field name="sequence">80</field>
+        </record>
+
+        <!-- ⑤ 乙太網路 (Ethernet) — radio_card (Mac mini specific), no per-option price -->
+        <record id="attr_ethernet" model="product.attribute">
+            <field name="name">乙太網路</field>
+            <field name="display_type">radio_card</field>
+            <field name="create_variant">dynamic</field>
+            <field name="apple_section_order">40</field>
+            <field name="apple_group_label">乙太網路。</field>
+            <field name="apple_subheading">選取速度。</field>
+            <field name="apple_price_display">none</field>
+        </record>
+        <record id="attr_val_ether_1g" model="product.attribute.value">
+            <field name="name">Gigabit 乙太網路</field>
+            <field name="attribute_id" ref="attr_ethernet"/>
+            <field name="sequence">10</field>
+            <field name="apple_description">標準網路功能，連結速度最高可達 1Gb。</field>
+        </record>
+        <record id="attr_val_ether_10g" model="product.attribute.value">
+            <field name="name">10 Gigabit 乙太網路</field>
+            <field name="attribute_id" ref="attr_ethernet"/>
+            <field name="sequence">20</field>
+            <field name="apple_description">更高的連線頻寬，連結速度最高可達 10Gb。</field>
+        </record>
+
+        <!-- ⑥ 鍵盤布局 (Keyboard Layout) — radio -->
+        <record id="attr_keyboard" model="product.attribute">
+            <field name="name">鍵盤</field>
+            <field name="display_type">radio</field>
+            <field name="create_variant">no_variant</field>
+            <field name="apple_section_order">50</field>
+            <field name="apple_group_label">鍵盤布局。</field>
+        </record>
+        <record id="attr_val_kb_zhuyin" model="product.attribute.value">
+            <field name="name">注音</field>
+            <field name="attribute_id" ref="attr_keyboard"/>
+            <field name="sequence">10</field>
+        </record>
+        <record id="attr_val_kb_cangjie" model="product.attribute.value">
+            <field name="name">倉頡</field>
+            <field name="attribute_id" ref="attr_keyboard"/>
+            <field name="sequence">20</field>
+        </record>
+        <record id="attr_val_kb_simplified" model="product.attribute.value">
+            <field name="name">簡體中文</field>
+            <field name="attribute_id" ref="attr_keyboard"/>
+            <field name="sequence">30</field>
+        </record>
+        <record id="attr_val_kb_english" model="product.attribute.value">
+            <field name="name">美式英文</field>
+            <field name="attribute_id" ref="attr_keyboard"/>
+            <field name="sequence">40</field>
+        </record>
+
+    </data>
+</odoo>

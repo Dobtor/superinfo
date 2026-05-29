@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add Apple-specific tab to product.template form -->
+    <record id="product_template_form_apple" model="ir.ui.view">
+        <field name="name">product.template.form.apple</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Apple Configurator" name="apple_configurator"
+                      invisible="not is_mac_product">
+                    <group>
+                        <group>
+                            <field name="is_mac_product" readonly="1"/>
+                            <field name="mac_color_attribute_id"
+                                   domain="[('display_type', '=', 'color')]"/>
+                        </group>
+                    </group>
+                    <group string="Default Selected Options (when configurator first loads)">
+                        <field name="mac_default_ptav_ids" nolabel="1" widget="many2many_tags"
+                               domain="[('product_tmpl_id', '=', id)]"/>
+                    </group>
+                    <group string="Compare Table Specs (shown at bottom of configurator)">
+                        <field name="mac_compare_spec_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="label"/>
+                                <field name="value"/>
+                                <field name="icon" widget="image" optional="hide"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

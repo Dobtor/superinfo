@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mac_compare_spec_user,mac.compare.spec.user,base.model_mac_compare_spec,base.group_user,1,0,0,0
+access_mac_compare_spec_manager,mac.compare.spec.manager,base.model_mac_compare_spec,base.group_system,1,1,1,1
+access_mac_compare_spec_public,mac.compare.spec.public,base.model_mac_compare_spec,base.group_public,1,0,0,0
+access_mac_compare_spec_portal,mac.compare.spec.portal,base.model_mac_compare_spec,base.group_portal,1,0,0,0
