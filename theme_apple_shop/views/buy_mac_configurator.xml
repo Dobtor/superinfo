@@ -79,6 +79,21 @@
                                         <t t-if="color_line">
                                             <div class="color-swatches" role="radiogroup" aria-label="顏色">
                                                 <t t-foreach="color_line.product_template_value_ids" t-as="cptav">
+                                                    <!--
+                                                        顏色 swatch 本身是 <button>，收不進 input.ptav-input:checked，
+                                                        導致加購（apple_configurator.js _onAddToBag 與 byod 鏡像 bridge）
+                                                        漏掉顏色維度 → 有顏色的 Mac 反查不到變體。
+                                                        補一個同 data-ptav-id 的 hidden radio（預設選 default 那一個），
+                                                        swatch click 會勾選對應 radio，讓兩條加購路徑都收得到顏色。
+                                                    -->
+                                                    <input type="radio" class="ptav-input"
+                                                           t-attf-name="ptav-attr-#{cptav.attribute_id.id}"
+                                                           t-att-checked="(cptav in default_ptavs) or None"
+                                                           t-att-data-ptav-id="cptav.id"
+                                                           t-att-data-attribute-id="cptav.attribute_id.id"
+                                                           t-att-data-price-extra="cptav.price_extra"
+                                                           t-att-data-display-name="cptav.name"
+                                                           hidden="hidden"/>
                                                     <button type="button" class="swatch" role="radio"
                                                             t-att-aria-checked="'true' if cptav in default_ptavs else 'false'"
                                                             t-att-aria-label="cptav.name"
