@@ -1620,3 +1620,165 @@
         margin-bottom: 2px;
     }
 }
+// ─── Laser Engraving Section ────────────────────────────────
+.as-laser-step {
+    .as-laser-free-badge {
+        display: inline-block;
+        background: rgba(52, 199, 89, 0.12);
+        color: #1a7f37;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        padding: 2px 8px;
+        border-radius: $apple-radius-pill;
+        border: 1px solid rgba(52, 199, 89, 0.25);
+    }
+
+    // ── Expandable drawer ───────────────────────
+    .as-laser-drawer {
+        margin: $apple-sp-md 0 0;
+        padding: $apple-sp-xl;
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
+        border-radius: $apple-radius-lg;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        animation: laserDrawerIn 280ms $apple-ease-default both;
+    }
+
+    @keyframes laserDrawerIn {
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    // ── Input fields ────────────────────────────
+    .as-laser-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: $apple-sp-md;
+        margin-bottom: $apple-sp-xl;
+    }
+
+    .as-laser-field {
+        position: relative;
+    }
+
+    .as-laser-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: $apple-gray-5;
+        letter-spacing: 0.04em;
+        margin-bottom: 6px;
+
+    }
+
+    .as-laser-input {
+        width: 100%;
+        padding: 10px 52px 10px 14px;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-md;
+        background: #fff;
+        font-size: 15px;
+        font-family: $apple-font-text;
+        color: $apple-black;
+        transition: border-color 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default;
+        outline: none;
+
+        &::placeholder {
+            color: $apple-gray-3;
+        }
+
+        &:focus {
+            border-color: $apple-blue;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+    }
+
+    .as-laser-counter {
+        position: absolute;
+        right: 12px;
+        bottom: 10px;
+        font-size: 11px;
+        color: $apple-gray-4;
+        pointer-events: none;
+        font-variant-numeric: tabular-nums;
+    }
+
+    // ── Preview stage ───────────────────────────
+    .as-laser-preview {
+        text-align: center;
+    }
+
+    .as-laser-preview-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $apple-gray-4;
+        margin: 0 0 $apple-sp-md;
+    }
+
+    .as-laser-preview-stage {
+        display: flex;
+        justify-content: center;
+    }
+
+    .as-laser-preview-device {
+        position: relative;
+        width: 280px;
+        height: 160px;
+        background: linear-gradient(145deg, #e8e8ed 0%, #d5d5db 60%, #c8c8ce 100%);
+        border-radius: 12px;
+        border: 1px solid rgba(0,0,0,0.08);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12),
+                    inset 0 1px 0 rgba(255,255,255,0.70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // Apple logo watermark
+        &::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 38px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 4px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .as-laser-preview-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .as-laser-preview-line1 {
+        font-family: $apple-font-display;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        color: rgba(0, 0, 0, 0.45);
+        // Laser engraving subtle shadow
+        text-shadow: 0 1px 2px rgba(255,255,255,0.40);
+        transition: color 150ms ease, text-shadow 150ms ease;
+        max-width: 240px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .as-laser-preview-note {
+        font-size: 11px;
+        color: $apple-gray-3;
+        margin: $apple-sp-sm 0 0;
+    }
+}

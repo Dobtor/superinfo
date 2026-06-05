@@ -20,6 +20,8 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
         "change input.optional-input": "_onOptionalChange",
         "change input.optional-toggle-input": "_onSoftwareToggle",
         "change input.tradein-input": "_onTradeinToggle",
+        "change input.laser-toggle-input": "_onLaserToggle",
+        "input .laser-input": "_onLaserInput",
         "click .swatch": "_onSwatchClick",
         "click .add-to-bag": "_onAddToBag",
         "click .help-trigger": "_onHelpClick",
@@ -194,6 +196,66 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
         }
     },
 
+    // ─── Laser Engraving ──────────────────────────
+    _onLaserToggle(ev) {
+        const input = ev.currentTarget;
+        // update is-selected on all radio rows
+        this.el.querySelectorAll('input[name="laser-engrave"]').forEach((r) => {
+            const wrap = r.closest(".form-selector");
+            if (wrap) wrap.classList.toggle("is-selected", r.checked);
+        });
+        const drawer = this.el.querySelector(".as-laser-drawer");
+        if (!drawer) return;
+        const show = input.value === "1" && input.checked;
+        if (show) {
+            drawer.removeAttribute("hidden");
+            this._syncLaserPreviewColor();
+            // focus first input
+            const first = drawer.querySelector(".laser-input");
+            if (first) first.focus();
+        } else {
+            drawer.setAttribute("hidden", "hidden");
+            // clear inputs & preview when dismissed
+            drawer.querySelectorAll(".laser-input").forEach((i) => { i.value = ""; });
+            this._updateLaserPreview();
+        }
+    },
+
+    _onLaserInput(ev) {
+        const input = ev.currentTarget;
+        // update character counter
+        const field = input.closest(".as-laser-field");
+        if (field) {
+            const counter = field.querySelector(".as-laser-count");
+            if (counter) counter.textContent = [...input.value].length;
+        }
+        this._updateLaserPreview();
+    },
+
+    _updateLaserPreview() {
+        const line1Input = this.el.querySelector("#laser-line1");
+        const prev1 = this.el.querySelector(".as-laser-preview-line1");
+        if (!prev1) return;
+        const text1 = line1Input ? line1Input.value.trim() : "";
+        prev1.textContent = text1;
+    },
+
+    _syncLaserPreviewColor() {
+        const device = this.el.querySelector(".as-laser-preview-device");
+        if (!device) return;
+        // Find the active swatch's background-color
+        const activeSwatch = this.el.querySelector(".swatch[aria-checked='true']");
+        if (activeSwatch) {
+            const bg = activeSwatch.style.backgroundColor;
+            if (bg) {
+                device.style.background = `radial-gradient(ellipse at 30% 30%, color-mix(in srgb, ${bg} 80%, #fff), color-mix(in srgb, ${bg} 50%, #fff))`;
+                return;
+            }
+        }
+        // fallback: light silver
+        device.style.background = "";
+    },
+
     _onSwatchClick(ev) {
         const swatch = ev.currentTarget;
         // Toggle aria-checked among siblings
@@ -201,6 +263,7 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
             s.setAttribute("aria-checked", "false");
         });
         swatch.setAttribute("aria-checked", "true");
+        this._syncLaserPreviewColor();
 
         // Find the matching ptav input and check it (this triggers price + image)
         const ptavId = swatch.dataset.ptavId;
