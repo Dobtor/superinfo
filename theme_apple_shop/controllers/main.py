@@ -96,6 +96,7 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         attribute_lines = product._get_apple_attribute_groups()
         default_ptavs = product.mac_default_ptav_ids or self._compute_initial_default_ptavs(product)
         exclusion_table = json.dumps(product._get_apple_exclusion_table())
+        color_image_map = self._build_color_image_map(product)
         return request.render('theme_apple_shop.buy_mac_configurator', {
             'product': product,
             'attribute_lines': attribute_lines,
@@ -105,8 +106,63 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
                 lambda s: (s.sequence, s.id)
             ),
             'exclusion_table': exclusion_table,
+            'color_image_map': color_image_map,
             'main_object': product,
         })
+
+    def _build_color_image_map(self, product):
+        """Return {ptav_id: image_url} for each color swatch.
+
+        Strategy (in order):
+        1. gallery images with product_variant_id whose combination includes this color PTAV
+        2. variant's own image_variant_1024 (if variant exists and has an image)
+        3. gallery images matched positionally to color PTAVs (index order)
+        4. fallback: product template main image
+        """
+        color_attr = product.mac_color_attribute_id
+        if not color_attr:
+            return {}
+
+        color_line = product.attribute_line_ids.filtered(
+            lambda l: l.attribute_id == color_attr
+        )
+        if not color_line:
+            return {}
+
+        color_ptavs = color_line.product_template_value_ids
+        fallback_url = '/web/image/product.template/%d/image_1024' % product.id
+        result = {}
+
+        # Strategy 1 & 2: try existing variants
+        for ptav in color_ptavs:
+            variant = product.product_variant_ids.filtered(
+                lambda v: ptav in v.product_template_attribute_value_ids
+            )[:1]
+            if variant:
+                # prefer gallery image linked to this variant
+                gimg = product.product_template_image_ids.filtered(
+                    lambda i: i.product_variant_id and i.product_variant_id.id == variant.id
+                )[:1]
+                if gimg:
+                    result[ptav.id] = '/web/image/product.image/%d/image_1024' % gimg.id
+                elif variant.image_variant_1024:
+                    result[ptav.id] = '/web/image/product.product/%d/image_variant_1024' % variant.id
+
+        # Strategy 3: positional fallback — gallery images (excluding variant-linked ones)
+        # paired with color PTAVs in declaration order
+        if len(result) < len(color_ptavs):
+            unlinked_imgs = product.product_template_image_ids.filtered(
+                lambda i: not i.product_variant_id
+            ).sorted(lambda i: i.sequence)
+            for i, ptav in enumerate(color_ptavs):
+                if ptav.id not in result and i < len(unlinked_imgs):
+                    result[ptav.id] = '/web/image/product.image/%d/image_1024' % unlinked_imgs[i].id
+
+        # Strategy 4: final fallback
+        for ptav in color_ptavs:
+            result.setdefault(ptav.id, fallback_url)
+
+        return result
 
     def _compute_initial_default_ptavs(self, product):
         """If admin didn't set mac_default_ptav_ids, pick the cheapest PTAV
