@@ -366,6 +366,88 @@
                                         </t>
 
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- 雷射刻字 (Laser Engraving) -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <div class="rf-bfe-step rf-bfe-dimension as-laser-step">
+                                            <fieldset class="rc-dimension rf-bfe-product-dimension-group">
+                                                <legend>
+                                                    <h2 class="rs-mac-bfe-step-header typography-eyebrow">
+                                                        <span>雷射刻字。</span>
+                                                        <span class="as-subheading">留下專屬你的印記。</span>
+                                                    </h2>
+                                                </legend>
+
+                                                <div class="rc-dimension-selector-group form-selector-group">
+
+                                                    <!-- 不刻字 -->
+                                                    <div class="rc-dimension-selector-row form-selector is-selected">
+                                                        <input type="radio" class="form-selector-input laser-toggle-input"
+                                                               name="laser-engrave" id="laser-no"
+                                                               value="0" checked="checked"/>
+                                                        <label class="form-selector-label" for="laser-no">
+                                                            <span class="row">
+                                                                <span class="column form-selector-left-col">
+                                                                    <span class="form-selector-title">不用了，謝謝</span>
+                                                                </span>
+                                                                <span class="column form-selector-right-col"/>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- 加入刻字 -->
+                                                    <div class="rc-dimension-selector-row form-selector">
+                                                        <input type="radio" class="form-selector-input laser-toggle-input"
+                                                               name="laser-engrave" id="laser-yes"
+                                                               value="1"/>
+                                                        <label class="form-selector-label" for="laser-yes">
+                                                            <span class="row">
+                                                                <span class="column form-selector-left-col">
+                                                                    <span class="form-selector-title">新增免費雷射刻字</span>
+                                                                    <span class="form-label-small">30 字元</span>
+                                                                </span>
+                                                                <span class="column form-selector-right-col">
+                                                                    <span class="form-label-small as-laser-free-badge">免費</span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- 展開的刻字輸入區 -->
+                                                <div class="as-laser-drawer" hidden="hidden">
+                                                    <div class="as-laser-inputs">
+                                                        <div class="as-laser-field">
+                                                            <label class="as-laser-label" for="laser-line1">刻字內容</label>
+                                                            <input type="text"
+                                                                   id="laser-line1"
+                                                                   name="laser_line1"
+                                                                   class="as-laser-input laser-input"
+                                                                   maxlength="30"
+                                                                   placeholder="僅限文字與數字，不支援 Emoji 或特殊符號"
+                                                                   autocomplete="off"/>
+                                                            <span class="as-laser-counter"><span class="as-laser-count">0</span> / 30</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- 即時預覽 -->
+                                                    <div class="as-laser-preview">
+                                                        <p class="as-laser-preview-label">預覽效果</p>
+                                                        <div class="as-laser-preview-stage">
+                                                            <div class="as-laser-preview-device">
+                                                                <div class="as-laser-preview-text">
+                                                                    <span class="as-laser-preview-line1"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="as-laser-preview-note">僅供參考，實際刻字位置與大小以出貨為準</p>
+                                                    </div>
+                                                </div>
+
+                                            </fieldset>
+                                        </div>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <!-- Summary panel (header + price + 繼續 + 收藏/分享) -->
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <div class="rf-bfe-summary">

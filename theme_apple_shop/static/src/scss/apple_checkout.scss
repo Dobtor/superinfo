@@ -1,0 +1,303 @@
+// ============================================
+// /shop/checkout — Apple-style checkout & address & payment
+// ============================================
+
+// All checkout-related pages share .oe_website_sale as a wrapper class.
+// We target each page variant explicitly to avoid leaking styles.
+
+$checkout-pages: (
+    ".oe_website_sale.o_website_sale_checkout",
+    ".oe_website_sale.o_wsale_address_fill",
+    ".oe_website_sale.o_wsale_payment"
+);
+
+// ─── Mixin: shared checkout styles ───────────
+@mixin checkout-base {
+    background: $apple-bg-page;
+    font-family: $apple-font-text;
+    color: $apple-black;
+
+    // ─── Progress bar (wizard steps) ──────────
+    // rendered OUTSIDE the container, just inside #wrap
+    .o_wizard_steps,
+    ol.o_wizard_steps,
+    .step_wizard_content {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        padding: $apple-sp-md $apple-sp-xl;
+        font-size: 13px;
+        font-weight: 500;
+
+        li, .breadcrumb-item {
+            color: $apple-gray-4;
+            &.active, &.o_current { color: $apple-blue; font-weight: 700; }
+            & + li::before, & + .breadcrumb-item::before {
+                color: $apple-gray-3;
+            }
+        }
+    }
+
+    // ─── Form inputs ──────────────────────────
+    .form-control,
+    .form-select {
+        border: 1.5px solid $apple-glass-border !important;
+        border-radius: $apple-radius-md !important;
+        background: #fff !important;
+        color: $apple-black !important;
+        font-size: 15px !important;
+        font-family: $apple-font-text !important;
+        padding: 10px 14px !important;
+        box-shadow: none !important;
+        transition: border-color 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default !important;
+
+        &::placeholder { color: $apple-gray-3 !important; }
+
+        &:focus {
+            border-color: $apple-blue !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+            outline: none !important;
+        }
+    }
+
+    .form-label,
+    label.col-form-label {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: $apple-gray-5 !important;
+        letter-spacing: 0.02em !important;
+        margin-bottom: 6px !important;
+    }
+
+    // ─── Primary button ───────────────────────
+    .btn-primary:not(.o_skip_to_content):not(.o_navlink_background):not(.oe_unremovable),
+    a[name="website_sale_main_button"],
+    button[name="website_sale_main_button"] {
+        background: $apple-blue !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: $apple-radius-pill !important;
+        padding: 12px 28px !important;
+        font-family: $apple-font-text !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.01em !important;
+        text-decoration: none !important;
+        transition: background 200ms $apple-ease-default,
+                    transform 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default !important;
+
+        &:hover, &:focus {
+            background: darken(#3b82f6, 8%) !important;
+            color: #fff !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.30) !important;
+        }
+        &:active { transform: translateY(0) !important; }
+    }
+
+    // ─── Secondary / outline button ───────────
+    .btn-outline-secondary,
+    .btn-secondary:not(.o_navlink_background) {
+        color: $apple-gray-6 !important;
+        background: transparent !important;
+        border: 1.5px solid $apple-glass-border !important;
+        border-radius: $apple-radius-pill !important;
+        padding: 11px 24px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: border-color 200ms $apple-ease-default,
+                    background 200ms $apple-ease-default !important;
+
+        &:hover {
+            border-color: rgba(59, 130, 246, 0.40) !important;
+            color: $apple-blue !important;
+            background: rgba(59, 130, 246, 0.05) !important;
+        }
+    }
+
+    // ─── Divider & alerts ─────────────────────
+    hr { border-color: $apple-glass-border; opacity: 1; }
+
+    .alert-info {
+        background: rgba(59, 130, 246, 0.08);
+        border: 1px solid rgba(59, 130, 246, 0.20);
+        border-radius: $apple-radius-md;
+        color: $apple-blue;
+        font-size: 14px;
+    }
+
+    .alert-warning {
+        background: rgba(251, 191, 36, 0.10);
+        border: 1px solid rgba(251, 191, 36, 0.30);
+        border-radius: $apple-radius-md;
+        font-size: 14px;
+    }
+}
+
+// ─── Apply to each checkout page ─────────────
+.oe_website_sale.o_website_sale_checkout,
+.oe_website_sale.o_wsale_address_fill,
+.oe_website_sale.o_wsale_payment_page {
+    @include checkout-base;
+}
+
+// ─── Address fill page extras ─────────────────
+.oe_website_sale.o_wsale_address_fill {
+    h3, h2 {
+        font-family: $apple-font-display;
+        font-size: 22px;
+        font-weight: 700;
+        color: $apple-black;
+        letter-spacing: -0.02em;
+        margin-bottom: $apple-sp-xl;
+    }
+}
+
+// ─── Checkout page extras ─────────────────────
+.oe_website_sale.o_website_sale_checkout {
+
+    // Left column forms
+    .oe_cart {
+        h4, h3 {
+            font-family: $apple-font-display;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            color: $apple-blue;
+            margin-bottom: $apple-sp-md;
+        }
+
+        // Address cards
+        .card {
+            border: 1.5px solid $apple-glass-border !important;
+            border-radius: $apple-radius-lg !important;
+            background: $apple-glass-bg !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: none !important;
+            transition: border-color 200ms $apple-ease-default,
+                        box-shadow 200ms $apple-ease-default;
+
+            &:hover {
+                border-color: rgba(59, 130, 246, 0.30) !important;
+                box-shadow: $apple-shadow-card-hv !important;
+            }
+
+            &.border-primary {
+                border-color: $apple-blue !important;
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12) !important;
+            }
+
+            .card-body { padding: $apple-sp-lg; }
+            .card-title { font-family: $apple-font-display; font-size: 15px; font-weight: 600; }
+            .card-text { font-size: 13px; color: $apple-gray-5; line-height: 1.6; }
+        }
+    }
+
+    // Right: order summary accordion
+    #o_wsale_total_accordion,
+    #o_cart_summary {
+        .o_total_card,
+        .accordion-item {
+            background: $apple-glass-bg !important;
+            border: 1.5px solid $apple-glass-border !important;
+            border-radius: $apple-radius-xl !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: transparent !important;
+            color: $apple-black !important;
+            font-family: $apple-font-display;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: none !important;
+            padding: $apple-sp-lg;
+
+            &::after { opacity: 0.4; }
+            &:not(.collapsed) { color: $apple-black !important; }
+            b { font-family: $apple-font-display; }
+        }
+
+        table#cart_products {
+            font-size: 13px;
+            td { vertical-align: middle; }
+
+            .td-img img {
+                border-radius: $apple-radius-sm;
+                width: 52px; height: 52px;
+                object-fit: contain;
+            }
+
+            h6 {
+                font-family: $apple-font-display;
+                font-size: 13px; font-weight: 600;
+                color: $apple-black; margin: 0;
+            }
+        }
+
+        #amount_total_summary,
+        .monetary_field {
+            font-family: $apple-font-display;
+            font-weight: 600;
+            color: $apple-black;
+        }
+    }
+}
+
+// ─── Progress breadcrumb (rendered in #wrap directly) ─────
+// The wizard nav sits outside .oe_website_sale so needs global target
+#wrap .o_wizard,
+#wrap nav.o_wizard,
+#wrap .o_checkout_steps_breadcrumb {
+    background: $apple-bg-page;
+    padding: $apple-sp-md $apple-sp-xl;
+    border-bottom: 1px solid $apple-glass-border;
+    font-family: $apple-font-text;
+    font-size: 13px;
+
+    .breadcrumb {
+        margin: 0;
+        gap: $apple-sp-xs;
+    }
+
+    .breadcrumb-item {
+        color: $apple-gray-4;
+        font-weight: 500;
+
+        &.active {
+            color: $apple-blue;
+            font-weight: 700;
+        }
+
+        a {
+            color: $apple-gray-5;
+            text-decoration: none;
+            &:hover { color: $apple-blue; }
+        }
+
+        + .breadcrumb-item::before {
+            color: $apple-gray-3;
+        }
+    }
+}
+
+// ─── Confirmation page ────────────────────────
+.oe_website_sale.o_wsale_confirmation {
+    @include checkout-base;
+
+    h1, h2 { font-family: $apple-font-display; letter-spacing: -0.02em; }
+
+    .o_website_sale_confirmation_main {
+        background: $apple-glass-bg;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-xl;
+        padding: $apple-sp-2xl;
+    }
+}

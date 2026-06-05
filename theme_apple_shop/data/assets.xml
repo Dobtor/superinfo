@@ -50,6 +50,12 @@
         <field name="path">theme_apple_shop/static/src/scss/apple_shop_trust.scss</field>
     </record>
 
+    <record id="asset_checkout" model="ir.asset">
+        <field name="name">Apple Shop Checkout SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_checkout.scss</field>
+    </record>
+
     <record id="asset_landing_js" model="ir.asset">
         <field name="name">Apple Shop Landing JS</field>
         <field name="bundle">web.assets_frontend</field>
