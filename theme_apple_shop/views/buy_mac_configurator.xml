@@ -85,7 +85,7 @@
                                                             t-att-data-ptav-id="cptav.id"
                                                             t-att-data-attribute-id="cptav.attribute_id.id"
                                                             t-att-style="'background-color: ' + (cptav.product_attribute_value_id.html_color or '#888')"
-                                                            t-att-data-image-url="'/web/image/product.template/' + str(product.id) + '/image_1024'"/>
+                                                            t-att-data-image-url="color_image_map.get(cptav.id, '/web/image/product.template/' + str(product.id) + '/image_1024')"/>
                                                 </t>
                                             </div>
                                             <p class="color-name">
