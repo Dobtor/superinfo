@@ -83,9 +83,8 @@
                                             </t>
                                             <t t-else="">
                                                 <form class="ac-form"
-                                                      action="/website_form/crm.lead"
-                                                      method="POST"
-                                                      data-success-page="/contactus?success=1">
+                                                      action="/contactus/submit"
+                                                      method="POST">
 
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
 
@@ -195,6 +194,70 @@
                                 </div>
                             </section>
 
+                        </main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── /contactus/thanks — success page ─────────────────────── -->
+    <record id="contactus_thanks_page" model="ir.ui.view">
+        <field name="name">Apple Shop — Contact Us Thanks</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.contactus_thanks</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.contactus_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <main class="apple-contactus">
+                            <section class="ac-thanks">
+                                <div class="container">
+                                    <div class="ac-thanks-card">
+                                        <!-- Animated checkmark -->
+                                        <div class="ac-thanks-icon">
+                                            <svg class="ac-checkmark" viewBox="0 0 52 52">
+                                                <circle class="ac-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                                <path class="ac-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                            </svg>
+                                        </div>
+
+                                        <h1 class="ac-thanks-title">訊息已送出！</h1>
+                                        <p class="ac-thanks-sub">感謝您的來信。<br/>我們的團隊將於 <strong>1–2 個工作天</strong>內與您聯繫。</p>
+
+                                        <!-- What's next -->
+                                        <div class="ac-thanks-steps">
+                                            <div class="ac-thanks-step">
+                                                <span class="ac-thanks-step-num">01</span>
+                                                <div>
+                                                    <h4>確認收件</h4>
+                                                    <p>您很快會收到一封確認信，請確認垃圾郵件夾。</p>
+                                                </div>
+                                            </div>
+                                            <div class="ac-thanks-step">
+                                                <span class="ac-thanks-step-num">02</span>
+                                                <div>
+                                                    <h4>顧問回覆</h4>
+                                                    <p>專業顧問將根據您的需求提供最適合的建議。</p>
+                                                </div>
+                                            </div>
+                                            <div class="ac-thanks-step">
+                                                <span class="ac-thanks-step-num">03</span>
+                                                <div>
+                                                    <h4>開始服務</h4>
+                                                    <p>從選機到部署，我們全程陪同。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Actions -->
+                                        <div class="ac-thanks-actions">
+                                            <a href="/" class="ac-thanks-btn-primary">回到首頁</a>
+                                            <a href="/zh_TW/shop" class="ac-thanks-btn-secondary">繼續選購 Mac</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </main>
                     </div>
                 </t>

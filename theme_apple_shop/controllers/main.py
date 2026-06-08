@@ -53,6 +53,28 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'main_object': request.website,
         })
 
+    @http.route(['/contactus/submit'], type='http', auth='public', website=True,
+                methods=['POST'], csrf=True)
+    def contactus_submit(self, contact_name='', email_from='', phone='',
+                         partner_name='', name='', description='', tag_ids='', **kwargs):
+        """Receive the Apple-style contact form and create a CRM lead."""
+        request.env['crm.lead'].sudo().create({
+            'contact_name': contact_name,
+            'email_from': email_from,
+            'phone': phone,
+            'partner_name': partner_name,
+            'name': name or '(無主旨)',
+            'description': description,
+            'type': 'lead',
+        })
+        return request.redirect('/contactus/thanks')
+
+    @http.route(['/contactus/thanks'], type='http', auth='public', website=True, sitemap=False)
+    def contactus_thanks(self, **kwargs):
+        return request.render('theme_apple_shop.contactus_thanks', {
+            'main_object': request.website,
+        })
+
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
 
     @http.route(

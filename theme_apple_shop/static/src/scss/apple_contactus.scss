@@ -418,3 +418,174 @@
         flex-shrink: 0;
     }
 }
+
+// ─── /contactus/thanks ───────────────────────────────────────
+.apple-contactus {
+    .ac-thanks {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+        background: radial-gradient(ellipse 70% 60% at 50% 20%,
+            rgba(59, 130, 246, 0.07) 0%,
+            transparent 70%);
+    }
+
+    .ac-thanks-card {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $apple-sp-xl;
+    }
+
+    // ── Animated SVG checkmark ──
+    .ac-thanks-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ac-checkmark {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        stroke: $apple-blue;
+        stroke-width: 2;
+    }
+
+    .ac-checkmark-circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke: $apple-blue;
+        fill: rgba(59, 130, 246, 0.08);
+        animation: ac-stroke 0.6s $apple-ease-default forwards;
+    }
+
+    .ac-checkmark-check {
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: ac-stroke 0.4s $apple-ease-default 0.5s forwards;
+    }
+
+    @keyframes ac-stroke {
+        to { stroke-dashoffset: 0; }
+    }
+
+    .ac-thanks-title {
+        font-family: $apple-font-display;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: $apple-black;
+        margin: 0;
+    }
+
+    .ac-thanks-sub {
+        font-size: 17px;
+        color: $apple-gray-5;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    // ── What's next steps ──
+    .ac-thanks-steps {
+        display: flex;
+        flex-direction: column;
+        gap: $apple-sp-md;
+        width: 100%;
+        text-align: left;
+        background: $apple-glass-bg;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-xl;
+        padding: $apple-sp-xl;
+        backdrop-filter: blur($apple-glass-blur);
+        -webkit-backdrop-filter: blur($apple-glass-blur);
+    }
+
+    .ac-thanks-step {
+        display: flex;
+        align-items: flex-start;
+        gap: $apple-sp-md;
+
+        h4 {
+            font-family: $apple-font-display;
+            font-size: 14px;
+            font-weight: 700;
+            color: $apple-black;
+            margin: 0 0 2px;
+        }
+        p {
+            font-size: 13px;
+            color: $apple-gray-4;
+            margin: 0;
+            line-height: 1.5;
+        }
+    }
+
+    .ac-thanks-step-num {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: $apple-radius-md;
+        background: rgba(59, 130, 246, 0.10);
+        color: $apple-blue;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // ── CTA buttons ──
+    .ac-thanks-actions {
+        display: flex;
+        gap: $apple-sp-md;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ac-thanks-btn-primary {
+        display: inline-block;
+        background: $apple-blue;
+        color: #fff;
+        border-radius: $apple-radius-pill;
+        padding: 12px 28px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 200ms $apple-ease-default,
+                    transform 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default;
+        &:hover {
+            background: darken(#3b82f6, 8%);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28);
+        }
+    }
+
+    .ac-thanks-btn-secondary {
+        display: inline-block;
+        color: $apple-blue;
+        border: 1.5px solid rgba(59, 130, 246, 0.35);
+        border-radius: $apple-radius-pill;
+        padding: 11px 24px;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: border-color 200ms $apple-ease-default,
+                    background 200ms $apple-ease-default;
+        &:hover {
+            border-color: $apple-blue;
+            background: rgba(59, 130, 246, 0.06);
+            color: $apple-blue;
+        }
+    }
+}
