@@ -14,6 +14,7 @@ from odoo.http import request
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 from odoo.addons.website_sale.controllers.combo_configurator import WebsiteSaleComboConfiguratorController
 from odoo.addons.website_sale.controllers.product_configurator import WebsiteSaleProductConfiguratorController
+from odoo.addons.website.controllers.main import Website
 
 _logger = logging.getLogger(__name__)
 
@@ -31,6 +32,17 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         if not product:
             return False
         return bool(product.exists()) and product.is_mac_product
+
+    # ─── / (homepage) → Mac landing ────────────────────────────────────
+
+    @http.route('/', auth='public', website=True, sitemap=True)
+    def index(self, **kw):
+        mac_root = request.env.ref(
+            'theme_apple_shop.categ_mac', raise_if_not_found=False
+        )
+        if mac_root:
+            return self._render_mac_landing(mac_root, page_title='極電資訊商店')
+        return super().index(**kw)
 
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
 
