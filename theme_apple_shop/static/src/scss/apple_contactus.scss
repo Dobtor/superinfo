@@ -1,0 +1,420 @@
+// ============================================
+// /contactus — Apple-style Contact Us page
+// ============================================
+
+.apple-contactus {
+    background: $apple-bg-page;
+    font-family: $apple-font-text;
+    color: $apple-black;
+
+    // ─── ① Hero ──────────────────────────────
+    .ac-hero {
+        padding: 80px 0 56px;
+        text-align: center;
+        background: radial-gradient(ellipse 80% 60% at 50% 0%,
+            rgba(59, 130, 246, 0.08) 0%,
+            transparent 70%);
+        border-bottom: 1px solid $apple-glass-border;
+
+        .ac-hero-eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: $apple-blue;
+            margin-bottom: $apple-sp-md;
+        }
+
+        .ac-hero-title {
+            font-family: $apple-font-display;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: $apple-black;
+            margin-bottom: $apple-sp-lg;
+        }
+
+        .ac-hero-sub {
+            font-size: 17px;
+            color: $apple-gray-5;
+            line-height: 1.7;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+    }
+
+    // ─── ② Body grid ─────────────────────────
+    .ac-body {
+        padding: $apple-sp-2xl 0;
+
+        .ac-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: $apple-sp-2xl;
+            align-items: start;
+
+            @media (max-width: 900px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    // ─── Info column ─────────────────────────
+    .ac-info {
+        display: flex;
+        flex-direction: column;
+        gap: $apple-sp-md;
+    }
+
+    .ac-info-card {
+        display: flex;
+        gap: $apple-sp-md;
+        align-items: flex-start;
+        background: $apple-glass-bg;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-lg;
+        padding: $apple-sp-lg;
+        backdrop-filter: blur($apple-glass-blur);
+        -webkit-backdrop-filter: blur($apple-glass-blur);
+        transition: border-color 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default;
+
+        &:hover {
+            border-color: rgba(59, 130, 246, 0.25);
+            box-shadow: $apple-shadow-card-hv;
+        }
+
+        .ac-info-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(59, 130, 246, 0.10);
+            border-radius: $apple-radius-md;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $apple-blue;
+        }
+
+        .ac-info-body {
+            h3 {
+                font-family: $apple-font-display;
+                font-size: 14px;
+                font-weight: 700;
+                color: $apple-black;
+                margin: 0 0 4px;
+            }
+            p {
+                font-size: 14px;
+                color: $apple-gray-5;
+                line-height: 1.6;
+                margin: 0;
+
+                a {
+                    color: $apple-blue;
+                    text-decoration: none;
+                    &:hover { text-decoration: underline; }
+                }
+            }
+            .ac-info-note {
+                font-size: 12px;
+                color: $apple-gray-3;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    // Quick links
+    .ac-quick-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-top: $apple-sp-xs;
+    }
+
+    .ac-quick-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px $apple-sp-md;
+        border-radius: $apple-radius-md;
+        font-size: 14px;
+        font-weight: 500;
+        color: $apple-blue;
+        text-decoration: none;
+        background: transparent;
+        transition: background 150ms $apple-ease-default;
+
+        svg { opacity: 0.7; transition: transform 150ms $apple-ease-default; }
+
+        &:hover {
+            background: rgba(59, 130, 246, 0.07);
+            svg { transform: translateX(3px); opacity: 1; }
+        }
+    }
+
+    // ─── Form card ───────────────────────────
+    .ac-form-wrap {
+        background: $apple-glass-bg;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-xl;
+        padding: $apple-sp-2xl;
+        backdrop-filter: blur($apple-glass-blur);
+        -webkit-backdrop-filter: blur($apple-glass-blur);
+    }
+
+    .ac-form-title {
+        font-family: $apple-font-display;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: $apple-black;
+        margin: 0 0 6px;
+    }
+
+    .ac-form-sub {
+        font-size: 14px;
+        color: $apple-gray-4;
+        margin: 0 0 $apple-sp-xl;
+    }
+
+    .ac-form {
+        display: flex;
+        flex-direction: column;
+        gap: $apple-sp-md;
+    }
+
+    .ac-field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $apple-sp-md;
+
+        @media (max-width: 600px) { grid-template-columns: 1fr; }
+    }
+
+    .ac-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        label {
+            font-size: 13px;
+            font-weight: 600;
+            color: $apple-gray-5;
+            letter-spacing: 0.02em;
+        }
+
+        .ac-required { color: $apple-blue; }
+
+        input, textarea {
+            border: 1.5px solid $apple-glass-border;
+            border-radius: $apple-radius-md;
+            background: #fff;
+            color: $apple-black;
+            font-family: $apple-font-text;
+            font-size: 15px;
+            padding: 10px 14px;
+            box-shadow: none;
+            outline: none;
+            width: 100%;
+            transition: border-color 200ms $apple-ease-default,
+                        box-shadow 200ms $apple-ease-default;
+            resize: vertical;
+
+            &::placeholder { color: $apple-gray-3; }
+
+            &:focus {
+                border-color: $apple-blue;
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            }
+        }
+
+        textarea { min-height: 120px; }
+    }
+
+    // Inquiry type chips
+    .ac-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 2px;
+    }
+
+    .ac-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 16px;
+        border: 1.5px solid $apple-glass-border;
+        border-radius: $apple-radius-pill;
+        background: transparent;
+        color: $apple-gray-5;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: $apple-font-text;
+        cursor: pointer;
+        transition: all 180ms $apple-ease-default;
+
+        &:hover {
+            border-color: $apple-blue;
+            color: $apple-blue;
+            background: rgba(59, 130, 246, 0.06);
+        }
+
+        &.active {
+            border-color: $apple-blue;
+            background: rgba(59, 130, 246, 0.10);
+            color: $apple-blue;
+            font-weight: 600;
+        }
+    }
+
+    // Form footer
+    .ac-form-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $apple-sp-md;
+        margin-top: $apple-sp-xs;
+        flex-wrap: wrap;
+    }
+
+    .ac-privacy {
+        font-size: 12px;
+        color: $apple-gray-3;
+        line-height: 1.5;
+        margin: 0;
+        flex: 1;
+
+        a { color: $apple-blue; text-decoration: none; &:hover { text-decoration: underline; } }
+    }
+
+    .ac-submit {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: $apple-blue;
+        color: #fff;
+        border: none;
+        border-radius: $apple-radius-pill;
+        padding: 12px 28px;
+        font-family: $apple-font-text;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 200ms $apple-ease-default,
+                    transform 200ms $apple-ease-default,
+                    box-shadow 200ms $apple-ease-default;
+
+        svg { transition: transform 200ms $apple-ease-default; }
+
+        &:hover {
+            background: darken(#3b82f6, 8%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.30);
+            svg { transform: translate(2px, -2px); }
+        }
+        &:active { transform: translateY(0); }
+    }
+
+    // ─── Success state ────────────────────────
+    .ac-success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: $apple-sp-2xl 0;
+        gap: $apple-sp-lg;
+
+        .ac-success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #22c55e;
+        }
+
+        h2 {
+            font-family: $apple-font-display;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: $apple-gray-5;
+            max-width: 360px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: $apple-blue;
+            color: #fff;
+            border-radius: $apple-radius-pill;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 200ms;
+            &:hover { background: darken(#3b82f6, 8%); }
+        }
+    }
+
+    // ─── ③ Map strip ─────────────────────────
+    .ac-map-strip {
+        padding: $apple-sp-2xl 0 60px;
+        border-top: 1px solid $apple-glass-border;
+
+        .ac-map-title {
+            font-family: $apple-font-display;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: $apple-black;
+            margin-bottom: $apple-sp-xl;
+        }
+    }
+
+    .ac-maps-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $apple-sp-lg;
+
+        @media (max-width: 700px) { grid-template-columns: 1fr; }
+    }
+
+    .ac-map-card {
+        display: flex;
+        flex-direction: column;
+        gap: $apple-sp-sm;
+
+        iframe { display: block; }
+    }
+
+    .ac-map-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $apple-gray-6;
+    }
+
+    .ac-map-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $apple-blue;
+        flex-shrink: 0;
+    }
+}

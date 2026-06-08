@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        /contactus — Apple-style contact page
+        Rendered by AppleShop.contactus() in controllers/main.py
+        Form submits to Odoo's standard /website_form/crm.lead endpoint.
+    -->
+    <record id="contactus_page" model="ir.ui.view">
+        <field name="name">Apple Shop — Contact Us</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.contactus</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.contactus">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <main class="apple-contactus">
+
+                            <!-- ① Hero -->
+                            <section class="ac-hero">
+                                <div class="container">
+                                    <p class="ac-hero-eyebrow">聯絡我們</p>
+                                    <h1 class="ac-hero-title">有任何問題，<br/>我們在這裡。</h1>
+                                    <p class="ac-hero-sub">無論是個人選機諮詢、學校採購規劃，或是 Jamf 部署支援，歡迎透過以下方式與極電資訊聯繫。</p>
+                                </div>
+                            </section>
+
+                            <!-- ② Main layout: info + form -->
+                            <section class="ac-body">
+                                <div class="container">
+                                    <div class="ac-grid">
+
+                                        <!-- Left: contact info -->
+                                        <aside class="ac-info">
+                                            <div class="ac-info-card">
+                                                <div class="ac-info-icon">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 0116.92.18 2 2 0 0118.1 2.2a2 2 0 00.18.52l1.58 3.22a2 2 0 01-.45 2.11L18 9.41a16 16 0 006.59 6.59l1.36-1.37a2 2 0 012.11-.45l3.22 1.58a2 2 0 01.52.18 2 2 0 012 2.18z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="ac-info-body">
+                                                    <h3>電話</h3>
+                                                    <p><a href="tel:+886212345678">+886 2 1234-5678</a></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ac-info-card">
+                                                <div class="ac-info-icon">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                                        <polyline points="22,6 12,13 2,6"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="ac-info-body">
+                                                    <h3>Email</h3>
+                                                    <p><a href="mailto:info@superinfo.com.tw">info@superinfo.com.tw</a></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Quick links -->
+                                            <div class="ac-quick-links">
+                                                <a href="/zh_TW/shop" class="ac-quick-link">
+                                                    <span>選購 Mac</span>
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                                                </a>
+                                            </div>
+                                        </aside>
+
+                                        <!-- Right: contact form -->
+                                        <div class="ac-form-wrap">
+                                            <!-- Success message (shown after submit) -->
+                                            <t t-if="success">
+                                                <div class="ac-success">
+                                                    <div class="ac-success-icon">
+                                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                                            <polyline points="22 4 12 14.01 9 11.01"/>
+                                                        </svg>
+                                                    </div>
+                                                    <h2>訊息已送出！</h2>
+                                                    <p>感謝您的來信，我們的團隊將於 1–2 個工作天內與您聯繫。</p>
+                                                    <a href="/" class="btn-primary">回到首頁</a>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <form class="ac-form"
+                                                      action="/website_form/crm.lead"
+                                                      method="POST"
+                                                      data-success-page="/contactus?success=1">
+
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                    <h2 class="ac-form-title">傳送訊息</h2>
+                                                    <p class="ac-form-sub">填寫以下表單，我們會盡快回覆您。</p>
+
+                                                    <div class="ac-field-row">
+                                                        <div class="ac-field">
+                                                            <label for="ac_name">姓名 <span class="ac-required">*</span></label>
+                                                            <input type="text" id="ac_name" name="contact_name"
+                                                                   placeholder="王小明" required="required"/>
+                                                        </div>
+                                                        <div class="ac-field">
+                                                            <label for="ac_phone">電話</label>
+                                                            <input type="tel" id="ac_phone" name="phone"
+                                                                   placeholder="+886 2 1234-5678"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ac-field-row">
+                                                        <div class="ac-field">
+                                                            <label for="ac_email">電子郵件 <span class="ac-required">*</span></label>
+                                                            <input type="email" id="ac_email" name="email_from"
+                                                                   placeholder="you@example.com" required="required"/>
+                                                        </div>
+                                                        <div class="ac-field">
+                                                            <label for="ac_company">公司 / 學校</label>
+                                                            <input type="text" id="ac_company" name="partner_name"
+                                                                   placeholder="國立臺灣師範大學"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ac-field">
+                                                        <label for="ac_subject">詢問主旨 <span class="ac-required">*</span></label>
+                                                        <input type="text" id="ac_subject" name="name"
+                                                               placeholder="例：學校 Mac 批量採購諮詢" required="required"/>
+                                                    </div>
+
+                                                    <!-- Inquiry type chips -->
+                                                    <div class="ac-field">
+                                                        <label>詢問類型</label>
+                                                        <div class="ac-chips" role="group">
+                                                            <button type="button" class="ac-chip active" data-value="個人選機">個人選機</button>
+                                                            <button type="button" class="ac-chip" data-value="學校採購">學校採購</button>
+                                                            <button type="button" class="ac-chip" data-value="Jamf 部署">Jamf 部署</button>
+                                                            <button type="button" class="ac-chip" data-value="售後服務">售後服務</button>
+                                                            <button type="button" class="ac-chip" data-value="其他">其他</button>
+                                                        </div>
+                                                        <input type="hidden" name="tag_ids" id="ac_inquiry_type" value="個人選機"/>
+                                                    </div>
+
+                                                    <div class="ac-field">
+                                                        <label for="ac_message">詳細說明 <span class="ac-required">*</span></label>
+                                                        <textarea id="ac_message" name="description" rows="5"
+                                                                  placeholder="請描述您的需求，例如：機型、數量、預算範圍、部署需求等…" required="required"/>
+                                                    </div>
+
+                                                    <div class="ac-form-footer">
+                                                        <p class="ac-privacy">送出即表示您同意我們的
+                                                            <a href="#">隱私政策</a>，我們不會將您的資料用於行銷以外用途。
+                                                        </p>
+                                                        <button type="submit" class="ac-submit">
+                                                            <span>送出訊息</span>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </t>
+                                        </div>
+
+                                    </div><!-- /.ac-grid -->
+                                </div>
+                            </section>
+
+                            <!-- ③ Map strip -->
+                            <section class="ac-map-strip">
+                                <div class="container">
+                                    <h2 class="ac-map-title">找到我們</h2>
+                                    <div class="ac-maps-grid">
+                                        <div class="ac-map-card">
+                                            <div class="ac-map-label">
+                                                <span class="ac-map-dot"/>
+                                                師大體驗中心
+                                            </div>
+                                            <iframe
+                                                width="100%"
+                                                height="220"
+                                                style="border:0; border-radius: 12px;"
+                                                loading="lazy"
+                                                allowfullscreen=""
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8324947656897!2d121.52912742346915!3d25.01888867667044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a939829d5fb5%3A0x8e4b4d4e4d4d4d4d!2z5pil56S-5a6c6Zy454Gy!5e0!3m2!1szh-TW!2stw!4v1234567890"/>
+                                        </div>
+                                        <div class="ac-map-card">
+                                            <div class="ac-map-label">
+                                                <span class="ac-map-dot"/>
+                                                世新體驗中心
+                                            </div>
+                                            <iframe
+                                                width="100%"
+                                                height="220"
+                                                style="border:0; border-radius: 12px;"
+                                                loading="lazy"
+                                                allowfullscreen=""
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8324947656897!2d121.5291275!3d25.0588089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5e0000d7777%3A0x7777777777777777!2z5Y2X5Y2h5a6c!5e0!3m2!1szh-TW!2stw!4v1234567890"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

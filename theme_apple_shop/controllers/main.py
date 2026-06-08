@@ -44,6 +44,15 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             return self._render_mac_landing(mac_root, page_title='極電資訊商店')
         return super().index(**kw)
 
+    # ─── /contactus ─────────────────────────────────────────────────────
+
+    @http.route(['/contactus'], type='http', auth='public', website=True, sitemap=True)
+    def contactus(self, success=False, **kwargs):
+        return request.render('theme_apple_shop.contactus', {
+            'success': bool(success),
+            'main_object': request.website,
+        })
+
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
 
     @http.route(
