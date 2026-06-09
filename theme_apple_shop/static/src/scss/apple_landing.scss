@@ -291,6 +291,46 @@
             }
 
         }
+
+        // ── Drag scrollbar ─────────────────────────────
+        .models-scrollbar {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: $apple-radius-pill;
+            margin: $apple-sp-sm auto 0;
+            cursor: pointer;
+            overflow: visible;
+
+            .models-scrollbar-thumb {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 4px;
+                width: 40%;            // overridden by JS
+                background: $apple-blue;
+                border-radius: $apple-radius-pill;
+                cursor: grab;
+                transition: height 150ms $apple-ease-default,
+                            background 150ms $apple-ease-default;
+
+                &:hover,
+                &.dragging {
+                    height: 6px;
+                    background: darken(#3b82f6, 8%);
+                    cursor: grabbing;
+                }
+
+                // Larger invisible hit area for easier grabbing
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: -8px -4px;
+                }
+            }
+        }
     }
 
     // ─── ④ Tile sections ─────────────────────────────

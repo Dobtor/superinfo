@@ -76,7 +76,7 @@
                                             aria-label="Previous">
                                             <span class="triangle" />
                                         </button>
-                                        <div class="models-track">
+                                        <div class="models-track" role="region" aria-label="Mac 機型列表">
                                             <t t-foreach="mac_models" t-as="model">
                                                 <article class="model-card">
                                                     <t t-if="model.mac_landing_order &lt; 15">
@@ -116,6 +116,10 @@
                                         <button type="button" class="track-next" aria-label="Next">
                                             <span class="triangle" />
                                         </button>
+                                    </div>
+                                    <!-- Drag scrollbar -->
+                                    <div class="models-scrollbar" role="scrollbar" aria-controls="section-models" aria-orientation="horizontal">
+                                        <div class="models-scrollbar-thumb" />
                                     </div>
                                 </div>
                             </section>

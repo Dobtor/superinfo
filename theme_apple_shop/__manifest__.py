@@ -32,6 +32,7 @@
         'views/buy_mac_configurator.xml',
         'views/shop_cart_overrides.xml',
         'views/shop_trust_features.xml',
+        'views/contactus.xml',
         # Data — order matters: attributes → categories → products → accessories
         'data/product_attributes.xml',
         'data/product_categories.xml',

@@ -85,4 +85,16 @@
         <field name="bundle">web.assets_frontend</field>
         <field name="path">theme_apple_shop/static/src/js/apple_compare_table.js</field>
     </record>
+
+    <record id="asset_contactus_scss" model="ir.asset">
+        <field name="name">Apple Shop Contact Us SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_contactus.scss</field>
+    </record>
+
+    <record id="asset_contactus_js" model="ir.asset">
+        <field name="name">Apple Shop Contact Us JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/apple_contactus.js</field>
+    </record>
 </odoo>
