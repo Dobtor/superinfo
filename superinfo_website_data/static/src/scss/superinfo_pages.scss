@@ -26,6 +26,20 @@ $si-font: "SF Pro TC", "SF Pro Text", "PingFang TC", "Segoe UI", SegoeUI,
     img { height: 64px; width: auto; }
 }
 
+// ───────── 設計切圖頁：置中堆疊（如共契BOT DM 等）─────────
+.si-stack {
+    max-width: 980px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 16px;
+        border-radius: 8px;
+    }
+}
+
 // ───────── 關於我們：忠實重建原站 maincontainer / part2 結構 ─────────
 .si-page {
     font-family: $si-font;

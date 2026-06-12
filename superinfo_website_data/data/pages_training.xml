@@ -81,14 +81,9 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">輔助使用</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="圖文">
-                <div class="container"><div class="si-rows">
-                    <div class="si-row">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/accessibility/0.png" class="img-fluid" alt="輔助使用" loading="lazy"/></div>
-                        <div class="si-col-txt"><p>Apple 輔助使用功能 輔助使用是 Apple 的核心 Apple 自 1985 年起致力於輔助使用創新，已有 40 年歷史</p><p>「輔助使用是 Apple 的 DNA 一部分」 — Tim Cook, Apple CEO 使用 Apple Silicon 晶片、機器學習和人工智慧提升輔助功能體驗，讓每個人都能享受科技帶來的便利。</p><h4>2025 年全新輔助功能</h4><p>App Store 輔助使用營養標籤 為 App Store 產品頁面新增輔助功能資訊區塊，讓用戶下載前即可了解應用程式是否適合自己使用。</p><p>Mac 版放大鏡應用程式 專為視力障礙者設計的探索與互動工具，提供更直覺的視覺輔助體驗。</p><p>點字訪問功能 增強的點字支援系統，讓視障用戶能更流暢地使用 Apple 裝置。</p><p>輔助閱讀器 全新的閱讀輔助工具，幫助閱讀障礙者更輕鬆地處理文字內容。</p><p>Apple Vision Pro 輔助功能升級 為 Apple Vision Pro 帶來全新的輔助使用體驗，讓空間運算更具包容性。</p><p>App Store 營養標籤 視覺輔助功能 聽覺與語音 行動與操作</p><p>營養標籤 VoiceOver 語音控制 放大文字 色彩濾鏡 動態效果 聽覺輔助</p><p>App Store 輔助使用營養標籤 為 App Store 產品頁面新增輔助功能資訊區塊 用戶下載前即可了解應用程式是否適合自己使用 支援顯示 VoiceOver、語音控制、放大文字等功能 開發者可突顯其應用程式支援的輔助功能 全球 App Store 將全面支援此功能</p><p>視覺輔助功能 Mac 版放大鏡應用程式（視力障礙者探索與互動） 即時辨識功能（Live Recognition）：描述現實世界物體 VoiceOver 螢幕報讀功能 圖像描述功能 Apple Vision Pro 攝影系統升級支援</p><p>聽覺與語音輔助功能 即時聆聽（Live Listen）功能更新 個人語音（Personal Voice）功能升級 背景音效（Background Sounds）改進 即時字幕（Live Captions）支援更多語言</p><p>行動與操作輔助功能 輔助使用快捷鍵（Accessibility Shortcut） 車輛動態提示（Vehicle Motion Cues） 語音快捷鍵（Vocal Shortcuts） 眼球追蹤（Eye Tracking）功能</p><h4>生態系統 跨裝置無縫整合</h4><p>Apple 輔助功能在 iPhone、iPad、Mac、Apple Watch 和 Apple Vision Pro 之間無縫整合，提供一致的使用體驗。</p><p>Apple 為開發者提供全面的輔助功能資源，幫助他們創建更具包容性的應用程式，讓所有用戶都能享受科技帶來的便利。</p><p>Apple 持續推動科技普惠化，確保每個人都能平等地使用和享受科技產品，無論其能力如何。</p><p>Apple 的設計理念是為每個人創造產品，確保所有用戶都能以自己的方式使用 Apple 裝置，享受科技帶來的便利。</p><h4>Apple 輔助使用功能發展歷程</h4><p>1985 年 Apple 開始致力於輔助使用創新</p><p>Apple 開始關注科技如何幫助不同能力的用戶，開啟了輔助使用功能的發展歷程。</p><p>Apple 推出 VoiceOver 螢幕報讀功能，成為視障用戶使用 Apple 裝置的重要工具。</p><p>2005 年 VoiceOver 螢幕報讀功能推出</p><h4>2023 年 個人語音功能推出</h4><p>Apple 推出個人語音功能，讓面臨語音喪失風險的用戶能夠創建與自己聲音相似的合成語音。</p><p>Apple 推出全新輔助功能，包括 App Store 輔助使用營養標籤、Mac 版放大鏡應用程式等，進一步提升科技的普惠性。</p><h4>2025 年 全新輔助功能推出</h4></div>
-                    </div>
-                </div></div>
-            </section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/accessibility/0.png" alt="輔助使用" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -113,14 +108,9 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">永續政策</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="圖文">
-                <div class="container"><div class="si-rows">
-                    <div class="si-row">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/sustainability/0.jpg" class="img-fluid" alt="永續政策" loading="lazy"/></div>
-                        <div class="si-col-txt"><p>Apple 永續政策 Apple 永續政策 Apple 環保承諾與願景</p><p>2030年達成全產品生命週期碳中和目標 目前進度 60%</p><p>2015年以來，全球溫室氣體排放量減少超過60%</p><h4>聚焦創新、合作與行動力永續發展</h4><h4>最新減排成果 4,100萬</h4><h4>2024年減碳公噸，年增17%</h4><h4>供應鏈再生能源導入</h4><h4>避免供應鏈排放公噸</h4><h4>2030年淨零碳排戰略</h4><h4>溫室氣體排放比2015年減少75%為目標</h4><h4>剩餘排放以高品質碳權抵銷</h4><h4>持續推動再生能源和能源效率</h4><h4>供應鏈與綠色能源轉型</h4><h4>全球供應鏈與超過200家夥伴合作，推動清潔能源</h4><h4>2024年供應商再生能源成長17%</h4><h4>台積電等關鍵供應商加入減碳行列</h4><h4>再生材料與創新應用</h4><h4>所有磁石用99%回收稀土，電池用99%回收鈷</h4><h4>iPhone 16</h4><h4>電池100%回收鈷，超過95%回收鋰</h4><h4>用100%纖維材料，2025年全面淘汰塑膠</h4><h4>產品生態設計與壽命延長</h4><h4>設計可拆解、易回收產品</h4><h4>增強耐用性，延長產品壽命</h4><h4>產品碳足跡持續下降</h4><h4>回收計畫與全球社會參與</h4><h4>提供裝置回收優惠，鼓勵顧客參與</h4><h4>投資自然資源保護與全球水資源保育</h4><h4>世界地球日推動全球永續行動</h4><h4>面對氣候變遷挑戰持續創新</h4><h4>深化供應鏈綠色轉型，推廣循環經濟</h4><h4>Apple持續領航全球科技業永續轉型</h4><h4>了解更多 Apple 永續發展計畫</h4></div>
-                    </div>
-                </div></div>
-            </section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/sustainability/0.jpg" alt="永續政策" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -249,22 +239,11 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育軟體解決方案</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="圖文">
-                <div class="container"><div class="si-rows">
-                    <div class="si-row">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/services-apps/0.png" class="img-fluid" alt="教育軟體解決方案" loading="lazy"/></div>
-                        <div class="si-col-txt"><p>教育軟體解決方案 我們提供業界領先的軟體工具，專為教育環境設計，滿足學校的多元化需求</p><h4>Microsoft 365</h4><h4>全方位辦公軟體套件</h4><p>Microsoft 365 為教育機構提供完整的生產力工具，包含 Word、Excel、PowerPoint 等核心應用程式，支援雲端協作與跨平台使用。</p><h4>Word 文書處理：撰寫報告、作業與教材</h4><h4>Excel 試算表：數據分析與成績管理</h4><h4>PowerPoint 簡報：互動式教學簡報</h4><h4>Teams 協作：線上課程與視訊會議</h4><h4>OneDrive 雲端：檔案同步與共享</h4><h4>教育版特殊功能與授權優惠</h4><p>🎓 教育應用優勢 支援多人協作編輯、即時同步更新，老師可輕鬆建立互動式教材，學生能隨時隨地存取課業內容，提升學習效率與參與度。</p><h4>Deep Freeze</h4><h4>電腦系統保護與還原</h4><p>Deep Freeze 是專業的電腦保護軟體，能將電腦系統凍結在理想狀態，重開機後自動還原，確保電腦教室環境的穩定性與安全性。</p></div>
-                    </div>
-                    <div class="si-row si-reverse">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/services-apps/1.png" class="img-fluid" alt="教育軟體解決方案" loading="lazy"/></div>
-                        <div class="si-col-txt"><h4>系統凍結：防止病毒感染與誤操作</h4><h4>自動還原：重開機後回到乾淨狀態</h4><h4>統一管理：批量部署與遠端控制</h4><h4>排程解凍：定時進行系統更新</h4><h4>使用者權限：彈性設定存取控制</h4><h4>網路版支援：集中管理多台電腦</h4><p>🏫 校園應用優勢 大幅降低電腦教室維護成本，防止學生誤裝軟體或下載病毒，確保每堂課都有乾淨穩定的電腦環境，IT 人員維護更輕鬆。</p><h4>Adobe Creative Cloud</h4><p>Adobe Creative Cloud 提供業界標準的創意軟體工具，包含 Photoshop、Illustrator、Premiere Pro 等，培養學生數位創作與設計能力。</p><h4>Photoshop：影像編輯與數位藝術</h4><h4>Illustrator：向量圖形與標誌設計</h4><h4>Premiere Pro：影片剪輯與後製</h4><h4>After Effects：動畫與視覺特效</h4><h4>InDesign：版面設計與出版</h4></div>
-                    </div>
-                    <div class="si-row">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/services-apps/2.png" class="img-fluid" alt="教育軟體解決方案" loading="lazy"/></div>
-                        <div class="si-col-txt"><h4>教育版特惠與豐富學習資源</h4><p>🎨 創意教育優勢 培養學生 21 世紀數位技能，從平面設計到影片製作，提供完整創意工具鏈，與業界接軌，提升學生未來就業競爭力。</p><h4>500+ 服務學校數量</h4><h4>50k+ 學生使用者</h4><h4>99% 客戶滿意度</h4><p>為什麼選擇我們 專業的教育軟體解決方案提供商，致力於提升教學品質與學習成效</p><p>深度了解教育需求，提供客製化軟體解決方案與導入建議，確保最佳投資效益。</p><p>專業技術團隊提供完整部署服務，最短時間內完成軟體安裝與環境設定。</p><p>提供長期技術支援與維護服務，確保軟體穩定運行與及時更新。</p><p>針對教師與 IT 人員提供專業培訓課程，確保軟體功能得到充分運用。</p><p>提供教育機構專屬的授權優惠方案，降低軟體採購成本與總體擁有成本。</p><p>確保軟體授權合法性，提供完整的資安防護建議與隱私保護方案。</p><h4>開始提升您的教育環境</h4><p>聯繫我們獲得專業諮詢，為您的學校量身打造最適合的軟體解決方案</p></div>
-                    </div>
-                </div></div>
-            </section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/services-apps/0.png" alt="教育軟體解決方案" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/services-apps/1.png" alt="教育軟體解決方案" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/services-apps/2.png" alt="教育軟體解決方案" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -342,18 +321,10 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育工作者</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="圖文">
-                <div class="container"><div class="si-rows">
-                    <div class="si-row">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/educators/0.png" class="img-fluid" alt="教育工作者" loading="lazy"/></div>
-                        <div class="si-col-txt"><p>Info to educators 教學創新：以 App 融入科技力量於課堂內外 革新教育體驗，Apple 教育工具讓科技自然融入教學歷程，釋放學生無限創意與學習潛能，同時為教師提供前所未有的教學彈性。 立即探索 預約示範</p><h4>120+ 專業課程資源</h4><h4>為教師提供豐富多元的教學內容</h4><h4>85% 學習效果提升</h4><h4>採用 Apple 教育科技的學校報告</h4><h4>3X 創意表達增長</h4><h4>透過多元媒體工具展現學習成果</h4><p>Apple 教育工具徹底改變現代教學方式，透過無縫整合的跨裝置學習體驗， 讓師生都能專注於知識的探索與創新，而非被科技操作所困擾。</p><p>核心教育應用程式 「課堂」App 全班螢幕即時監控 精準引導學習歷程 遠距教學無縫連接 一目了然掌握學習進度 確保教學同步進行</p><p>「課業」App 輕鬆收發作業 實時追蹤進度 即時協作指導 創意實作學習 Pages、Numbers、Keynote 整合</p><h4>共享 iPad 功能：個人化的共用體驗 🔐</h4><h4>自動將學生配對到最近使用的裝置，減少切換時間</h4><h4>每位學生都擁有專屬的學習環境與進度追蹤</h4><h4>確保學生資料安全，同時提供個人化學習體驗</h4><h4>教師快速開始課程，減少設備準備與配置時間</h4></div>
-                    </div>
-                    <div class="si-row si-reverse">
-                        <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/educators/1.png" class="img-fluid" alt="教育工作者" loading="lazy"/></div>
-                        <div class="si-col-txt"><h4>教師專業發展資源 🏆</h4><h4>Apple Teacher 認證</h4><h4>專業能力肯定與職涯發展</h4><h4>掌握 iPad 和 Mac 關鍵教學功能</h4><h4>超過 120 種專業教學內容與素材</h4><p>透過 Apple 提供的專業發展資源，教師能夠循序漸進地精進數位教學技能，同時獲得實用的教案參考與創新教學靈感，打造更具吸引力的學習體驗。</p><h4>教育應用生態系統 🔬</h4><p>從數學、科學到語文藝術，每一學科都有專業設計的應用輔助教學，讓抽象概念變得具體可見。</p><p>繪圖、影片、音樂創作等多元媒體應用，讓學生能以最適合自己的方式展現學習成果。</p><p>促進師生互動與學生間協作的應用工具，培養團隊合作與溝通能力。</p><h4>開始您的教育科技之旅 1</h4><p>了解您的學校需求，制定最適合的 Apple 教育科技導入計畫。我們提供專業諮詢，協助您規劃每一步驟。</p><p>快速設置裝置並提供教師專業培訓，確保所有人都能輕鬆上手。從基礎操作到進階教學應用，全面支援。</p><p>獲取長期技術支援與教學資源更新，加入教育者社群分享經驗與最佳實踐，持續精進教學品質。</p><p>立即體驗教育科技的力量 準備好讓您的教學體驗更上一層樓了嗎？ 聯繫我們，開始您的 Apple 教育科技之旅</p></div>
-                    </div>
-                </div></div>
-            </section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/educators/0.png" alt="教育工作者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/educators/1.png" alt="教育工作者" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -435,33 +406,14 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">決策者</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="相片格"><div class="container">
-                <div class="si-rows" style="margin-bottom:24px">
-                    <p>Apple 教育 - 以促進學習為原動力 由 Apple 精心設計，以促進學習為原動力 真正的課堂，往往能開啟一個更美好世界；而這樣的課堂，必須配備靈活易用，而且內建隱私保護、輔助使用功能和永續環保理念的教學工具。</p>
-                    <p>必備的工具，帶來各種驚喜可能 iPad，好攜帶，好強大，潛能滿載 輕巧的設計和最長可達 10 小時的電池續航力，讓你從早到晚都可輕鬆保持聯繫 靈活多用，適合各種學習方式，可用來塗鴉、想創意、編輯照片和影片 兼容老師和學生每天使用的 app，包括來自 Google 和 Microsoft 的各種選擇 進一步了解 iPad</p>
-                    <p>Mac，出奇輕，格外快，表現跳級領先 由 Apple 晶片驅動，帶來卓越的效能表現和能源效率 為經久耐用打造，輕巧好攜帶，隨處可用 一向直覺好用，上手無壓力，讓你輕鬆找到所需內容 進一步了解 Mac</p>
-                    <p>用心設計，為未來，也為教育負起責任 可保護學生資料的裝置 Apple 重視隱私，確保學生資料安全，讓教育工作者和家長安心。</p>
-                    <p>輔助使用功能 讓每位學習者擁有每個學習機會，無論其能力或學習方式如何。</p>
-                    <p>為未來世代，全心守護地球 Apple 致力於環保，產品使用再生材料，減少碳足跡，為地球永續發展。</p>
-                    <h4>眾多內建 App，可用來教授、學習和創作</h4>
-                    <h4>GarageBand</h4>
-                    <p>進一步了解 iWork 進一步了解 GarageBand 進一步了解 iMovie 進一步了解教學工具</p>
-                    <p>你愛的 App 都在這裡，還有更多等你探索 探索數千款專為教育設計的 App，讓學習變得更加豐富有趣。 前往 App Store</p>
-                    <p>Apple 走進全球各地的課堂 教師啟發學生，學生為將來做準備，IT 團隊則流暢地部署裝置。世界各地的學校使用 Apple 產品，創造各種精彩。</p>
-                    <p>教師故事 了解教師如何使用 Apple 產品激發學生的創造力和批判性思維。 了解更多</p>
-                    <p>學生成就 探索學生如何使用 Apple 產品發揮創意並為未來做好準備。 了解更多</p>
-                    <p>IT 部署 了解 IT 團隊如何輕鬆部署和管理 Apple 裝置，提供流暢的教育體驗。 了解更多</p>
-                    <p>準備好為您的學校帶來 Apple 的教育優勢了嗎？ 聯絡 Apple 教育團隊 探索教育優惠</p>
-                </div>
-                <div class="si-grid si-grid-3">
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/0.png" alt="決策者" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/1.png" alt="決策者" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/2.png" alt="決策者" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/3.png" alt="決策者" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/4.png" alt="決策者" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/5.png" alt="決策者" loading="lazy"/>
-                </div>
-            </div></section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/0.png" alt="決策者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/1.png" alt="決策者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/2.png" alt="決策者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/3.png" alt="決策者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/4.png" alt="決策者" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/decision-makers/5.png" alt="決策者" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -486,51 +438,13 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">家長</h1></div></div></div>
             </section>
-            <section class="pt40 pb40" data-name="相片格"><div class="container">
-                <div class="si-rows" style="margin-bottom:24px">
-                    <p>iPad - 家長指南 iPad好好用 - 家長指南 讓 iPad 幫助學習！每台 iPad 都有免費強力學習助手 APP， 有助於提升學習效率與激發創造力。 1 5項訣竅保持專注</p>
-                    <p>專注於學習有助於提升批判性思考能力，並發揮更高的創造力。</p>
-                    <p>✓ 提升專注力 營造不受通訊、提示或通知干擾的學習環境。在iPad的「勿擾模式」設定中，請確保在「靜音」下方選取「永遠」。</p>
-                    <p>✓ 簡化工作流程 使用「分割顯示」在兩個視窗或app之間移動內容。前往「設定」的「主畫面與Dock」，開啟「多工處理」。</p>
-                    <p>✓ 調整通知設定 前往「設定」&gt;「通知」，為非必要的app關閉「標記」，減少學習過程中的分心因素。</p>
-                    <h4>2 整理iPad以供學習</h4>
-                    <p>整理供學習使用的iPad，讓學生可以更輕鬆地完成日常作業，並維持生產力和參與度。</p>
-                    <p>✓ 更新作業系統 確保學生的裝置具備最新的功能、產品和安全性。在「設定」中點一下「一般」，查看是否為最新的軟體更新。</p>
-                    <p>✓ 建立網站捷徑 從Safari的分享選項中，點一下「加入主畫面」，便會為學生建立最常使用網站的圖像。</p>
-                    <p>✓ 共享備忘錄 在「備忘錄」中輕鬆整理學習資源，建立各科目的檔案夾，並與所有家庭成員共享。</p>
-                    <h4>3 管理螢幕使用時間</h4>
-                    <p>「螢幕使用時間」包含多項絕佳功能，協助你選擇學生使用裝置的方式和頻率。</p>
-                    <p>✓ 持續追蹤 透過「螢幕使用時間」，你可以依照日期和週來查看裝置的總使用時間，以及學生最常使用的app。</p>
-                    <p>✓ 休息一下 利用「停用時間」每天安排一點時間避開螢幕，啟用後，只會開放允許的app和通話功能。</p>
-                    <p>✓ 安排時間 使用「App限制」來規劃時間，你可以安排更多使用學習和創造力app，並減少社交app帶來的干擾。</p>
-                    <p>✓ 選擇適當內容 使用「內容與隱私限制」，在學生的裝置上阻擋不當的網站、購買項目和下載項目。</p>
-                    <h4>4 提高生產力的方式</h4>
-                    <p>所有學生都能透過內建的輔助使用功能來加強學習體驗，並提高生產力。</p>
-                    <p>✓ 輕輕一點，完成種種動作 使用「輔助觸控」，更輕鬆地存取選單、控制項目和各項功能。對於動作技能受限的人士特別有用。</p>
-                    <p>✓ 大聲提升聆讀流利度 利用「朗讀所選範圍」和「反白內容」，讓學生在系統朗讀反白文字時跟著念出來，加強閱讀理解能力。</p>
-                    <p>✓ 專注瀏覽網頁內容 「Safari閱讀器」會移除廣告、減少干擾，還能讓你調整文字大小、對比和字體樣式。</p>
-                    <p>✓ 引導使用模式 「引導使用模式」會將iPad鎖定在單一app中，並讓你控制可用的功能和時間限制。你可以用手指在螢幕上圈出不希望對觸控有所反應的區域。</p>
-                    <p>✓ 表達想法，增進寫作能力 Pages、Keynote和「備忘錄」等app具備「聽寫」功能，有助於表達訊息及培養寫作技巧。只需點一下iPad鍵盤上的麥克風按鍵。</p>
-                    <p>✓ 確實掌握進度 使用「時鐘」app的計時器來規劃學習時段。橘色的線條會隨著時間倒數而縮短，讓學生可以透過視覺化方式了解時間的概念。</p>
-                    <h4>5 述說故事的方式</h4>
-                    <p>講故事是與親友交流情感與聯繫的絕佳方式。</p>
-                    <p>✓ 大聲說出來 使用「語音備忘錄」來錄音，例如自己朗讀書本，或向某人敘述一天的經歷。然後在「訊息」或「郵件」中分享錄音。</p>
-                    <p>✓ 共享照片相簿 透過「共享的相簿」，邀請其他人持續關注你的冒險故事和日常生活。朋友可以為你的影像按讚，並留下評論。</p>
-                    <p>✓ 共同編寫故事 在Keynote幻燈片上描述故事，然後將文件連結傳送給朋友。讓他們可以加入照片、形狀和更多內容。</p>
-                    <p>✓ 製作影片 使用「可立拍」App拍攝有趣的故事</p>
-                    <p>✓ 製作圖畫書 在Pages書籍樣版中編寫或描繪故事</p>
-                    <h4>✓ 分享創作 將作品輸出成適合的格式與親友分享</h4>
-                    <p>透過這五大面向的指導，家長可以協助孩子更有效地使用iPad進行學習，</p>
-                    <p>同時建立健康的數位使用習慣，並發揮創造力與學習潛能。</p>
-                </div>
-                <div class="si-grid">
-                    <img src="/superinfo_website_data/static/src/img/content/pages/parents/0.jpg" alt="家長" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/parents/1.jpg" alt="家長" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/parents/2.JPG" alt="家長" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/parents/3.jpg" alt="家長" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/parents/4.jpg" alt="家長" loading="lazy"/>
-                </div>
-            </div></section>
+            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
+                <img src="/superinfo_website_data/static/src/img/content/pages/parents/0.jpg" alt="家長" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/parents/1.jpg" alt="家長" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/parents/2.JPG" alt="家長" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/parents/3.jpg" alt="家長" loading="lazy"/>
+                <img src="/superinfo_website_data/static/src/img/content/pages/parents/4.jpg" alt="家長" loading="lazy"/>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
