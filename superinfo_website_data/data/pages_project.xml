@@ -170,68 +170,6 @@
             <field name="view_id" ref="page_mac_classroom_view"/>
         </record>
 
-        <record id="page_cases_view" model="ir.ui.view">
-            <field name="name">實際案例</field>
-            <field name="type">qweb</field>
-            <field name="key">superinfo_website_data.page_cases_view</field>
-            <field name="arch" type="xml">
-                <t name="實際案例" t-name="superinfo_website_data.page_cases_view">
-                    <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/success.jpg'); background-size: cover; background-position: center;">
-                <div class="o_we_bg_filter bg-black-25"/>
-                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">實際案例</h1></div></div></div>
-            </section>
-            <section class="pt40 pb40" data-name="相片格"><div class="container">
-                <div class="si-rows" style="margin-bottom:24px">
-                    <h4>Mac 電腦教室 電腦教室</h4>
-                    <p>「工欲善其事，必先利其器。」在這個網路資訊爆炸的環境下，許多學校為了讓同學可以在多元的系統架構下，進行多媒體與資訊領域的學習，開始有了建置 Mac 教室的需求。</p>
-                    <p>極電資訊從 2002 年迄今已協助建置與規劃逾 50 間 Mac 電腦教室，並適時提供網路與資訊系統的架設。除了擁有豐富的建置教室經驗，更有專業的技術人員提供後續技術支援與故障排除等服務。</p>
-                    <p>從第一間建置的教室至今已超過 10 年，也曾經歷過 檯燈機 (G4) Mac 的年代，合作的學校與老師無數，下列為近年合作學校名單： (詳細科系與單位恕無法列出)</p>
-                    <p>▎國立臺灣大學 ▎國立政治大學 ▎國立臺灣師範大學 ▎國立臺北藝術大學 ▎國立臺灣藝術大學 ▎國立臺灣戲曲學院 ▎國立臺灣科技大學</p>
-                    <p>▎國立臺北科技大學 ▎國立臺北教育大學 ▎國立臺北商業大學 ▎國立臺北護理健康大學 ▎中國文化大學 ▎臺北醫學大學 ▎東吳大學</p>
-                    <p>▎世新大學 ▎銘傳大學 ▎臺北市立景美女子高級中學 ▎臺北市立大安高級工業職業學校 ▎臺北市立士林高級商業職業學校 ▎臺北市立大學附設實驗國民小學 ▎臺北市國語實驗國民小學</p>
-                    <h4>問題解決 經驗豐富</h4>
-                    <p>電腦教室的建置與維護，對資訊組長與系統師來說常常是非常耗費體力、心力的事，需依照使用需求做基本設定，系統版本更新、軟體安裝等繁雜事務。有時也因為網路問題產生許多困擾。</p>
-                    <p>極電資訊致力協助資訊組長與系統師解決問題，透過建置數間教室、故障排除的經驗，提供最快速與專業的意見。</p>
-                    <p>「極電服務有問必答，服務周到！」 ——台藝大老師</p>
-                    <p>「價格合理，對電腦安裝後續交待很清楚，服務品質態度很好！」 ——士林高商廣設科主任</p>
-                    <p>「在處理電腦教室的服務中，極電整線、整合教室環境做得不錯，能迅速了解狀況，給予支援。」——景美女中資訊組長</p>
-                    <h4>Mac Lab 成功實例 - K12</h4>
-                    <h4>Mac mini 資訊科技教室</h4>
-                    <h4>Mac mini 電腦教室</h4>
-                    <h4>Mac mini 多媒體教室</h4>
-                    <h4>Mac Lab 成功實例 - High ED</h4>
-                    <h4>iMac 電腦教室</h4>
-                    <p>遠離詐騙「三不」！ 1.不碰ATM 2.不說個人資料 3.勿理會陌生電話 1.詐騙集團會假冒店家名義，謊稱訂單發生錯誤，要求去操作 ATM 解除分期付款。聽到「訂單錯誤要操作ATM」都是詐騙！他們經常利用下班時間聯繫你，甚至週末不打烊喔！ 2.聽到關鍵字「銀行比特幣專戶」？不要猶豫，當然是詐騙！ 3.聽到關鍵字「訂單錯誤需要解除分期付款」即可直接用力掛斷電話！ 4.詐騙集團有機房可以偽造任何電話號碼，絕對不一定是 + 號開頭喔！ 駭客團隊技術日益精進，網路世界中沒有絕對的隱私，駭客都有可能攔截/破解/盜取您的個資變賣 詐騙集團話術千變萬化，不要隨意信任各種理由 一定要主動聯絡店家查證！或 165 反詐騙專線 我瞭解了, 我確定不會被騙！</p>
-                </div>
-                <div class="si-grid si-grid-3">
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/0.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/1.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/2.png" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/3.png" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/4.png" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/5.png" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/6.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/7.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/8.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/9.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/10.jpg" alt="實際案例" loading="lazy"/>
-                    <img src="/superinfo_website_data/static/src/img/content/pages/success/11.jpg" alt="實際案例" loading="lazy"/>
-                </div>
-            </div></section>
-                        </div>
-                    </t>
-                </t>
-            </field>
-        </record>
-        <record id="page_cases" model="website.page">
-            <field name="name">實際案例</field>
-            <field name="is_published">True</field>
-            <field name="url">/services/cases</field>
-            <field name="view_id" ref="page_cases_view"/>
-        </record>
-
         <record id="page_promise_view" model="ir.ui.view">
             <field name="name">PROMISE 安心承諾</field>
             <field name="type">qweb</field>

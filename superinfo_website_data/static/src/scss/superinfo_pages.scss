@@ -1,39 +1,54 @@
-// 極電資訊 CMS 內頁版型輔助樣式（自有 SCSS，非複製原站樣式）
-// 用以還原原站「交錯圖文列 / 相片格 / 圖示列」的結構與比例。
+// 極電資訊 CMS 內頁版型輔助樣式（自有 SCSS，依原站量測值對齊）
+// 量測：內容區 ~1110px、圖約 40% 寬交錯、圖片圓角 15px、無陰影、系統中文字體。
+
+$si-font: "SF Pro TC", "SF Pro Text", "PingFang TC", "Segoe UI", SegoeUI,
+    "Microsoft JhengHei", "微軟正黑體", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .si-rows {
-    max-width: 1140px;
+    max-width: 1110px;
     margin-left: auto;
     margin-right: auto;
+    font-family: $si-font;
 }
 
 .si-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 36px;
-    margin: 48px 0;
+    gap: 48px;
+    margin: 32px 0;
 
     &.si-reverse {
         flex-direction: row-reverse;
     }
 
     > .si-col-img {
-        flex: 0 0 42%;
-        max-width: 42%;
+        flex: 0 0 40%;
+        max-width: 40%;
     }
 
     > .si-col-txt {
         flex: 1 1 0;
         min-width: 0;
+
+        h3, h4 {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
     }
 
     img {
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 14px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 15px;
     }
 }
 
@@ -42,14 +57,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    max-width: 1140px;
+    max-width: 1110px;
     margin: 32px auto;
+    font-family: $si-font;
 
     img {
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 14px;
+        border-radius: 15px;
     }
 
     &.si-grid-3 {
@@ -57,11 +73,47 @@
     }
 }
 
+// 圖示／合作徽章列
+.si-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    max-width: 1110px;
+    margin: 8px auto 0;
+
+    img {
+        height: 64px;
+        width: auto;
+    }
+}
+
+// 聯絡資訊三欄
+.si-contact {
+    max-width: 1110px;
+    margin: 0 auto;
+    font-family: $si-font;
+
+    .si-contact-item {
+        h4 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+    }
+}
+
 // 手機收合為單欄
 @media (max-width: 767.98px) {
     .si-row {
         gap: 20px;
-        margin: 28px 0;
+        margin: 24px 0;
 
         > .si-col-img,
         > .si-col-txt {

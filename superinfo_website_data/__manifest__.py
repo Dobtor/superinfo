@@ -38,6 +38,7 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         'data/page_home.xml',
         'data/page_about.xml',
         'data/pages_project.xml',
+        'data/page_cases.xml',
         'data/pages_training.xml',
         'data/pages_info.xml',
         # 最新消息
