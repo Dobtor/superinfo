@@ -17,75 +17,99 @@
                                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">關於我們</h1></div></div></div>
                             </section>
 
-                            <section class="pt48 pb48" data-name="公司簡介">
-                                <div class="container">
-                                    <div class="si-rows">
+                            <section class="si-page pt24 pb24" data-name="關於我們內容">
 
-                                        <div class="si-row si-reverse">
-                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/about/0.jpg" class="img-fluid" alt="極電資訊" loading="lazy"/></div>
-                                            <div class="si-col-txt">
-                                                <h3>Apple 授權教育經銷商</h3>
-                                                <p>極電資訊有限公司為 Apple 授權教育經銷商，創立於 1990 年，銷售 Apple 電腦、平板電腦、行動裝置與 Apple 原廠配件，除此之外，也提供學校、公家機關的軟硬體採買與安裝，包含工作站、伺服器、儲存裝置、數位機背等相關服務。</p>
-                                                <p>擁有業界最豐富的 Mac 教室部署與 iPad 大量採購經驗，由多位專業工程師與教育訓練講師提供完整客製化服務。</p>
-                                                <p>教育零售方面極電有師大校園體驗中心（Campus Experience Center），開設至今協助眾多老師、學生與教職人員解決 Apple 產品相關問題；教育優惠價與新手使用教學，帶領更多師生善用 Mac 與 iPad 等設備。</p>
-                                            </div>
-                                        </div>
+                                <!-- 公司簡介 -->
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">公司簡介</div>
+                                        <div class="head3 midgrayword">Apple 授權教育經銷商</div>
+                                        <div class="part-p grayword">極電資訊有限公司為 Apple 授權教育經銷商，創立於 1990 年，銷售 Apple 電腦、平板電腦、行動裝置與 Apple 原廠配件，除此之外，也提供學校、公家機關的軟硬體採買與安裝，包含工作站、伺服器、儲存裝置、數位機背等相關服務。</div>
+                                        <div class="part-p grayword">擁有業界最豐富的 Mac 教室部署與 iPad 大量採購經驗，由多位專業工程師與教育訓練講師提供完整客製化服務。</div>
+                                        <div class="part-p grayword">教育零售方面極電有師大校園體驗中心（Campus Experience Center），開設至今協助眾多老師、學生與教職人員解決 Apple 產品相關問題；教育優惠價與新手使用教學，帶領更多師生善用 Mac 與 iPad 等設備。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/about/0.jpg" alt="極電資訊" loading="lazy"/></div>
+                                </div>
 
-                                        <div class="si-row">
-                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/about/1.jpg" class="img-fluid" alt="軟體到硬體，滿足客戶專屬需求" loading="lazy"/></div>
-                                            <div class="si-col-txt">
-                                                <h3>軟體到硬體，滿足客戶專屬需求</h3>
-                                                <p>近三十年的經驗，讓我們能依據不同客戶需求提供客製化解決方案，從機器採購和架設、軟體選擇與安裝，到售後教育訓練，滿足客戶從採買計畫到實際操作的需求。</p>
-                                                <p>極電資訊於臺北市有兩間校園門市，分別位於國立臺灣師範大學以及世新大學。協助師生安裝校園授權軟體，並提供教育優惠價與開學、畢業季活動，讓學生能以更實惠的價格使用 Apple 裝置輔助學習，老師與教職人員也能更安全無慮地工作。</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="si-row si-reverse">
-                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/about/2.jpg" class="img-fluid" alt="協助客戶善用最新科技" loading="lazy"/></div>
-                                            <div class="si-col-txt">
-                                                <h3>協助客戶在不同領域善用最新科技</h3>
-                                                <p>隨著無紙化、資源分享等科技化趨勢，加上北市府推動「一生一平板」專案與程式教育的需求成長，極電資訊將繼續積極拓展客源與協助目前客戶夥伴，透過 Apple 設備與 MDM、Apple School Manager 等相關服務，在各自專業領域上發展出更多元的科技應用。</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="si-row">
-                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/about/3.jpg" class="img-fluid" alt="官方認證工程師" loading="lazy"/></div>
-                                            <div class="si-col-txt">
-                                                <h3>擁有多位官方認證工程師</h3>
-                                                <p>與時俱進的知識背景，是我們極度重視的一件事。極電資訊工程師擁有多張 Apple / Jamf Pro 專業證照，不僅是專業能力的鑑定，同時也是提供服務最有力的保證。</p>
-                                                <div class="si-badges"><img src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="Apple / Jamf 認證" loading="lazy"/></div>
-                                            </div>
-                                        </div>
-
+                                <!-- 服務理念 -->
+                                <div class="maincontainer">
+                                    <div class="part2"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/about/1.jpg" alt="服務理念" loading="lazy"/></div>
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">服務理念</div>
+                                        <div class="head3 midgrayword">軟體到硬體，滿足客戶專屬需求</div>
+                                        <div class="part-p grayword">近三十年的經驗，讓我們能依據不同客戶需求提供客製化解決方案，從機器採購和架設、軟體選擇與安裝，到售後教育訓練，滿足客戶從採買計畫到實際操作的需求。</div>
+                                        <div class="part-p grayword">極電資訊於臺北市有兩間校園門市，分別位於國立臺灣師範大學以及世新大學。協助師生安裝校園授權軟體，並提供教育優惠價與開學、畢業季活動，讓學生能以更實惠的價格使用 Apple 裝置輔助學習，老師與教職人員也能更安全無慮地工作。</div>
                                     </div>
                                 </div>
-                            </section>
 
-                            <section class="s_text_block o_cc o_cc2 pt48 pb48" data-snippet="s_text_block" data-name="聯絡資訊">
-                                <div class="container">
-                                    <div class="si-contact">
-                                        <div class="row">
-                                            <div class="col-lg-4 si-contact-item">
-                                                <h4>極電資訊總部</h4>
-                                                <p>地址：臺灣新北市汐止區新台五路一段 99 號 22F-1（U-TOWN 大樓 A 棟）</p>
-                                                <p>E-mail：contact@superinfo.com.tw</p>
-                                                <p>電話：(02) 2697-5813　傳真：(02) 2697-5907</p>
-                                            </div>
-                                            <div class="col-lg-4 si-contact-item">
-                                                <h4>師大 Apple 校園體驗中心</h4>
-                                                <p>地址：臺灣台北市大安區和平東路一段 129 號 師大國際會議中心一樓</p>
-                                                <p>E-mail：apple_ntnu@superinfo.com.tw</p>
-                                                <p>電話：(02) 2322-3718　傳真：(02) 2322-3718</p>
-                                            </div>
-                                            <div class="col-lg-4 si-contact-item">
-                                                <h4>世新 Apple 校園體驗中心</h4>
-                                                <p>地址：臺灣台北市文山區木柵路一段 17 巷 1 號 行政大樓一樓</p>
-                                                <p>E-mail：apple_shu@superinfo.com.tw</p>
-                                                <p>電話：(02) 2236-6358</p>
-                                            </div>
+                                <!-- 願景 -->
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">願景</div>
+                                        <div class="head3 midgrayword">協助客戶在不同領域善用最新科技</div>
+                                        <div class="part-p grayword">隨著無紙化、資源分享等科技化趨勢，加上北市府推動「一生一平板」專案與程式教育的需求成長，極電資訊將繼續積極拓展客源與協助目前客戶夥伴，透過 Apple 設備與 MDM、Apple School Manager 等相關服務，在各自專業領域上發展出更多元的科技應用。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/about/2.jpg" alt="願景" loading="lazy"/></div>
+                                </div>
+
+                                <!-- 認證工程師（深色區塊） -->
+                                <div class="maincontainer aboutbg1 whiteword">
+                                    <div class="part2">
+                                        <div class="head2">擁有多位官方認證工程師</div>
+                                        <div class="part-p">與時俱進的知識背景，是我們極度重視的一件事。極電資訊工程師擁有多張 Apple / Jamf Pro 專業證照，不僅是專業能力的鑑定，同時也是提供服務最有力的保證。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/about/3.jpg" alt="Apple / Jamf 認證工程師" loading="lazy"/></div>
+                                </div>
+
+                                <!-- 總部 -->
+                                <div class="maincontainer">
+                                    <div class="part-map">
+                                        <div><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1720036334304!2d121.64661867539911!3d25.062158677798244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5323b8a2fd43:0xe39e37194db53873!2z5qW16Zu76LOH6KiK5pyJ6ZmQ5YWs5Y-4772cU3VwZXJpbmZvIENvbXB1dGVy!5e0!3m2!1szh-TW!2stw!4v1713942569140!5m2!1szh-TW!2stw"/></div>
+                                        <a class="line-box" href="https://line.naver.jp/ti/p/~@xat.0000119425.rpn" target="_blank"><img class="line-icon" src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="LINE"/> 極電資訊業務客服</a>
+                                        <a class="line-box" href="https://line.naver.jp/ti/p/~@xat.0000119425.rpn" target="_blank"><img class="line-icon" src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="LINE"/> 極電資訊技術客服</a>
+                                    </div>
+                                    <div class="part-store reverse-order">
+                                        <div class="head2 darkgrayword">極電資訊－總部</div>
+                                        <div class="store-info">
+                                            <div class="info-add"><b>地址</b>：<br/>臺灣新北市汐止區<br/>新台五路一段 99 號 22F-1<br/>（U-TOWN 大樓 A 棟）<br/><br/><b>e-mail</b>：<br/>contact@superinfo.com.tw</div>
+                                            <div class="info-tel"><b>PHONE</b>：<br/>(02) 2697-5813<br/><br/><b>FAX</b>：<br/>(02) 2697-5907</div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- 師大 -->
+                                <div class="maincontainer">
+                                    <div class="part-map">
+                                        <div><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2197556226715!2d121.52751827539798!3d25.02661527782116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9844da84831:0xf1d6f9612ff01bf9!2z5bir5aSnQXBwbGXmjojmrIrmoKHlnJLlupcgLyDmpbXpm7vos4foqIo!5e0!3m2!1szh-TW!2stw!4v1713943085410!5m2!1szh-TW!2stw"/></div>
+                                        <a class="line-box" href="https://line.naver.jp/ti/p/~@xat.0000119425.rpn" target="_blank"><img class="line-icon" src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="LINE"/> 師大校園店客服</a>
+                                    </div>
+                                    <div class="part-store reverse-order">
+                                        <div class="head2 darkgrayword">師大 Apple 校園體驗中心</div>
+                                        <div class="store-info">
+                                            <div class="info-add"><b>地址</b>：<br/>臺灣台北市大安區<br/>和平東路一段 129 號<br/>師大國際會議中心一樓<br/><br/><b>e-mail</b>：<br/>apple_ntnu@superinfo.com.tw</div>
+                                            <div class="info-tel"><b>PHONE</b>：<br/>(02) 2322-3718<br/><br/><b>FAX</b>：<br/>(02) 2322-3718</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 世新 -->
+                                <div class="maincontainer">
+                                    <div class="part-map">
+                                        <div><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.311288521978!2d121.54251657539672!3d24.989536377845244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab2670ab82b9:0xaeb8d07b197f3f78!2z5LiW5pawIEFwcGxlIOaOiOasiuagoeWckuW6lyAvIOaltembu-izh-ioig!5e0!3m2!1szh-TW!2stw!4v1713943120170!5m2!1szh-TW!2stw"/></div>
+                                        <a class="line-box" href="https://line.naver.jp/ti/p/~@xat.0000119425.rpn" target="_blank"><img class="line-icon" src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="LINE"/> 世新校園店客服</a>
+                                    </div>
+                                    <div class="part-store reverse-order">
+                                        <div class="head2 darkgrayword">世新 Apple 校園體驗中心</div>
+                                        <div class="store-info">
+                                            <div class="info-add"><b>地址</b>：<br/>臺灣台北市文山區<br/>木柵路一段 17 巷 1 號<br/>行政大樓一樓<br/><br/><b>e-mail</b>：<br/>apple_shu@superinfo.com.tw</div>
+                                            <div class="info-tel"><b>PHONE</b>：<br/>(02) 2236-6358</div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </section>
 
                         </div>
