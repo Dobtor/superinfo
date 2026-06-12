@@ -14,17 +14,8 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">關於我們</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt32 pb32" data-snippet="s_text_block" data-name="內容圖">
-                <div class="container"><div class="row justify-content-center">
-                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/0.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
-                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/1.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
-                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/2.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
-                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/3.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
-                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/4.png" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
-                </div></div>
-            </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
-                <div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt40 pb40" data-name="相片格"><div class="container">
+                <div class="si-rows" style="margin-bottom:24px">
                     <h4>Apple 授權教育經銷商</h4>
                     <p>極電資訊有限公司為 Apple 授權教育經銷商，創立於 1990 年，銷售 Apple 電腦、平板電腦、行動裝置與 Apple 原廠配件，除此之外，也提供學校、公家機關的軟硬體採買與安裝，包含工作站、伺服器、儲存裝置、數位機背等相關服務。</p>
                     <p>擁有業界最豐富的 Mac 教室部署與 iPad 大量採購經驗，由多位專業工程師與教育訓練講師提供完整客製化服務。</p>
@@ -44,8 +35,15 @@
                     <h4>世新 Apple 校園體驗中心</h4>
                     <p>地址 ： 臺灣台北市文山區 木柵路一段 17 巷 1 號 行政大樓一樓 e-mail: apple_shu@superinfo.com.tw</p>
                     <h4>PHONE : (02) 2236-6358</h4>
-                </div></div></div>
-            </section>
+                </div>
+                <div class="si-grid">
+                    <img src="/superinfo_website_data/static/src/img/content/pages/about/0.jpg" alt="關於我們" loading="lazy"/>
+                    <img src="/superinfo_website_data/static/src/img/content/pages/about/1.jpg" alt="關於我們" loading="lazy"/>
+                    <img src="/superinfo_website_data/static/src/img/content/pages/about/2.jpg" alt="關於我們" loading="lazy"/>
+                    <img src="/superinfo_website_data/static/src/img/content/pages/about/3.jpg" alt="關於我們" loading="lazy"/>
+                    <img src="/superinfo_website_data/static/src/img/content/pages/about/4.png" alt="關於我們" loading="lazy"/>
+                </div>
+            </div></section>
                         </div>
                     </t>
                 </t>

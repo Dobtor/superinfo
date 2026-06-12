@@ -1,0 +1,77 @@
+// 極電資訊 CMS 內頁版型輔助樣式（自有 SCSS，非複製原站樣式）
+// 用以還原原站「交錯圖文列 / 相片格 / 圖示列」的結構與比例。
+
+.si-rows {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.si-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 36px;
+    margin: 48px 0;
+
+    &.si-reverse {
+        flex-direction: row-reverse;
+    }
+
+    > .si-col-img {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+
+    > .si-col-txt {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+}
+
+// 相片格（多張等寬，如學校案例）
+.si-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1140px;
+    margin: 32px auto;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 14px;
+    }
+
+    &.si-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// 手機收合為單欄
+@media (max-width: 767.98px) {
+    .si-row {
+        gap: 20px;
+        margin: 28px 0;
+
+        > .si-col-img,
+        > .si-col-txt {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .si-grid,
+    .si-grid.si-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

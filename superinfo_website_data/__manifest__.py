@@ -47,6 +47,11 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         # 選單（最後，程式化建立：確保 page/category 已存在；安裝與升級都重建）
         'data/menus.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            'superinfo_website_data/static/src/scss/superinfo_pages.scss',
+        ],
+    },
     'images': ['static/description/cover.png'],
     'license': 'LGPL-3',
     'installable': True,
