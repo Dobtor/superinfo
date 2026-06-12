@@ -18,7 +18,7 @@
 | 蘋果培訓 13 頁 | 逐字文案 + hero | `s_cover` / `s_text_block` |
 | 常見問題 | 逐字 Q&A | `s_cover` / `s_faq_collapse` |
 | 資訊安全／隱私權／購物須知 | 逐字文案 + hero | `s_cover` / `s_text_block` |
-| 最新消息 4 篇 | 站台公告 | `website.blog` / `blog.post` |
+| 最新消息 4 篇 | 站台公告 | `blog.blog` / `blog.post`（website_blog 模組，模型名是 `blog.blog` 非 `website.blog`） |
 
 ## 安裝
 

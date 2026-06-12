@@ -3,7 +3,7 @@
     <data noupdate="1">
 
         <!-- ════════ 最新消息 部落格 ════════ -->
-        <record id="blog_news" model="website.blog">
+        <record id="blog_news" model="blog.blog">
             <field name="name">最新消息</field>
             <field name="subtitle">極電資訊・產品與活動公告</field>
         </record>
