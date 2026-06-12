@@ -26,19 +26,28 @@ MENU_TREE = [
         {"name": "決策者", "url": "/apple-training/decision-makers"},
         {"name": "家長", "url": "/apple-training/parents"},
     ]},
-    {"name": "商城", "url": "/shop", "children": [
+    # 產品線頂層選單：頂層連父分類（child_of 遞迴 → 顯示該線全部商品），
+    # 第二層連葉分類做篩選範圍。Odoo 選單只支援兩層，故原站第三層商品歸入第二層。
+    {"name": "iPhone", "categ": "categ_iphone", "children": [
         {"name": "iPhone 17", "categ": "categ_iphone_17"},
         {"name": "iPhone 17 Air", "categ": "categ_iphone_17_air"},
         {"name": "iPhone 17 Pro", "categ": "categ_iphone_17_pro"},
         {"name": "iPhone 配件", "categ": "categ_iphone_acc"},
+    ]},
+    {"name": "Mac", "categ": "categ_mac", "children": [
         {"name": "iMac", "categ": "categ_mac_imac"},
+        {"name": "Mac 配件", "categ": "categ_mac_acc"},
+    ]},
+    {"name": "iPad", "categ": "categ_ipad", "children": [
         {"name": "iPad", "categ": "categ_ipad_std"},
         {"name": "iPad mini", "categ": "categ_ipad_mini"},
         {"name": "iPad Air", "categ": "categ_ipad_air"},
         {"name": "iPad Pro", "categ": "categ_ipad_pro"},
         {"name": "Apple Pencil", "categ": "categ_ipad_pencil"},
         {"name": "鍵盤", "categ": "categ_ipad_keyboard"},
-        {"name": "AirPods", "categ": "categ_airpods"},
+    ]},
+    {"name": "AirPods", "categ": "categ_airpods"},
+    {"name": "副廠週邊", "categ": "categ_acc", "children": [
         {"name": "SwitchEasy", "categ": "categ_acc_switcheasy"},
         {"name": "ELECOM", "categ": "categ_acc_elecom"},
         {"name": "其他周邊", "categ": "categ_acc_other"},
@@ -58,6 +67,10 @@ def _all_names(nodes, acc):
         acc.add(n["name"])
         _all_names(n.get("children", []), acc)
     return acc
+
+
+# 曾經用過、現已移除的頂層選單名稱（升級時一併清除，避免殘留）
+OBSOLETE_MENU_NAMES = ["商城"]
 
 
 class Website(models.Model):
@@ -81,8 +94,8 @@ class Website(models.Model):
         root = self.menu_id
         if not root:
             return
-        names = list(_all_names(MENU_TREE, set()))
-        # 清掉本網站上同名的舊選單（移除舊版重複），父刪子會 cascade
+        names = list(_all_names(MENU_TREE, set())) + OBSOLETE_MENU_NAMES
+        # 清掉本網站上同名的舊選單（移除舊版重複與已移除的「商城」），父刪子會 cascade
         Menu.search([("website_id", "=", self.id), ("name", "in", names)]).unlink()
         self._superinfo_create_nodes(MENU_TREE, root, base_seq=20)
         self.env.registry.clear_cache()
