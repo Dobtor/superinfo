@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
 
         <record id="page_bot_view" model="ir.ui.view">
             <field name="name">共契BOT專區</field>
