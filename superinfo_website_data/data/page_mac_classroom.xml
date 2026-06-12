@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="page_mac_classroom_view" model="ir.ui.view">
+            <field name="name">Mac 電腦教室</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_mac_classroom_view</field>
+            <field name="arch" type="xml">
+                <t name="Mac 電腦教室" t-name="superinfo_website_data.page_mac_classroom_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+
+                            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首"
+                                     style="background-image: url('/superinfo_website_data/static/src/img/content/success.jpg'); background-size: cover; background-position: center;">
+                                <div class="o_we_bg_filter bg-black-25"/>
+                                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">Mac 電腦教室</h1></div></div></div>
+                            </section>
+
+                            <section class="pt48 pb48" data-name="教室建置">
+                                <div class="container">
+                                    <div class="si-rows">
+                                        <div class="si-row si-reverse">
+                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/success/1.jpg" class="img-fluid" alt="Mac 電腦教室" loading="lazy"/></div>
+                                            <div class="si-col-txt">
+                                                <h3>逾 50 間 Mac 電腦教室建置經驗</h3>
+                                                <p>「工欲善其事，必先利其器。」在這個網路資訊爆炸的環境下，許多學校為了讓同學可以在多元的系統架構下，進行多媒體與資訊領域的學習，開始有了建置 Mac 教室的需求。</p>
+                                                <p>極電資訊從 2002 年迄今已協助建置與規劃逾 50 間 Mac 電腦教室，並適時提供網路與資訊系統的架設。除了擁有豐富的建置教室經驗，更有專業的技術人員提供完整服務。</p>
+                                                <p>從第一間建置的教室至今已超過 10 年，也曾經歷過檯燈機（G4）Mac 的年代，合作的學校與老師無數。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="s_text_block o_cc o_cc2 pt40 pb40" data-snippet="s_text_block" data-name="合作學校">
+                                <div class="container si-contact">
+                                    <h3 class="text-center mb-4">近年合作學校名單</h3>
+                                    <div class="row">
+                                        <div class="col-md-4"><p>國立臺灣大學<br/>國立政治大學<br/>國立臺灣師範大學<br/>國立臺北藝術大學<br/>國立臺灣藝術大學<br/>國立臺灣戲曲學院<br/>國立臺灣科技大學</p></div>
+                                        <div class="col-md-4"><p>國立臺北科技大學<br/>國立臺北教育大學<br/>國立臺北商業大學<br/>國立臺北護理健康大學<br/>中國文化大學<br/>臺北醫學大學<br/>東吳大學</p></div>
+                                        <div class="col-md-4"><p>世新大學<br/>銘傳大學<br/>臺北市立景美女子高級中學<br/>臺北市立大安高級工業職業學校<br/>臺北市立士林高級商業職業學校<br/>臺北市立大學附設實驗國民小學</p></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="pt48 pb48" data-name="問題解決">
+                                <div class="container">
+                                    <div class="si-rows">
+                                        <div class="si-row">
+                                            <div class="si-col-img"><img src="/superinfo_website_data/static/src/img/content/pages/success/6.jpg" class="img-fluid" alt="問題解決 經驗豐富" loading="lazy"/></div>
+                                            <div class="si-col-txt">
+                                                <h3>問題解決 · 經驗豐富</h3>
+                                                <p>電腦教室的建置與維護，對資訊組長與系統師來說常常是非常耗費體力、心力的事，需依照使用需求做基本設定，系統版本更新、軟體安裝等繁雜事務。</p>
+                                                <p>極電資訊致力協助資訊組長與系統師解決問題，透過建置數間教室、故障排除的經驗，提供最快速與專業的意見。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="s_text_block o_cc o_cc1 pt40 pb40" data-snippet="s_text_block" data-name="客戶回饋">
+                                <div class="container si-contact">
+                                    <div class="row">
+                                        <div class="col-lg-4 si-contact-item"><blockquote class="blockquote"><p>「極電服務有問必答，服務周到！」</p><footer class="blockquote-footer">台藝大老師</footer></blockquote></div>
+                                        <div class="col-lg-4 si-contact-item"><blockquote class="blockquote"><p>「價格合理，對電腦安裝後續交待很清楚，服務品質態度很好！」</p><footer class="blockquote-footer">士林高商廣設科主任</footer></blockquote></div>
+                                        <div class="col-lg-4 si-contact-item"><blockquote class="blockquote"><p>「整線、整合教室環境做得不錯，能迅速了解狀況，給予支援。」</p><footer class="blockquote-footer">景美女中資訊組長</footer></blockquote></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="pt32 pb56" data-name="成功實例">
+                                <div class="container">
+                                    <h3 class="text-center mb-4">Mac Lab 成功實例</h3>
+                                    <div class="si-grid si-grid-3">
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/6.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/7.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/8.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/9.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/10.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/11.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="page_mac_classroom" model="website.page">
+            <field name="name">Mac 電腦教室</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/mac-classroom</field>
+            <field name="view_id" ref="page_mac_classroom_view"/>
+        </record>
+
+    </data>
+</odoo>

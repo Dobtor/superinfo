@@ -31,63 +31,6 @@
             <field name="view_id" ref="page_bot_view"/>
         </record>
 
-        <record id="page_byod_view" model="ir.ui.view">
-            <field name="name">BYOD 自帶載具計畫</field>
-            <field name="type">qweb</field>
-            <field name="key">superinfo_website_data.page_byod_view</field>
-            <field name="arch" type="xml">
-                <t name="BYOD 自帶載具計畫" t-name="superinfo_website_data.page_byod_view">
-                    <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/byod.jpg'); background-size: cover; background-position: center;">
-                <div class="o_we_bg_filter bg-black-25"/>
-                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">BYOD 自帶載具計畫</h1></div></div></div>
-            </section>
-            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
-                <img src="/superinfo_website_data/static/src/img/content/pages/byod/0.jpg" alt="BYOD 自帶載具計畫" loading="lazy"/>
-                <img src="/superinfo_website_data/static/src/img/content/pages/byod/1.png" alt="BYOD 自帶載具計畫" loading="lazy"/>
-                <img src="/superinfo_website_data/static/src/img/content/pages/byod/2.png" alt="BYOD 自帶載具計畫" loading="lazy"/>
-                <img src="/superinfo_website_data/static/src/img/content/pages/byod/3.png" alt="BYOD 自帶載具計畫" loading="lazy"/>
-            </div></div></section>
-                        </div>
-                    </t>
-                </t>
-            </field>
-        </record>
-        <record id="page_byod" model="website.page">
-            <field name="name">BYOD 自帶載具計畫</field>
-            <field name="is_published">True</field>
-            <field name="url">/services/byod</field>
-            <field name="view_id" ref="page_byod_view"/>
-        </record>
-
-        <record id="page_mac_classroom_view" model="ir.ui.view">
-            <field name="name">Mac 電腦教室</field>
-            <field name="type">qweb</field>
-            <field name="key">superinfo_website_data.page_mac_classroom_view</field>
-            <field name="arch" type="xml">
-                <t name="Mac 電腦教室" t-name="superinfo_website_data.page_mac_classroom_view">
-                    <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/mac-classroom.png'); background-size: cover; background-position: center;">
-                <div class="o_we_bg_filter bg-black-25"/>
-                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">Mac 電腦教室</h1></div></div></div>
-            </section>
-            <section class="pt40 pb40" data-name="內容"><div class="container"><div class="si-stack">
-                <img src="/superinfo_website_data/static/src/img/content/pages/mac-classroom/0.jpg" alt="Mac 電腦教室" loading="lazy"/>
-            </div></div></section>
-                        </div>
-                    </t>
-                </t>
-            </field>
-        </record>
-        <record id="page_mac_classroom" model="website.page">
-            <field name="name">Mac 電腦教室</field>
-            <field name="is_published">True</field>
-            <field name="url">/services/mac-classroom</field>
-            <field name="view_id" ref="page_mac_classroom_view"/>
-        </record>
-
         <record id="page_promise_view" model="ir.ui.view">
             <field name="name">PROMISE 安心承諾</field>
             <field name="type">qweb</field>
