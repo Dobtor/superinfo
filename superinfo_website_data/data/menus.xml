@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- noupdate 預設 0：安裝與每次升級都重建選單樹（冪等） -->
+    <function model="website" name="_superinfo_build_menus"/>
+</odoo>

@@ -42,14 +42,12 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         'data/pages_info.xml',
         # 最新消息
         'data/blog_news.xml',
-        # 選單（最後，確保 page/category 已建立）
-        'data/website_menus.xml',
-        'data/shop_menus.xml',
         # 商品圖（每次升級重載）
         'data/product_images.xml',
+        # 選單（最後，程式化建立：確保 page/category 已存在；安裝與升級都重建）
+        'data/menus.xml',
     ],
     'images': ['static/description/cover.png'],
-    'post_init_hook': '_post_init_hook',
     'license': 'LGPL-3',
     'installable': True,
     'application': False,
