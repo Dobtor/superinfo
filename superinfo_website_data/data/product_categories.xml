@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="categ_iphone" model="product.public.category">
+      <field name="name">iPhone</field>
+      <field name="sequence">10</field>
+    </record>
+    <record id="categ_iphone_17" model="product.public.category">
+      <field name="name">iPhone 17</field>
+      <field name="parent_id" ref="categ_iphone"/>
+      <field name="sequence">11</field>
+    </record>
+    <record id="categ_iphone_17_air" model="product.public.category">
+      <field name="name">iPhone 17 Air</field>
+      <field name="parent_id" ref="categ_iphone"/>
+      <field name="sequence">12</field>
+    </record>
+    <record id="categ_iphone_17_pro" model="product.public.category">
+      <field name="name">iPhone 17 Pro</field>
+      <field name="parent_id" ref="categ_iphone"/>
+      <field name="sequence">13</field>
+    </record>
+    <record id="categ_iphone_acc" model="product.public.category">
+      <field name="name">iPhone 配件</field>
+      <field name="parent_id" ref="categ_iphone"/>
+      <field name="sequence">14</field>
+    </record>
+    <record id="categ_mac" model="product.public.category">
+      <field name="name">Mac</field>
+      <field name="sequence">20</field>
+    </record>
+    <record id="categ_mac_imac" model="product.public.category">
+      <field name="name">iMac</field>
+      <field name="parent_id" ref="categ_mac"/>
+      <field name="sequence">21</field>
+    </record>
+    <record id="categ_mac_acc" model="product.public.category">
+      <field name="name">Mac 配件</field>
+      <field name="parent_id" ref="categ_mac"/>
+      <field name="sequence">26</field>
+    </record>
+    <record id="categ_ipad" model="product.public.category">
+      <field name="name">iPad</field>
+      <field name="sequence">30</field>
+    </record>
+    <record id="categ_ipad_std" model="product.public.category">
+      <field name="name">iPad</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">31</field>
+    </record>
+    <record id="categ_ipad_mini" model="product.public.category">
+      <field name="name">iPad mini</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">32</field>
+    </record>
+    <record id="categ_ipad_air" model="product.public.category">
+      <field name="name">iPad Air</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">33</field>
+    </record>
+    <record id="categ_ipad_pro" model="product.public.category">
+      <field name="name">iPad Pro</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">34</field>
+    </record>
+    <record id="categ_ipad_pencil" model="product.public.category">
+      <field name="name">Apple Pencil</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">35</field>
+    </record>
+    <record id="categ_ipad_keyboard" model="product.public.category">
+      <field name="name">鍵盤</field>
+      <field name="parent_id" ref="categ_ipad"/>
+      <field name="sequence">36</field>
+    </record>
+    <record id="categ_airpods" model="product.public.category">
+      <field name="name">AirPods</field>
+      <field name="sequence">40</field>
+    </record>
+    <record id="categ_acc" model="product.public.category">
+      <field name="name">副廠週邊</field>
+      <field name="sequence">50</field>
+    </record>
+    <record id="categ_acc_switcheasy" model="product.public.category">
+      <field name="name">SwitchEasy</field>
+      <field name="parent_id" ref="categ_acc"/>
+      <field name="sequence">51</field>
+    </record>
+    <record id="categ_acc_elecom" model="product.public.category">
+      <field name="name">ELECOM</field>
+      <field name="parent_id" ref="categ_acc"/>
+      <field name="sequence">52</field>
+    </record>
+    <record id="categ_acc_other" model="product.public.category">
+      <field name="name">其他周邊</field>
+      <field name="parent_id" ref="categ_acc"/>
+      <field name="sequence">59</field>
+    </record>
+  </data>
+</odoo>

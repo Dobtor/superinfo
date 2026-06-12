@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Superinfo 極電資訊 官網資料',
+    'summary': '極電資訊 superinfo.com.tw 全站資料模組（純原生 snippet，無自訂樣式）',
+    'description': """
+極電資訊官網資料模組
+====================
+以 Odoo 18 原生 website / website_sale / website_blog 模型與原生 snippet
+重建 superinfo.com.tw 全站內容：選單、CMS 頁面、商城分類、商品（含變體）、
+最新消息、品牌牆。安裝即建站，不含任何自訂 SCSS/JS/snippet。
+
+對應 snippet：s_carousel / s_dynamic_snippet_products / s_references /
+s_cards_grid / s_image_text / s_numbers / s_key_benefits / s_process_steps /
+s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
+""",
+    'author': 'Dobtor SI',
+    'website': 'https://www.dobtor.com',
+    'category': 'Website',
+    'version': '18.0.1.0.0',
+    'depends': [
+        'website',
+        'website_sale',
+        'website_blog',
+    ],
+    'data': [
+        # 公司 / 網站基本設定
+        'data/res_config.xml',
+        # 商品分類 / 屬性 / 商品
+        'data/product_categories.xml',
+        'data/product_attributes.xml',
+        'data/products_iphone.xml',
+        'data/products_mac.xml',
+        'data/products_ipad.xml',
+        'data/products_airpods.xml',
+        'data/products_accessories.xml',
+        'data/products_variants.xml',
+        # CMS 頁面（原生 snippet）
+        'data/page_home.xml',
+        'data/page_about.xml',
+        'data/pages_project.xml',
+        'data/pages_training.xml',
+        'data/pages_info.xml',
+        # 最新消息
+        'data/blog_news.xml',
+        # 選單（最後，確保 page/category 已建立）
+        'data/website_menus.xml',
+        'data/shop_menus.xml',
+        # 商品圖（每次升級重載）
+        'data/product_images.xml',
+    ],
+    'images': ['static/description/cover.png'],
+    'post_init_hook': '_post_init_hook',
+    'license': 'LGPL-3',
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

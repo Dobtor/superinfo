@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="page_faq_view" model="ir.ui.view">
+            <field name="name">常見問題</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_faq_view</field>
+            <field name="arch" type="xml">
+                <t name="常見問題" t-name="superinfo_website_data.page_faq_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/faq.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">常見問題</h1></div></div></div>
+            </section>
+            <section class="s_faq_collapse o_cc o_cc1 pt56 pb56" data-snippet="s_faq_collapse" data-name="常見問題">
+                <div class="container"><div class="accordion" id="superinfoFaq">
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq0">我是大學教職員生 / 碩博生 / 國高中小教師 我可以享有哪些優惠？</button></div>
+                        <div id="sfaq0" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>凡持有 「全台公私立大學有效學生證」或 「國小以上各級學校教職員等證明文件」， 即可以教育優惠價購買 Mac、iPad、Apple Pencil 等商品</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq1">哪些對象是用教育優惠價？</button></div>
+                        <div id="sfaq1" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>持有全台公私立大學有效學生證/教職員證者，無論何時購買 Mac 與 iPad 產品皆可享教育優惠價。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq2">教育優惠價有數量限制嗎？</button></div>
+                        <div id="sfaq2" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>每 1 位符合 Apple 教育優惠價與學生折扣方案之學生或教職員 (以學生證或教職員證號為準)，於每一日曆年期間，僅能以 Apple 教育優惠價購買下列限定數量之產品。 1 部 MacBook 產品 1 部 iMac 產品 1 部 Mac mini 產品 2 部 iPad 產品 2 個 Apple 教育價配件（含 Apple Pencil、iPad Keyboard、Studio Display &amp; Pro Display XDR ） 每一日曆年即從 1 月 1 日 至 12 月 31 日 止。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq3">商品頁上的價格就是教育優惠價了嗎？</button></div>
+                        <div id="sfaq3" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>商店頁面上顯示皆為教育優惠價。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq4">如何驗證我的教育身份？</button></div>
+                        <div id="sfaq4" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>下訂後於官網右下角對話功能上傳教育證明文件後，客服人員將寄信至您提供的教育信箱，驗證信箱後完成教育驗證，訂單才成立。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq5">有哪些取貨方式呢？</button></div>
+                        <div id="sfaq5" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>宅配 黑貓宅配，寄出後會提供物流單號供查詢。 目前物流僅配送台灣本島。 店取 可預約以下據點取貨： 師大店：台北市大安區和平東路一段 129 號 世新店：台北市文山區木柵路一段 17 巷 1 號</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq6">接受哪些付款方式呢？</button></div>
+                        <div id="sfaq6" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>匯款（視同現金付款） 匯款完於 email 信件下方點選「匯款單」回傳匯款資訊。 匯款完 私訊/Email 回傳末五碼。 刷卡 未來將陸續提供線上刷卡、LINE Pay、銀角零卡等付款方式，目前無法線上刷卡。 到店取貨付款 可選店面取貨，並當面付現 / 刷卡（可分期）。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq7">可以訂購客製化機型嗎？</button></div>
+                        <div id="sfaq7" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>訂製客製化機型請先 私訊 我們開立專屬於您的下單頁面。 客製化機型須先付 20% 訂金 約一至兩週到貨，貨到會再通知。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq8">商品下單後多久會到貨呢？</button></div>
+                        <div id="sfaq8" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>商品有貨 預計於付款後一個工作天內宅配出貨。三個工作天內可寄達。 商品缺貨 商品庫存會顯示為預購，可直接下訂。若已遇商品無法出貨，我方保留更換訂單、或取消訂單之權利。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq9">我沒有教育價優惠資格，能以原價購買嗎？</button></div>
+                        <div id="sfaq9" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>若欲購買原價，請在商品規格選擇「沒有教育價身份」，即可以原價購買。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq10">如何查詢我的訂單記錄？</button></div>
+                        <div id="sfaq10" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>請登入 我的會員 頁面查詢。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq11">目前提供哪些優惠活動呢？</button></div>
+                        <div id="sfaq11" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>詳情請見首頁「 最新活動 」，不定期提供優惠中。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq12">優惠活動可以刷卡嗎？</button></div>
+                        <div id="sfaq12" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>刷卡僅可選擇活動期間刷卡分期零利率優惠。 ＊目前線上未提供刷卡分期服務，刷卡問題可先至右下洽談聊天室詢問。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq13">優惠活動適用對象？</button></div>
+                        <div id="sfaq13" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>對象：不限身份，大專院校教職員生、國高中小教職員可再搭配教育優惠價。</p></div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq14">優惠活動一定要到現場嗎？</button></div>
+                        <div id="sfaq14" class="accordion-collapse collapse" data-bs-parent="#superinfoFaq"><div class="accordion-body"><p>線上商店也可提供相同優惠方案。 有任何問題歡迎聯繫我們！</p></div></div>
+                    </div>
+                </div></div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_faq" model="website.page">
+            <field name="name">常見問題</field>
+            <field name="is_published">True</field>
+            <field name="url">/info/faq</field>
+            <field name="view_id" ref="page_faq_view"/>
+        </record>
+
+        <record id="page_security_view" model="ir.ui.view">
+            <field name="name">資訊安全</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_security_view</field>
+            <field name="arch" type="xml">
+                <t name="資訊安全" t-name="superinfo_website_data.page_security_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/security.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">資訊安全</h1></div></div></div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+                    <p>極電資訊有限公司 資通安全政策 機密等級：一般 編號：I-1-01 版本：1.0 發行日期：114 年 02 月 14 日</p>
+                    <p>1. 目的 為維護極電資訊有限公司（以下簡稱本公司）所屬資訊資產之機密性、完整性及可用性，並符合相關法規之要求，並保障使用者資料隱私，使其免於遭受內、外部的蓄意或意外之威脅。本公司整合各層級部門資通安全目標，建立本公司整體資通安全政策目標如下： 保護本公司業務活動資訊，避免未經授權存取，確保機密性。 保護本公司業務活動資訊，避免未經授權修改，確保正確完整性。 建立資訊業務永續運作計畫，維持本公司業務持續運作，確保可用性。 本公司之業務執行符合相關法規之要求，確保法規遵循性。</p>
+                    <p>3. 權責 為落實執行本公司資通安全政策，權責劃分如下： 本公司設置資通安全委員會，由公司管理高層指定一員任資通安全長，該委員會統籌資通安全政策、計畫、作業、資源調度之協調與管理審查。 資通安全委員會下設置資通安全工作小組，由資通安全長指定專人擔任管理代表，配合本公司資通安全需求制修訂各階管理程序文件，維持本公司資通安全管理系統之有效運作，每年應至少一次將資通安全工作執行成果，陳報資通安全委員會進行管理審查。 本公司各單位應遵循資通安全工作小組制定之相關資通安全規定。 本公司員工、本公司辦公場所以外之系統連線使用者及承接本公司業務之廠商，應遵循本公司資通安全政策及相關管理規定。 有任何危及資通安全之行為者，應依法負擔民事、刑事責任，並依本公司相關規定進行行政懲處。</p>
+                    <p>4. 名詞定義 資通安全： 實現和維護資訊與通訊的機密性、完整性及可用性；亦能涉及如鑑別性、可歸責性、不可否認性及可靠性等性質。</p>
+                    <p>機密性： 資訊不得被未經授權之個人、實體或程序所取得或揭露的特性。</p>
+                    <p>可用性： 已授權實體在需要時可存取與使用之特性。</p>
+                    <p>完整性： 對資產之精確與完整安全保證的特性。</p>
+                    <p>鑑別性： 確保特定主體或資源之識別就是其所聲明者的特性。</p>
+                    <p>不可否認性： 對一已發生之行動或事件的證明，使該行動或事件往後不能被否認的能力。</p>
+                    <p>可歸責性： 確保實體之行為可唯一追溯到該實體的特性。</p>
+                    <p>可靠性： 確保預期行為與結果一致的特性。</p>
+                    <p>© 2025 極電資訊有限公司 版權所有 本文件最後更新日期：114年02月14日</p>
+                </div></div></div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_security" model="website.page">
+            <field name="name">資訊安全</field>
+            <field name="is_published">True</field>
+            <field name="url">/info/security</field>
+            <field name="view_id" ref="page_security_view"/>
+        </record>
+
+        <record id="page_privacy_view" model="ir.ui.view">
+            <field name="name">隱私權政策</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_privacy_view</field>
+            <field name="arch" type="xml">
+                <t name="隱私權政策" t-name="superinfo_website_data.page_privacy_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/privacy.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">隱私權政策</h1></div></div></div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+                    <p>非常歡迎您光臨「極電資訊官網」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：</p>
+                    <h4>一、隱私權保護政策的適用範圍</h4>
+                    <p>隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。</p>
+                    <h4>二、個人資料的蒐集、處理及利用方式</h4>
+                    <p>當您造訪本網站或使用本網站所提供之購物服務時，我們將請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。</p>
+                    <p>本網站在您使用購物功能時，會保留您所提供的真實姓名、電子郵件地址、聯絡方式及使用時間等。</p>
+                    <p>於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。</p>
+                    <p>若您無意願接受上述使用或資訊提供，只需聯絡我們我們將依照需求停止運用您的個資。</p>
+                    <p>本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。</p>
+                    <p>如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</p>
+                    <h4>四、網站對外的相關連結</h4>
+                    <p>本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。</p>
+                    <h4>五、與第三人共用個人資料之政策</h4>
+                    <p>本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。</p>
+                    <h4>前項但書之情形包括不限於：</h4>
+                    <p>為免除您生命、身體、自由或財產上之危險。</p>
+                    <p>當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。</p>
+                    <p>為您提供完整的購物及送貨服務需提供委託貨運廠商或金流平台。</p>
+                    <h4>六、Cookie之使用</h4>
+                    <p>為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie 的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。</p>
+                    <h4>七、隱私權保護政策之修正</h4>
+                    <p>本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。</p>
+                </div></div></div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_privacy" model="website.page">
+            <field name="name">隱私權政策</field>
+            <field name="is_published">True</field>
+            <field name="url">/info/privacy</field>
+            <field name="view_id" ref="page_privacy_view"/>
+        </record>
+
+        <record id="page_terms_view" model="ir.ui.view">
+            <field name="name">購物須知與服務條款</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_terms_view</field>
+            <field name="arch" type="xml">
+                <t name="購物須知與服務條款" t-name="superinfo_website_data.page_terms_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/terms.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">購物須知與服務條款</h1></div></div></div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+                    <p>本站未開放非會員訂購商品。</p>
+                    <p>請先登入會員，方可享有紅利點數回饋；如欲加入會員，請點選右上角加入會員，填寫資料後即可加入。</p>
+                    <p>本站一年 365 日 24 小時皆可訂購，僅工作天安排商品配送，請詳見下方配送說明。</p>
+                    <p>訂購成功後，系統將自動發送 email 確認信，不另行其他通訊方式通知(如簡訊、電話)。</p>
+                    <p>訂單送出後，將無法自行取消或修改，請於上班日聯繫客服，將有專人為您服務。（客服資訊請見最下方）</p>
+                    <p>訂單送出後，若尚未付款者，5 個工作天內聯繫不上，恕由我方逕行取消訂單。</p>
+                    <p>訂單已配送後，如欲退換貨，請先聯繫客服後可至「會員中心」中的「訂購紀錄」頁面，按下退換貨按鈕申請。</p>
+                    <p>確認訂單後，將於三個工作天內出貨。並於出貨後 1~3 日配送至指定地址(預購或特殊商品除外)。</p>
+                    <p>因委外黑貓物流，配送途中可能會產生有不可預知之因素或因節日物流延誤，無法保證於指定配送時段到達，敬請見諒。</p>
+                    <p>配送範圍限台灣本島，台灣離島及其他國家暫不提供寄送服務。</p>
+                    <p>配送地址請勿填寫郵政信箱。</p>
+                    <p>同一筆訂單僅限配送一個地址，恕無法拆單寄送。</p>
+                    <p>因訂購人所提供收件資料錯誤或缺漏無法即時聯繫，或個人因素未先告知無法收件等導致損失，恕不接受退換貨及退貨款。</p>
+                    <h4>物流：店面取貨說明</h4>
+                    <h4>配送方式：店面取貨</h4>
+                    <p>請於訂單準備好後再至店面取貨，切勿自行直接至現場，以免向隅。</p>
+                    <p>提供兩店面可於結帳時選擇，若有更動請於右下角洽談訊息或 LINE@ 上告知後修改，未免糾紛恕僅能修改一次。</p>
+                    <p>師大店：臺北市大安區和平東路一段 129 號 師大國際會議中心</p>
+                    <p>世新店：臺北市文山區木柵路一段 17 巷 1 號 世新大學行政大樓 1 樓</p>
+                    <h4>運費計算(限台灣本島)</h4>
+                    <h4>宅配：常溫 100 元/滿 5,000 元免運</h4>
+                    <p>訂單完成後，本公司將開立二聯式紙本發票正本，連同商品一併寄出。</p>
+                    <p>購買教育價商品無法開立三聯式發票，若有需求請選擇原價商品。</p>
+                    <p>如有開立三聯式發票的需求，請填妥必要資訊，恕無法重新開立三聯式發票。</p>
+                    <p>發票上商品名稱將依訂購的品名和金額開立，恕無法指定開立其它品名、金額，或指定開立日期。</p>
+                    <p>每筆訂單對應一張發票，恕無法分別開立多張。</p>
+                    <p>常溫商品如未開封且在包裝完整、未毀損之情形下，可於收到商品後的七日內(含例假日)申請接受退/換貨。</p>
+                    <p>如有退換貨需求，請於服務時間聯繫客服人員（頁面右下角洽談或 LINE@） ，將有專人為您服務。</p>
+                    <p>退/換貨時，需附上原訂購商品 (須為原狀、包裝完整無損毀)及發票。確認收到完整退貨時，方進行退款流程。</p>
+                    <p>若已開箱，將收取來回物流與商品售價 20% 拆箱費，敬請見諒。</p>
+                    <p>服務時間：週一至週五 9:00-18:00 （例假日暫停服務）</p>
+                    <p>客服方式：右下角洽談聊天室 或 極電資訊校園店 LINE@ 官方帳號</p>
+                    <h4>線上購物服務約定條款</h4>
+                    <h4>一、服務約定條款說明</h4>
+                    <p>極電資訊有限公司(以下簡稱，本公司)依據本購物服務條款(以下簡稱，本服務)提供本網站服務。</p>
+                    <p>當您瀏覽或使用本服務時(包括但不限於：本網站中之文字、圖片、訊息、影音、網頁、超鏈結、檔案)，即表示您已詳讀下列條款，且同意所有條款內容。本公司將隨時修改、變更本服務條款內容，並公告於本公司之網站(下稱本網站)，本公司將不另行通知。</p>
+                    <p>本服務條款經修改、變更後，若您繼續使用本服務，將視為您已詳讀且同意更新之條款內容，如不同意時，應即終止使用本服務。</p>
+                    <p>您閱讀本服務條款時，如未滿 20 歲，應事先告知本公司，並徵得法定代理人同意後，始得使用本服務；如您隱匿、未告知或虛構已滿 20 歲或未徵得法定代理人同意時，本公司得知時有權暫停或取消您的會員資格及相關已成立及尚未成立之訂購單，且有權請求法定代理人與您負連帶責任。</p>
+                    <p>會員：同意註冊為本網站之會員，且提供正確個人資料，經本公司核准會員資格之人。</p>
+                    <p>非會員：未經註冊、未經核准會員資格及會員資格遭暫停、終止之人。</p>
+                    <p>網站使用者：使用本網站服務之人(包括會員及非會員)。</p>
+                    <p>如果您同意提供您正確的個人資料，可申請註冊成為本網站的會員；在您完成註冊後，您始得登入本網站，參與本服務相關活動及購物。</p>
+                    <p>您應擔保所提供予本網站之這些資料的完整和正確，若個人資料有異動，您必須主動上網登錄修改或連絡客服人員處理，若您提供任何錯誤或不實資料，本公司有權暫停或終止您的會員資格，並拒絕繼續對您提供服務。</p>
+                    <p>您有妥善保管「會員帳號、密碼」的義務與責任，應不定期更新密碼且不得洩漏、出借、轉讓、共用或其他方式或名義提供給第三人知悉，並應於每次使用後確實登出，以防他人冒用。使用該組會員帳號密碼登入本網站線上服務平台後之所有一切行為，除可證明遭第三人盜用、非可歸責於您之事由所致者，都將視為您本人之行為，您須負完全責任，若非可歸責於本公司之事由致您的帳號遭盜用而產生您個人的損失，本公司不負賠償責任。</p>
+                    <p>發生前項情形或帳號密碼遺失時，應立即通知本站連絡掛失，在您通知前所產生訂單或費用，不因通知而當然免除。若因未即時通知，導致本公司無法有效防止及修改時，所造成的所有損失，會員應自負全責。</p>
+                    <h4>四、個人資料保護之告知暨同意事項</h4>
+                    <p>蒐集目的、個人資料類別、利用期間、地區、對象及方式</p>
+                    <p>本公司遵守個人資料保護法及相關法令規定，為提供註冊、登入網站、資訊、產品訂購、行銷(包括但不限於：發送活動、商品之優惠訊息、發放優惠券)、使用狀況調查及統計資料、研究、客戶服務等服務，及與網站使用者聯繫，或於下列各款情形，您同意於使用本服務期間，由本公司、本網站、其關係企業及合作對象、廠商，得於法律限制範圍內蒐集、處理、保存、傳遞、使用您留存之直接或間接識別個人之資料(包括但不限於：姓名、身分證字號、聯絡方式、電子郵件、出生日期、性別、地址、IP 位址、cookie 及使用行為、所購產品)：</p>
+                    <p>(1) 依法令或受檢警調、司法機關或其他有權機關基於法定程序之要求。</p>
+                    <p>(2) 在緊急情況下為維護其他網站使用者或第三人之合法權益。</p>
+                    <p>(3) 為維護本網站之正常運作。</p>
+                    <p>(4) 為提供本公司相關服務產生之金流、物流或其他協力廠商合作廠商必要資訊。</p>
+                    <p>(5) 網站使用者有任何違反政府法令或本網站使用條款之情形。</p>
+                    <p>(6) 本公司與本網站相互連結，除此之外跳脫連結至其他網站，即不適用本網站使用條款與隱私權規範。</p>
+                    <h4>個人資料權利行使事項</h4>
+                    <p>您可以透過以下聯繫方式向本公司行使下列個人資料權利，除個人資料保護法另有規定外，本公司得為您提供：(1)查詢或請求閱覽 (2)請求製給複製本 (3)請求補充或更正 (4)請求停止蒐集、處理或利用 (5)請求刪除。</p>
+                    <p>客服信箱：contact@superinfo.com.tw</p>
+                    <p>服務時間：週一至週五 09:00 - 18:00</p>
+                    <p>如您不同意提供個人資料或要求刪除或停止蒐集、處理、利用個人資料，您了解並接受本公司可能因此無法完成上述蒐集目的或提供您相關服務，尚請見諒。</p>
+                    <p>您放入購物車之商品或提交訂購單，不代表已完成訂購程序，在您在線上提交訂購單後，本網站會自動經由電子郵件或其他方式寄給您一封通知，但是該通知只是通知您本服務已經收到您的訂購訊息，不代表契約已經成立，本網站仍保有是否接受您的訂單權利。本公司有權視商品庫存及現況，不接受您的訂購單，並請您自購物車中移除。</p>
+                    <p>您同意並瞭解本網站中所標示之商品價格及其他廣告、促銷或相關資訊，均屬要約之引誘，而您的訂單性質屬要約，本公司有權以任何方式拒絕承諾您的要約或撤銷您的訂單。</p>
+                    <p>本網站之商品價格及其他廣告、促銷或相關資訊有任何錯誤時，本公司將隨時以官方公告進行更正，請隨時注意公告。您必須依照本網站商品所標示的數量、規格、圖片、說明、價格或相關交易條件進行購買，前述標示如具有明顯或可得推知之錯誤時，本公司有權在您完成訂購程序後拒絕或撤銷您的訂單。</p>
+                    <p>若您選擇以信用卡、金融卡、銀行帳戶或其他第三人支付帳戶等進行付款時，即便您已在本網站輸入相關資訊，也僅是作為確認資訊有效性及相關交易授權之用，並不代表您已經付款或交易已經完成或契約已經成立。若您的信用卡、金融卡、銀行帳戶或其他第三人支付帳戶等已經收款，而後您的訂單被本公司拒絕或撤銷者，本公司將直接退款至您的原購買帳戶。</p>
+                    <h4>交易方式 退款方式 完成退款作業時間</h4>
+                    <p>到店付款、轉帳匯款 須提供正確存摺封面影本以便我們退款予您 於收到您的商品確認檢測無誤及相關退款資料齊備後，約 10-14 個工作天(不包含例假日)完成退款至您的指定帳戶。</p>
+                    <p>LINE Pay、線上付款 退回原刷卡信用卡帳戶 於收到您的商品確認檢測無誤及相關退款資料齊備後，約 10-14 個工作天(不包含例假日)完成退款至您原刷卡帳戶。</p>
+                    <p>本網站進行的所有線上消費，網站使用者同意以線上購物所紀錄之電子交易資料為準；網站使用者如果發現交易資料不正確，應立即通知本網站客服中心。如有糾紛網站使用者同意以該電子交易資料為認定標準。</p>
+                    <p>同一消費者但是以多數帳號重覆多次下單。本公司有權決定僅對單一帳號依數量上限出貨。</p>
+                    <p>本網站之商品並不含運費，價格標示為商品本身價格。運費之收取若有達到本網站之門檻新台幣(下同) 5000 元以上則不收取。5000 元以下則酌收 100 元運費。運費將合併於最後的結帳總金額當中。若訂單中有部分商品已享有指定商品免運優惠，則該商品金額將不列入運費門檻計算。</p>
+                    <p>運費若產生變動，本網站將隨時公告，請於確認訂購前務必注意。</p>
+                    <p>本網站所提供之商品，除一般商品外，教育價商品售價與優惠皆需符合教育價優惠資格方可適用，下訂單前請務必確認自身是否符合教育價優惠資格，如不符資格，本公司有權以任何方式拒絕承諾您的要約或撤銷您的訂單。</p>
+                    <p>本網站提供之線上服務平台，消費者享有商品到貨 7 天鑑賞期之權益(到貨日的計算以宅配簽收單為憑，7 天包含假日)。請注意鑑賞期不等同於試用期，收到商品時，請先確認商品內容物是否完整，商品數量是否無誤。(※提醒您：在您還不確定是否辦理退貨前，請勿拆封，若拆封將酌收商品價值 20% 拆箱費)</p>
+                    <p>線上購物售出商品只退不換，紅利點數及優惠券亦不退回，若您有換貨需求，請辦理退貨後，重新下單訂購。</p>
+                    <p>如欲退貨，費用會整筆退回，如您整筆訂單使用紅利點數或優惠折抵，則不可單獨品項退貨，需將整筆訂單商品一併退回。</p>
+                    <p>產品拆封時請全程錄影，並保存影片直到確認商品沒有問題，以維護您的權益。 商品連上網路（含啟動 wifi）、登入 Apple ID 或連結上 iTunes 後，該商品即被註冊並開始計算商品保固時間，保固啟用後即無法復原，除產品有功能性瑕疵外恕不接受退換貨。若產品有功能性瑕疵（如：鍵盤卡鍵、觸控板沒反應等），請在產品開封後七日內攜帶產品原包裝（包含牛皮紙盒即產品包裝盒）及發票至本公司店面進行換貨，以免超過七日新品換貨時間。</p>
+                    <p>在您還不確定是否要辦理退貨以前，請勿拆封；若您購買的商品屬於「通訊交易解除全合理例外情事適用準則」(台消保字第1040155809號令)所定之商品，即一經拆封即無法回復原狀的商品，請在尚未確認是否辦理退貨前，請勿拆封；一經拆卸即代表您滿意商品並開始使用，並瞭解此行為將影響您的退貨權益。</p>
+                    <p>前項「通訊交易解除權合理例外情事適用準則」排除消費者保護法第19條第1項7日解除權之商品：</p>
+                    <p>易於腐敗、保存期限較短或解約時即將逾期。</p>
+                    <p>依消費者要求所為之客製化給付。</p>
+                    <p>報紙、期刊或雜誌。</p>
+                    <p>經消費者拆封之影音商品或電腦軟體。</p>
+                    <p>非以有形媒介提供之數位內容或一經提供即為完成之線上服務，經消費者事先同意始提供。</p>
+                    <p>已拆封之個人衛生用品。</p>
+                    <p>退貨時若有下列情形，將影響您的商品退貨權益(包括但不限於：須依供應商報價支付相關費用等)：</p>
+                    <p>商品、使用手冊、相關配備、贈品或配件不齊全。</p>
+                    <p>商品、外盒外觀污損或刮傷(含外盒條碼撕除)。</p>
+                    <p>商品保固貼紙毀損。</p>
+                    <p>已拆封耗材、個人衛生用品。</p>
+                    <p>其他於本公司商品銷售網頁上有特別載明者。</p>
+                    <p>您退回之商品經檢測無誤後，本公司將約於 10 - 14 個工作天(不含假日)完成退款作業。</p>
+                    <p>每筆訂單僅限一次退貨，如因個人因素辦理退貨次數超過2次(含)以上，我們將暫停或終止您的購物與服務資格，敬請見諒。</p>
+                    <p>若您申辦退貨事宜，為加速退貨退款流程，您同意得由本公司代為處理電子發票、折讓單或銷貨退回單等相關事宜。</p>
+                    <p>訂購產品後未取貨或無故退貨超過 2 次(含)以上即屬惡意，本公司得暫停或終止提供配送服務。</p>
+                    <p>所有未盡詳述表示之處，將遵循中華民國法律所有相關規定。</p>
+                    <p>本網站刊載所有(包括但不限於)資料、資訊、商標、圖片、插圖、網站架構、程式設計、畫面安排、網頁編排、其他標示與資訊等等，均屬本公司或其權利人依法擁有智慧財產權、著作權、商標法、專利法、營業秘密法及公平交易法之保護。非經本公司或權利人事先授權，不得任意(包括但不限於)使用、修改、重製、公開播送、改作、散布、轉讓、出版、逆工程組譯，否則本公司及相關權利人將依法主張或請求民事及刑事之責任。</p>
+                    <h4>配送服務之暫停或終止</h4>
+                    <p>如發生下列情事時，本公司得暫停或終止配送服務，網站使用者不得請求賠償或為任何主張：</p>
+                    <p>因網站所設伺服器之軟、硬體設備及電子通信設備，因故無法登入，已確定成立之訂單，則仍予配送。</p>
+                    <p>偶發事件或天災等不可抗力事由，包括但不限於：火災、水災、地震、電力中斷、爆炸、洪水、天災、戰爭、暴動、內亂、貨運輸設備及機器器材發生故障、國防、政府政策。</p>
+                    <p>網站使用者違反法令規定。</p>
+                    <p>本合約其他條款已約定得暫停或終止配送之事由。</p>
+                    <p>本網站使用者不得以前項服務之暫停或中斷為由，主張因此造成使用不便、時間損失或經濟上損失或為其他損失之請求。</p>
+                    <p>本網站將以符合目前一般可合理期待安全性之方式與技術維護網站正常運作。產生下列情況時本網站有權暫停提供服務，且不負事先通知您之義務。本網站對於產生任何直接或間接損害，均不負任何賠償或補償之義務：</p>
+                    <p>本網站相關軟硬體設備進行搬遷、更換、升級、保養或維修。</p>
+                    <p>偶發事件或天災等不可抗力事由，包括但不限於：火災、水災、地震、電力中斷、爆炸、洪水、天災、戰爭、暴動、內亂、貨運輸設備及機器器材發生故障、國防、政府政策，導致服務終止或中斷。</p>
+                    <p>因電信公司或網路服務公司中斷或其他不可歸責於本公司事由所致之服務暫停或中斷。</p>
+                    <p>本網站遭受外力影響以致資訊不正確、遭偽造、竄改、刪除或擷取，或致使系統中斷不能正常運作。</p>
+                    <p>使用者有違本網站使用條款或法令之情形而對該使用者暫停或終止服務。</p>
+                    <p>本公司本網站有需要暫停或終止服務。</p>
+                    <p>本公司本網站有需要暫停或終止服務時，會儘量事先於網站上公告。</p>
+                    <p>本公司本網站為了維護全體使用者的權益，當您有以下情形時，本公司得立即暫停或中止您的購物資格、一部或全部之服務，且網站使用者因此所生之損失，本公司不負賠償、補償責任：</p>
+                    <p>因可歸責網站使用者之事由，致延誤履約期限，情節重大者。</p>
+                    <p>提供不實或錯誤資料進行登錄。</p>
+                    <h4>偽造或變造本合約或履約相關文件</h4>
+                    <p>未經本人許可而盜刷信用卡或盜用金融帳號。</p>
+                    <p>無故在「貨到付款」時拒不付款，超過第三次。</p>
+                    <p>經本公司本網站認定有惡意退貨情形。</p>
+                    <p>對本公司本網站進行騷擾、辱罵、恐嚇或不當言行。</p>
+                    <p>經本公司本網站認定有惡意而本公司已經報警。</p>
+                    <h4>無正當理由而不履行合約者</h4>
+                    <p>違反本合約之其他約定。</p>
+                    <p>以上事項您已經同意，且本公司本網站對您或第三人均不負任何義務與責任。</p>
+                    <p>本公司不會以電話告知轉帳帳號與操作任何 ATM 之事宜，若有疑慮請撥打 165 反詐騙電話。</p>
+                    <p>電話聯繫僅會核對訂單資料與金額，若不方便接電話可在下單後於右下角洽談聊天室或官方 LINE 帳號與專員聯繫。</p>
+                    <h4>本同意書效力與管轄法院</h4>
+                    <p>除本約定條款外，您亦應遵守本公司會員條款、隱私權政策、本網站之各項公告及各商品之交易相關限制規定。</p>
+                    <p>您在本網站所進行之訂購、交易或相關消費行為，以及本約定條款，都以中華民國法令為準據法，如因此涉訟，您同意以臺灣臺北地方法院為第一審管轄法院。</p>
+                    <p>本網站保留隨時修改本約定條款之權利，修改後之約定條款將固定公佈於本網站會員中心內，不另行個別通知；如您繼續於本網站進行訂購或其他行為，即視為您已瞭解、並同意遵守修改後之約定條款。</p>
+                    <p>本同意書若有未盡之處，依中華民國法律解釋、補充及辦理。</p>
+                </div></div></div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_terms" model="website.page">
+            <field name="name">購物須知與服務條款</field>
+            <field name="is_published">True</field>
+            <field name="url">/info/terms</field>
+            <field name="view_id" ref="page_terms_view"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ════════ 商城（多選單 → 各分類電商篩選結果） ════════ -->
+        <!-- 子選單 URL 由 post_init_hook 補成 /shop/category/<slug> -->
+        <record id="menu_shop" model="website.menu">
+            <field name="name">商城</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">60</field>
+        </record>
+
+        <!-- iPhone -->
+        <record id="menu_shop_iphone_17" model="website.menu">
+            <field name="name">iPhone 17</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">61</field>
+        </record>
+        <record id="menu_shop_iphone_17_air" model="website.menu">
+            <field name="name">iPhone 17 Air</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">62</field>
+        </record>
+        <record id="menu_shop_iphone_17_pro" model="website.menu">
+            <field name="name">iPhone 17 Pro</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">63</field>
+        </record>
+        <record id="menu_shop_iphone_acc" model="website.menu">
+            <field name="name">iPhone 配件</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">64</field>
+        </record>
+
+        <!-- Mac -->
+        <record id="menu_shop_imac" model="website.menu">
+            <field name="name">iMac</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">65</field>
+        </record>
+
+        <!-- iPad -->
+        <record id="menu_shop_ipad_std" model="website.menu">
+            <field name="name">iPad</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">66</field>
+        </record>
+        <record id="menu_shop_ipad_mini" model="website.menu">
+            <field name="name">iPad mini</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">67</field>
+        </record>
+        <record id="menu_shop_ipad_air" model="website.menu">
+            <field name="name">iPad Air</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">68</field>
+        </record>
+        <record id="menu_shop_ipad_pro" model="website.menu">
+            <field name="name">iPad Pro</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">69</field>
+        </record>
+        <record id="menu_shop_ipad_pencil" model="website.menu">
+            <field name="name">Apple Pencil</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">70</field>
+        </record>
+        <record id="menu_shop_ipad_keyboard" model="website.menu">
+            <field name="name">鍵盤</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">71</field>
+        </record>
+
+        <!-- AirPods -->
+        <record id="menu_shop_airpods" model="website.menu">
+            <field name="name">AirPods</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">72</field>
+        </record>
+
+        <!-- 副廠週邊 -->
+        <record id="menu_shop_acc_switcheasy" model="website.menu">
+            <field name="name">SwitchEasy</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">73</field>
+        </record>
+        <record id="menu_shop_acc_elecom" model="website.menu">
+            <field name="name">ELECOM</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">74</field>
+        </record>
+        <record id="menu_shop_acc_other" model="website.menu">
+            <field name="name">其他周邊</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="menu_shop"/>
+            <field name="sequence">75</field>
+        </record>
+
+    </data>
+</odoo>

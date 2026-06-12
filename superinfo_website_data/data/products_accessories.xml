@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- [721] 台北歐洲學校 BYOD｜iPad Air 11" M3 Wi‑Fi 256GB -->
+    <record id="product_721" model="product.template">
+      <field name="name">台北歐洲學校 BYOD｜iPad Air 11" M3 Wi‑Fi 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">21700</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[11 吋 iPad Air，由快如閃電的 Apple M3 晶片超強驅動1。擁有令人驚豔的 Liquid Retina 顯示器；配備 12MP Center Stage 前置相機，給你更優越的視訊通話體驗；還有疾速 Wi-Fi 6E2 與 5G 連線能力3。可搭配 Apple Pencil Pro、巧控鍵盤與聰穎雙面夾使用，讓你在任何地方都能多工處理，盡情學習、工作、娛樂和創作。]]></field>
+    </record>
+    <!-- [339] Logitech Keys-To-Go 2 輕巧藍牙鍵盤 -->
+    <record id="product_339" model="product.template">
+      <field name="name">Logitech Keys-To-Go 2 輕巧藍牙鍵盤</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">2590</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[▪ 超級纖薄、輕盈的設計、內建外蓋、剪刀腳按鍵
+▪ Easy-switch 可連線三個裝置
+▪ 整排快捷鍵
+▪ 1 年有限硬體保固 石墨灰 珍珠白 星暮紫]]></field>
+    </record>
+    <!-- [333] Logitech Combo Touch 鍵盤保護套- iPad Pro 11 吋 5代 (M4) -->
+    <record id="product_333" model="product.template">
+      <field name="name">Logitech Combo Touch 鍵盤保護套- iPad Pro 11 吋 5代 (M4)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">7990</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[◆ 多種使用模式(打字、繪畫、瀏覽、閱讀)
+◆ 整行iPadOS快捷鍵
+◆ Apple Smart Connector：一秒拆卸直接與iPad配對與充電，不需要額外充電
+◆ 材質密合設計防潑灑(輕鬆將污漬清潔)
+◆ 靈活可調支架(提供10-60度可調節傾角)
+◆ 全方位包覆，安全貼合
+◆ 1年硬體有限保固]]></field>
+    </record>
+    <!-- [334] Logitech Combo Touch 鍵盤保護套- iPad Pro 13 吋 7代 (M4) -->
+    <record id="product_334" model="product.template">
+      <field name="name">Logitech Combo Touch 鍵盤保護套- iPad Pro 13 吋 7代 (M4)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">8990</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[◆ 多種使用模式(打字、繪畫、瀏覽、閱讀)
+◆ 整行iPadOS快捷鍵
+◆ Apple Smart Connector：一秒拆卸直接與iPad配對與充電，不需要額外充電
+◆ 材質密合設計防潑灑(輕鬆將污漬清潔)
+◆ 靈活可調支架(提供10-60度可調節傾角)
+◆ 全方位包覆，安全貼合
+◆ 1年硬體有限保固]]></field>
+    </record>
+    <!-- [337] Logitech Combo Touch 鍵盤保護套- iPad Air 11 吋 5-6代 (M2) -->
+    <record id="product_337" model="product.template">
+      <field name="name">Logitech Combo Touch 鍵盤保護套- iPad Air 11 吋 5-6代 (M2)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">7690</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[◆ 多種使用模式(打字、繪畫、瀏覽、閱讀)
+◆ 整行iPadOS快捷鍵
+◆ Apple Smart Connector：一秒拆卸直接與iPad配對與充電，不需要額外充電
+◆ 材質密合設計防潑灑(輕鬆將污漬清潔)
+◆ 靈活可調支架(提供10-60度可調節傾角)
+◆ 全方位包覆，安全貼合
+◆ 1年硬體有限保固]]></field>
+    </record>
+    <!-- [338] Logitech Combo Touch 鍵盤保護套- iPad Air 13 吋 (M2) -->
+    <record id="product_338" model="product.template">
+      <field name="name">Logitech Combo Touch 鍵盤保護套- iPad Air 13 吋 (M2)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">8690</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[◆ 多種使用模式(打字、繪畫、瀏覽、閱讀)
+◆ 整行iPadOS快捷鍵
+◆ Apple Smart Connector：一秒拆卸直接與iPad配對與充電，不需要額外充電
+◆ 材質密合設計防潑灑(輕鬆將污漬清潔)
+◆ 靈活可調支架(提供10-60度可調節傾角)
+◆ 全方位包覆，安全貼合
+◆ 1年硬體有限保固]]></field>
+    </record>
+    <!-- [225] Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-深灰 -->
+    <record id="product_225" model="product.template">
+      <field name="name">Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-深灰</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機型：iPad air10.9 2024 6th，2022 5th, 2020 4th]]></field>
+    </record>
+    <!-- [302] Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-大象藍 -->
+    <record id="product_302" model="product.template">
+      <field name="name">Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-大象藍</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機型：iPad air10.9 2024 6th，2022 5th, 2020 4th]]></field>
+    </record>
+    <!-- [303] Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-紅鶴粉 -->
+    <record id="product_303" model="product.template">
+      <field name="name">Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-紅鶴粉</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機型：iPad air10.9 2024 6th，2022 5th, 2020 4th]]></field>
+    </record>
+    <!-- [304] Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-星光 -->
+    <record id="product_304" model="product.template">
+      <field name="name">Hipporizz iPad Air 11(2024) Air10.9(2022,2020) Origo 晶透筆槽防摔殼-星光</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機型：iPad air10.9 2024 6th，2022 5th, 2020 4th]]></field>
+    </record>
+    <!-- [305] Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-紅鶴粉 -->
+    <record id="product_305" model="product.template">
+      <field name="name">Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-紅鶴粉</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [306] Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-深灰 -->
+    <record id="product_306" model="product.template">
+      <field name="name">Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-深灰</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [307] Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-星光 -->
+    <record id="product_307" model="product.template">
+      <field name="name">Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-星光</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [308] Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-大象藍 -->
+    <record id="product_308" model="product.template">
+      <field name="name">Hipporizz iPad Pro 11(2024) Origo 晶透筆槽防摔殼-大象藍</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1080</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、粉、藍、灰 適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [309] Hipporizz iPad Air 13(2024) Pro12.9(2022-2020) Origo 晶透筆槽防摔殼-深灰 -->
+    <record id="product_309" model="product.template">
+      <field name="name">Hipporizz iPad Air 13(2024) Pro12.9(2022-2020) Origo 晶透筆槽防摔殼-深灰</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、灰 適用機種：2024 iPad Air 13"、iPad Pro 12.9"（2022~2020）]]></field>
+    </record>
+    <!-- [310] Hipporizz iPad Air 13(2024)Pro12.9(2022-2020) Origo 晶透筆槽防摔殼-星光 -->
+    <record id="product_310" model="product.template">
+      <field name="name">Hipporizz iPad Air 13(2024)Pro12.9(2022-2020) Origo 晶透筆槽防摔殼-星光</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、灰 適用機種：2024 iPad Air 13"、iPad Pro 12.9"（2022~2020）]]></field>
+    </record>
+    <!-- [311] Hipporizz iPad Pro 13(2024) Origo 晶透筆槽防摔殼-星光 -->
+    <record id="product_311" model="product.template">
+      <field name="name">Hipporizz iPad Pro 13(2024) Origo 晶透筆槽防摔殼-星光</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、灰
+適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [312] Hipporizz iPad Pro 13(2024) Origo 晶透筆槽防摔殼-深灰 -->
+    <record id="product_312" model="product.template">
+      <field name="name">Hipporizz iPad Pro 13(2024) Origo 晶透筆槽防摔殼-深灰</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[防摔結構邊框與透明背板，有效防止iPad彎折與刮傷。 筆槽設計能完整包覆Apple pencil,支援磁吸充電。
+多角度站立面蓋設計，適用於各種iPad使用情境。
+智能休眠、喚醒功能，靈敏偵測，可有效減少iPad耗電，延長其壽命。
+支援指紋辨識開鎖功能。
+面蓋內外層皆採用防潑水面料，耐用好清潔。
+高質感外觀與設計細節，適合各種使用族群。
+材質：PU+TPU+PC+磁鐵
+顏色：星光、灰 適用機種：專用（無任何共用機型）]]></field>
+    </record>
+    <!-- [190] 無酒精液晶螢幕擦拭巾隨身包-15張 -->
+    <record id="product_190" model="product.template">
+      <field name="name">無酒精液晶螢幕擦拭巾隨身包-15張</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">110</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_elecom')])]"/>
+      <field name="website_description"><![CDATA[適合用來擦拭精密的液晶螢幕，溫柔地擦拭，讓螢幕隨時保持潔淨的無酒精液晶螢幕擦拭巾。]]></field>
+    </record>
+    <!-- [33] Logitech Combo Touch 鍵盤保護套 - iPad 10 代和 A16 專用 -->
+    <record id="product_33" model="product.template">
+      <field name="name">Logitech Combo Touch 鍵盤保護套 - iPad 10 代和 A16 專用</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">5490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[具備可拆卸式鍵盤與可調式支架，支援四種使用模式，提供靈活多用。牢固貼合的保護殼能抵禦撞擊、刮傷及掉落衝擊，可容納 Apple Pencil 或 Logitech Crayon。具有背光按鍵、軌跡板和多種 iOS 快速鍵，方便操作。使用聰穎接點進行配對和充電，材質易於清潔。]]></field>
+    </record>
+    <!-- [58] Logitech Crayon iPad 數位筆 - 橙 -->
+    <record id="product_58" model="product.template">
+      <field name="name">Logitech Crayon iPad 數位筆 - 橙</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">2290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[Logitech Crayon 是為 iPad 設計的數位觸控筆，具像素級精準度和多樣功能，Lightning 充電，使用體驗如同在紙上書寫般自然。]]></field>
+    </record>
+    <!-- [59] Logitech Crayon iPad 數位筆 - TypeC -->
+    <record id="product_59" model="product.template">
+      <field name="name">Logitech Crayon iPad 數位筆 - TypeC</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">2290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[Logitech Crayon 是為 iPad 設計的數位觸控筆，具像素級精準度和多樣功能，USB C充電，使用體驗如同在紙上書寫般自然。]]></field>
+    </record>
+    <!-- [60] Logitech Slim Folio 輕薄鍵盤保護套 - iPad 10 代專用 -->
+    <record id="product_60" model="product.template">
+      <field name="name">Logitech Slim Folio 輕薄鍵盤保護套 - iPad 10 代專用</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">3290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[在攜帶 iPad (第 10 代) 所到的任何地方享受舒適的打字體驗。這款全功能保護殼容易使用，且可以帶到任何地方，保護您的 iPad 在發生碰撞和刮擦狀況時安全無虞。]]></field>
+    </record>
+    <!-- [61] Logitech Keys-To-Go iPad 輕巧藍牙鍵盤 -->
+    <record id="product_61" model="product.template">
+      <field name="name">Logitech Keys-To-Go iPad 輕巧藍牙鍵盤</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1990</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[一個鍵盤，所有裝置。Keys-to-Go 是便攜的無線藍牙鍵盤，可搭配所有 Apple 裝置順暢使用，包括您的行動裝置、電腦和智慧電視。]]></field>
+    </record>
+    <!-- [62] Logitech RUGGED COMBO 3 iPad 鍵盤保護殼 - 藍 - iPad 7-9 代 -->
+    <record id="product_62" model="product.template">
+      <field name="name">Logitech RUGGED COMBO 3 iPad 鍵盤保護殼 - 藍 - iPad 7-9 代</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">4290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_other')])]"/>
+      <field name="website_description"><![CDATA[適用於 iPad 第 7-9 代 Logitech Rugged Folio 保護殼配鍵盤，具吸震材質，四種模式，無需配對充電，附筆套方便攜帶。]]></field>
+    </record>
+    <!-- [32] SwitchEasy Origami Nude iPad 多角度透明保護套 -->
+    <record id="product_32" model="product.template">
+      <field name="name">SwitchEasy Origami Nude iPad 多角度透明保護套</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1090</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [80] 2024 SwitchEasy Origami Nude iPad 多角度透明保護套（iPad Pro 11"） -->
+    <record id="product_80" model="product.template">
+      <field name="name">2024 SwitchEasy Origami Nude iPad 多角度透明保護套（iPad Pro 11"）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [93] SwitchEasy Origami Nude iPad 多角度透明保護套 (iPad 10th) -->
+    <record id="product_93" model="product.template">
+      <field name="name">SwitchEasy Origami Nude iPad 多角度透明保護套 (iPad 10th)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [96] SwitchEasy Origami Nude iPad 多角度透明保護套（iPad mini 8.3） -->
+    <record id="product_96" model="product.template">
+      <field name="name">SwitchEasy Origami Nude iPad 多角度透明保護套（iPad mini 8.3）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1090</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [98] SwitchEasy Origami Nude iPad 多角度透明保護套（iPad 10.2"） -->
+    <record id="product_98" model="product.template">
+      <field name="name">SwitchEasy Origami Nude iPad 多角度透明保護套（iPad 10.2"）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1090</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [128] SwitchEasy Origami iPad 多角度保護套（iPad mini 8.3） -->
+    <record id="product_128" model="product.template">
+      <field name="name">SwitchEasy Origami iPad 多角度保護套（iPad mini 8.3）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1090</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [129] SwitchEasy Origami iPad 多角度保護套（iPad 10.2） -->
+    <record id="product_129" model="product.template">
+      <field name="name">SwitchEasy Origami iPad 多角度保護套（iPad 10.2）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1190</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [130] SwitchEasy Origami iPad 多角度保護套 (iPad 10th) -->
+    <record id="product_130" model="product.template">
+      <field name="name">SwitchEasy Origami iPad 多角度保護套 (iPad 10th)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1280</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [131] SwitchEasy Origami iPad 多角度保護套（10.9" &amp; 11" ） -->
+    <record id="product_131" model="product.template">
+      <field name="name">SwitchEasy Origami iPad 多角度保護套（10.9" &amp; 11" ）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [132] 2024 SwitchEasy Origami iPad 多角度保護套（iPad Pro 11"） -->
+    <record id="product_132" model="product.template">
+      <field name="name">2024 SwitchEasy Origami iPad 多角度保護套（iPad Pro 11"）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [141] 2024 SwitchEasy Origami Nude iPad 多角度透明保護套（iPad Pro 13"） -->
+    <record id="product_141" model="product.template">
+      <field name="name">2024 SwitchEasy Origami Nude iPad 多角度透明保護套（iPad Pro 13"）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [151] 2024 SwitchEasy Origami iPad 多角度保護套（iPad Pro 13） -->
+    <record id="product_151" model="product.template">
+      <field name="name">2024 SwitchEasy Origami iPad 多角度保護套（iPad Pro 13）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+    <!-- [152] SwitchEasy Origami iPad 多角度保護套（12.9"） -->
+    <record id="product_152" model="product.template">
+      <field name="name">SwitchEasy Origami iPad 多角度保護套（12.9"）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">1490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_acc_switcheasy')])]"/>
+      <field name="website_description"><![CDATA[透明霧面背板、兩段式筆槽、磁吸擋板設計、支援Apple Pencil 2充電、4種支撐方式、智慧休眠/喚醒功能，提供完美保護與便利使用體驗。]]></field>
+    </record>
+  </data>
+</odoo>

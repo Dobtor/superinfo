@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ════════ 關於我們 ════════ -->
+        <record id="menu_about" model="website.menu">
+            <field name="name">關於我們</field>
+            <field name="url">/about</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">20</field>
+        </record>
+
+        <!-- ════════ 專案服務 ════════ -->
+        <record id="menu_services" model="website.menu">
+            <field name="name">專案服務</field>
+            <field name="url">#</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">30</field>
+        </record>
+        <record id="menu_services_bot" model="website.menu">
+            <field name="name">共契BOT專區</field>
+            <field name="url">/services/bot</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">31</field>
+        </record>
+        <record id="menu_services_ipad" model="website.menu">
+            <field name="name">iPad 大量部署</field>
+            <field name="url">/services/ipad-deployment</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">32</field>
+        </record>
+        <record id="menu_services_byod" model="website.menu">
+            <field name="name">BYOD 自帶載具計畫</field>
+            <field name="url">/services/byod</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">33</field>
+        </record>
+        <record id="menu_services_mac_classroom" model="website.menu">
+            <field name="name">Mac 電腦教室</field>
+            <field name="url">/services/mac-classroom</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">34</field>
+        </record>
+        <record id="menu_services_cases" model="website.menu">
+            <field name="name">實際案例</field>
+            <field name="url">/services/cases</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">35</field>
+        </record>
+        <record id="menu_services_promise" model="website.menu">
+            <field name="name">PROMISE</field>
+            <field name="url">/services/promise</field>
+            <field name="parent_id" ref="menu_services"/>
+            <field name="sequence">36</field>
+        </record>
+
+        <!-- ════════ 蘋果培訓 ════════ -->
+        <record id="menu_training" model="website.menu">
+            <field name="name">蘋果培訓</field>
+            <field name="url">#</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">40</field>
+        </record>
+        <record id="menu_training_hub" model="website.menu">
+            <field name="name">蘋果教育專區</field>
+            <field name="url">/apple-training/edu-hub</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">41</field>
+        </record>
+        <record id="menu_training_courses" model="website.menu">
+            <field name="name">課程學習中心</field>
+            <field name="url">/apple-training/courses</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">42</field>
+        </record>
+        <record id="menu_training_accessibility" model="website.menu">
+            <field name="name">輔助使用</field>
+            <field name="url">/apple-training/accessibility</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">43</field>
+        </record>
+        <record id="menu_training_sustainability" model="website.menu">
+            <field name="name">永續政策</field>
+            <field name="url">/apple-training/sustainability</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">44</field>
+        </record>
+        <record id="menu_training_investment" model="website.menu">
+            <field name="name">聰明投資</field>
+            <field name="url">/apple-training/smart-investment</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">45</field>
+        </record>
+        <record id="menu_training_lifecycle" model="website.menu">
+            <field name="name">生命週期管理</field>
+            <field name="url">/apple-training/lifecycle</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">46</field>
+        </record>
+        <record id="menu_training_services_apps" model="website.menu">
+            <field name="name">教育軟體解決方案</field>
+            <field name="url">/apple-training/services-apps</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">47</field>
+        </record>
+        <record id="menu_training_it" model="website.menu">
+            <field name="name">IT 部門</field>
+            <field name="url">/apple-training/it</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">48</field>
+        </record>
+        <record id="menu_training_educators" model="website.menu">
+            <field name="name">教育工作者</field>
+            <field name="url">/apple-training/educators</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">49</field>
+        </record>
+        <record id="menu_training_leaders" model="website.menu">
+            <field name="name">教育領導者</field>
+            <field name="url">/apple-training/leaders</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">50</field>
+        </record>
+        <record id="menu_training_decision" model="website.menu">
+            <field name="name">決策者</field>
+            <field name="url">/apple-training/decision-makers</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">51</field>
+        </record>
+        <record id="menu_training_parents" model="website.menu">
+            <field name="name">家長</field>
+            <field name="url">/apple-training/parents</field>
+            <field name="parent_id" ref="menu_training"/>
+            <field name="sequence">52</field>
+        </record>
+
+        <!-- ════════ 最新消息 ════════ -->
+        <record id="menu_news" model="website.menu">
+            <field name="name">最新消息</field>
+            <field name="url">/blog</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">70</field>
+        </record>
+
+        <!-- ════════ 商店資訊（頁面，供 footer / 直接連結） ════════ -->
+        <record id="menu_info_faq" model="website.menu">
+            <field name="name">常見問題</field>
+            <field name="url">/info/faq</field>
+            <field name="parent_id" ref="menu_news"/>
+            <field name="sequence">71</field>
+        </record>
+        <record id="menu_info_security" model="website.menu">
+            <field name="name">資訊安全</field>
+            <field name="url">/info/security</field>
+            <field name="parent_id" ref="menu_news"/>
+            <field name="sequence">72</field>
+        </record>
+        <record id="menu_info_privacy" model="website.menu">
+            <field name="name">隱私權政策</field>
+            <field name="url">/info/privacy</field>
+            <field name="parent_id" ref="menu_news"/>
+            <field name="sequence">73</field>
+        </record>
+        <record id="menu_info_terms" model="website.menu">
+            <field name="name">購物須知與服務條款</field>
+            <field name="url">/info/terms</field>
+            <field name="parent_id" ref="menu_news"/>
+            <field name="sequence">74</field>
+        </record>
+
+    </data>
+</odoo>

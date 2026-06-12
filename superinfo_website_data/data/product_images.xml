@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+    <record id="product_622" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/622/0.jpg"/>
+    </record>
+    <record id="product_640" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/640/0.jpg"/>
+    </record>
+    <record id="product_647" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/647/0.jpg"/>
+    </record>
+    <record id="product_656" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/656/0.jpg"/>
+    </record>
+    <record id="product_662" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/662/0.jpg"/>
+    </record>
+    <record id="product_670" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/670/0.jpg"/>
+    </record>
+    <record id="product_694" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/694/0.jpg"/>
+    </record>
+    <record id="product_701" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/701/0.jpg"/>
+    </record>
+    <record id="product_702" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/702/0.jpg"/>
+    </record>
+    <record id="product_706" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/706/0.jpg"/>
+    </record>
+    <record id="product_710" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/710/0.jpg"/>
+    </record>
+    <record id="product_714" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/714/0.jpg"/>
+    </record>
+    <record id="product_277" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/277/0.jpg"/>
+    </record>
+    <record id="product_594" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/594/0.jpg"/>
+    </record>
+    <record id="product_234" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/234/0.jpg"/>
+    </record>
+    <record id="product_233" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/233/0.jpg"/>
+    </record>
+    <record id="product_452" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/452/0.jpg"/>
+    </record>
+    <record id="product_451" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/451/0.jpg"/>
+    </record>
+    <record id="product_323" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/323/0.jpg"/>
+    </record>
+    <record id="product_331" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/331/0.jpg"/>
+    </record>
+    <record id="product_320" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/320/0.jpg"/>
+    </record>
+    <record id="product_328" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/328/0.jpg"/>
+    </record>
+    <record id="product_313" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/313/0.jpg"/>
+    </record>
+    <record id="product_42" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/42/0.png"/>
+    </record>
+    <record id="product_30" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/30/0.jpg"/>
+    </record>
+    <record id="product_31" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/31/0.jpg"/>
+    </record>
+    <record id="product_715" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/715/0.jpg"/>
+    </record>
+    <record id="product_431" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/431/0.jpg"/>
+    </record>
+    <record id="product_432" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/432/0.jpg"/>
+    </record>
+    <record id="product_205" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/205/0.jpg"/>
+    </record>
+    <record id="product_204" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/204/0.jpg"/>
+    </record>
+    <record id="product_721" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/721/0.jpg"/>
+    </record>
+    <record id="product_339" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/339/0.png"/>
+    </record>
+    <record id="product_333" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/333/0.png"/>
+    </record>
+    <record id="product_334" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/334/0.png"/>
+    </record>
+    <record id="product_337" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/337/0.png"/>
+    </record>
+    <record id="product_338" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/338/0.png"/>
+    </record>
+    <record id="product_225" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/225/0.png"/>
+    </record>
+    <record id="product_302" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/302/0.png"/>
+    </record>
+    <record id="product_303" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/303/0.png"/>
+    </record>
+    <record id="product_304" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/304/0.png"/>
+    </record>
+    <record id="product_305" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/305/0.png"/>
+    </record>
+    <record id="product_306" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/306/0.png"/>
+    </record>
+    <record id="product_307" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/307/0.png"/>
+    </record>
+    <record id="product_308" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/308/0.png"/>
+    </record>
+    <record id="product_309" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/309/0.png"/>
+    </record>
+    <record id="product_310" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/310/0.png"/>
+    </record>
+    <record id="product_311" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/311/0.png"/>
+    </record>
+    <record id="product_312" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/312/0.png"/>
+    </record>
+    <record id="product_190" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/190/0.jpg"/>
+    </record>
+    <record id="product_33" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/33/0.jpg"/>
+    </record>
+    <record id="product_58" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/58/0.jpg"/>
+    </record>
+    <record id="product_59" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/59/0.png"/>
+    </record>
+    <record id="product_60" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/60/0.png"/>
+    </record>
+    <record id="product_61" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/61/0.png"/>
+    </record>
+    <record id="product_62" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/62/0.png"/>
+    </record>
+    <record id="product_32" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/32/0.jpeg"/>
+    </record>
+    <record id="product_80" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/80/0.jpeg"/>
+    </record>
+    <record id="product_93" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/93/0.jpeg"/>
+    </record>
+    <record id="product_96" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/96/0.jpeg"/>
+    </record>
+    <record id="product_98" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/98/0.jpeg"/>
+    </record>
+    <record id="product_128" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/128/0.jpg"/>
+    </record>
+    <record id="product_129" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/129/0.jpg"/>
+    </record>
+    <record id="product_130" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/130/0.jpg"/>
+    </record>
+    <record id="product_131" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/131/0.jpg"/>
+    </record>
+    <record id="product_132" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/132/0.png"/>
+    </record>
+    <record id="product_141" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/141/0.jpeg"/>
+    </record>
+    <record id="product_151" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/151/0.png"/>
+    </record>
+    <record id="product_152" model="product.template">
+      <field name="image_1920" type="base64" file="superinfo_website_data/static/src/img/products/152/0.jpg"/>
+    </record>
+  </data>
+</odoo>

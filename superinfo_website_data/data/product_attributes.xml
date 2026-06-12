@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="attr_color" model="product.attribute">
+      <field name="name">顏色</field>
+      <field name="display_type">color</field>
+      <field name="create_variant">always</field>
+    </record>
+    <record id="attrval_color_skyblue" model="product.attribute.value">
+      <field name="name">天藍色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_lightgold" model="product.attribute.value">
+      <field name="name">淺金色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_cloudwhite" model="product.attribute.value">
+      <field name="name">雲白色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_spaceblack" model="product.attribute.value">
+      <field name="name">太空黑色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_lavender" model="product.attribute.value">
+      <field name="name">薰衣草紫</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_sage" model="product.attribute.value">
+      <field name="name">鼠尾草綠</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_mistblue" model="product.attribute.value">
+      <field name="name">霧藍色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_white" model="product.attribute.value">
+      <field name="name">白色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_black" model="product.attribute.value">
+      <field name="name">黑色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_blue" model="product.attribute.value">
+      <field name="name">藍色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_starlight" model="product.attribute.value">
+      <field name="name">星光色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_pink" model="product.attribute.value">
+      <field name="name">粉紅色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_yellow" model="product.attribute.value">
+      <field name="name">黃色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_silver" model="product.attribute.value">
+      <field name="name">銀色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_purple" model="product.attribute.value">
+      <field name="name">紫色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_green" model="product.attribute.value">
+      <field name="name">綠色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+    <record id="attrval_color_red" model="product.attribute.value">
+      <field name="name">紅色</field>
+      <field name="attribute_id" ref="attr_color"/>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="page_bot_view" model="ir.ui.view">
+            <field name="name">共契BOT專區</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_bot_view</field>
+            <field name="arch" type="xml">
+                <t name="共契BOT專區" t-name="superinfo_website_data.page_bot_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/bot.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">共契BOT專區</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>提供設備借測 相關服務 歡迎洽詢 業務客服 LINE ID：@406ifuui</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_bot" model="website.page">
+            <field name="name">共契BOT專區</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/bot</field>
+            <field name="view_id" ref="page_bot_view"/>
+        </record>
+
+        <record id="page_ipad_deploy_view" model="ir.ui.view">
+            <field name="name">iPad 大量部署</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_ipad_deploy_view</field>
+            <field name="arch" type="xml">
+                <t name="iPad 大量部署" t-name="superinfo_website_data.page_ipad_deploy_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/ipad-deployment.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">iPad 大量部署</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>iPad 大量部署</p>
+                        <p>政府推動行動教學以及科技輔助教育已行之有年，但在許多教育者心中，或多或少對於裝置管理存有疑慮：</p>
+                        <p>「如果同學亂改 iPad 設定怎麼辦？」 「要怎麼有系統的管理多台 iPad ?」 「一次買這麼多台 iPad 要怎麼一次完成設定?」</p>
+                        <p>已為 150 所中小學的 iPad 做大量部署與裝置設定的極電資訊，有著豐富的經驗與專業技術，能夠有效協助學校消除使用與管理上的大小疑慮，使 iPad 成為教育上最棒的推進器。</p>
+                        <p>更希望使用者能無後顧之憂</p>
+                        <p>極電資訊至今協助與支援的機構，除了大學、國高中小等學校單位外，也為許多引進「無紙化」理念的公部門提供裝置管理等技術支援，下為近年合作的服務單位：</p>
+                        <p>▎臺北市南港區南港國小 ▎台北市松山區敦化國小 ▎臺北市立誠正國民中學 ▎臺北市立中正國民中學 ▎臺北市立第一女子高級中學 ▎臺北市立松山高級工農職業學校 ▎中國文化大學 ▎大學入學考試中心</p>
+                        <p>Apple School Manager</p>
+                        <p>一個簡單的線上入口網站，可讓 IT 管理者集中一處管理人員、裝置和內容。可輕鬆建立與運用管理式 Apple ID 並整合『裝置註冊計畫』（DEP）與『大量採購計畫』(VPP)將學校裝置指派到MDM，讓裝置自動註冊與配置。</p>
+                        <p>裝置註冊計畫 (DEP)</p>
+                        <p>DEP 簡化了初始設定程序，它能在設定過程中，自動將裝置註冊至行動裝置管理 (MDM) 並對其進行監管， 讓您在不須親手觸碰裝置的情況下，就能完成配置與設定。 只有直接購自 Apple 或 Apple 授權經銷商的裝置才可透過 DEP 快速精簡地完成部署。</p>
+                        <p>大量採購計畫 (VPP)</p>
+                        <p>大量採購計劃能簡化分配流程，讓教育機構大量下載免費或付費 App，並透過行動裝置管理 (MDM) 解決方案分發給班級、學生、老師和管理階層。此計畫另有提供教育大量採購折扣優惠。</p>
+                        <p>Apple Configurator</p>
+                        <p>Apple Configurator 富彈性、以裝置為中心的設計可讓您快速並輕鬆地設定一或多部透過 USB 連接到 Mac 的 iPhone、iPad、Apple TV 和 iPod touch 裝置。您只需要選取單一或多部裝置，然後執行動作即可。有了 Apple Configurator，您可以更新軟體、安裝 App 和設定描述檔、重新命名裝置和更改背景圖片、輸出裝置資訊和文件，以及其他功能。</p>
+                        <p>課堂 (Classroom)</p>
+                        <p>「課堂」是一款 iPad App，可協助教師指導學習、分享課業和管理學生裝置。教師可以在課堂中的任一部 iPad 上啟動特定 App、網站或教課書頁面。也可以在其班級中傳送和接收文件，並使用 Apple TV 在電視、螢幕或投影機上分享學生的作業。教師還可以查看學生正在使用哪些 App、將學生裝置調成靜音，以及重置學生的密碼。</p>
+                        <p>想詢問大量部署相關問題？</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_ipad_deploy" model="website.page">
+            <field name="name">iPad 大量部署</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/ipad-deployment</field>
+            <field name="view_id" ref="page_ipad_deploy_view"/>
+        </record>
+
+        <record id="page_byod_view" model="ir.ui.view">
+            <field name="name">BYOD 自帶載具計畫</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_byod_view</field>
+            <field name="arch" type="xml">
+                <t name="BYOD 自帶載具計畫" t-name="superinfo_website_data.page_byod_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/byod.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">BYOD 自帶載具計畫</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>BYOD BYOD 自帶載具到校學習計畫</p>
+                        <p>陪伴孩子的學習工具</p>
+                        <p>時代在走，變化要有！過往的教學方式已經悄悄的變化轉型之中。不論是因為疫情而轉變的學習方式，還是現代人了解與消化知識的管道逐漸多元，「學習」這件事不再單靠紙本，數位工具成為我們生活中不可或缺的一環！</p>
+                        <p>根據 ISA 預測 未來 90% 以上的工作皆需要依靠數位技能，從小培養數位能力，是眼下教育界重要的發展趨勢。</p>
+                        <p>iPad 目前是多數學校選擇的數位學習工具之一，學校與政府單位都在為了孩子們的學習工具努力著，但考量現實層面，校內可提供的資源依然有限，自備數位工具（載具）到校也是多數其他國家目前作法。</p>
+                        <p>以往經驗來說，校內統一裝置管理除了讓教師課程進行順暢，也能弭平同學間介面、軟體之落差，故政府單位有意推行 BYOD 計畫，讓學習工具可以同時滿足教師端、家長端、學生端、管理端的複雜需求。</p>
+                        <p>由 BYOD 配合之學校聯繫後，提供以下服務：</p>
+                        <p>平板電腦機型配件組合報價</p>
+                        <p>協助學校評估需求，提供合適的平板電腦機型與配件組合報價。</p>
+                        <p>自帶載具納管建議與規劃</p>
+                        <p>提供 MDM 行動裝置管理建議與規劃，協助學校管理學生裝置與應用程式。</p>
+                        <p>到校工作會議設立工作小組</p>
+                        <p>提供到校工作會議，協助學校設立 BYOD 推動工作小組，並提供相關諮詢與建議。</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_byod" model="website.page">
+            <field name="name">BYOD 自帶載具計畫</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/byod</field>
+            <field name="view_id" ref="page_byod_view"/>
+        </record>
+
+        <record id="page_mac_classroom_view" model="ir.ui.view">
+            <field name="name">Mac 電腦教室</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_mac_classroom_view</field>
+            <field name="arch" type="xml">
+                <t name="Mac 電腦教室" t-name="superinfo_website_data.page_mac_classroom_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/mac-classroom.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">Mac 電腦教室</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>極電資訊有限公司專注於提供Apple產品的教育授權經銷服務，並致力於為客戶提供專業的軟硬體諮詢服務。專案服務包括iPad大量部署、BYOD自帶載具計畫、Mac電腦教室等，為學校和企業提供全面的技術支持和解決方案。極電資訊還透過實際案例展示其成功的項目經驗，幫助客戶了解如何最佳利用Apple產品提升學習和工作效率。極電資訊以優質服務和專業知識，成為教育和商業領域的信賴夥伴。</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_mac_classroom" model="website.page">
+            <field name="name">Mac 電腦教室</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/mac-classroom</field>
+            <field name="view_id" ref="page_mac_classroom_view"/>
+        </record>
+
+        <record id="page_cases_view" model="ir.ui.view">
+            <field name="name">實際案例</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_cases_view</field>
+            <field name="arch" type="xml">
+                <t name="實際案例" t-name="superinfo_website_data.page_cases_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/success.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">實際案例</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Mac 電腦教室 電腦教室</p>
+                        <p>「工欲善其事，必先利其器。」在這個網路資訊爆炸的環境下，許多學校為了讓同學可以在多元的系統架構下，進行多媒體與資訊領域的學習，開始有了建置 Mac 教室的需求。</p>
+                        <p>極電資訊從 2002 年迄今已協助建置與規劃逾 50 間 Mac 電腦教室，並適時提供網路與資訊系統的架設。除了擁有豐富的建置教室經驗，更有專業的技術人員提供後續技術支援與故障排除等服務。</p>
+                        <p>從第一間建置的教室至今已超過 10 年，也曾經歷過 檯燈機 (G4) Mac 的年代，合作的學校與老師無數，下列為近年合作學校名單： (詳細科系與單位恕無法列出)</p>
+                        <p>▎國立臺灣大學 ▎國立政治大學 ▎國立臺灣師範大學 ▎國立臺北藝術大學 ▎國立臺灣藝術大學 ▎國立臺灣戲曲學院 ▎國立臺灣科技大學</p>
+                        <p>▎國立臺北科技大學 ▎國立臺北教育大學 ▎國立臺北商業大學 ▎國立臺北護理健康大學 ▎中國文化大學 ▎臺北醫學大學 ▎東吳大學</p>
+                        <p>▎世新大學 ▎銘傳大學 ▎臺北市立景美女子高級中學 ▎臺北市立大安高級工業職業學校 ▎臺北市立士林高級商業職業學校 ▎臺北市立大學附設實驗國民小學 ▎臺北市國語實驗國民小學</p>
+                        <p>問題解決 經驗豐富</p>
+                        <p>電腦教室的建置與維護，對資訊組長與系統師來說常常是非常耗費體力、心力的事，需依照使用需求做基本設定，系統版本更新、軟體安裝等繁雜事務。有時也因為網路問題產生許多困擾。</p>
+                        <p>極電資訊致力協助資訊組長與系統師解決問題，透過建置數間教室、故障排除的經驗，提供最快速與專業的意見。</p>
+                        <p>「極電服務有問必答，服務周到！」 ——台藝大老師</p>
+                        <p>「價格合理，對電腦安裝後續交待很清楚，服務品質態度很好！」 ——士林高商廣設科主任</p>
+                        <p>「在處理電腦教室的服務中，極電整線、整合教室環境做得不錯，能迅速了解狀況，給予支援。」——景美女中資訊組長</p>
+                        <p>Mac Lab 成功實例 - K12</p>
+                        <p>Mac mini 資訊科技教室</p>
+                        <p>Mac mini 電腦教室</p>
+                        <p>Mac mini 多媒體教室</p>
+                        <p>Mac Lab 成功實例 - High ED</p>
+                        <p>iMac 電腦教室</p>
+                        <p>遠離詐騙「三不」！ 1.不碰ATM 2.不說個人資料 3.勿理會陌生電話 1.詐騙集團會假冒店家名義，謊稱訂單發生錯誤，要求去操作 ATM 解除分期付款。聽到「訂單錯誤要操作ATM」都是詐騙！他們經常利用下班時間聯繫你，甚至週末不打烊喔！ 2.聽到關鍵字「銀行比特幣專戶」？不要猶豫，當然是詐騙！ 3.聽到關鍵字「訂單錯誤需要解除分期付款」即可直接用力掛斷電話！ 4.詐騙集團有機房可以偽造任何電話號碼，絕對不一定是 + 號開頭喔！ 駭客團隊技術日益精進，網路世界中沒有絕對的隱私，駭客都有可能攔截/破解/盜取您的個資變賣 詐騙集團話術千變萬化，不要隨意信任各種理由 一定要主動聯絡店家查證！或 165 反詐騙專線 我瞭解了, 我確定不會被騙！</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_cases" model="website.page">
+            <field name="name">實際案例</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/cases</field>
+            <field name="view_id" ref="page_cases_view"/>
+        </record>
+
+        <record id="page_promise_view" model="ir.ui.view">
+            <field name="name">PROMISE 安心承諾</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_promise_view</field>
+            <field name="arch" type="xml">
+                <t name="PROMISE 安心承諾" t-name="superinfo_website_data.page_promise_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/promise.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">PROMISE 安心承諾</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>PROMISE &gt;&gt;&gt; 立即詢價 &gt;&gt;&gt; 立即詢價</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_promise" model="website.page">
+            <field name="name">PROMISE 安心承諾</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/promise</field>
+            <field name="view_id" ref="page_promise_view"/>
+        </record>
+
+    </data>
+</odoo>

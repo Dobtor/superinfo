@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="page_edu_hub_view" model="ir.ui.view">
+            <field name="name">蘋果教育專區</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_edu_hub_view</field>
+            <field name="arch" type="xml">
+                <t name="蘋果教育專區" t-name="superinfo_website_data.page_edu_hub_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/edu-hub.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">蘋果教育專區</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>課程學習中心 輔助使用 永續政策 聰明投資 生命週期管理 教育軟體解決方案</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_edu_hub" model="website.page">
+            <field name="name">蘋果教育專區</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/edu-hub</field>
+            <field name="view_id" ref="page_edu_hub_view"/>
+        </record>
+
+        <record id="page_courses_view" model="ir.ui.view">
+            <field name="name">課程學習中心</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_courses_view</field>
+            <field name="arch" type="xml">
+                <t name="課程學習中心" t-name="superinfo_website_data.page_courses_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/courses.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">課程學習中心</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 專業學習 課程學習中心 教育的新可能。 透過 Apple 專業學習專家的指導，發掘教育科技的創新應用，為教學與學習開創全新體驗。 開始探索</p>
+                        <p>課程公告 經銷商專業培訓</p>
+                        <p>最新課程公告 iPad 在課堂應用進階培訓</p>
+                        <p>Mac 教學環境設置與管理</p>
+                        <p>Apple TV 互動教學應用</p>
+                        <p>新增 Apple Intelligence 教學應用工作坊</p>
+                        <p>iPad 教學應用基礎</p>
+                        <p>學習如何運用 iPad 的強大功能來提升教學效果，包括 Apple Pencil 的創意應用。</p>
+                        <p>每週三 13:00 實體</p>
+                        <p>深入探索 macOS 的教育功能，建立高效的數位教學環境。</p>
+                        <p>每週五 13:00 實體</p>
+                        <p>即時互動 APL Live Apple 課程</p>
+                        <p>🎉 APL Live 課程不間斷🎉 學習用 Mac ＆ iPad 內建軟體提升教學效率，發揮創意紀錄學習歷程！</p>
+                        <p>Apple 專業學習專家 Apple 專業學習專家 (APL 專家) 為教育工作者背景，各自擁有獨特資格，能夠向你展示如何在教與學上，皆全面發揮 Apple 產品的潛力。這群專家透過現場和線上輔導，以及專業發展活動來提供指導、培訓與支援，幫助教育工作者以創新方式制定課程和評量方式。 與 APL 專家聯繫，為教育工作者與學生取得個人化支援。 了解更多</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_courses" model="website.page">
+            <field name="name">課程學習中心</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/courses</field>
+            <field name="view_id" ref="page_courses_view"/>
+        </record>
+
+        <record id="page_accessibility_view" model="ir.ui.view">
+            <field name="name">輔助使用</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_accessibility_view</field>
+            <field name="arch" type="xml">
+                <t name="輔助使用" t-name="superinfo_website_data.page_accessibility_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/accessibility.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">輔助使用</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 輔助使用功能 輔助使用是 Apple 的核心 Apple 自 1985 年起致力於輔助使用創新，已有 40 年歷史</p>
+                        <p>「輔助使用是 Apple 的 DNA 一部分」 — Tim Cook, Apple CEO 使用 Apple Silicon 晶片、機器學習和人工智慧提升輔助功能體驗，讓每個人都能享受科技帶來的便利。</p>
+                        <p>2025 年全新輔助功能</p>
+                        <p>App Store 輔助使用營養標籤 為 App Store 產品頁面新增輔助功能資訊區塊，讓用戶下載前即可了解應用程式是否適合自己使用。</p>
+                        <p>Mac 版放大鏡應用程式 專為視力障礙者設計的探索與互動工具，提供更直覺的視覺輔助體驗。</p>
+                        <p>點字訪問功能 增強的點字支援系統，讓視障用戶能更流暢地使用 Apple 裝置。</p>
+                        <p>輔助閱讀器 全新的閱讀輔助工具，幫助閱讀障礙者更輕鬆地處理文字內容。</p>
+                        <p>Apple Vision Pro 輔助功能升級 為 Apple Vision Pro 帶來全新的輔助使用體驗，讓空間運算更具包容性。</p>
+                        <p>App Store 營養標籤 視覺輔助功能 聽覺與語音 行動與操作</p>
+                        <p>營養標籤 VoiceOver 語音控制 放大文字 色彩濾鏡 動態效果 聽覺輔助</p>
+                        <p>App Store 輔助使用營養標籤 為 App Store 產品頁面新增輔助功能資訊區塊 用戶下載前即可了解應用程式是否適合自己使用 支援顯示 VoiceOver、語音控制、放大文字等功能 開發者可突顯其應用程式支援的輔助功能 全球 App Store 將全面支援此功能</p>
+                        <p>視覺輔助功能 Mac 版放大鏡應用程式（視力障礙者探索與互動） 即時辨識功能（Live Recognition）：描述現實世界物體 VoiceOver 螢幕報讀功能 圖像描述功能 Apple Vision Pro 攝影系統升級支援</p>
+                        <p>聽覺與語音輔助功能 即時聆聽（Live Listen）功能更新 個人語音（Personal Voice）功能升級 背景音效（Background Sounds）改進 即時字幕（Live Captions）支援更多語言</p>
+                        <p>行動與操作輔助功能 輔助使用快捷鍵（Accessibility Shortcut） 車輛動態提示（Vehicle Motion Cues） 語音快捷鍵（Vocal Shortcuts） 眼球追蹤（Eye Tracking）功能</p>
+                        <p>生態系統 跨裝置無縫整合</p>
+                        <p>Apple 輔助功能在 iPhone、iPad、Mac、Apple Watch 和 Apple Vision Pro 之間無縫整合，提供一致的使用體驗。</p>
+                        <p>Apple 為開發者提供全面的輔助功能資源，幫助他們創建更具包容性的應用程式，讓所有用戶都能享受科技帶來的便利。</p>
+                        <p>Apple 持續推動科技普惠化，確保每個人都能平等地使用和享受科技產品，無論其能力如何。</p>
+                        <p>Apple 的設計理念是為每個人創造產品，確保所有用戶都能以自己的方式使用 Apple 裝置，享受科技帶來的便利。</p>
+                        <p>Apple 輔助使用功能發展歷程</p>
+                        <p>1985 年 Apple 開始致力於輔助使用創新</p>
+                        <p>Apple 開始關注科技如何幫助不同能力的用戶，開啟了輔助使用功能的發展歷程。</p>
+                        <p>Apple 推出 VoiceOver 螢幕報讀功能，成為視障用戶使用 Apple 裝置的重要工具。</p>
+                        <p>2005 年 VoiceOver 螢幕報讀功能推出</p>
+                        <p>2023 年 個人語音功能推出</p>
+                        <p>Apple 推出個人語音功能，讓面臨語音喪失風險的用戶能夠創建與自己聲音相似的合成語音。</p>
+                        <p>Apple 推出全新輔助功能，包括 App Store 輔助使用營養標籤、Mac 版放大鏡應用程式等，進一步提升科技的普惠性。</p>
+                        <p>2025 年 全新輔助功能推出</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_accessibility" model="website.page">
+            <field name="name">輔助使用</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/accessibility</field>
+            <field name="view_id" ref="page_accessibility_view"/>
+        </record>
+
+        <record id="page_sustainability_view" model="ir.ui.view">
+            <field name="name">永續政策</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_sustainability_view</field>
+            <field name="arch" type="xml">
+                <t name="永續政策" t-name="superinfo_website_data.page_sustainability_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/sustainability.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">永續政策</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 永續政策 Apple 永續政策 Apple 環保承諾與願景</p>
+                        <p>2030年達成全產品生命週期碳中和目標 目前進度 60%</p>
+                        <p>2015年以來，全球溫室氣體排放量減少超過60%</p>
+                        <p>聚焦創新、合作與行動力永續發展</p>
+                        <p>最新減排成果 4,100萬</p>
+                        <p>2024年減碳公噸，年增17%</p>
+                        <p>供應鏈再生能源導入</p>
+                        <p>避免供應鏈排放公噸</p>
+                        <p>2030年淨零碳排戰略</p>
+                        <p>溫室氣體排放比2015年減少75%為目標</p>
+                        <p>剩餘排放以高品質碳權抵銷</p>
+                        <p>持續推動再生能源和能源效率</p>
+                        <p>供應鏈與綠色能源轉型</p>
+                        <p>全球供應鏈與超過200家夥伴合作，推動清潔能源</p>
+                        <p>2024年供應商再生能源成長17%</p>
+                        <p>台積電等關鍵供應商加入減碳行列</p>
+                        <p>再生材料與創新應用</p>
+                        <p>所有磁石用99%回收稀土，電池用99%回收鈷</p>
+                        <p>iPhone 16</p>
+                        <p>電池100%回收鈷，超過95%回收鋰</p>
+                        <p>用100%纖維材料，2025年全面淘汰塑膠</p>
+                        <p>產品生態設計與壽命延長</p>
+                        <p>設計可拆解、易回收產品</p>
+                        <p>增強耐用性，延長產品壽命</p>
+                        <p>產品碳足跡持續下降</p>
+                        <p>回收計畫與全球社會參與</p>
+                        <p>提供裝置回收優惠，鼓勵顧客參與</p>
+                        <p>投資自然資源保護與全球水資源保育</p>
+                        <p>世界地球日推動全球永續行動</p>
+                        <p>面對氣候變遷挑戰持續創新</p>
+                        <p>深化供應鏈綠色轉型，推廣循環經濟</p>
+                        <p>Apple持續領航全球科技業永續轉型</p>
+                        <p>了解更多 Apple 永續發展計畫</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_sustainability" model="website.page">
+            <field name="name">永續政策</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/sustainability</field>
+            <field name="view_id" ref="page_sustainability_view"/>
+        </record>
+
+        <record id="page_investment_view" model="ir.ui.view">
+            <field name="name">聰明投資</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_investment_view</field>
+            <field name="arch" type="xml">
+                <t name="聰明投資" t-name="superinfo_website_data.page_investment_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/smart-investment.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">聰明投資</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 教育 - 明智的投資 Apple 教育 - 明智的投資 教育領導者在進⾏科技相關決策時，須考慮各種因素，例如⽬前的系統、流程和預算。為師⽣、IT 部⾨和整體校園社群做出明智的投資決定。 Professional Learning Center</p>
+                        <p>耐用設計 Apple 裝置以耐⽤素材製成，能夠隨意收入後背包⽽不易受損，同時非常輕巧，能讓師⽣輕鬆攜帶到校園各個⾓落。</p>
+                        <p>長效電池 iPad 和 Mac 擁有 Apple 晶片的節能效能、滿⾜⼀天所需的電池續航⼒，且軟體會定期更新，是能夠長久使⽤的優質裝置。</p>
+                        <p>延長生命週期 選擇改⽤ Apple 產品後，裝置生命週期平均延長 +18.5 個⽉。</p>
+                        <p>由於 Apple 裝置、軟體可靠，還有可持續更新的 OS，因此殘值相當⾼。</p>
+                        <p>裝置須要升級時，還能進⾏換購，讓教育領導者得以回收成本，並重新⽤來投資學區。</p>
+                        <p>與其他裝置在⽣命週期結束後只能送⼈或丟棄不同，Apple裝置隨著時間推進仍保有相當⾼的價值。</p>
+                        <p>保護學校數據與資源</p>
+                        <p>Apple 裝置既可靠⼜經久耐⽤，能降低須向 IT ⼈員需求協助的次數、減少修理所需時間，還有更完善的安全性，能夠幫助學校和學區提升營運效率。</p>
+                        <p>智慧管理耗電量，為學校節省能源成本</p>
+                        <p>製造時大量採用再生或回收物料</p>
+                        <p>對學生和地球都有益的明智投資</p>
+                        <p>產品生命週期結束後易於回收處理</p>
+                        <p>「成本不只是考量裝置成本，還有維護成本、各種 app 和技術⽀援成本。裝置的⽣命週期結束時，轉售能有多少價值？只要考慮到數字，根本連比都不⽤比，iPad 對我們來說就是最符合成本效益的選擇。」 Brian Messinger 紐約州 Sewanhaka Central ⾼中學區技術主任</p>
+                        <p>01 全面成本考量</p>
+                        <p>不僅考慮裝置初始成本，還包括維護、應用程式和技術支援等長期支出。</p>
+                        <p>02 彈性付款方式</p>
+                        <p>Apple 保證提供買回舊裝置和換購服務，讓教育機構在設備升級時更安心。</p>
+                        <p>裝置生命週期結束時，仍保有相當高的轉售價值，可抵減新設備投資</p>
+                        <p>準備開始您的 Apple 教育之旅？ 探索更多專業學習資源和教育解決方案 開始學習 聯絡專家</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_investment" model="website.page">
+            <field name="name">聰明投資</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/smart-investment</field>
+            <field name="view_id" ref="page_investment_view"/>
+        </record>
+
+        <record id="page_lifecycle_view" model="ir.ui.view">
+            <field name="name">生命週期管理</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_lifecycle_view</field>
+            <field name="arch" type="xml">
+                <t name="生命週期管理" t-name="superinfo_website_data.page_lifecycle_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/lifecycle.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">生命週期管理</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 生命週期管理 Apple 生命週期管理 採用現代化方法，確保您的 Apple 平台始終保持最新狀態，提供最佳安全性與使用者體驗</p>
+                        <p>現代化管理方式 全球企業都因行動力而帶來全新面貌，Apple 裝置與 app 成為完成關鍵業務的重要工具</p>
+                        <p>採用率統計 77% 最近 4 年內推出的 iPhone 裝置使用 iOS 13</p>
+                        <p>79% 最近 4 年內推出的 iPad 裝置使用 iPadOS</p>
+                        <p>"最終而言，保護我們的顧客和員工體驗才是最重要的，這值得我們為了嚴苛測試流程所做的投資。" Jennifer Paine</p>
+                        <p>Senior Director Employee Mobility, Southwest Airlines</p>
+                        <p>四階段生命週期 每次發行 Beta 版本時，Apple 平台採用的生命週期都包含四個持續進行的活動</p>
+                        <p>組建團隊並取得資源</p>
+                        <p>向 Apple 回報問題</p>
+                        <p>核心管理領域 掌握 Apple 生命週期管理的關鍵要素</p>
+                        <p>現代化生命週期管理</p>
+                        <p>強調持續更新的重要性，確保平台安全性與完整性</p>
+                        <p>軟體更新需週而復始持續進行</p>
+                        <p>軟體測試是全年無休的任務</p>
+                        <p>行動環境運作環環相扣</p>
+                        <p>組建團隊和取得 Beta 版資源，建立有效的測試流程</p>
+                        <p>籌組團隊來支援公司計畫</p>
+                        <p>存取 Beta 版資源</p>
+                        <p>清點公司的 Apple 裝置</p>
+                        <p>評估 Apple 平台</p>
+                        <p>測試基礎設施、MDM 解決方案和應用程式</p>
+                        <p>第三方 MDM 解決方案</p>
+                        <p>App Store 與自訂 App</p>
+                        <p>向 Apple 回報問題和建議，協助改善產品品質</p>
+                        <p>使用者意見程式 App</p>
+                        <p>Feedback Assistant 網站</p>
+                        <p>取得 AppleCare 協助</p>
+                        <p>認證公開發行版本和部署策略</p>
+                        <p>排定軟體更新的時程</p>
+                        <p>向員工傳達後續步驟</p>
+                        <p>開始您的 Apple 生命週期管理</p>
+                        <p>透過現代化的管理方法，確保您的組織能夠充分利用 Apple 平台的優勢</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_lifecycle" model="website.page">
+            <field name="name">生命週期管理</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/lifecycle</field>
+            <field name="view_id" ref="page_lifecycle_view"/>
+        </record>
+
+        <record id="page_services_apps_view" model="ir.ui.view">
+            <field name="name">教育軟體解決方案</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_services_apps_view</field>
+            <field name="arch" type="xml">
+                <t name="教育軟體解決方案" t-name="superinfo_website_data.page_services_apps_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/services-apps.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育軟體解決方案</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>教育軟體解決方案 我們提供業界領先的軟體工具，專為教育環境設計，滿足學校的多元化需求</p>
+                        <p>Microsoft 365</p>
+                        <p>全方位辦公軟體套件</p>
+                        <p>Microsoft 365 為教育機構提供完整的生產力工具，包含 Word、Excel、PowerPoint 等核心應用程式，支援雲端協作與跨平台使用。</p>
+                        <p>Word 文書處理：撰寫報告、作業與教材</p>
+                        <p>Excel 試算表：數據分析與成績管理</p>
+                        <p>PowerPoint 簡報：互動式教學簡報</p>
+                        <p>Teams 協作：線上課程與視訊會議</p>
+                        <p>OneDrive 雲端：檔案同步與共享</p>
+                        <p>教育版特殊功能與授權優惠</p>
+                        <p>🎓 教育應用優勢 支援多人協作編輯、即時同步更新，老師可輕鬆建立互動式教材，學生能隨時隨地存取課業內容，提升學習效率與參與度。</p>
+                        <p>Deep Freeze</p>
+                        <p>電腦系統保護與還原</p>
+                        <p>Deep Freeze 是專業的電腦保護軟體，能將電腦系統凍結在理想狀態，重開機後自動還原，確保電腦教室環境的穩定性與安全性。</p>
+                        <p>系統凍結：防止病毒感染與誤操作</p>
+                        <p>自動還原：重開機後回到乾淨狀態</p>
+                        <p>統一管理：批量部署與遠端控制</p>
+                        <p>排程解凍：定時進行系統更新</p>
+                        <p>使用者權限：彈性設定存取控制</p>
+                        <p>網路版支援：集中管理多台電腦</p>
+                        <p>🏫 校園應用優勢 大幅降低電腦教室維護成本，防止學生誤裝軟體或下載病毒，確保每堂課都有乾淨穩定的電腦環境，IT 人員維護更輕鬆。</p>
+                        <p>Adobe Creative Cloud</p>
+                        <p>Adobe Creative Cloud 提供業界標準的創意軟體工具，包含 Photoshop、Illustrator、Premiere Pro 等，培養學生數位創作與設計能力。</p>
+                        <p>Photoshop：影像編輯與數位藝術</p>
+                        <p>Illustrator：向量圖形與標誌設計</p>
+                        <p>Premiere Pro：影片剪輯與後製</p>
+                        <p>After Effects：動畫與視覺特效</p>
+                        <p>InDesign：版面設計與出版</p>
+                        <p>教育版特惠與豐富學習資源</p>
+                        <p>🎨 創意教育優勢 培養學生 21 世紀數位技能，從平面設計到影片製作，提供完整創意工具鏈，與業界接軌，提升學生未來就業競爭力。</p>
+                        <p>500+ 服務學校數量</p>
+                        <p>50k+ 學生使用者</p>
+                        <p>99% 客戶滿意度</p>
+                        <p>為什麼選擇我們 專業的教育軟體解決方案提供商，致力於提升教學品質與學習成效</p>
+                        <p>深度了解教育需求，提供客製化軟體解決方案與導入建議，確保最佳投資效益。</p>
+                        <p>專業技術團隊提供完整部署服務，最短時間內完成軟體安裝與環境設定。</p>
+                        <p>提供長期技術支援與維護服務，確保軟體穩定運行與及時更新。</p>
+                        <p>針對教師與 IT 人員提供專業培訓課程，確保軟體功能得到充分運用。</p>
+                        <p>提供教育機構專屬的授權優惠方案，降低軟體採購成本與總體擁有成本。</p>
+                        <p>確保軟體授權合法性，提供完整的資安防護建議與隱私保護方案。</p>
+                        <p>開始提升您的教育環境</p>
+                        <p>聯繫我們獲得專業諮詢，為您的學校量身打造最適合的軟體解決方案</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_services_apps" model="website.page">
+            <field name="name">教育軟體解決方案</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/services-apps</field>
+            <field name="view_id" ref="page_services_apps_view"/>
+        </record>
+
+        <record id="page_it_view" model="ir.ui.view">
+            <field name="name">IT 部門</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_it_view</field>
+            <field name="arch" type="xml">
+                <t name="IT 部門" t-name="superinfo_website_data.page_it_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/apple-info-it.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">IT 部門</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 校務管理部署指南 Apple 校務管理部署指南 為教育機構打造的全方位裝置管理解決方案， 簡化 IT 團隊工作流程，創造卓越學習體驗。</p>
+                        <p>Apple 校務管理概述</p>
+                        <p>專為教育機構設計的現代化裝置部署解決方案，透過單一門戶網站輕鬆管理所有 Apple 裝置、內容及使用者。</p>
+                        <p>全面支援一對一及共享裝置等多種部署模式，滿足不同教學環境需求，為學校提供最大彈性。</p>
+                        <p>讓 IT 管理員能更有效率地部署 iPad 與 Mac，降低技術支援複雜度，專注於提升教學體驗。</p>
+                        <p>透過先進的批量註冊與無線部署功能，快速設定大量裝置，節省寶貴時間。</p>
+                        <p>與學校現有的行動裝置管理解決方案完美整合，提供無縫的管理體驗。</p>
+                        <p>依照教育環境需求設定裝置限制與政策，確保學生專注於學習活動。</p>
+                        <p>提供直覺式介面，讓技術支援人員輕鬆管理所有裝置，提高工作效率。</p>
+                        <p>輕鬆採購教學應用程式與電子書籍，獲得教育機構專屬折扣，最大化預算效益。</p>
+                        <p>依據教學需求自由分配數位內容使用權限，確保資源最佳化利用。</p>
+                        <p>在校內不同裝置間靈活重新分配應用程式，因應班級或學期變動需求。</p>
+                        <p>透過統一平台管理所有數位教學資源，簡化行政流程，提升效率。</p>
+                        <p>iCloud 儲存空間</p>
+                        <p>每位使用者皆可獲得免費 iCloud 儲存空間，安全保存所有學習資料。</p>
+                        <p>系統支援大規模使用者管理，適合各種規模學校使用。</p>
+                        <p>全天候技術支援，確保學校系統運作順暢無虞。</p>
+                        <p>透過管理式 Apple ID，教育機構可為師生建立專用帳戶，整合學生資訊系統，簡化帳戶建立流程，並可委派不同技術支援專員管理特定資訊科技職務，提升整體管理效率。</p>
+                        <p>一人一機部署 為每位學生提供專屬裝置，創造個人化學習體驗，培養數位公民意識。</p>
+                        <p>共享 iPad 模式 多位學生可安全共用同一台裝置，保留個人進度與作業，適合資源有限環境。</p>
+                        <p>班級管理整合 與班級管理工具無縫整合，讓教師輕鬆控制課堂裝置使用情況。</p>
+                        <p>彈性配置 依據學校特定需求客製化部署模式，確保最佳學習成效。</p>
+                        <p>全方位保護學生資料安全</p>
+                        <p>所有裝置和雲端資料皆經加密處理</p>
+                        <p>完整的家長監護與隱私保護機制</p>
+                        <p>符合全球教育隱私法規要求</p>
+                        <p>Apple 校務管理系統提供領先業界的安全機制，嚴格保護學生資料隱私，符合各國教育機構資料安全標準。透過專用功能確保個人資訊安全，讓學校、教師與家長皆能安心使用。</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_it" model="website.page">
+            <field name="name">IT 部門</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/it</field>
+            <field name="view_id" ref="page_it_view"/>
+        </record>
+
+        <record id="page_educators_view" model="ir.ui.view">
+            <field name="name">教育工作者</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_educators_view</field>
+            <field name="arch" type="xml">
+                <t name="教育工作者" t-name="superinfo_website_data.page_educators_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/educators.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育工作者</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Info to educators 教學創新：以 App 融入科技力量於課堂內外 革新教育體驗，Apple 教育工具讓科技自然融入教學歷程，釋放學生無限創意與學習潛能，同時為教師提供前所未有的教學彈性。 立即探索 預約示範</p>
+                        <p>120+ 專業課程資源</p>
+                        <p>為教師提供豐富多元的教學內容</p>
+                        <p>85% 學習效果提升</p>
+                        <p>採用 Apple 教育科技的學校報告</p>
+                        <p>3X 創意表達增長</p>
+                        <p>透過多元媒體工具展現學習成果</p>
+                        <p>Apple 教育工具徹底改變現代教學方式，透過無縫整合的跨裝置學習體驗， 讓師生都能專注於知識的探索與創新，而非被科技操作所困擾。</p>
+                        <p>核心教育應用程式 「課堂」App 全班螢幕即時監控 精準引導學習歷程 遠距教學無縫連接 一目了然掌握學習進度 確保教學同步進行</p>
+                        <p>「課業」App 輕鬆收發作業 實時追蹤進度 即時協作指導 創意實作學習 Pages、Numbers、Keynote 整合</p>
+                        <p>共享 iPad 功能：個人化的共用體驗 🔐</p>
+                        <p>自動將學生配對到最近使用的裝置，減少切換時間</p>
+                        <p>每位學生都擁有專屬的學習環境與進度追蹤</p>
+                        <p>確保學生資料安全，同時提供個人化學習體驗</p>
+                        <p>教師快速開始課程，減少設備準備與配置時間</p>
+                        <p>教師專業發展資源 🏆</p>
+                        <p>Apple Teacher 認證</p>
+                        <p>專業能力肯定與職涯發展</p>
+                        <p>掌握 iPad 和 Mac 關鍵教學功能</p>
+                        <p>超過 120 種專業教學內容與素材</p>
+                        <p>透過 Apple 提供的專業發展資源，教師能夠循序漸進地精進數位教學技能，同時獲得實用的教案參考與創新教學靈感，打造更具吸引力的學習體驗。</p>
+                        <p>教育應用生態系統 🔬</p>
+                        <p>從數學、科學到語文藝術，每一學科都有專業設計的應用輔助教學，讓抽象概念變得具體可見。</p>
+                        <p>繪圖、影片、音樂創作等多元媒體應用，讓學生能以最適合自己的方式展現學習成果。</p>
+                        <p>促進師生互動與學生間協作的應用工具，培養團隊合作與溝通能力。</p>
+                        <p>開始您的教育科技之旅 1</p>
+                        <p>了解您的學校需求，制定最適合的 Apple 教育科技導入計畫。我們提供專業諮詢，協助您規劃每一步驟。</p>
+                        <p>快速設置裝置並提供教師專業培訓，確保所有人都能輕鬆上手。從基礎操作到進階教學應用，全面支援。</p>
+                        <p>獲取長期技術支援與教學資源更新，加入教育者社群分享經驗與最佳實踐，持續精進教學品質。</p>
+                        <p>立即體驗教育科技的力量 準備好讓您的教學體驗更上一層樓了嗎？ 聯繫我們，開始您的 Apple 教育科技之旅</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_educators" model="website.page">
+            <field name="name">教育工作者</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/educators</field>
+            <field name="view_id" ref="page_educators_view"/>
+        </record>
+
+        <record id="page_leaders_view" model="ir.ui.view">
+            <field name="name">教育領導者</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_leaders_view</field>
+            <field name="arch" type="xml">
+                <t name="教育領導者" t-name="superinfo_website_data.page_leaders_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/leaders.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育領導者</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 傑出教育工作者 成為 Apple 傑出教育工作者 25 年多以來，Apple 傑出教育工作者 (ADE) 方案認可全球教育先鋒，他們運用 Apple 科技改寫教育與學習方式。成為這個創新社群的一員，幫助其他教育工作者重新思考 iPad 和 Mac 的教學潛能。 申請成為 Apple 傑出教育工作者 申請流程 透過三個簡單步驟，開始你的 Apple 傑出教育工作者申請之旅。</p>
+                        <p>1 成為獲得認可的 Apple Teacher 申請人必須先通過 iPad 或 Mac 的六項互動式測驗，獲得 Apple Teacher 認可。</p>
+                        <p>2 規劃你的申請影片 創作一部不超過兩分鐘的影片，展示你如何翻轉學習環境、教學成效及影響力。</p>
+                        <p>3 參加 ADE 學院 入選者必須參加所在地區的實體 ADE 學院活動，了解方案內容並獲得專業學習機會。</p>
+                        <p>申請影片製作指南 創作一部精彩的申請影片，展現你的教學創新與影響力。</p>
+                        <p>翻轉學習環境 分享你如何提高學習者參與度，以及 Apple 產品如何以獨特方式協助你達成學習目標。</p>
+                        <p>展示教學成效 提供資料或嶄新學習方式，佐證你的影響力。特別介紹學生作品或創新策略範例。</p>
+                        <p>拓展你的影響力 展示你如何將專業工作拓展到課堂以外，協助其他教育工作者提升能力，展現你的領導力。</p>
+                        <p>創作工具 使用 iPhone、iPad 和/或 Mac 創造影片，盡情發揮創意。</p>
+                        <p>內容要求 包含能呈現主題的影像和故事旁白，避免「頭部特寫」鏡頭，僅使用已取得分享授權的內容。</p>
+                        <p>技術規格 片長不超過兩分鐘，檔案大小不超過 200 MB，格式為 .mov、.mp4 或 .m4v。</p>
+                        <p>Apple Teacher 旅程 「Apple Teacher 計畫」是一套免額外付費的專業學習計畫，協助教育工作者運用 Apple 產品從事教學與學習。通過三項認可，獲得無限靈感和機會，為學生提供更緊密連結、更有創意的學習體驗。</p>
+                        <p>學習 iPad、Mac 和 Apple 應用程式</p>
+                        <p>整合科技、創意和程式設計</p>
+                        <p>成為 Apple Teacher、完成 Portfolio 和 Swift Playground</p>
+                        <p>從探索 120 個培養技能教學課程開始你的 Apple Teacher 旅程，讓你在教學上使用 iPad、Mac 和 Apple 眾多 app (Pages、Keynote、Numbers、GarageBand 和 iMovie 等) 可以更得心應手。通過互動式測驗後獲得徽章，集滿 6 枚 iPad 或 Mac 徽章，便能成為獲得認可的 Apple Teacher。</p>
+                        <p>獲得 Apple Teacher Portfolio 認可 透過三個學習階段，設計出色的教學體驗。</p>
+                        <p>啟動階段 介紹構想、啟動原有的知識，以及運用簡單的熱身活動，引導學生以有創意的新方式思考內容。</p>
+                        <p>探索階段 協助學生探索新資訊、交流構想，加深他們對新教材的理解。</p>
+                        <p>應用階段 運用各種計畫案評估學習成果，協助學生展現對新教材的熟悉程度，並將所學應用到不同情境中。</p>
+                        <p>打造你的 Apple Teacher Portfolio</p>
+                        <p>收集構想 整合創意教學方法</p>
+                        <p>設計課程 製作自訂課程系列</p>
+                        <p>記錄反思 評估教學成效</p>
+                        <p>分享成果 與同事交流專業經驗</p>
+                        <p>加入 Apple 教育社群 成為全球教育創新網絡的一份子，與世界各地的教育工作者交流學習。</p>
+                        <p>持續專業發展 參與定期研習活動，學習最新的教學技術與策略，與其他 ADE 成員分享最佳實務。</p>
+                        <p>影響教育未來 參與產品開發回饋，協助 Apple 打造更好的教育工具，為全球學習者帶來正面影響。</p>
+                        <p>認可與榮譽 獲得官方認證標章，在專業領域中展現你的教育創新領導地位，激勵更多教育工作者。</p>
+                        <p>我們的專業團隊隨時為您提供申請 Apple 傑出教育工作者的相關支援</p>
+                        <p>services@superinfo.com.tw</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_leaders" model="website.page">
+            <field name="name">教育領導者</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/leaders</field>
+            <field name="view_id" ref="page_leaders_view"/>
+        </record>
+
+        <record id="page_decision_view" model="ir.ui.view">
+            <field name="name">決策者</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_decision_view</field>
+            <field name="arch" type="xml">
+                <t name="決策者" t-name="superinfo_website_data.page_decision_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/decision-makers.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">決策者</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>Apple 教育 - 以促進學習為原動力 由 Apple 精心設計，以促進學習為原動力 真正的課堂，往往能開啟一個更美好世界；而這樣的課堂，必須配備靈活易用，而且內建隱私保護、輔助使用功能和永續環保理念的教學工具。</p>
+                        <p>必備的工具，帶來各種驚喜可能 iPad，好攜帶，好強大，潛能滿載 輕巧的設計和最長可達 10 小時的電池續航力，讓你從早到晚都可輕鬆保持聯繫 靈活多用，適合各種學習方式，可用來塗鴉、想創意、編輯照片和影片 兼容老師和學生每天使用的 app，包括來自 Google 和 Microsoft 的各種選擇 進一步了解 iPad</p>
+                        <p>Mac，出奇輕，格外快，表現跳級領先 由 Apple 晶片驅動，帶來卓越的效能表現和能源效率 為經久耐用打造，輕巧好攜帶，隨處可用 一向直覺好用，上手無壓力，讓你輕鬆找到所需內容 進一步了解 Mac</p>
+                        <p>用心設計，為未來，也為教育負起責任 可保護學生資料的裝置 Apple 重視隱私，確保學生資料安全，讓教育工作者和家長安心。</p>
+                        <p>輔助使用功能 讓每位學習者擁有每個學習機會，無論其能力或學習方式如何。</p>
+                        <p>為未來世代，全心守護地球 Apple 致力於環保，產品使用再生材料，減少碳足跡，為地球永續發展。</p>
+                        <p>眾多內建 App，可用來教授、學習和創作</p>
+                        <p>GarageBand</p>
+                        <p>進一步了解 iWork 進一步了解 GarageBand 進一步了解 iMovie 進一步了解教學工具</p>
+                        <p>你愛的 App 都在這裡，還有更多等你探索 探索數千款專為教育設計的 App，讓學習變得更加豐富有趣。 前往 App Store</p>
+                        <p>Apple 走進全球各地的課堂 教師啟發學生，學生為將來做準備，IT 團隊則流暢地部署裝置。世界各地的學校使用 Apple 產品，創造各種精彩。</p>
+                        <p>教師故事 了解教師如何使用 Apple 產品激發學生的創造力和批判性思維。 了解更多</p>
+                        <p>學生成就 探索學生如何使用 Apple 產品發揮創意並為未來做好準備。 了解更多</p>
+                        <p>IT 部署 了解 IT 團隊如何輕鬆部署和管理 Apple 裝置，提供流暢的教育體驗。 了解更多</p>
+                        <p>準備好為您的學校帶來 Apple 的教育優勢了嗎？ 聯絡 Apple 教育團隊 探索教育優惠</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_decision" model="website.page">
+            <field name="name">決策者</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/decision-makers</field>
+            <field name="view_id" ref="page_decision_view"/>
+        </record>
+
+        <record id="page_parents_view" model="ir.ui.view">
+            <field name="name">家長</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_parents_view</field>
+            <field name="arch" type="xml">
+                <t name="家長" t-name="superinfo_website_data.page_parents_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/parents.jpg'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">家長</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>iPad - 家長指南 iPad好好用 - 家長指南 讓 iPad 幫助學習！每台 iPad 都有免費強力學習助手 APP， 有助於提升學習效率與激發創造力。 1 5項訣竅保持專注</p>
+                        <p>專注於學習有助於提升批判性思考能力，並發揮更高的創造力。</p>
+                        <p>✓ 提升專注力 營造不受通訊、提示或通知干擾的學習環境。在iPad的「勿擾模式」設定中，請確保在「靜音」下方選取「永遠」。</p>
+                        <p>✓ 簡化工作流程 使用「分割顯示」在兩個視窗或app之間移動內容。前往「設定」的「主畫面與Dock」，開啟「多工處理」。</p>
+                        <p>✓ 調整通知設定 前往「設定」&gt;「通知」，為非必要的app關閉「標記」，減少學習過程中的分心因素。</p>
+                        <p>2 整理iPad以供學習</p>
+                        <p>整理供學習使用的iPad，讓學生可以更輕鬆地完成日常作業，並維持生產力和參與度。</p>
+                        <p>✓ 更新作業系統 確保學生的裝置具備最新的功能、產品和安全性。在「設定」中點一下「一般」，查看是否為最新的軟體更新。</p>
+                        <p>✓ 建立網站捷徑 從Safari的分享選項中，點一下「加入主畫面」，便會為學生建立最常使用網站的圖像。</p>
+                        <p>✓ 共享備忘錄 在「備忘錄」中輕鬆整理學習資源，建立各科目的檔案夾，並與所有家庭成員共享。</p>
+                        <p>3 管理螢幕使用時間</p>
+                        <p>「螢幕使用時間」包含多項絕佳功能，協助你選擇學生使用裝置的方式和頻率。</p>
+                        <p>✓ 持續追蹤 透過「螢幕使用時間」，你可以依照日期和週來查看裝置的總使用時間，以及學生最常使用的app。</p>
+                        <p>✓ 休息一下 利用「停用時間」每天安排一點時間避開螢幕，啟用後，只會開放允許的app和通話功能。</p>
+                        <p>✓ 安排時間 使用「App限制」來規劃時間，你可以安排更多使用學習和創造力app，並減少社交app帶來的干擾。</p>
+                        <p>✓ 選擇適當內容 使用「內容與隱私限制」，在學生的裝置上阻擋不當的網站、購買項目和下載項目。</p>
+                        <p>4 提高生產力的方式</p>
+                        <p>所有學生都能透過內建的輔助使用功能來加強學習體驗，並提高生產力。</p>
+                        <p>✓ 輕輕一點，完成種種動作 使用「輔助觸控」，更輕鬆地存取選單、控制項目和各項功能。對於動作技能受限的人士特別有用。</p>
+                        <p>✓ 大聲提升聆讀流利度 利用「朗讀所選範圍」和「反白內容」，讓學生在系統朗讀反白文字時跟著念出來，加強閱讀理解能力。</p>
+                        <p>✓ 專注瀏覽網頁內容 「Safari閱讀器」會移除廣告、減少干擾，還能讓你調整文字大小、對比和字體樣式。</p>
+                        <p>✓ 引導使用模式 「引導使用模式」會將iPad鎖定在單一app中，並讓你控制可用的功能和時間限制。你可以用手指在螢幕上圈出不希望對觸控有所反應的區域。</p>
+                        <p>✓ 表達想法，增進寫作能力 Pages、Keynote和「備忘錄」等app具備「聽寫」功能，有助於表達訊息及培養寫作技巧。只需點一下iPad鍵盤上的麥克風按鍵。</p>
+                        <p>✓ 確實掌握進度 使用「時鐘」app的計時器來規劃學習時段。橘色的線條會隨著時間倒數而縮短，讓學生可以透過視覺化方式了解時間的概念。</p>
+                        <p>5 述說故事的方式</p>
+                        <p>講故事是與親友交流情感與聯繫的絕佳方式。</p>
+                        <p>✓ 大聲說出來 使用「語音備忘錄」來錄音，例如自己朗讀書本，或向某人敘述一天的經歷。然後在「訊息」或「郵件」中分享錄音。</p>
+                        <p>✓ 共享照片相簿 透過「共享的相簿」，邀請其他人持續關注你的冒險故事和日常生活。朋友可以為你的影像按讚，並留下評論。</p>
+                        <p>✓ 共同編寫故事 在Keynote幻燈片上描述故事，然後將文件連結傳送給朋友。讓他們可以加入照片、形狀和更多內容。</p>
+                        <p>✓ 製作影片 使用「可立拍」App拍攝有趣的故事</p>
+                        <p>✓ 製作圖畫書 在Pages書籍樣版中編寫或描繪故事</p>
+                        <p>✓ 分享創作 將作品輸出成適合的格式與親友分享</p>
+                        <p>透過這五大面向的指導，家長可以協助孩子更有效地使用iPad進行學習，</p>
+                        <p>同時建立健康的數位使用習慣，並發揮創造力與學習潛能。</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_parents" model="website.page">
+            <field name="name">家長</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/parents</field>
+            <field name="view_id" ref="page_parents_view"/>
+        </record>
+
+        <record id="page_audiences_view" model="ir.ui.view">
+            <field name="name">適用對象</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_audiences_view</field>
+            <field name="arch" type="xml">
+                <t name="適用對象" t-name="superinfo_website_data.page_audiences_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/audiences.png'); background-size: cover; background-position: center;">
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="container">
+                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">適用對象</h1></div></div>
+                </div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
+                <div class="container">
+                    <div class="row"><div class="col-lg-10 offset-lg-1">
+                        <p>IT 部門 教育工作者 教育領導者 決策者 家長</p>
+                    </div></div>
+                </div>
+            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="page_audiences" model="website.page">
+            <field name="name">適用對象</field>
+            <field name="is_published">True</field>
+            <field name="url">/apple-training/audiences</field>
+            <field name="view_id" ref="page_audiences_view"/>
+        </record>
+
+    </data>
+</odoo>

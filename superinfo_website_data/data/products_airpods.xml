@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- [715] AirPods Pro (第 3 代) -->
+    <record id="product_715" model="product.template">
+      <field name="name">AirPods Pro (第 3 代)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">7490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_airpods')])]"/>
+      <field name="website_description"><![CDATA[「主動式降噪」效果提升最高可達 2 倍¹。現具備心率感測功能²、「即時翻譯」³、更持久的電池續航力⁴、更進一步的聽力健康功能。且經重新設計，更穩妥貼合耳朵⁴。]]></field>
+    </record>
+    <!-- [431] AirPods (第 4 代) -->
+    <record id="product_431" model="product.template">
+      <field name="name">AirPods (第 4 代)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">4490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_airpods')])]"/>
+      <field name="website_description"><![CDATA[AirPods 4，具備「語音隔離」1、「Siri 互動」1 和「個人化空間音訊」2，讓聽覺體驗徹底改觀，全盤刷新。全面升級的吻合服貼，讓你舒適佩戴一整天。]]></field>
+    </record>
+    <!-- [432] AirPods (第 4 代) 主動式降噪款 -->
+    <record id="product_432" model="product.template">
+      <field name="name">AirPods (第 4 代) 主動式降噪款</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">5990</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_airpods')])]"/>
+      <field name="website_description"><![CDATA[AirPods 4 主動式降噪款，具備「適應性音訊」和「通透模式」，讓聽覺體驗徹底改觀，全盤刷新1；全面升級的吻合服貼，讓你舒適佩戴一整天。]]></field>
+    </record>
+    <!-- [205] AirPods Pro (第 2 代) -->
+    <record id="product_205" model="product.template">
+      <field name="name">AirPods Pro (第 2 代)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">7490</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_airpods')])]"/>
+      <field name="website_description"><![CDATA[AirPods Pro 提升2倍主動式降噪效能，適應性音訊根據環境自動調整噪音控制，通透模式與個人化空間音訊，提供最佳聆聽體驗。]]></field>
+    </record>
+    <!-- [204] AirPods (第 3 代) -->
+    <record id="product_204" model="product.template">
+      <field name="name">AirPods (第 3 代)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">5590</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_airpods')])]"/>
+      <field name="website_description"><![CDATA[AirPods (第 3 代) 具備個人化空間音訊與動態頭部追蹤功能，提供沉浸式音樂體驗，並擁有長效電池續航力及抗汗抗水設計，是理想的無線耳機選擇。]]></field>
+    </record>
+  </data>
+</odoo>

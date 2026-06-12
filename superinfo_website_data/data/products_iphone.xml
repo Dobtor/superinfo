@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- [622] iPhone 17 Air 256GB -->
+    <record id="product_622" model="product.template">
+      <field name="name">iPhone 17 Air 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">36900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_air')])]"/>
+      <field name="website_description"><![CDATA[iPhone Air 全新登場。
+iPhone Air，史上最薄 iPhone。配備 6.5 吋顯示器1、耐用的超瓷晶盾前後面板、A19 Pro 晶片、4800 萬像素融合相機系統，以及 Center Stage 前置相機。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 天空藍 淺金色 雲白色 太空黑]]></field>
+    </record>
+    <!-- [640] iPhone 17 256GB -->
+    <record id="product_640" model="product.template">
+      <field name="name">iPhone 17 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">29900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17')])]"/>
+      <field name="website_description"><![CDATA[神妙神彩
+iPhone 17，更讓人心動，更經久耐用。6.3 吋顯示器1 具備 ProMotion 自動適應更新頻率技術，配備超瓷晶盾 2，後置相機全具備 4800 萬像素，還有 Center Stage 前置相機、A19 晶片，以及更多精彩。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 薰衣草紫色 鼠尾草綠色 霧藍色 白色 黑色]]></field>
+    </record>
+    <!-- [647] iPhone 17 Air 512GB -->
+    <record id="product_647" model="product.template">
+      <field name="name">iPhone 17 Air 512GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">43900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_air')])]"/>
+      <field name="website_description"><![CDATA[iPhone Air 全新登場。
+iPhone Air，史上最薄 iPhone。配備 6.5 吋顯示器1、耐用的超瓷晶盾前後面板、A19 Pro 晶片、4800 萬像素融合相機系統，以及 Center Stage 前置相機。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 天空藍 淺金色 雲白色 太空黑]]></field>
+    </record>
+    <!-- [656] iPhone 17 Air 1TB -->
+    <record id="product_656" model="product.template">
+      <field name="name">iPhone 17 Air 1TB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">50900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_air')])]"/>
+      <field name="website_description"><![CDATA[iPhone Air 全新登場。
+iPhone Air，史上最薄 iPhone。配備 6.5 吋顯示器1、耐用的超瓷晶盾前後面板、A19 Pro 晶片、4800 萬像素融合相機系統，以及 Center Stage 前置相機。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 天空藍 淺金色 雲白色 太空黑]]></field>
+    </record>
+    <!-- [662] iPhone 17 512GB -->
+    <record id="product_662" model="product.template">
+      <field name="name">iPhone 17 512GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">36900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17')])]"/>
+      <field name="website_description"><![CDATA[神妙神彩 神妙神彩 iPhone 17，更讓人心動，更經久耐用。6.3 吋顯示器1 具備 ProMotion 自動適應更新頻率技術，配備超瓷晶盾 2，後置相機全具備 4800 萬像素，還有 Center Stage 前置相機、A19 晶片，以及更多精彩。 ＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 薰衣草紫色 鼠尾草綠色 霧藍色 白色 黑色]]></field>
+    </record>
+    <!-- [670] iPhone 17 Pro Max 256GB -->
+    <record id="product_670" model="product.template">
+      <field name="name">iPhone 17 Pro Max 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">44900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro Max，史上最強大 iPhone。具備亮麗的 6.9 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，並擁有歷來最佳電池續航力。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [694] iPhone 17 Pro Max 512GB -->
+    <record id="product_694" model="product.template">
+      <field name="name">iPhone 17 Pro Max 512GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">51900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro Max，史上最強大 iPhone。具備亮麗的 6.9 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，並擁有歷來最佳電池續航力。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [701] iPhone 17 Pro Max 1TB -->
+    <record id="product_701" model="product.template">
+      <field name="name">iPhone 17 Pro Max 1TB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">58900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro Max，史上最強大 iPhone。具備亮麗的 6.9 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，並擁有歷來最佳電池續航力。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [702] iPhone 17 Pro Max 2TB -->
+    <record id="product_702" model="product.template">
+      <field name="name">iPhone 17 Pro Max 2TB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">72900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro Max，史上最強大 iPhone。具備亮麗的 6.9 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，並擁有歷來最佳電池續航力。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [706] iPhone 17 Pro 512GB -->
+    <record id="product_706" model="product.template">
+      <field name="name">iPhone 17 Pro 512GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">46900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro，史上最強大 iPhone。具備亮麗的 6.3 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，電池續航力也大大突破。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [710] iPhone 17 Pro 256GB -->
+    <record id="product_710" model="product.template">
+      <field name="name">iPhone 17 Pro 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">39900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro，史上最強大 iPhone。具備亮麗的 6.3 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，電池續航力也大大突破。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+    <!-- [714] iPhone 17 Pro 1TB -->
+    <record id="product_714" model="product.template">
+      <field name="name">iPhone 17 Pro 1TB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">53900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_iphone_17_pro')])]"/>
+      <field name="website_description"><![CDATA[Pro 實力全釋放。
+iPhone 17 Pro，史上最強大 iPhone。具備亮麗的 6.3 吋顯示器1，鋁金屬一體成型設計，A19 Pro 晶片，後置相機均為 4800 萬像素，電池續航力也大大突破。
+＊此為預約商品，出貨時間為9/19之後，依照預約順序出貨 宇宙橙色 藏藍色 銀色]]></field>
+    </record>
+  </data>
+</odoo>

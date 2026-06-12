@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- [594] iPad 第 11 代 (A16) Wi‑Fi 512GB -->
+    <record id="product_594" model="product.template">
+      <field name="name">iPad 第 11 代 (A16) Wi‑Fi 512GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">21400</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_std')])]"/>
+      <field name="website_description"><![CDATA[11 吋 iPad 現配備飛快的 A16 晶片、Liquid Retina 顯示器1、先進相機、疾速 Wi-Fi 6 與 5G2，以及USB-C 連接器，身手強大更勝以往，還有四款亮眼色彩。iPad 讓你以強大的方式盡情創作、保持聯繫和輕鬆完成大小事，而且價格超親民。]]></field>
+    </record>
+    <!-- [234] iPad 第 11 代 (A16) Wi‑Fi 256GB -->
+    <record id="product_234" model="product.template">
+      <field name="name">iPad 第 11 代 (A16) Wi‑Fi 256GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">14400</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_std')])]"/>
+      <field name="website_description"><![CDATA[11 吋 iPad 現配備飛快的 A16 晶片、Liquid Retina 顯示器1、先進相機、疾速 Wi-Fi 6 與 5G2，以及USB-C 連接器，身手強大更勝以往，還有四款亮眼色彩。iPad 讓你以強大的方式盡情創作、保持聯繫和輕鬆完成大小事，而且價格超親民。]]></field>
+    </record>
+    <!-- [233] iPad 第 11 代 (A16) Wi‑Fi 128GB -->
+    <record id="product_233" model="product.template">
+      <field name="name">iPad 第 11 代 (A16) Wi‑Fi 128GB</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">10900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_std')])]"/>
+      <field name="website_description"><![CDATA[11 吋 iPad 現配備飛快的 A16 晶片、Liquid Retina 顯示器1、先進相機、疾速 Wi-Fi 6 與 5G2，以及USB-C 連接器，身手強大更勝以往，還有四款亮眼色彩。iPad 讓你以強大的方式盡情創作、保持聯繫和輕鬆完成大小事，而且價格超親民。]]></field>
+    </record>
+    <!-- [452] iPad mini 256GB（第 7 代） -->
+    <record id="product_452" model="product.template">
+      <field name="name">iPad mini 256GB（第 7 代）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">19400</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_mini')])]"/>
+      <field name="website_description"><![CDATA[iPad mini，超快，超好攜帶。
+iPad mini，實力非凡又超好攜帶。配備超快的 A17 Pro 晶片和 8.3 吋 Liquid Retina 顯示器1，擁有超飆速 Wi-Fi 6E2和 5G3，還可搭配 Apple Pencil Pro 使用，到哪都能學習、工作、娛樂和創作。 太空灰 藍色 星光色 紫色]]></field>
+    </record>
+    <!-- [451] iPad mini 128GB（第 7 代） -->
+    <record id="product_451" model="product.template">
+      <field name="name">iPad mini 128GB（第 7 代）</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">15900</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_mini')])]"/>
+      <field name="website_description"><![CDATA[小巧迷你，本事巨無霸。
+iPad mini，實力非凡又超好攜帶。配備超快的 A17 Pro 晶片和 8.3 吋 Liquid Retina 顯示器1，擁有超飆速 Wi-Fi 6E2和 5G3，還可搭配 Apple Pencil Pro 使用，到哪都能學習、工作、娛樂和創作。 太空灰 藍色 星光色 紫色]]></field>
+    </record>
+    <!-- [323] 巧控鍵盤，適用於 11 吋 iPad Air (M2) - 中文 (注音) -->
+    <record id="product_323" model="product.template">
+      <field name="name">巧控鍵盤，適用於 11 吋 iPad Air (M2) - 中文 (注音)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">9890</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_keyboard')])]"/>
+      <field name="website_description"><![CDATA[巧控鍵盤，為 iPad 帶來出色的打字體驗。
+巧控鍵盤帶來舒適、靈敏的打字體驗。它配備觸控式軌跡板，讓你能以各種新方式工作；不但角度調整自如，還具備背光按鍵；同時，它還能為 iPad 的正面與背面提供保護。 黑色 白色]]></field>
+    </record>
+    <!-- [331] 巧控鍵盤，適用於 13 吋 iPad Air (M2) - 中文 (注音) -->
+    <record id="product_331" model="product.template">
+      <field name="name">巧控鍵盤，適用於 13 吋 iPad Air (M2) - 中文 (注音)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">11690</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_keyboard')])]"/>
+      <field name="website_description"><![CDATA[巧控鍵盤，為 iPad 帶來出色的打字體驗。
+巧控鍵盤帶來舒適、靈敏的打字體驗。它配備觸控式軌跡板，讓你能以各種新方式工作；不但角度調整自如，還具備背光按鍵；同時，它還能為 iPad 的正面與背面提供保護。 黑色 白色]]></field>
+    </record>
+    <!-- [320] 巧控鍵盤，適用於 13 吋 iPad Pro (M4) - 中文 (注音) -->
+    <record id="product_320" model="product.template">
+      <field name="name">巧控鍵盤，適用於 13 吋 iPad Pro (M4) - 中文 (注音)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">11690</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pro')])]"/>
+      <field name="website_description"><![CDATA[巧控鍵盤，為 iPad 帶來出色的打字體驗。
+全新設計的巧控鍵盤帶來舒適、靈敏的打字體驗，超輕巧又方便攜帶。它配備觸控式軌跡板，讓你能以各種新方式工作；不但角度調整自如，還具備背光按鍵與 USB-C 埠。同時，它還能為 iPad 的正面與背面提供保護，並備有兩種新色可供選擇。 黑色 白色]]></field>
+    </record>
+    <!-- [328] 巧控鍵盤，適用於 11 吋 iPad Pro (M4) - 中文 (注音) -->
+    <record id="product_328" model="product.template">
+      <field name="name">巧控鍵盤，適用於 11 吋 iPad Pro (M4) - 中文 (注音)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">9890</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pro')])]"/>
+      <field name="website_description"><![CDATA[巧控鍵盤，為 iPad 帶來出色的打字體驗。
+全新設計的巧控鍵盤帶來舒適、靈敏的打字體驗，超輕巧又方便攜帶。它配備觸控式軌跡板，讓你能以各種新方式工作；不但角度調整自如，還具備背光按鍵與 USB-C 埠。同時，它還能為 iPad 的正面與背面提供保護，並備有兩種新色可供選擇。 黑色 白色]]></field>
+    </record>
+    <!-- [313] Apple Pencil 筆尖 — 4 件裝 -->
+    <record id="product_313" model="product.template">
+      <field name="name">Apple Pencil 筆尖 — 4 件裝</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">590</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pencil')])]"/>
+      <field name="website_description"><![CDATA[為你的 Apple Pencil 隨時準備好替換筆尖。適用於 Apple Pencil Pro、Apple Pencil (第 1 代與第 2 代) 和 Apple Pencil (USB-C)。Apple 出品。
+相容性
+Apple Pencil Pro
+Apple Pencil (第 1 代與第 2 代) Apple Pencil (USB-C)]]></field>
+    </record>
+    <!-- [42] Apple Pencil Pro -->
+    <record id="product_42" model="product.template">
+      <field name="name">Apple Pencil Pro</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">4390</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pencil')])]"/>
+      <field name="website_description"><![CDATA[全新的 Apple Pencil Pro 增添更多巧妙的功能，讓你呈現各種靈感，比以往更生動。以強大的全新互動方式，盡情繪圖、畫畫和做筆記，讓你輕鬆一手掌握無限創意。]]></field>
+    </record>
+    <!-- [30] Apple Pencil (USB-C) -->
+    <record id="product_30" model="product.template">
+      <field name="name">Apple Pencil (USB-C)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">2690</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pencil')])]"/>
+      <field name="website_description"><![CDATA[Apple Pencil，可寫，可畫，樣樣搞定。]]></field>
+    </record>
+    <!-- [31] Apple Pencil (第 1 代) -->
+    <record id="product_31" model="product.template">
+      <field name="name">Apple Pencil (第 1 代)</field>
+      <field name="type">consu</field>
+      <field name="sale_ok">True</field>
+      <field name="purchase_ok">False</field>
+      <field name="website_published">True</field>
+      <field name="list_price">3290</field>
+      <field name="public_categ_ids" eval="[(6,0,[ref('categ_ipad_pencil')])]"/>
+      <field name="website_description"><![CDATA[Apple Pencil。繪畫，簽名，做筆記。靈感一來，隨手動筆。]]></field>
+    </record>
+  </data>
+</odoo>

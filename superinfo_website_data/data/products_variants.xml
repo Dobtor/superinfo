@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="pal_color_622" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_622"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_skyblue'),ref('attrval_color_lightgold'),ref('attrval_color_cloudwhite'),ref('attrval_color_spaceblack')])]"/>
+    </record>
+    <record id="pal_color_640" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_640"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_lavender'),ref('attrval_color_sage'),ref('attrval_color_mistblue'),ref('attrval_color_white'),ref('attrval_color_black')])]"/>
+    </record>
+    <record id="pal_color_647" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_647"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_skyblue'),ref('attrval_color_lightgold'),ref('attrval_color_cloudwhite'),ref('attrval_color_spaceblack')])]"/>
+    </record>
+    <record id="pal_color_656" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_656"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_skyblue'),ref('attrval_color_lightgold'),ref('attrval_color_cloudwhite'),ref('attrval_color_spaceblack')])]"/>
+    </record>
+    <record id="pal_color_662" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_662"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_lavender'),ref('attrval_color_sage'),ref('attrval_color_mistblue'),ref('attrval_color_white'),ref('attrval_color_black')])]"/>
+    </record>
+    <record id="pal_color_721" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_721"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_starlight')])]"/>
+    </record>
+    <record id="pal_color_594" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_594"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_pink'),ref('attrval_color_yellow'),ref('attrval_color_silver')])]"/>
+    </record>
+    <record id="pal_color_234" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_234"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_pink'),ref('attrval_color_yellow'),ref('attrval_color_silver')])]"/>
+    </record>
+    <record id="pal_color_233" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_233"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_pink'),ref('attrval_color_yellow'),ref('attrval_color_silver')])]"/>
+    </record>
+    <record id="pal_color_452" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_452"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_purple'),ref('attrval_color_starlight')])]"/>
+    </record>
+    <record id="pal_color_451" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_451"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_purple'),ref('attrval_color_starlight')])]"/>
+    </record>
+    <record id="pal_color_277" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="product_277"/>
+      <field name="attribute_id" ref="attr_color"/>
+      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_green'),ref('attrval_color_red'),ref('attrval_color_silver')])]"/>
+    </record>
+  </data>
+</odoo>

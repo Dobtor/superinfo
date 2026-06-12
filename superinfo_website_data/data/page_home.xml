@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ═══════════════ 首頁 ═══════════════ -->
+        <record id="homepage_view" model="ir.ui.view">
+            <field name="name">極電資訊 首頁</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.homepage_view</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="superinfo_website_data.homepage_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+
+                            <!-- 主視覺輪播 s_carousel -->
+                            <section class="s_carousel_wrapper p-0" data-snippet="s_carousel" data-name="輪播">
+                                <div id="superinfoHomeCarousel" class="s_carousel s_carousel_default carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active oe_img_bg o_bg_img_center pt152 pb152" style="background-image: url('/superinfo_website_data/static/src/img/banner/banner_ipad_air_m2.png');" data-name="Slide">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="carousel-content col-lg-6">
+                                                        <h2 class="display-3-fs">iPad Air M2 現貨販售中</h2>
+                                                        <p class="lead">效能噴到飛！大學生必備、文書機首選。</p>
+                                                        <p><a href="/shop" class="btn btn-primary">前往選購</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item oe_img_bg o_bg_img_center pt152 pb152" style="background-image: url('/superinfo_website_data/static/src/img/banner/banner_ipad_pro_m4.png');" data-name="Slide">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="carousel-content col-lg-6 offset-lg-6 text-end">
+                                                        <h2 class="display-3-fs">iPad Pro M4 現貨販售中</h2>
+                                                        <p class="lead">全新 M4 電腦販售中！</p>
+                                                        <p><a href="/shop" class="btn btn-primary">前往選購</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item oe_img_bg o_bg_img_center pt152 pb152" style="background-image: url('/superinfo_website_data/static/src/img/banner/banner_promise.png');" data-name="Slide">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="carousel-content col-lg-8 offset-lg-2 text-center">
+                                                        <h2 class="display-3-fs">PROMISE 安心承諾</h2>
+                                                        <p class="lead">極電資訊・Apple 優質教育合作夥伴與 Jamf Elite 經銷商</p>
+                                                        <p><a href="/services/promise" class="btn btn-primary">了解更多</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#superinfoHomeCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#superinfoHomeCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"/>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- 主題導購卡 s_cards_grid -->
+                            <section class="s_cards_grid o_cc o_cc1 pt56 pb56" data-snippet="s_cards_grid" data-name="主題導購">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed" data-name="Cards">
+                                        <div class="col-lg-4 pb16">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">全新 M4 電腦販售中</h4>
+                                                    <p class="card-text">效能噴到飛，工作學習一次到位。</p>
+                                                    <a href="/shop" class="btn btn-secondary">前往 Mac</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pb16">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">大學生必備</h4>
+                                                    <p class="card-text">iPad ＋ Apple Pencil ＋ 鍵盤，學習生產力滿載。</p>
+                                                    <a href="/shop" class="btn btn-secondary">前往 iPad</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pb16">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">超值配件</h4>
+                                                    <p class="card-text">SwitchEasy、Logitech、ELECOM 等原廠／副廠精選。</p>
+                                                    <a href="/shop" class="btn btn-secondary">前往配件</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- 品牌牆 s_references -->
+                            <section class="s_references o_cc o_cc1 pt80 pb80" data-snippet="s_references" data-name="品牌牆">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="col-12 pb24">
+                                            <h2 style="text-align: center;">合作品牌</h2>
+                                            <p class="lead" style="text-align: center;">嚴選原廠與副廠周邊，品質有保障。</p>
+                                        </div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/logitech.jpg" class="img img-fluid mx-auto" alt="Logitech"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/switcheasy.png" class="img img-fluid mx-auto" alt="SwitchEasy"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/belkin.png" class="img img-fluid mx-auto" alt="Belkin"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/adam.png" class="img img-fluid mx-auto" alt="ADAM"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/eip.png" class="img img-fluid mx-auto" alt="eiP"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/overdigi.png" class="img img-fluid mx-auto" alt="OVERDIGI"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/hoda.png" class="img img-fluid mx-auto" alt="hoda"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/jtlegend.png" class="img img-fluid mx-auto" alt="JTLEGEND"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/lapo.png" class="img img-fluid mx-auto" alt="Lapo"/></div>
+                                        <div class="col-6 col-lg-2 pt16 pb16"><img src="/superinfo_website_data/static/src/img/brand/simmpo.png" class="img img-fluid mx-auto" alt="Simmpo"/></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- CTA s_call_to_action -->
+                            <section class="s_call_to_action o_cc o_cc2 pt96 pb96" data-snippet="s_call_to_action" data-name="行動呼籲">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <h2>需要教育採購／大量部署方案？</h2>
+                                            <p class="lead mb-0">極電資訊近三十年 Apple 教育經驗，提供從採購、部署到培訓的整套服務。</p>
+                                        </div>
+                                        <div class="col-lg-3 align-self-center text-end">
+                                            <a href="/services/bot" class="btn btn-primary btn-lg">專案服務</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="homepage_page" model="website.page">
+            <field name="name">首頁</field>
+            <field name="website_indexed">True</field>
+            <field name="is_published">True</field>
+            <field name="url">/superinfo-home</field>
+            <field name="view_id" ref="homepage_view"/>
+        </record>
+
+        <!-- 設為網站首頁 -->
+        <record id="website.default_website" model="website">
+            <field name="homepage_url">/superinfo-home</field>
+        </record>
+
+    </data>
+</odoo>
