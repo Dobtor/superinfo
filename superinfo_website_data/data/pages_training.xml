@@ -14,9 +14,9 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">蘋果教育專區</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>課程學習中心 輔助使用 永續政策 聰明投資 生命週期管理 教育軟體解決方案</p>
-            </div></div></div></section>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -41,22 +41,22 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">課程學習中心</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>Apple 專業學習 課程學習中心 教育的新可能。 透過 Apple 專業學習專家的指導，發掘教育科技的創新應用，為教學與學習開創全新體驗。 開始探索</p>
-                <h4>課程公告 經銷商專業培訓</h4>
-                <h4>最新課程公告 iPad 在課堂應用進階培訓</h4>
-                <h4>Mac 教學環境設置與管理</h4>
-                <h4>Apple TV 互動教學應用</h4>
-                <p>新增 Apple Intelligence 教學應用工作坊</p>
-                <h4>iPad 教學應用基礎</h4>
+                <h3>課程公告 經銷商專業培訓</h3>
+                <h3>最新課程公告 iPad 在課堂應用進階培訓</h3>
+                <h3>Mac 教學環境設置與管理</h3>
+                <h3>Apple TV 互動教學應用</h3>
+                <h3>新增 Apple Intelligence 教學應用工作坊</h3>
+                <h3>iPad 教學應用基礎</h3>
                 <p>學習如何運用 iPad 的強大功能來提升教學效果，包括 Apple Pencil 的創意應用。</p>
-                <h4>每週三 13:00 實體</h4>
+                <h3>每週三 13:00 實體</h3>
                 <p>深入探索 macOS 的教育功能，建立高效的數位教學環境。</p>
-                <h4>每週五 13:00 實體</h4>
-                <h4>即時互動 APL Live Apple 課程</h4>
+                <h3>每週五 13:00 實體</h3>
+                <h3>即時互動 APL Live Apple 課程</h3>
                 <p>🎉 APL Live 課程不間斷🎉 學習用 Mac ＆ iPad 內建軟體提升教學效率，發揮創意紀錄學習歷程！</p>
                 <p>Apple 專業學習專家 Apple 專業學習專家 (APL 專家) 為教育工作者背景，各自擁有獨特資格，能夠向你展示如何在教與學上，皆全面發揮 Apple 產品的潛力。這群專家透過現場和線上輔導，以及專業發展活動來提供指導、培訓與支援，幫助教育工作者以創新方式制定課程和評量方式。 與 APL 專家聯繫，為教育工作者與學生取得個人化支援。 了解更多</p>
-            </div></div></div></section>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -135,7 +135,7 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">聰明投資</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>Apple 教育 - 明智的投資 Apple 教育 - 明智的投資 教育領導者在進⾏科技相關決策時，須考慮各種因素，例如⽬前的系統、流程和預算。為師⽣、IT 部⾨和整體校園社群做出明智的投資決定。 Professional Learning Center</p>
                 <p>耐用設計 Apple 裝置以耐⽤素材製成，能夠隨意收入後背包⽽不易受損，同時非常輕巧，能讓師⽣輕鬆攜帶到校園各個⾓落。</p>
                 <p>長效電池 iPad 和 Mac 擁有 Apple 晶片的節能效能、滿⾜⼀天所需的電池續航⼒，且軟體會定期更新，是能夠長久使⽤的優質裝置。</p>
@@ -143,20 +143,20 @@
                 <p>由於 Apple 裝置、軟體可靠，還有可持續更新的 OS，因此殘值相當⾼。</p>
                 <p>裝置須要升級時，還能進⾏換購，讓教育領導者得以回收成本，並重新⽤來投資學區。</p>
                 <p>與其他裝置在⽣命週期結束後只能送⼈或丟棄不同，Apple裝置隨著時間推進仍保有相當⾼的價值。</p>
-                <h4>保護學校數據與資源</h4>
+                <h3>保護學校數據與資源</h3>
                 <p>Apple 裝置既可靠⼜經久耐⽤，能降低須向 IT ⼈員需求協助的次數、減少修理所需時間，還有更完善的安全性，能夠幫助學校和學區提升營運效率。</p>
-                <h4>智慧管理耗電量，為學校節省能源成本</h4>
-                <h4>製造時大量採用再生或回收物料</h4>
-                <h4>對學生和地球都有益的明智投資</h4>
-                <h4>產品生命週期結束後易於回收處理</h4>
+                <h3>智慧管理耗電量，為學校節省能源成本</h3>
+                <h3>製造時大量採用再生或回收物料</h3>
+                <h3>對學生和地球都有益的明智投資</h3>
+                <h3>產品生命週期結束後易於回收處理</h3>
                 <p>「成本不只是考量裝置成本，還有維護成本、各種 app 和技術⽀援成本。裝置的⽣命週期結束時，轉售能有多少價值？只要考慮到數字，根本連比都不⽤比，iPad 對我們來說就是最符合成本效益的選擇。」 Brian Messinger 紐約州 Sewanhaka Central ⾼中學區技術主任</p>
-                <h4>01 全面成本考量</h4>
+                <h3>01 全面成本考量</h3>
                 <p>不僅考慮裝置初始成本，還包括維護、應用程式和技術支援等長期支出。</p>
-                <h4>02 彈性付款方式</h4>
+                <h3>02 彈性付款方式</h3>
                 <p>Apple 保證提供買回舊裝置和換購服務，讓教育機構在設備升級時更安心。</p>
                 <p>裝置生命週期結束時，仍保有相當高的轉售價值，可抵減新設備投資</p>
                 <p>準備開始您的 Apple 教育之旅？ 探索更多專業學習資源和教育解決方案 開始學習 聯絡專家</p>
-            </div></div></div></section>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -181,7 +181,7 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">生命週期管理</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>Apple 生命週期管理 Apple 生命週期管理 採用現代化方法，確保您的 Apple 平台始終保持最新狀態，提供最佳安全性與使用者體驗</p>
                 <p>現代化管理方式 全球企業都因行動力而帶來全新面貌，Apple 裝置與 app 成為完成關鍵業務的重要工具</p>
                 <p>採用率統計 77% 最近 4 年內推出的 iPhone 裝置使用 iOS 13</p>
@@ -189,32 +189,32 @@
                 <p>"最終而言，保護我們的顧客和員工體驗才是最重要的，這值得我們為了嚴苛測試流程所做的投資。" Jennifer Paine</p>
                 <p>Senior Director Employee Mobility, Southwest Airlines</p>
                 <p>四階段生命週期 每次發行 Beta 版本時，Apple 平台採用的生命週期都包含四個持續進行的活動</p>
-                <h4>組建團隊並取得資源</h4>
-                <h4>向 Apple 回報問題</h4>
-                <p>核心管理領域 掌握 Apple 生命週期管理的關鍵要素</p>
-                <h4>現代化生命週期管理</h4>
-                <h4>強調持續更新的重要性，確保平台安全性與完整性</h4>
-                <h4>軟體更新需週而復始持續進行</h4>
-                <h4>軟體測試是全年無休的任務</h4>
-                <h4>行動環境運作環環相扣</h4>
-                <p>組建團隊和取得 Beta 版資源，建立有效的測試流程</p>
-                <h4>籌組團隊來支援公司計畫</h4>
-                <h4>存取 Beta 版資源</h4>
-                <h4>清點公司的 Apple 裝置</h4>
-                <h4>評估 Apple 平台</h4>
-                <h4>測試基礎設施、MDM 解決方案和應用程式</h4>
-                <h4>第三方 MDM 解決方案</h4>
-                <h4>App Store 與自訂 App</h4>
-                <p>向 Apple 回報問題和建議，協助改善產品品質</p>
-                <h4>使用者意見程式 App</h4>
-                <h4>Feedback Assistant 網站</h4>
-                <h4>取得 AppleCare 協助</h4>
-                <h4>認證公開發行版本和部署策略</h4>
-                <h4>排定軟體更新的時程</h4>
-                <h4>向員工傳達後續步驟</h4>
-                <h4>開始您的 Apple 生命週期管理</h4>
+                <h3>組建團隊並取得資源</h3>
+                <h3>向 Apple 回報問題</h3>
+                <h3>核心管理領域 掌握 Apple 生命週期管理的關鍵要素</h3>
+                <h3>現代化生命週期管理</h3>
+                <h3>強調持續更新的重要性，確保平台安全性與完整性</h3>
+                <h3>軟體更新需週而復始持續進行</h3>
+                <h3>軟體測試是全年無休的任務</h3>
+                <h3>行動環境運作環環相扣</h3>
+                <h3>組建團隊和取得 Beta 版資源，建立有效的測試流程</h3>
+                <h3>籌組團隊來支援公司計畫</h3>
+                <h3>存取 Beta 版資源</h3>
+                <h3>清點公司的 Apple 裝置</h3>
+                <h3>評估 Apple 平台</h3>
+                <h3>測試基礎設施、MDM 解決方案和應用程式</h3>
+                <h3>第三方 MDM 解決方案</h3>
+                <h3>App Store 與自訂 App</h3>
+                <h3>向 Apple 回報問題和建議，協助改善產品品質</h3>
+                <h3>使用者意見程式 App</h3>
+                <h3>Feedback Assistant 網站</h3>
+                <h3>取得 AppleCare 協助</h3>
+                <h3>認證公開發行版本和部署策略</h3>
+                <h3>排定軟體更新的時程</h3>
+                <h3>向員工傳達後續步驟</h3>
+                <h3>開始您的 Apple 生命週期管理</h3>
                 <p>透過現代化的管理方法，確保您的組織能夠充分利用 Apple 平台的優勢</p>
-            </div></div></div></section>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -268,9 +268,9 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">IT 部門</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>Apple 校務管理部署指南 Apple 校務管理部署指南 為教育機構打造的全方位裝置管理解決方案， 簡化 IT 團隊工作流程，創造卓越學習體驗。</p>
-                <h4>Apple 校務管理概述</h4>
+                <h3>Apple 校務管理概述</h3>
                 <p>專為教育機構設計的現代化裝置部署解決方案，透過單一門戶網站輕鬆管理所有 Apple 裝置、內容及使用者。</p>
                 <p>全面支援一對一及共享裝置等多種部署模式，滿足不同教學環境需求，為學校提供最大彈性。</p>
                 <p>讓 IT 管理員能更有效率地部署 iPad 與 Mac，降低技術支援複雜度，專注於提升教學體驗。</p>
@@ -282,7 +282,7 @@
                 <p>依據教學需求自由分配數位內容使用權限，確保資源最佳化利用。</p>
                 <p>在校內不同裝置間靈活重新分配應用程式，因應班級或學期變動需求。</p>
                 <p>透過統一平台管理所有數位教學資源，簡化行政流程，提升效率。</p>
-                <h4>iCloud 儲存空間</h4>
+                <h3>iCloud 儲存空間</h3>
                 <p>每位使用者皆可獲得免費 iCloud 儲存空間，安全保存所有學習資料。</p>
                 <p>系統支援大規模使用者管理，適合各種規模學校使用。</p>
                 <p>全天候技術支援，確保學校系統運作順暢無虞。</p>
@@ -291,12 +291,12 @@
                 <p>共享 iPad 模式 多位學生可安全共用同一台裝置，保留個人進度與作業，適合資源有限環境。</p>
                 <p>班級管理整合 與班級管理工具無縫整合，讓教師輕鬆控制課堂裝置使用情況。</p>
                 <p>彈性配置 依據學校特定需求客製化部署模式，確保最佳學習成效。</p>
-                <h4>全方位保護學生資料安全</h4>
-                <h4>所有裝置和雲端資料皆經加密處理</h4>
-                <h4>完整的家長監護與隱私保護機制</h4>
-                <h4>符合全球教育隱私法規要求</h4>
+                <h3>全方位保護學生資料安全</h3>
+                <h3>所有裝置和雲端資料皆經加密處理</h3>
+                <h3>完整的家長監護與隱私保護機制</h3>
+                <h3>符合全球教育隱私法規要求</h3>
                 <p>Apple 校務管理系統提供領先業界的安全機制，嚴格保護學生資料隱私，符合各國教育機構資料安全標準。透過專用功能確保個人資訊安全，讓學校、教師與家長皆能安心使用。</p>
-            </div></div></div></section>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -349,7 +349,7 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">教育領導者</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
                 <p>Apple 傑出教育工作者 成為 Apple 傑出教育工作者 25 年多以來，Apple 傑出教育工作者 (ADE) 方案認可全球教育先鋒，他們運用 Apple 科技改寫教育與學習方式。成為這個創新社群的一員，幫助其他教育工作者重新思考 iPad 和 Mac 的教學潛能。 申請成為 Apple 傑出教育工作者 申請流程 透過三個簡單步驟，開始你的 Apple 傑出教育工作者申請之旅。</p>
                 <p>1 成為獲得認可的 Apple Teacher 申請人必須先通過 iPad 或 Mac 的六項互動式測驗，獲得 Apple Teacher 認可。</p>
                 <p>2 規劃你的申請影片 創作一部不超過兩分鐘的影片，展示你如何翻轉學習環境、教學成效及影響力。</p>
@@ -362,26 +362,26 @@
                 <p>內容要求 包含能呈現主題的影像和故事旁白，避免「頭部特寫」鏡頭，僅使用已取得分享授權的內容。</p>
                 <p>技術規格 片長不超過兩分鐘，檔案大小不超過 200 MB，格式為 .mov、.mp4 或 .m4v。</p>
                 <p>Apple Teacher 旅程 「Apple Teacher 計畫」是一套免額外付費的專業學習計畫，協助教育工作者運用 Apple 產品從事教學與學習。通過三項認可，獲得無限靈感和機會，為學生提供更緊密連結、更有創意的學習體驗。</p>
-                <p>學習 iPad、Mac 和 Apple 應用程式</p>
-                <h4>整合科技、創意和程式設計</h4>
+                <h3>學習 iPad、Mac 和 Apple 應用程式</h3>
+                <h3>整合科技、創意和程式設計</h3>
                 <p>成為 Apple Teacher、完成 Portfolio 和 Swift Playground</p>
                 <p>從探索 120 個培養技能教學課程開始你的 Apple Teacher 旅程，讓你在教學上使用 iPad、Mac 和 Apple 眾多 app (Pages、Keynote、Numbers、GarageBand 和 iMovie 等) 可以更得心應手。通過互動式測驗後獲得徽章，集滿 6 枚 iPad 或 Mac 徽章，便能成為獲得認可的 Apple Teacher。</p>
                 <p>獲得 Apple Teacher Portfolio 認可 透過三個學習階段，設計出色的教學體驗。</p>
                 <p>啟動階段 介紹構想、啟動原有的知識，以及運用簡單的熱身活動，引導學生以有創意的新方式思考內容。</p>
                 <p>探索階段 協助學生探索新資訊、交流構想，加深他們對新教材的理解。</p>
                 <p>應用階段 運用各種計畫案評估學習成果，協助學生展現對新教材的熟悉程度，並將所學應用到不同情境中。</p>
-                <p>打造你的 Apple Teacher Portfolio</p>
-                <h4>收集構想 整合創意教學方法</h4>
-                <h4>設計課程 製作自訂課程系列</h4>
-                <h4>記錄反思 評估教學成效</h4>
-                <h4>分享成果 與同事交流專業經驗</h4>
+                <h3>打造你的 Apple Teacher Portfolio</h3>
+                <h3>收集構想 整合創意教學方法</h3>
+                <h3>設計課程 製作自訂課程系列</h3>
+                <h3>記錄反思 評估教學成效</h3>
+                <h3>分享成果 與同事交流專業經驗</h3>
                 <p>加入 Apple 教育社群 成為全球教育創新網絡的一份子，與世界各地的教育工作者交流學習。</p>
                 <p>持續專業發展 參與定期研習活動，學習最新的教學技術與策略，與其他 ADE 成員分享最佳實務。</p>
                 <p>影響教育未來 參與產品開發回饋，協助 Apple 打造更好的教育工具，為全球學習者帶來正面影響。</p>
                 <p>認可與榮譽 獲得官方認證標章，在專業領域中展現你的教育創新領導地位，激勵更多教育工作者。</p>
                 <p>我們的專業團隊隨時為您提供申請 Apple 傑出教育工作者的相關支援</p>
-                <p>services@superinfo.com.tw</p>
-            </div></div></div></section>
+                <h3>services@superinfo.com.tw</h3>
+            </div></div></section>
                         </div>
                     </t>
                 </t>
@@ -469,9 +469,9 @@
                 <div class="o_we_bg_filter bg-black-25"/>
                 <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">適用對象</h1></div></div></div>
             </section>
-            <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
-                <p>IT 部門 教育工作者 教育領導者 決策者 家長</p>
-            </div></div></div></section>
+            <section class="pt48 pb56" data-name="內容"><div class="container"><div class="si-prose">
+                <h3>IT 部門 教育工作者 教育領導者 決策者 家長</h3>
+            </div></div></section>
                         </div>
                     </t>
                 </t>

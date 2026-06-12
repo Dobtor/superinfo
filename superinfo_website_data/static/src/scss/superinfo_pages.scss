@@ -26,6 +26,19 @@ $si-font: "SF Pro TC", "SF Pro Text", "PingFang TC", "Segoe UI", SegoeUI,
     img { height: 64px; width: auto; }
 }
 
+// ───────── 文字內容頁：可讀性排版（蘋果培訓文字頁）─────────
+.si-prose {
+    max-width: 820px;
+    margin: 0 auto;
+    font-family: $si-font;
+
+    h2 { font-size: 26px; font-weight: 700; color: #111; margin: 36px 0 12px; }
+    h3 { font-size: 20px; font-weight: 700; color: #1f2933; margin: 22px 0 8px; }
+    p  { font-size: 16px; line-height: 1.95; color: #333; margin-bottom: 14px; }
+    ul { padding-left: 1.25rem; }
+    li { font-size: 16px; line-height: 1.9; color: #333; margin-bottom: 6px; }
+}
+
 // ───────── 設計切圖頁：置中堆疊（如共契BOT DM 等）─────────
 .si-stack {
     max-width: 980px;
