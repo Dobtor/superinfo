@@ -12,34 +12,39 @@
                         <div id="wrap" class="oe_structure">
             <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首" style="background-image: url('/superinfo_website_data/static/src/img/content/about.jpg'); background-size: cover; background-position: center;">
                 <div class="o_we_bg_filter bg-black-25"/>
-                <div class="container">
-                    <div class="row"><div class="col-lg-8"><h1 class="display-2-fs">關於我們</h1></div></div>
-                </div>
+                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">關於我們</h1></div></div></div>
+            </section>
+            <section class="s_text_block o_cc o_cc1 pt32 pb32" data-snippet="s_text_block" data-name="內容圖">
+                <div class="container"><div class="row justify-content-center">
+                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/0.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
+                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/1.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
+                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/2.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
+                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/3.jpg" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
+                    <div class="col-lg-10 mb-3"><img src="/superinfo_website_data/static/src/img/content/pages/about/4.png" class="img img-fluid d-block mx-auto" alt="關於我們" loading="lazy"/></div>
+                </div></div>
             </section>
             <section class="s_text_block o_cc o_cc1 pt56 pb56" data-snippet="s_text_block" data-name="內容">
-                <div class="container">
-                    <div class="row"><div class="col-lg-10 offset-lg-1">
-                        <p>Apple 授權教育經銷商</p>
-                        <p>極電資訊有限公司為 Apple 授權教育經銷商，創立於 1990 年，銷售 Apple 電腦、平板電腦、行動裝置與 Apple 原廠配件，除此之外，也提供學校、公家機關的軟硬體採買與安裝，包含工作站、伺服器、儲存裝置、數位機背等相關服務。</p>
-                        <p>擁有業界最豐富的 Mac 教室部署與 iPad 大量採購經驗，由多位專業工程師與教育訓練講師提供完整客製化服務。</p>
-                        <p>教育零售方面極電有師大校園體驗中心（Campus Experience Center ），開設至今協助眾多老師、學生與教職人員解決 Apple 產品相關問題；教育優惠價與新手使用教學，帶領更多師生善用 Mac 與 iPad 等設備。</p>
-                        <p>軟體到硬體，滿足客戶專屬需求</p>
-                        <p>近三十年的經驗，讓我們能依據不同客戶需求提供客製化解決方案，從機器採購和架設、軟體選擇與安裝，到售後教育訓練，滿足客戶從採買計畫到實際操作的需求。</p>
-                        <p>極電資訊於臺北市有兩間校園門市，分別位於國立臺灣師範大學以及世新大學。協助師生安裝校園授權軟體，並提供教育優惠價與開學、畢業季活動，讓學生能以更實惠的價格使用 Apple 裝置輔助學習，老師與教職人員也能更安全無慮地工作。</p>
-                        <p>協助客戶在不同領域善用最新科技</p>
-                        <p>隨著無紙化、資源分享等科技化趨勢，加上北市府推動「一生一平板」專案與程式教育的需求成長，極電資訊將繼續積極拓展客源與協助目前客戶夥伴，透過 Apple 設備 與 MDM、Apple School Manager 等相關服務，在各自專業領域上發展出更多元的科技應用。</p>
-                        <p>擁有多位官方認證工程師</p>
-                        <p>與時俱進的知識背景，是我們極度重視的一件事。極電資訊工程師擁有多張 Apple / Jamf Pro 專業證照，不僅是專業能力的鑑定，同時也是提供服務最有力的保證。</p>
-                        <p>地址 ： 臺灣新北市汐止區 新台五路一段 99 號 22F-1 （U-TOWN大樓A棟） e-mail : contact@superinfo.com.tw</p>
-                        <p>PHONE : (02) 2697-5813 FAX : (02) 2697-5907</p>
-                        <p>師大 Apple 校園體驗中心</p>
-                        <p>地址 ： 臺灣台北市大安區 和平東路一段 129 號 師大國際會議中心一樓 e-mail : apple_ntnu@superinfo.com.tw</p>
-                        <p>PHONE : (02) 2322-3718 FAX : (02) 2322-3718</p>
-                        <p>世新 Apple 校園體驗中心</p>
-                        <p>地址 ： 臺灣台北市文山區 木柵路一段 17 巷 1 號 行政大樓一樓 e-mail: apple_shu@superinfo.com.tw</p>
-                        <p>PHONE : (02) 2236-6358</p>
-                    </div></div>
-                </div>
+                <div class="container"><div class="row"><div class="col-lg-10 offset-lg-1">
+                    <h4>Apple 授權教育經銷商</h4>
+                    <p>極電資訊有限公司為 Apple 授權教育經銷商，創立於 1990 年，銷售 Apple 電腦、平板電腦、行動裝置與 Apple 原廠配件，除此之外，也提供學校、公家機關的軟硬體採買與安裝，包含工作站、伺服器、儲存裝置、數位機背等相關服務。</p>
+                    <p>擁有業界最豐富的 Mac 教室部署與 iPad 大量採購經驗，由多位專業工程師與教育訓練講師提供完整客製化服務。</p>
+                    <p>教育零售方面極電有師大校園體驗中心（Campus Experience Center ），開設至今協助眾多老師、學生與教職人員解決 Apple 產品相關問題；教育優惠價與新手使用教學，帶領更多師生善用 Mac 與 iPad 等設備。</p>
+                    <h4>軟體到硬體，滿足客戶專屬需求</h4>
+                    <p>近三十年的經驗，讓我們能依據不同客戶需求提供客製化解決方案，從機器採購和架設、軟體選擇與安裝，到售後教育訓練，滿足客戶從採買計畫到實際操作的需求。</p>
+                    <p>極電資訊於臺北市有兩間校園門市，分別位於國立臺灣師範大學以及世新大學。協助師生安裝校園授權軟體，並提供教育優惠價與開學、畢業季活動，讓學生能以更實惠的價格使用 Apple 裝置輔助學習，老師與教職人員也能更安全無慮地工作。</p>
+                    <h4>協助客戶在不同領域善用最新科技</h4>
+                    <p>隨著無紙化、資源分享等科技化趨勢，加上北市府推動「一生一平板」專案與程式教育的需求成長，極電資訊將繼續積極拓展客源與協助目前客戶夥伴，透過 Apple 設備 與 MDM、Apple School Manager 等相關服務，在各自專業領域上發展出更多元的科技應用。</p>
+                    <h4>擁有多位官方認證工程師</h4>
+                    <p>與時俱進的知識背景，是我們極度重視的一件事。極電資訊工程師擁有多張 Apple / Jamf Pro 專業證照，不僅是專業能力的鑑定，同時也是提供服務最有力的保證。</p>
+                    <p>地址 ： 臺灣新北市汐止區 新台五路一段 99 號 22F-1 （U-TOWN大樓A棟） e-mail : contact@superinfo.com.tw</p>
+                    <p>PHONE : (02) 2697-5813 FAX : (02) 2697-5907</p>
+                    <h4>師大 Apple 校園體驗中心</h4>
+                    <p>地址 ： 臺灣台北市大安區 和平東路一段 129 號 師大國際會議中心一樓 e-mail : apple_ntnu@superinfo.com.tw</p>
+                    <p>PHONE : (02) 2322-3718 FAX : (02) 2322-3718</p>
+                    <h4>世新 Apple 校園體驗中心</h4>
+                    <p>地址 ： 臺灣台北市文山區 木柵路一段 17 巷 1 號 行政大樓一樓 e-mail: apple_shu@superinfo.com.tw</p>
+                    <h4>PHONE : (02) 2236-6358</h4>
+                </div></div></div>
             </section>
                         </div>
                     </t>
