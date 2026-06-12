@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="page_ipad_deploy_view" model="ir.ui.view">
+            <field name="name">iPad 大量部署</field>
+            <field name="type">qweb</field>
+            <field name="key">superinfo_website_data.page_ipad_deploy_view</field>
+            <field name="arch" type="xml">
+                <t name="iPad 大量部署" t-name="superinfo_website_data.page_ipad_deploy_view">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+                            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首"
+                                     style="background-image: url('/superinfo_website_data/static/src/img/content/ipad-deployment.jpg'); background-size: cover; background-position: center;">
+                                <div class="o_we_bg_filter bg-black-25"/>
+                                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">iPad 大量部署</h1></div></div></div>
+                            </section>
+                            <section class="si-page pt24 pb40" data-name="iPad 大量部署內容">
+                                <div class="maincontainer">
+                                    <div class="part2"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/0.jpg" alt="iPad 大量部署" loading="lazy"/></div>
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">學校的強力後盾</div>
+                                        <div class="part-p grayword">政府推動行動教學以及科技輔助教育已行之有年，但在許多教育者心中，或多或少對於裝置管理存有疑慮：</div>
+                                        <div class="part-p grayword">已為 150 所中小學的 iPad 做大量部署與裝置設定的極電資訊，有著豐富的經驗與專業技術，能夠有效協助學校消除使用與管理上的大小疑慮，使 iPad 成為教育上最棒的推進器。</div>
+                                    </div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">不只是售出硬體</div>
+                                        <div class="head3 midgrayword">更希望使用者能無後顧之憂</div>
+                                        <div class="part-p grayword">極電資訊至今協助與支援的機構，除了大學、國高中小等學校單位外，也為許多引進「無紙化」理念的公部門提供裝置管理等技術支援，下為近年合作的服務單位：</div>
+                                        <div class="part-p grayword"><br/>▎臺北市南港區南港國小 <br/>▎台北市松山區敦化國小 <br/>▎臺北市立誠正國民中學 <br/>▎臺北市立中正國民中學 <br/>▎臺北市立第一女子高級中學 <br/>▎臺北市立松山高級工農職業學校 <br/>▎中國文化大學 <br/>▎大學入學考試中心</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/1.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">Apple School Manager</div>
+                                        <div class="part-p grayword">一個簡單的線上入口網站，可讓 IT 管理者集中一處管理人員、裝置和內容。可輕鬆建立與運用管理式 Apple ID 並整合『裝置註冊計畫』（DEP）與『大量採購計畫』(VPP)將學校裝置指派到MDM，讓裝置自動註冊與配置。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/2.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/3.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">裝置註冊計畫 (DEP)</div>
+                                        <div class="part-p grayword">DEP 簡化了初始設定程序，它能在設定過程中，自動將裝置註冊至行動裝置管理 (MDM) 並對其進行監管， 讓您在不須親手觸碰裝置的情況下，就能完成配置與設定。 只有直接購自 Apple 或 Apple 授權經銷商的裝置才可透過 DEP 快速精簡地完成部署。</div>
+                                    </div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">大量採購計畫 (VPP)</div>
+                                        <div class="part-p grayword">大量採購計劃能簡化分配流程，讓教育機構大量下載免費或付費 App，並透過行動裝置管理 (MDM) 解決方案分發給班級、學生、老師和管理階層。此計畫另有提供教育大量採購折扣優惠。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/4.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/5.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">Apple Configurator</div>
+                                        <div class="part-p grayword">Apple Configurator 富彈性、以裝置為中心的設計可讓您快速並輕鬆地設定一或多部透過 USB 連接到 Mac 的 iPhone、iPad、Apple TV 和 iPod touch 裝置。您只需要選取單一或多部裝置，然後執行動作即可。有了 Apple Configurator，您可以更新軟體、安裝 App 和設定描述檔、重新命名裝置和更改背景圖片、輸出裝置資訊和文件，以及其他功能。</div>
+                                    </div>
+                                </div>
+                                <div class="maincontainer">
+                                    <div class="part2">
+                                        <div class="head2 darkgrayword">課堂 (Classroom)</div>
+                                        <div class="part-p grayword">「課堂」是一款 iPad App，可協助教師指導學習、分享課業和管理學生裝置。教師可以在課堂中的任一部 iPad 上啟動特定 App、網站或教課書頁面。也可以在其班級中傳送和接收文件，並使用 Apple TV 在電視、螢幕或投影機上分享學生的作業。教師還可以查看學生正在使用哪些 App、將學生裝置調成靜音，以及重置學生的密碼。</div>
+                                    </div>
+                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/ipad-deployment/6.png" alt="iPad 大量部署" loading="lazy"/></div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="page_ipad_deploy" model="website.page">
+            <field name="name">iPad 大量部署</field>
+            <field name="is_published">True</field>
+            <field name="url">/services/ipad-deployment</field>
+            <field name="view_id" ref="page_ipad_deploy_view"/>
+        </record>
+
+    </data>
+</odoo>
