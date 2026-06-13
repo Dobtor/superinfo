@@ -9,7 +9,7 @@ MENU_TREE = [
         {"name": "iPad 大量部署", "url": "/services/ipad-deployment"},
         {"name": "BYOD 自帶載具計畫", "url": "/services/byod"},
         {"name": "Mac 電腦教室", "url": "/services/mac-classroom"},
-        {"name": "實際案例", "url": "/services/cases"},
+        {"name": "實際案例", "blog": "blog_cases"},
         {"name": "PROMISE", "url": "/services/promise"},
     ]},
     {"name": "蘋果培訓", "url": "#", "children": [
@@ -106,11 +106,17 @@ class Website(models.Model):
         for i, node in enumerate(nodes):
             url = node.get("url") or "#"
             categ_xid = node.get("categ")
+            blog_xid = node.get("blog")
             if categ_xid:
                 categ = self.env.ref(
                     "superinfo_website_data." + categ_xid, raise_if_not_found=False
                 )
                 url = "/shop/category/%s" % IrHttp._slug(categ) if categ else "/shop"
+            elif blog_xid:
+                blog = self.env.ref(
+                    "superinfo_website_data." + blog_xid, raise_if_not_found=False
+                )
+                url = "/blog/%s" % IrHttp._slug(blog) if blog else "/blog"
             menu = Menu.create({
                 "name": node["name"],
                 "url": url,
