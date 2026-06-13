@@ -2,92 +2,137 @@
 <odoo>
     <data noupdate="1">
 
-        <!-- ════════ 實際案例 部落格 ════════ -->
         <record id="blog_cases" model="blog.blog">
             <field name="name">實際案例</field>
-            <field name="subtitle">極電資訊・Mac 電腦教室建置實績</field>
+            <field name="subtitle">紀錄故事，分享精彩。</field>
         </record>
 
-        <!-- 分組標籤（對應原站 Mac Lab 成功實例 K12 / High ED） -->
-        <record id="case_tag_k12" model="blog.tag">
-            <field name="name">K12</field>
-        </record>
-        <record id="case_tag_highed" model="blog.tag">
-            <field name="name">High ED</field>
-        </record>
+        <record id="case_tag_ipad" model="blog.tag"><field name="name">iPad 專案</field></record>
+        <record id="case_tag_mac" model="blog.tag"><field name="name">Mac 電腦教室</field></record>
+        <record id="case_tag_event" model="blog.tag"><field name="name">活動紀錄</field></record>
+        <record id="case_tag_training" model="blog.tag"><field name="name">教育訓練</field></record>
 
-        <!-- ───── K12 ───── -->
-        <record id="case_nangang" model="blog.post">
-            <field name="name">南港高中 — Mac mini 資訊科技教室</field>
+        <record id="case_nkps_ipad" model="blog.post">
+            <field name="name">南港國小用 iPad 帶孩子無際飛航</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_k12')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/nangang.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/nangang.jpg" class="img img-fluid rounded mx-auto" alt="南港高中 Mac mini 資訊科技教室"/></p>
-                <p class="text-center text-muted">南港高中・Mac mini 資訊科技教室</p>
-            ]]></field>
+            <field name="post_date">2024-04-19 13:44:36</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/nkps-ipad/cover.JPG')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h3><b>數位科技是南港孩子的現在，更是未來。</b> </h3> <p>    南港國小建校迄今已 110 年，為南港地區第一所學校，近年來因工商業加速成長，使原本具有傳統色彩的學校，轉變成為與社區脈動密切結合的社區型學校，以及以「資訊化」、「國際化」、「在地化」為目標，發展「學習智慧」、「關鍵能力」、「國際學伴」及「友善校園」為四個面向架構，訂定學校經營的目標，打造「智能學校」的願景。</p> <p>   以「智慧南港 無際飛航」為主軸，培養孩子未來資訊素養能力以及競爭力，讓科技為孩子創造不一樣的學習新體驗。南港國小致力於透過「數位學習 X 多元展能」，成就一艘艘太空船，航向無垠未來。</p> <p><img src="/superinfo_website_data/static/src/img/blog/nkps-ipad/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <h3><b>行動學習不受限</b></h3> <p>以「行動無距離、學習無國界」做為行動學習的主軸，讓孩子藉由行動學習不受距離、國家、語言的限制，利用各項雲端資料進行自主學習，並從南港國小的雲端電子書庫到開發各種南港國小專屬的行動教學 App 等，本校除每年參與教育部及教育局行動學習暨資訊精進專案，運用學習智慧、創新實驗的內涵，協助教師將資訊科技融入各學習領域課程中，以提升學生的關鍵能力，並建置校園內資訊軟硬體基礎設置，培養孩子「自發、互動、共好」之核心素養。</p> <h3><b>教師神乎其技將資訊完美融入教學</b></h3> <p>  極電資訊長期支援南港國小軟硬體服務，從 0 開始協助打造 MDM 管理系統，快速而即時的問題解決服務也讓本校在硬體的管理上更為順暢。 南港國小在校內推動行動學習多年，除了廠商的硬體支援外，最大功勞最大的莫過於各科不同領域的教師了，一起來看看南港國小的高手們如何帶領孩子使用 iPad 融入教學吧！</p> <h5>「從空中看校園」攝影展</h5> <p>  教師運用 iPad 內建置的 Keynote 帶領孩子進行討論與簡報發表，並結合原生 App <u><a href="https://apps.apple.com/tw/app/無邊記/id6443742539">無邊記</a></u>帶孩子畫出數位心智圖，以及利用相機帶著孩子攝影與相片編輯，結合國語領域進行【從空中看校園】攝影展，讓孩子透過實地操作的方式進行探究。<img src="/superinfo_website_data/static/src/img/blog/nkps-ipad/1.jpg" alt="從空中看校園" class="img-fluid d-block mx-auto my-3"/></p> <h5>四學模式搭配因才網落實自主學習與差異化</h5> <p>   各領域結合教育部因材網進行線上自主學習任務。任課教師運用自主學習四學模式搭配因材網，透過教師派送任務給予「學生自學」，接著透過學生「組內共學」的小組討論，以及小組討論後的「組間互學」發表，最後再由老師進行「教師導學」的歸納、統整。任課老師可運用因材網上知識節點的差異給予不同學生個別的任務，落實到學生自主學習的差異化。</p> <h5>未來視窗課程 透過 AR、VR 看世界</h5> <p>   未來視窗課程結合科技與雙語，其中「用 AR 探索九大行星」不僅是運用科技，也融入雙語課堂的教學方式，讓學生透過 AR 有一個很不一樣的課程體驗；而運用 <u><a href="https://apps.apple.com/hk/app/cospaces-edu/id1224622426">CoSpaces</a></u> App 融入課程，讓學生可以體驗 VR 虛擬實境，激發學生的創意及學習興趣。<img src="/superinfo_website_data/static/src/img/blog/nkps-ipad/2.JPG" alt="" class="img-fluid d-block mx-auto my-3"/></p> <p><img src="/superinfo_website_data/static/src/img/blog/nkps-ipad/3.png" alt="" class="img-fluid d-block mx-auto my-3"/></p>]]></field>
         </record>
 
-        <record id="case_dongmen" model="blog.post">
-            <field name="name">東門國小 — Mac mini 電腦教室</field>
+        <record id="case_imac_class_scghs" model="blog.post">
+            <field name="name">中山女中 iMac 生科教室打造創新學習空間</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_k12')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad'),ref('case_tag_mac')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/dongmen.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/dongmen.jpg" class="img img-fluid rounded mx-auto" alt="東門國小 Mac mini 電腦教室"/></p>
-                <p class="text-center text-muted">東門國小・Mac mini 電腦教室</p>
-            ]]></field>
+            <field name="post_date">2024-04-18 13:12:10</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/iMac-class-scghs/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h3><span style="font-family:microsoft jhenghei;">落實數位學習 發展 STEAM 教育</span></h3> <p><span style="font-family:microsoft jhenghei;">    創校迄今超過 127 年的臺北市立中山女子高級中學，積極培育女性菁英人才，為國內女子教育翹楚。校園內除日據時代古蹟外，還擁有由台灣第一女建築師修澤蘭設計，目前被登錄為歷史建築的學生活動中心，更在綜合大樓規劃配有 iMac 的生活科技教室，建構了豐富多元性格的空間語彙。<br />
+   未來預計於 113 學年度，進行教室設備更新，在本校承接臺北市 STEAM 與新科技教育辦公室的同時，祈將本教室的空間經驗，推至學校其他空間，創造更多精彩的學習樣貌。</span></p> <h3><span style="font-family:microsoft jhenghei;">打破既定學習模式</span></h3> <p><span style="font-family:microsoft jhenghei;">「讓學習回到學習者中心，讓設備支持學習而非限制」是本教室規劃理念，中山學生具強烈學習主動性與多元面向的探索驅動力，教學空間設計需兼顧穩定與多樣化應用，而專題化學習趨勢中，跨科思維與打破空間疆界，故一開始便選擇 Mac 系統，希望能整合分組互動與個人探索的學習需求。</span></p> <p><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/iMac-class-scghs/0.jpg" alt="學生使用 iMac " class="img-fluid d-block mx-auto my-3"/></span></p> <h3><span style="font-family:microsoft jhenghei;">將 Mac 帶入藝術教育</span></h3> <p><span style="font-family:microsoft jhenghei;">    負責空間及課程規劃的蔡紫德老師除了長年投入生活科技、空間教育，更曾為教育部美感教育課程推廣計畫主持人，對課程設計有一定的堅持與熱情。蔡老師表示，分組使用一體成型的 iMac 裝置，提升空間效能的同時，搭配 iPad 與 Apple Pencil 使溝通更為便利。利用 AirDrop 隨建即連網路資料分享功能，大大節省學生在檔案傳遞的困擾與時間耗損，在師生互動上，Apple TV 則創造了小組發表的彈性與自由度，教師也能即時透過 iPad 作為白板延伸於教室電腦中，使學生更快速的理解。</span></p> <p><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/iMac-class-scghs/1.jpg" alt="中山女中學生進行 iPad 拍攝" class="img-fluid d-block mx-auto my-3"/></span></p> <h3><span style="font-family:microsoft jhenghei;">展望與未來</span></h3> <p><span style="font-family:microsoft jhenghei;">   除了 iOS 的系統整合，近年來蔡老師也加入新興科技與新媒體的自主專題研發，利用 iPad Pro 的光達相機，輕易地達成點雲掃描的工具輔助，帶領學生一同完成歷史建築精彩的區塊鏈 NFT 作品。Mac 優異且穩定的作業系統，在撰寫 JavaScript 系統的 P5.JS 生成藝術、Unity 的 3D AR 作品，均減少了許多教學系統的困擾，而最終在平台輸出上，也讓師生感受到高品質的成果展現。</span></p>  <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://akaswap.com/event/csghs1250"></iframe></div> <h6> </h6> <h6>更多圖片</h6>]]></field>
         </record>
 
-        <record id="case_jingmei_mini" model="blog.post">
-            <field name="name">景美女中 — Mac mini 多媒體教室</field>
+        <record id="case_byod_in_jcps" model="blog.post">
+            <field name="name"> iPad 融入課程 志清國小師生家長齊心協力 BYOD</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_k12')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/jingmei_mini.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/jingmei_mini.jpg" class="img img-fluid rounded mx-auto" alt="景美女中 Mac mini 多媒體教室"/></p>
-                <p class="text-center text-muted">景美女中・Mac mini 多媒體教室</p>
-            ]]></field>
+            <field name="post_date">2024-04-16 15:58:36</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/byod-in-jcps/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h3><span style="font-family:microsoft jhenghei;"> 將科技帶進教室</span></h3> <p><span style="font-family:microsoft jhenghei;">  志清國民小學創立於民國 65 年，位於臺北市文教住宅區景美溪畔。學校秉持著看見孩子們的需要為核心，營造不受時空限制的自主學習與智慧教育環境，這些努力都為了培養具有國際觀、有競爭力、有創意有想法，並且能夠解決問題的未來人才。因此，走在全新的數位時代，志清國小積極「以閱讀扎根、用科技助攻」，成為聚焦數位學習的智慧校園。</span></p> <p><span style="font-family:microsoft jhenghei;">    從 102 學年校內開始推動資訊融入教學，至今校內超過8 成教師主動考取 Apple Teacher 認證，更有 2 位教師取得 Apple 專業學習專家認證以及1位教師取得國際性的 Apple 傑出教育工作者認證。志清從組織教師專業社群開始，結合 Apple 專業學習資源，一步步透過校內專業教師的分享，成為其他教師改變的陪伴者，讓其他教師看到 iPad 在教學上帶來著正面影響，也讓所有教師都能慢慢地跟上腳步，在 iPad 使用上更具專業度。</span></p> <h3><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/byod-in-jcps/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></span></span></span></span></span></span></span></span></span></span></span></span></h3> <h3><span style="font-family:microsoft jhenghei;">全台首間「公立」Apple 傑出學校</span></h3> <p><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"></span></span></span></span></span>   志清國小除了近年來榮獲臺北市教師行動研究團體獎、優質學校獎、教育部閱冠磐石獎、ISA 國際學校獎，目前也是臺北市數位學習重點推展學校及 BYOD 推動示範學校，透過親師合作推動「行動學習、智慧教學」的努力，更在民國 112 年獲得 Apple Distinguished School 蘋果傑出學校，也是臺灣首間公立學校榮獲此項認證。</span></p> <p><span style="font-family:microsoft jhenghei;">   資訊組長蔡唯嶸表示，大量導入 iPad 需要的經費龐大，一開始透過申請教育局、教育部的各種專案計畫，來取得購買 iPad 的預算，大約從 110 學年開始，學校逐步推動 BYOD，透過學生自備載具，減輕校內更換 iPad 的經費負擔，讓 iPad 數位學習可以長遠持續。</span></p> <h3><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/byod-in-jcps/1.jpg" alt="112 年志清國小獲得 Apple 傑出學校認證" class="img-fluid d-block mx-auto my-3"/></span></span></span></span></span></span></span></span></h3> <h3><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"></span></span></span></span></span></span></span>BYOD 串起親師合作機制</span></h3> <p><span style="font-family:microsoft jhenghei;">    BYOD（Bring Your Own Device，學生自備行動載具）為讓每位學生於課堂上皆有設備可使用，現行政策逐漸走向學生自備學習載具到校勢在必行，除了課<span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"><span style="font-family:microsoft jhenghei;"></span></span></span></span>程中學習過程能夠個人化，未來也可攜帶裝置升學成為個人學習工具，各縣市政府與學校近年也積極投入此計畫。志清國小目前國小 4 年級以上已經達到每位師生有自己的 iPad，其中有超過 50% 是學生自行準備載具，而且 4 年級有超過 9 成以上的學生家長支持這項計畫。資訊組長蔡唯嶸提到在推動 BYOD 計畫時，選擇 iPad 作為教學設備是看到 Apple 設備的穩定性、App Store 內豐富的軟體，在價格上也相較電腦來得實惠。</span></p> <p><span style="font-family:microsoft jhenghei;">   在推行時與家長的溝通也非常重要，透過互動平台，讓家長了解什麼是行動學習，教室內的行動課程內容也被延伸到需要帶回家與家長共學共做，國小階段的行動學習需要親師共同合作，建立並管理行動載具的使用時間與內容，因此志清國小在推動行動學習、BYOD 之前，也會積極辦理家長說明會串起親師合作機制，家長安心之餘，也會給予一定的支持。志清國小在行政端、老師端、家長端都獲得極大的支持，在 BYOD 計畫上可以說是推行得相當成功。</span></p> <h3><span style="font-family:microsoft jhenghei;">MDM 導入 解決管理困難</span></h3> <p><span style="font-family:microsoft jhenghei;">   資訊組長蔡唯嶸提到，早期缺乏成熟、穩定的裝置管理工具（MDM），大量載具的管理造成很大的負擔，後來學校導入穩定、成熟且功能強大 MDM 方案 Jamf 後，大大的解決的管理的難題。極電資訊擁有專業的 iPad 後台管理知識與經驗，從 2014 年就曾經協助志清國小管理少量 iPad，到 2021 年學校開始發展 BYOD 時，協助 BYOD 計畫交貨流程、帳號問題諮詢，舉凡 Jamf Parent 帳號問題、自帶裝置納管、統一採購問題等，在 BYOD 計畫進行時，讓學校與家長在購買端更加安心無虞。不論是精進計畫的 Jamf 後台還是其他的裝置管理後台，極電資訊在學校購入設備後，皆會盡心盡力依照學校要求將裝置編輯預設名稱、修改最適用學生使用的限制設定等，並也會適時地提供最新配件、軟體更新資訊，期望能夠在學校推動科技融入之時，也能成為有利的助手。</span></p> <h5><font face="microsoft jhenghei">更多圖片</font></h5>  <div class="bob-container"> <div class="bob-row"> <div class="bob-2item"><img src="/superinfo_website_data/static/src/img/blog/byod-in-jcps/2.jpg" alt="" class="img-fluid d-block mx-auto my-3"/> <div style="height:43px;">志清國小學童使用 iPad 進行課程</div> </div> <div class="bob-2item"><img src="/superinfo_website_data/static/src/img/blog/byod-in-jcps/3.jpg" alt="" class="img-fluid d-block mx-auto my-3"/> <div style="height:43px;">資訊組長蔡唯嶸開設 iPad 家長說明會]]></field>
         </record>
 
-        <record id="case_jingmei_imac" model="blog.post">
-            <field name="name">景美女中 — iMac 教室</field>
+        <record id="case_esut_mac_computer_classroom" model="blog.post">
+            <field name="name">北市大附小 Mac mini 教室：卓越師資，創新設備</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_k12')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_mac')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/jingmei_imac.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/jingmei_imac.jpg" class="img img-fluid rounded mx-auto" alt="景美女中 iMac 教室"/></p>
-                <p class="text-center text-muted">景美女中・iMac 教室</p>
-            ]]></field>
+            <field name="post_date">2024-04-11 13:18:36</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/esut-mac-computer-classroom/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h3><b>擔負培育國家幼苗教育使命的百年學校</b></h3> <p>   成就『適性揚才、 學為人師、 友善共榮、 前瞻未來』—— 臺北市立大學附設實驗國民小學，一所百年影響未來百年的學校。自 1913 年創校以來，一直擁有輝煌的校譽，1945 年後更是臺北市立大學（原臺北市立教育大學）附設的實驗國民小學，擔負春風化雨培育國家幼苗的教育使命。百年風雨洗禮，以卓越的教育傳統孕育出一代又一代的優秀人才，校友們在母校的悉心栽培下，踏上各行各業，為社會帶來卓越的貢獻，在不同領域的舞台上熠熠生輝。</p> <h3><b>精緻化、人性化教育打造親師協作文化</b></h3> <p>  在歷任校長帶領之下，依據教育政策，配合學校現況與未來發展之需要，規劃發展藍圖，藉以充實學校教育內涵，提昇整體教育品質，務期邁向精緻化、人性化的教育理想。全心照顧學生，成就每一位附小孩子，精進教研，全力支持教師專業發展，打造優質親師協作文化，感恩家長支持與認同是現任吳校長的理念。</p> <p><img src="/superinfo_website_data/static/src/img/blog/esut-mac-computer-classroom/0.jpg" alt="校內進行Pagamo競賽" class="img-fluid d-block mx-auto my-3"/>▲ 校內 Mac 電腦教室進行 Pagamo 競賽</p> <h3><b>「實驗研究」與「教育實習」的典範與指標</b></h3> <p>   市大附小除應具有一般國民小學的任務之外，還肩負實驗研究及提供教育參觀與實習，由於校風開放民主，教師的專業教學與家長的熱誠參與，使得附小翹楚於臺北市各國小，扮演典範的角色。</p> <p>   隨著教育改革的風潮，學校教育更是重要的一環，檢視歷經數個階段性的革新，附小親師生始終是積極的參與者；且深知肩負國民教育必須有省思、更新和再出發的態度與行動，因此，附小教育十足的展現多元崢嶸、生生不息的樣態。</p> <p><img src="/superinfo_website_data/static/src/img/blog/esut-mac-computer-classroom/1.png" alt="" class="img-fluid d-block mx-auto my-3"/>▲ 學生使用 iMac 搭配繪圖板進行電繪</p> <h3><b>突破傳統建置</b><b> Mac </b><b>電腦教室</b></h3> <p>  不同於一般學校使用 PC 電腦教室，附小建置 2 間 Mac mini 電腦教室。資訊組長表示，因 Mac 電腦具有耐用、穩定、故障少的特性，再加上附小的電腦老師、資優班老師對於 Apple 電腦與作業系統相當熟悉，能充分發揮優勢，因此選擇 Mac 電腦作為電腦教室。</p> <p>   資訊組長更提到，電腦教師為了弭平家長疑慮，也會在學校日對家長說明選用 Mac 電腦教室的原因，也就是選用 Apple 的 MacOS 作業系統，能讓學生同時熟悉 Apple 與 Windows 兩種作業系統，提早探索並熟悉各系統優點。未來升學會就業時，也更能夠與不同系統無縫接軌。</p> <p><img src="/superinfo_website_data/static/src/img/blog/esut-mac-computer-classroom/2.jpg" alt="極電資訊教育訓練" class="img-fluid d-block mx-auto my-3"/>▲ 極電資訊到校進行 Mac 與 iPad 教育訓練</p> <p>   在上電腦課時，教師的廣播、監看相當重要，教師透過穩定的 Apple 廣播系統 （<u><a href="https://apps.apple.com/tw/app/apple-remote-desktop/id409907375?mt=12">Apple Remote Desktop</a></u>），能讓學生方便且清楚看到教師的示範，也能適時接收到教師的協助。資訊組長表示，經銷商能提供完善的售後服務（如相關技術支援，教育訓練），會以教師的角度來設想老師的需求，也是選購 Mac 後附加的價值。極電資訊與市大附小合作能夠達到學校的期待，也會盡全力帶給學校最完整的後援。</p>]]></field>
         </record>
 
-        <!-- ───── High ED ───── -->
-        <record id="case_taiwanarts" model="blog.post">
-            <field name="name">國立臺灣藝術大學 — Mac mini 資訊科技教室</field>
+        <record id="case_2018_spring_computer_show" model="blog.post">
+            <field name="name">2018 春季電腦展 程式教育 w/ Swift Playground</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_highed')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad'),ref('case_tag_event')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/taiwanarts.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/taiwanarts.jpg" class="img img-fluid rounded mx-auto" alt="國立臺灣藝術大學 Mac mini 資訊科技教室"/></p>
-                <p class="text-center text-muted">國立臺灣藝術大學・Mac mini 資訊科技教室</p>
-            ]]></field>
+            <field name="post_date">2024-01-17 15:02:25</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/2018-spring-computer-show/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p>為期三天的 2018 春季電腦展，極電資訊支援 Swift Playground 活動攤位中的展示與解說。此次活動攤位所擺設的展區主要為教育新課綱，鄰近的攤位也多是程式教育相關軟硬體支援的服務。</p> <section data-container="section" data-widget="section" id="section-content"> <p>什麼是 Swift Playground?</p> <p>這次主要推廣的內容 Swift Playground 是 Apple 所推出只能在 iPad 上取得的軟體服務。</p> <p><img src="/superinfo_website_data/static/src/img/blog/2018-spring-computer-show/0.png" alt="" class="img-fluid d-block mx-auto my-3"/></p> <p><a data-action="url" href="https://www.apple.com/tw/swift/playgrounds/" target="_blank" rel="noopener noreferrer nofollow">官方解說</a>：<br /> <em>Swift Playgrounds 不需要程式設計的知識，因此最適合學生的程式初學者使用，從  12 歲到  112 歲都可藉此學習。整個過程中您都會使用到  Swift，這是一種由  Apple  開發的強大程式設計語言，專業人士使用它來設計了當今許多最受歡迎的 App。 Swift Playgrounds 的設計可充分運用  iPad  以及真實的  iOS SDK 功能，因此能提供您獨一無二的學習體驗。</em></p> <p> </p> <p></p> <p>基礎學習的課程總共三課： Learn to Code 1-3，在 App 中還有許多不同課程可以搭配支援藍牙的玩具機器人來進行學習。 Swift Playgrounds 與其他程式如 Scratch 等程式遊戲不同的地方在於以更相近於寫程式的型態，呈現一行一行排列的程式碼來進行遊戲。雖然看起來比較生硬，但對於學生未來開始使用程式碼進行程式編寫時，銜接上會更加容易。</p> <p> </p> <p>對於程式教育工作者 Apple 也提供了許多資源：</p> <ul> <li>給老師的超棒教案：<a data-action="url" href="https://itunes.apple.com/tw/book/swift-playgrounds-learn-to-code-1-2/id1118578018?mt=11" target="_blank" rel="noopener noreferrer nofollow">Everyone Can Code — Teacher Guide</a></li> <li><a data-action="url" href="https://www.apple.com/tw/shop/iphone/iphone-accessories/toys-games" target="_blank" rel="noopener noreferrer nofollow">官方支援配件</a>：Jimu Meebot、Sphero SPRK+ 跟很多很多貴鬆鬆的配件</li> <li><a data-action="url" href="https://www.apple.com/tw/today/" target="_blank" rel="noopener noreferrer nofollow">Today at Apple</a> ：各種 Apple 軟硬體的現場教學順便逛逛 Apple store</li> </ul> <p>在這三天春季電腦的攤位中，有許多學校老師現場試玩可支援 Swift Playground 的機器人，也在此更多了解未來在學校內可以使用的資源。對 Swift Playground 有興趣的老師、或是程式教育工作者，歡迎與擁有 Apple 原廠認證的程式教育機構  <a data-action="url" href="http://www.zencher.com/#iOSApp" target="_blank" rel="noopener noreferrer nofollow">Zencher</a> 聯繫。有其他想法或是合作提案，也歡迎與我們聯繫。</p> <p> </p> </section> <center> <div style="width:100%;max-width:850px"> <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K-AR7gGhrk4?si=Rlpu2zXjsgERqLXy"></iframe></div> </div> </center>]]></field>
         </record>
 
-        <record id="case_taiwantech" model="blog.post">
-            <field name="name">國立臺灣科技大學 — iMac 電腦教室</field>
+        <record id="case_ipad_class_in_gj" model="blog.post">
+            <field name="name">格致 20 小時行動學習工作坊</field>
             <field name="blog_id" ref="blog_cases"/>
-            <field name="tag_ids" eval="[(6,0,[ref('case_tag_highed')])]"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad'),ref('case_tag_mac'),ref('case_tag_training')])]"/>
             <field name="is_published">True</field>
-            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/cases/taiwantech.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
-            <field name="content"><![CDATA[
-                <p class="text-center"><img src="/superinfo_website_data/static/src/img/cases/taiwantech.jpg" class="img img-fluid rounded mx-auto" alt="國立臺灣科技大學 iMac 電腦教室"/></p>
-                <p class="text-center text-muted">國立臺灣科技大學・iMac 電腦教室</p>
-            ]]></field>
+            <field name="post_date">2019-06-25 15:29:20</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/ipad-class-in-gj/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h3>iPad 初次見面</h3> <h5><strong>iPad小技巧、Nearpod、好用 App、Apple Pencil</strong></h5> <p>2018 上學期，每週二進行兩小時的課程，與老師們一起深入淺出的了解 iPad 與 Nearpod。課程中段也邀請到中崙老師分享使用 iPad 帶領課程的經驗，讓格致的老師們在規劃課程中，也有更具體的畫面，當天與會的老師們也是收穫良多！</p> <p>雖然課程的時間緊湊、內容繁雜，但格致老師們依然非常認真地將自己的課程與行動載具做結合，也彼此交換想法，慢慢建構出行動教學的雛形。</p> <p><img src="/superinfo_website_data/static/src/img/blog/ipad-class-in-gj/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <h3>資訊融入教學</h3> <h5><strong>Nearpod、Google Expedition、Poly、iMovie Clips、Keynote</strong></h5> <p>在新學期新課程中，奠基著上學期五次課程的基礎，老師們以教學內容為主體，發想每週不同軟體應用主題與課程之連結。</p> <p>從 AR 擴增實境到影片剪輯，老師們全程使用 iPad 搭配 Apple Pencil ，並在簡報模版上，製作發想主題，設計多元課程內容。雖然許多都是第一次接觸的新應用，但仍然削減不了老師對教學的熱情，每每設計出的課程內容，都令人驚豔不已。</p> <p><img src="/superinfo_website_data/static/src/img/blog/ipad-class-in-gj/1.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <h3>後記</h3> <p>在十堂課總計 20 小時共同的奮鬥之後，學校舉辦了一場成果發表會，邀請到文化大學教授一同到場聆聽教師們的課程使用分享。教師們運用所學，分別在數學、國文、英語領域上將工具融入到課程中，成為課程中的助手。不論是即時收到同學回饋、引發同學學習動機，亦或是將 Google 地景與文學做結合，經歷過長時間的練習與準備，在課程中角色的翻新上也頗有成就。</p> <p>一直以來極電資訊致力推動的即是教師可實際運用於課程中的內容。不單單只是在課程中曇花一現的工具，而是讓同學了解到行動裝置更是認識世界的一個媒介。</p> <p>很高興能夠參與教師們努力進行行動學習、行動教學的路上，在未來的日子裡也讓我們繼續一起努力！</p> <p><img src="/superinfo_website_data/static/src/img/blog/ipad-class-in-gj/2.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <p> </p> <center> <div style="width:100%;max-width:850px"> <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/REAS5SsctBk?si=z4118EwAEC-2L-bT"></iframe></div> </div> </center>]]></field>
+        </record>
+
+        <record id="case_mac_class_in_taichung_pccu" model="blog.post">
+            <field name="name">文化大學推廣教育部 台中教育中心</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_mac')])]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2018-08-23 15:46:55</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/mac-class-in-taichung-pccu/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p>2018 年 7 月底，我們來到文化大學教育推廣部台中教育中心，協助安裝全新的 Mac 多媒體教室。</p> <p>近年科技與多媒體的發達，學習設計、影像剪輯等內容已經是很多人趨之若鶩的技能，許多成人教育的機構，也不斷推出新型課程提供大眾選擇，選擇課程去進修的終身學習更是民眾自我期許的實現。在這一切學習之前，不變的道理即是：工欲善其事，必先利其器。有了好的教室設備，才能有好的課程進行與學習。</p> <p><img src="/superinfo_website_data/static/src/img/blog/mac-class-in-taichung-pccu/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <p>Mac 在圖像處理、影片剪輯上，一直是業界首推的硬體設備，不論是顯色、處理效能，都能達到中上甚至頂規的水準。這次台中教育中心購入的機型是 iMac 27 吋 配備 Retina 5K 顯示器，屬於高規處理的電腦機型。教育中心預期未來使用此教室開設影片剪輯、圖像設計等課程，畫面大與效能高的 iMac ，定能成為課程中的最棒工具。</p> <p>此次我們也為電腦安裝 Apple Remote Desktop 遠端控制系統，方便教師在課程中監看畫面、推送教學內容等。也安裝了還原軟體 Deep Freeze，讓電腦雖然會被來來去去不同的使用者操作，但仍可以保持原先設定。</p> <p>期許這些高級的電腦，在不同領域的教師與學員的課程上如虎添翼，也能順利的讓每個人在終身學習的路上，更加順遂。</p>]]></field>
+        </record>
+
+        <record id="case_ipad_class_in_balong" model="blog.post">
+            <field name="name">雲端上的小學-巴崚國小</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_ipad'),ref('case_tag_training')])]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2018-08-07 14:08:56</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/ipad-class-in-balong/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p><span style="font-family:microsoft jhenghei;">巴崚 Balong ，泰雅族語代表的是神木、檜木的意思，位於海拔 1230 公尺的高山地勢，可以眺望山谷與自然美景，而巴崚國小就是位在這麼高的山上，除了冬季享雪景，夏天清爽無比之外，學校人數也是短小精練，約百人的規模，讓老師們可以一一了解同學學習狀況，學校也致力在創新教學方法，帶給同學最好的教學內容與環境。</span></p> <p><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/ipad-class-in-balong/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></span></p> <section data-container="section" data-widget="section" id="section-content"> <p> </p> <p alt="" data-id="298" src="file:///mt-content/uploads/2018/07/-10.jpg" title=""> </p> <p><span style="font-family:microsoft jhenghei;">2018 年初，我們來到桃園復興鄉巴崚國小進行 iPad 部署與教育訓練，將行動教學的內容，帶到這處世外桃源。從二月到八月之間，除了 iPad 部署教育訓練外，總共也開設了三場 iPad App 的教育訓練，除了教學基本操作外，也將其他學校老師常使用的 App 帶到課程中，讓老師們在使用平板教學時，可以更快的上手。</span><span style="font-family:microsoft jhenghei;"></span></p> <h5><span style="font-family:microsoft jhenghei;">三場課程內容：</span></h5> <ul> <li><span style="font-family:microsoft jhenghei;">2018/02/07 MDM 教育訓練、iPad 基礎教學</span></li> <li><span style="font-family:microsoft jhenghei;">2018/03/28 iPad 基礎教育訓練</span></li> <li><span style="font-family:microsoft jhenghei;">2018/08/01 iPad 進階教育訓練</span></li> </ul> <p> </p> <p alt="" data-id="299" src="file:///mt-content/uploads/2018/07/-8.jpg" title=""> </p> <p><span style="font-family:microsoft jhenghei;">希望每一次的教學內容，都有真的位老師們的教學上帶來助益，也讓這些好用的科技工具，協助老師的課堂進行更加順利，快要開學了，也希望老師們真的能夠善用手中工具，帶同學看到更大的世界！</span></p> </section>]]></field>
+        </record>
+
+        <record id="case_2015_ileader_coding_support" model="blog.post">
+            <field name="name">回顧：2015 南港國小 i-Leader 智慧學校 ING 程式教育支援</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_event'),ref('case_tag_training')])]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2018-07-31 13:56:07</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/2015-ileader-coding-support/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<h1><span style="font-family:microsoft jhenghei;"></span></h1> <p><span style="font-family:microsoft jhenghei;">教育訓練一直是極電資訊很注重的一塊，2015 年我們就曾經參與南港國小孩子們的程式教育課程，搭配當時南港國小所舉辦的活動，讓行動教學從程式教育的角度出發，與學童一起開發新世界。</span></p> <section data-container="section" data-widget="section" id="section-content"> <p><span style="font-family:microsoft jhenghei;"></span></p> <p><span style="font-family:microsoft jhenghei;">當時的活動是由臺北市教育局主辦，並由臺北市南港國小以及協會承辦的「2015i-Leader 智慧學校 ING 與未來論壇」，主要目的是希望能夠將行動學習、資訊融入教學以及智慧學校等的落實情形，做一個最完整的呈現。除了做一個協助學校採購機器與安裝的角色，極電也與  <a href="https://www.zencher.com"><u>Zencher</u> </a>合作，由最專業的程式教育講師，帶領學童一步步認識資訊的知識。</span></p> <p><span style="font-family:microsoft jhenghei;"></span></p> <p><img src="/superinfo_website_data/static/src/img/blog/2015-ileader-coding-support/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <p><span style="font-family:microsoft jhenghei;">就讓我們藉由學校老師所製作的回顧短片，一起回到 2015 的時空，見證學童與知識迸發的美好畫面。</span></p> <p> </p> </section> <center> <div style="width:100%;max-width:850px"> <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F9QKlYhHXIg?si=AMad6FIuO7dSBZIn"></iframe></div> </div> </center> <center> <div style="width:100%;max-width:850px"> <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VGpj2ZNmwMg?si=8fyWh1MdQ24z6g3g"></iframe></div> </div> </center>]]></field>
+        </record>
+
+        <record id="case_build_classroom_in_tku" model="blog.post">
+            <field name="name">一手規劃淡江大學語練教室</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_mac')])]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2018-06-20 14:39:17</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/build-classroom-in-tku/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p><span style="font-family:microsoft jhenghei;">極電資訊建置電腦教室的經驗已超過十年，雖然不知道時至今日教室樣貌變化如何，但大大小小的教室都曾經過我們巧手規劃所建置而成。其中有些特別令人印象深刻、值得驕傲的教室案例，也就是我們在 2010 年曾為淡江大學所建置的電腦教室，至今八年已過去，就讓我們一起來回味這間教室的細節與故事。</span></p> <h3><span style="font-family:microsoft jhenghei;">從音響到桌椅都仔細規劃</span></h3> <p><span style="font-family:microsoft jhenghei;">當時這間教室是為了淡江大學校內語練（語文練習）課程所規劃，整間教室的設備因應課程所需，需要許多收音、廣播、播放軟體等支援。我們規劃的硬體內容除了基本的 iMac 與外接設備外，還另外為教室訂製適合的桌椅，方便教室位置的變化與移動。許多電腦教室普遍出現的線路凌亂交雜、收納不易的需求，也在我們規劃課桌椅時一併解決，有專屬掛勾以及線材收納配置，讓同學除了方便放書包外，也不會被地上的線路勾到腳，產生一連串不方便。</span></p> <p><span style="font-family:microsoft jhenghei;"><img src="/superinfo_website_data/static/src/img/blog/build-classroom-in-tku/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></span></p> <h3><span style="font-family:microsoft jhenghei;">針對教室使用的教育訓練內容</span></h3> <p><span style="font-family:microsoft jhenghei;">2010 年 2 月 23 日這天，我們與淡江大學學習與教學中心遠距教學發展組開設「 iMac 系統暨視訊會議系統操作說明」教學課程，讓使用教室的老師們了解如何操作與教學。</span></p> <p><span style="font-family:microsoft jhenghei;">此間教室配備了 77 台 iMac 電腦以及相關硬體，老師可使用 Apple Remote Desktop (ARD) 同時針對 76 台學生電腦做廣播及監控，也藉由視訊會議系統，讓同學除了口語練習與錄音，更可以與指定的同學進行對話練習。當天更與老師們討論了可能在課堂上遇到的問題，同時推薦 Apple 內建軟體如：GarageBand 、iMovie 等來幫助課程的進行與規劃。</span></p> <p><span style="font-family:microsoft jhenghei;">教室除了這些課程使用設備外，另外設有 360 度高解析攝影機，可以追蹤老師動態來攝影，除了記錄下課程外，也可以與教室外人員做視訊交流等。我們所做的不僅僅是為學校安裝電腦而已，還提供了專業的教室建置規劃，更讓老師們在使用前有足夠的知識來使用。若這些設備能夠成為老師與同學學習上最佳幫手，那會是我們提供服務之後最大的收穫與滿足。</span><br />
+ </p>]]></field>
+        </record>
+
+        <record id="case_ntnu_super_course" model="blog.post">
+            <field name="name">NTNU SUPERCOURSE</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(6,0,[ref('case_tag_training')])]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2018-05-24 15:23:19</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/ntnu-super-course/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p><strong>「蘋果買了就是要物盡其用！」</strong></p> <p>師大 Apple 店從三月開始推出系列免費課程，希望能讓同學更透徹認識手上的產品功能，在課業、社團、工作與生活方面，都能將手邊的 Apple 裝置發揮 100% 的價值。</p> <p>此次課程分三個月進行不同主題的課程，目的是希望能夠針對同學、老師們在日常使用上，或在學校課程中，都可以使用到手中的裝置，使這些裝置成為全方位好助手。當然，在課堂中間若是有任何疑問，也可以獲得立即的回答，或是共同腦力激盪。</p> <p><img src="/superinfo_website_data/static/src/img/blog/ntnu-super-course/0.jpg" alt="同學使用Mac預覽程式" class="img-fluid d-block mx-auto my-3"/></p> <p>在課程中看到大家願意花上一個半小時的時間，來更多的了解 Mac 、iPhone 是一件非常令人開心的事，原因無他就是對於自身的學習期許，希望能夠更多的了解使用的產品，而不是把產品擱置在一旁，或只是作為娛樂使用而已。學無止境，身處在科技變動的時代裡更深有感觸，希望使用者不僅是購買了產品，也買到了實際的產品價值。<br />
+這學期的 NTNU Super Course 在本月畫上句點，非常感謝這三個月撥空和我們一起探索 Mac 與 iPhone 內建工具的朋友們，不管是日常生活好幫手行事曆、備忘錄、預覽程式，還是製作計畫、簡報的優秀夥伴 Pages、Keynote，又或是免費的好用剪片軟體 iMovie，都希望參與者們在課後都有感受到它們對自己生活的實質助益，也希望可以幫助到身邊更多的 Apple 使用者。</p> <center> <div style="width:100%;max-width:850px"> <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/d6jxcSpdAUI?si=FUigCPBPYYTf6bcj"></iframe></div> </div> </center>]]></field>
+        </record>
+
+        <record id="case_ipad_for_each_student" model="blog.post">
+            <field name="name">2017 一生一平板</field>
+            <field name="blog_id" ref="blog_cases"/>
+            <field name="tag_ids" eval="[(5,0,0)]"/>
+            <field name="is_published">True</field>
+            <field name="post_date">2017-12-27 15:51:00</field>
+            <field name="cover_properties">{"background-image": "url('/superinfo_website_data/static/src/img/blog/ipad-for-each-student/cover.jpg')", "resize_class": "o_record_has_cover o_half_screen_height", "opacity": "0.4"}</field>
+            <field name="content"><![CDATA[<p>隨著時代的演進，教育逐漸朝向以「教師」及「學生」為主體的方向發展，而「翻轉教育」為近年來發展出的一種新的教學模式，目前普遍的核心概念大致包括：扭轉過去課堂上純粹「老師說、學生聽」的單向填鴨，轉而重視「以學生學習為中心」的教學，把學習的發球權還到孩子手上；更看重啟發學生學習動機，幫助學生建構自主學習能力，並認同多元評量與多元價值。</p> <p>在翻轉教育之中，除了老師的教學內容跟著轉變之外，科技的發展使得教育理念內的資源，可以更加擴張，也出現了「行動教學」這樣的概念，隨之而來的便是學生自身的行動學習，藉由行動載具來加強學習成效，也因為這樣形式的學習充滿了魅力以及樂趣，使得行動學習在翻轉教育內更被視為不可或缺的一角。</p> <p>以行動載具來說，除了可以擔任學習引導的角色外，更可以做為學生在學習現場的資料蒐集工具。擁有多樣化且強大的應用程式，學生可以運用這些有益的工具，幫助自己在學習現場進行資料的蒐集與知識整合。使學習活動成為世界與課本間無縫結合的學習模式，促進學習生活化之目標。</p> <p><img src="/superinfo_website_data/static/src/img/blog/ipad-for-each-student/0.jpg" alt="" class="img-fluid d-block mx-auto my-3"/></p> <h3>與學校並肩作戰</h3> <p>極電資訊一直以來都以服務客戶至上作為中心理念，客戶當中教師與教育人員占比極高，與老師們站在同一線感受到這波行動教學趨勢的來襲，這股潮流確實已勢不可擋。</p> <p> </p> <p>2017 年極電資訊承接了 <strong>中小學行動學習 一生一平板</strong> 的計畫，當中有 23 所中小學，共 2000 台的 iPad。每所學校的網路架構不同，也各有自己特色教學的使用計畫，我們也依照不同的需求調整適合各所學校的大量部署方案。</p> <p>從初期申請 Apple School Manager 帳號就提供完整的協助，在這過程中我們也另外為老師開設兩種不同的教學課程，對象分別是資訊人員與教師。</p> <ul> <li> <p>針對佔行動教學重要地位的後援單位，也就是學校資訊人員的部分，我們提供的服務包含：使用 Apple School Manager 建立學校管理者與教師的 Apple ID 、使用 MDM 管理 iPad 與派送 App 等，並製作教學文件供資訊人員參考使用。</p> </li> <li> <p>因應首次接觸 iPad 做教學的教師，我們也設計了相關教學課程包含：iPad 使用方式、iWork 和 iLife 、行動學習 App 應用以及課堂（Classroom）等。</p> </li> </ul> <p>能夠與學校還有老師們一起努力，也是為了讓台灣的教育環境因為我們所提供的服務，而有一點改變，我們感到非常開心與榮幸。2017 年的一生一平板的案子結束過後，不是所有事情就因此落幕，這是個起點，是老師們開始規劃新教育內容的開始，也是行動教學開始改變教育的開始。希望好的內容未來會因為好的裝置不斷產出、不斷延續，極電資訊也非常樂意繼續提供相關技術、教學支援，讓老師、資訊人員可以無後顧之憂地使用這些硬體設備。</p> <p><strong>我們不會把機器安裝完就不管你，這就是我們的一生（輩子）一平板啊！</strong></p> <p>有其他想問的問題或是合作機會，歡迎與我們聯絡。</p>]]></field>
         </record>
 
     </data>
