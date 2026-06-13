@@ -55,6 +55,22 @@ $si-font: "SF Pro TC", "SF Pro Text", "PingFang TC", "Segoe UI", SegoeUI,
 }
 @keyframes si-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+// ───────── 實際案例入口：學校網格（對齊原站 school-grid）─────────
+.si-cases { max-width: 1110px; margin: 0 auto; }
+.si-cases-head { text-align: center; font-size: 24px; font-weight: 700; color: #111; margin: 44px 0 24px; }
+.si-school-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 16px;
+}
+.si-school-block {
+    display: block; text-decoration: none; color: inherit; text-align: center;
+    &:hover { color: inherit; }
+    &:hover img { box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16); transform: translateY(-4px); }
+    .si-brush { font-size: 26px; font-weight: 800; color: #1f2933; margin-bottom: 4px; letter-spacing: 1px; }
+    .si-subtitle { font-size: 16px; color: #666; margin-bottom: 14px; }
+    img { width: 100%; height: auto; border-radius: 15px; display: block; transition: box-shadow .2s, transform .2s; }
+}
+@media (max-width: 767.98px) { .si-school-grid { grid-template-columns: 1fr; gap: 28px; } }
+
 // ───────── 文字內容頁：可讀性排版（蘋果培訓文字頁）─────────
 .si-prose {
     max-width: 820px;

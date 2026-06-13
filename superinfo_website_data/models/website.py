@@ -9,7 +9,7 @@ MENU_TREE = [
         {"name": "iPad 大量部署", "url": "/services/ipad-deployment"},
         {"name": "BYOD 自帶載具計畫", "url": "/services/byod"},
         {"name": "Mac 電腦教室", "url": "/services/mac-classroom"},
-        {"name": "實際案例", "blog": "blog_cases"},
+        {"name": "實際案例", "url": "/services/cases"},
         {"name": "PROMISE", "url": "/services/promise"},
     ]},
     {"name": "蘋果培訓", "url": "#", "children": [
