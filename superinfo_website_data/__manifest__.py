@@ -43,6 +43,7 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         'data/page_mac_classroom.xml',
         'data/pages_training.xml',
         'data/pages_info.xml',
+        'data/footer.xml',
         # 最新消息 / 實際案例（部落格）
         'data/blog_news.xml',
         'data/blog_cases.xml',

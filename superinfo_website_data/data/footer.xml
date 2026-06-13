@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 改寫 footer 對齊原站：商店訊息 / 其他服務 / 會員中心 / 公司資訊 -->
+    <template id="footer_superinfo" inherit_id="website.footer_custom" name="極電資訊 Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block o_cc o_cc4 pt40 pb24" data-snippet="s_text_block" data-name="Footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-6 pt24 pb16">
+                                <h5 class="mb-3">商店訊息</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/info/faq">常見問題</a></li>
+                                    <li><a href="/info/security">資訊安全</a></li>
+                                    <li><a href="/info/privacy">隱私權政策</a></li>
+                                    <li><a href="/info/terms">購物須知與服務條款</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-6 pt24 pb16">
+                                <h5 class="mb-3">其他服務</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/blog">最新消息</a></li>
+                                    <li><a href="/shop">全部商品</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-6 pt24 pb16">
+                                <h5 class="mb-3">會員中心</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/my/home">會員中心</a></li>
+                                    <li><a href="/my/orders">訂購紀錄</a></li>
+                                    <li><a href="/contactus">訂閱官網通知</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-6 pt24 pb16">
+                                <h5 class="mb-3">極電資訊有限公司</h5>
+                                <p class="mb-2">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢<br/>致力於給您最好的服務</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-envelope fa-fw me-2"/><a href="mailto:services@superinfo.com.tw">services@superinfo.com.tw</a></li>
+                                    <li><i class="fa fa-comment fa-fw me-2"/><a href="https://line.naver.jp/ti/p/~@xat.0000119425.rpn" target="_blank" rel="noopener">LINE@ 客服</a></li>
+                                    <li><i class="fa fa-facebook fa-fw me-2"/><a href="https://www.messenger.com/t/applentnu" target="_blank" rel="noopener">Facebook Messenger</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- 版權列文字對齊原站 -->
+    <template id="footer_copyright_superinfo" inherit_id="website.layout" name="極電資訊 Copyright">
+        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+            <span class="o_footer_copyright_name me-2">Copyright © 極電資訊｜Apple 授權教育經銷商　極電資訊有限公司 ｜ 統一編號 23756990</span>
+        </xpath>
+    </template>
+</odoo>
