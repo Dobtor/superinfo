@@ -12,14 +12,16 @@ MENU_TREE = [
         {"name": "實際案例", "url": "/services/cases"},
         {"name": "PROMISE", "url": "/services/promise"},
     ]},
-    {"name": "蘋果培訓", "url": "#", "children": [
-        {"name": "蘋果教育專區", "url": "/apple-training/edu-hub"},
+    # 蘋果培訓 已捨棄，改為兩個頂層選單
+    {"name": "蘋果教育專區", "url": "/apple-training/edu-hub", "children": [
         {"name": "課程學習中心", "url": "/apple-training/courses"},
         {"name": "輔助使用", "url": "/apple-training/accessibility"},
         {"name": "永續政策", "url": "/apple-training/sustainability"},
         {"name": "聰明投資", "url": "/apple-training/smart-investment"},
         {"name": "生命週期管理", "url": "/apple-training/lifecycle"},
         {"name": "教育軟體解決方案", "url": "/apple-training/services-apps"},
+    ]},
+    {"name": "蘋果培訓適用對象", "url": "/apple-training/audiences", "children": [
         {"name": "IT 部門", "url": "/apple-training/it"},
         {"name": "教育工作者", "url": "/apple-training/educators"},
         {"name": "教育領導者", "url": "/apple-training/leaders"},
@@ -70,7 +72,7 @@ def _all_names(nodes, acc):
 
 
 # 曾經用過、現已移除的頂層選單名稱（升級時一併清除，避免殘留）
-OBSOLETE_MENU_NAMES = ["商城"]
+OBSOLETE_MENU_NAMES = ["商城", "蘋果培訓"]
 
 
 class Website(models.Model):
