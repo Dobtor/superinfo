@@ -5,6 +5,16 @@
 // NOTE: $o-color-palettes map-merge removed — DartSass on Odoo 18
 // remote server does not support variable-exists() inside if().
 
+// ─── Odoo website editor palette (o-color-1 ~ 5) ────────────
+$o-user-color-palette: (
+    'o-color-1': #3b82f6,
+    'o-color-2': #6366f1,
+    'o-color-3': #10b981,
+    'o-color-4': #0f172a,
+    'o-color-5': #f8faff,
+) !default;
+
+
 // ─── Bootstrap palette ───────────────────────
 $primary:       #3b82f6;   // sky blue
 $secondary:     #64748b;   // slate
