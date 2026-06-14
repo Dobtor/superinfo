@@ -55,6 +55,7 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
     'assets': {
         'web.assets_frontend': [
             'superinfo_website_data/static/src/scss/superinfo_pages.scss',
+            'superinfo_website_data/static/src/scss/apl_tailwind.css',
             'superinfo_website_data/static/src/js/apl_reveal.js',
         ],
     },

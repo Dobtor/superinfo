@@ -1,0 +1,614 @@
+/* 蘋果培訓系列頁面：Tailwind 工具類別子集（原站用 Tailwind Play CDN，
+   此處由 Tailwind CLI 依各頁實際使用的類別產生，並全部 scope 到 .si-apl-page
+   以免污染 Odoo/Bootstrap 全站樣式。請勿手改；如需更新請重跑產生流程。 */
+.si-apl-page .visible{
+  visibility: visible
+}.si-apl-page .absolute{
+  position: absolute
+}.si-apl-page .relative{
+  position: relative
+}.si-apl-page .inset-0{
+  inset: 0px
+}.si-apl-page .bottom-0{
+  bottom: 0px
+}.si-apl-page .left-1\/2{
+  left: 50%
+}.si-apl-page .z-10{
+  z-index: 10
+}.si-apl-page .order-1{
+  order: 1
+}.si-apl-page .order-2{
+  order: 2
+}.si-apl-page .order-3{
+  order: 3
+}.si-apl-page .mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem
+}.si-apl-page .mx-auto{
+  margin-left: auto;
+  margin-right: auto
+}.si-apl-page .my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem
+}.si-apl-page .mb-10{
+  margin-bottom: 2.5rem
+}.si-apl-page .mb-12{
+  margin-bottom: 3rem
+}.si-apl-page .mb-16{
+  margin-bottom: 4rem
+}.si-apl-page .mb-2{
+  margin-bottom: 0.5rem
+}.si-apl-page .mb-20{
+  margin-bottom: 5rem
+}.si-apl-page .mb-3{
+  margin-bottom: 0.75rem
+}.si-apl-page .mb-4{
+  margin-bottom: 1rem
+}.si-apl-page .mb-5{
+  margin-bottom: 1.25rem
+}.si-apl-page .mb-6{
+  margin-bottom: 1.5rem
+}.si-apl-page .mb-8{
+  margin-bottom: 2rem
+}.si-apl-page .ml-1{
+  margin-left: 0.25rem
+}.si-apl-page .mr-2{
+  margin-right: 0.5rem
+}.si-apl-page .mr-3{
+  margin-right: 0.75rem
+}.si-apl-page .mr-4{
+  margin-right: 1rem
+}.si-apl-page .mr-6{
+  margin-right: 1.5rem
+}.si-apl-page .mt-1{
+  margin-top: 0.25rem
+}.si-apl-page .mt-8{
+  margin-top: 2rem
+}.si-apl-page .block{
+  display: block
+}.si-apl-page .inline-block{
+  display: inline-block
+}.si-apl-page .flex{
+  display: flex
+}.si-apl-page .grid{
+  display: grid
+}.si-apl-page .contents{
+  display: contents
+}.si-apl-page .hidden{
+  display: none
+}.si-apl-page .h-0\.5{
+  height: 0.125rem
+}.si-apl-page .h-10{
+  height: 2.5rem
+}.si-apl-page .h-12{
+  height: 3rem
+}.si-apl-page .h-14{
+  height: 3.5rem
+}.si-apl-page .h-16{
+  height: 4rem
+}.si-apl-page .h-20{
+  height: 5rem
+}.si-apl-page .h-4{
+  height: 1rem
+}.si-apl-page .h-48{
+  height: 12rem
+}.si-apl-page .h-5{
+  height: 1.25rem
+}.si-apl-page .h-6{
+  height: 1.5rem
+}.si-apl-page .h-7{
+  height: 1.75rem
+}.si-apl-page .h-8{
+  height: 2rem
+}.si-apl-page .h-auto{
+  height: auto
+}.si-apl-page .h-full{
+  height: 100%
+}.si-apl-page .w-1{
+  width: 0.25rem
+}.si-apl-page .w-10{
+  width: 2.5rem
+}.si-apl-page .w-12{
+  width: 3rem
+}.si-apl-page .w-14{
+  width: 3.5rem
+}.si-apl-page .w-16{
+  width: 4rem
+}.si-apl-page .w-20{
+  width: 5rem
+}.si-apl-page .w-3\/5{
+  width: 60%
+}.si-apl-page .w-4{
+  width: 1rem
+}.si-apl-page .w-5{
+  width: 1.25rem
+}.si-apl-page .w-6{
+  width: 1.5rem
+}.si-apl-page .w-7{
+  width: 1.75rem
+}.si-apl-page .w-8{
+  width: 2rem
+}.si-apl-page .w-full{
+  width: 100%
+}.si-apl-page .max-w-3xl{
+  max-width: 48rem
+}.si-apl-page .max-w-4xl{
+  max-width: 56rem
+}.si-apl-page .max-w-5xl{
+  max-width: 64rem
+}.si-apl-page .max-w-6xl{
+  max-width: 72rem
+}.si-apl-page .max-w-7xl{
+  max-width: 80rem
+}.si-apl-page .max-w-sm{
+  max-width: 24rem
+}.si-apl-page .-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .-rotate-3{
+  --tw-rotate: -3deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .rotate-3{
+  --tw-rotate: 3deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr))
+}.si-apl-page .grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}.si-apl-page .flex-col{
+  flex-direction: column
+}.si-apl-page .flex-wrap{
+  flex-wrap: wrap
+}.si-apl-page .items-start{
+  align-items: flex-start
+}.si-apl-page .items-center{
+  align-items: center
+}.si-apl-page .justify-center{
+  justify-content: center
+}.si-apl-page .justify-between{
+  justify-content: space-between
+}.si-apl-page .gap-4{
+  gap: 1rem
+}.si-apl-page .gap-6{
+  gap: 1.5rem
+}.si-apl-page .gap-8{
+  gap: 2rem
+}.si-apl-page .gap-x-12{
+  -moz-column-gap: 3rem;
+       column-gap: 3rem
+}.si-apl-page .gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem
+}.si-apl-page .gap-y-12{
+  row-gap: 3rem
+}.si-apl-page .gap-y-16{
+  row-gap: 4rem
+}.si-apl-page .space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse))
+}.si-apl-page .space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+}.si-apl-page .overflow-hidden{
+  overflow: hidden
+}.si-apl-page .rounded-2xl{
+  border-radius: 1rem
+}.si-apl-page .rounded-3xl{
+  border-radius: 1.5rem
+}.si-apl-page .rounded-full{
+  border-radius: 9999px
+}.si-apl-page .rounded-lg{
+  border-radius: 0.5rem
+}.si-apl-page .rounded-xl{
+  border-radius: 0.75rem
+}.si-apl-page .border{
+  border-width: 1px
+}.si-apl-page .border-2{
+  border-width: 2px
+}.si-apl-page .border-b{
+  border-bottom-width: 1px
+}.si-apl-page .border-b-2{
+  border-bottom-width: 2px
+}.si-apl-page .border-l-8{
+  border-left-width: 8px
+}.si-apl-page .border-t{
+  border-top-width: 1px
+}.si-apl-page .border-blue-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1))
+}.si-apl-page .border-blue-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity, 1))
+}.si-apl-page .border-gray-100{
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity, 1))
+}.si-apl-page .border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
+}.si-apl-page .border-transparent{
+  border-color: transparent
+}.si-apl-page .bg-amber-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-blue-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-blue-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-blue-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-blue-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-green-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-purple-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+}.si-apl-page .bg-gradient-to-br{
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops))
+}.si-apl-page .bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops))
+}.si-apl-page .from-blue-400{
+  --tw-gradient-from: #60a5fa var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(96 165 250 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-blue-50{
+  --tw-gradient-from: #eff6ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(239 246 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-blue-500{
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-gray-400{
+  --tw-gradient-from: #9ca3af var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(156 163 175 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-gray-50{
+  --tw-gradient-from: #f9fafb var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(249 250 251 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-green-400{
+  --tw-gradient-from: #4ade80 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(74 222 128 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-green-50{
+  --tw-gradient-from: #f0fdf4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(240 253 244 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-green-500{
+  --tw-gradient-from: #22c55e var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(34 197 94 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-indigo-50{
+  --tw-gradient-from: #eef2ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(238 242 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .from-purple-400{
+  --tw-gradient-from: #c084fc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(192 132 252 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}.si-apl-page .to-blue-50{
+  --tw-gradient-to: #eff6ff var(--tw-gradient-to-position)
+}.si-apl-page .to-blue-500{
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position)
+}.si-apl-page .to-gray-100{
+  --tw-gradient-to: #f3f4f6 var(--tw-gradient-to-position)
+}.si-apl-page .to-gray-600{
+  --tw-gradient-to: #4b5563 var(--tw-gradient-to-position)
+}.si-apl-page .to-indigo-100{
+  --tw-gradient-to: #e0e7ff var(--tw-gradient-to-position)
+}.si-apl-page .to-indigo-50{
+  --tw-gradient-to: #eef2ff var(--tw-gradient-to-position)
+}.si-apl-page .to-indigo-500{
+  --tw-gradient-to: #6366f1 var(--tw-gradient-to-position)
+}.si-apl-page .to-indigo-600{
+  --tw-gradient-to: #4f46e5 var(--tw-gradient-to-position)
+}.si-apl-page .to-pink-500{
+  --tw-gradient-to: #ec4899 var(--tw-gradient-to-position)
+}.si-apl-page .to-pink-600{
+  --tw-gradient-to: #db2777 var(--tw-gradient-to-position)
+}.si-apl-page .to-purple-500{
+  --tw-gradient-to: #a855f7 var(--tw-gradient-to-position)
+}.si-apl-page .to-teal-600{
+  --tw-gradient-to: #0d9488 var(--tw-gradient-to-position)
+}.si-apl-page .object-cover{
+  -o-object-fit: cover;
+     object-fit: cover
+}.si-apl-page .p-10{
+  padding: 2.5rem
+}.si-apl-page .p-12{
+  padding: 3rem
+}.si-apl-page .p-2{
+  padding: 0.5rem
+}.si-apl-page .p-3{
+  padding: 0.75rem
+}.si-apl-page .p-4{
+  padding: 1rem
+}.si-apl-page .p-6{
+  padding: 1.5rem
+}.si-apl-page .p-8{
+  padding: 2rem
+}.si-apl-page .px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
+}.si-apl-page .px-4{
+  padding-left: 1rem;
+  padding-right: 1rem
+}.si-apl-page .px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}.si-apl-page .px-8{
+  padding-left: 2rem;
+  padding-right: 2rem
+}.si-apl-page .py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem
+}.si-apl-page .py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem
+}.si-apl-page .py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}.si-apl-page .py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem
+}.si-apl-page .py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem
+}.si-apl-page .py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem
+}.si-apl-page .py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}.si-apl-page .pb-8{
+  padding-bottom: 2rem
+}.si-apl-page .pl-10{
+  padding-left: 2.5rem
+}.si-apl-page .text-center{
+  text-align: center
+}.si-apl-page .text-right{
+  text-align: right
+}.si-apl-page .text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem
+}.si-apl-page .text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem
+}.si-apl-page .text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem
+}.si-apl-page .text-5xl{
+  font-size: 3rem;
+  line-height: 1
+}.si-apl-page .text-base{
+  font-size: 1rem;
+  line-height: 1.5rem
+}.si-apl-page .text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}.si-apl-page .text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem
+}.si-apl-page .text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}.si-apl-page .font-bold{
+  font-weight: 700
+}.si-apl-page .font-light{
+  font-weight: 300
+}.si-apl-page .font-medium{
+  font-weight: 500
+}.si-apl-page .font-semibold{
+  font-weight: 600
+}.si-apl-page .italic{
+  font-style: italic
+}.si-apl-page .leading-relaxed{
+  line-height: 1.625
+}.si-apl-page .leading-tight{
+  line-height: 1.25
+}.si-apl-page .text-amber-600{
+  --tw-text-opacity: 1;
+  color: rgb(217 119 6 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-gray-900{
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-green-500{
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-purple-500{
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-purple-600{
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity, 1))
+}.si-apl-page .text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}.si-apl-page .opacity-10{
+  opacity: 0.1
+}.si-apl-page .opacity-20{
+  opacity: 0.2
+}.si-apl-page .opacity-90{
+  opacity: 0.9
+}.si-apl-page .shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}.si-apl-page .transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}.si-apl-page .transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}.si-apl-page .duration-300{
+  transition-duration: 300ms
+}.si-apl-page .ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}.si-apl-page .ease-out{
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1)
+}.si-apl-page .hover\:-translate-y-1:hover{
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .hover\:scale-105:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}.si-apl-page .hover\:bg-blue-50:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1))
+}.si-apl-page .hover\:bg-blue-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1))
+}.si-apl-page .hover\:bg-gray-900:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+}.si-apl-page .hover\:text-blue-800:hover{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1))
+}.si-apl-page .hover\:text-gray-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+}.si-apl-page .hover\:shadow-lg:hover{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.si-apl-page .hover\:shadow-xl:hover{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}@media (min-width: 640px) {.si-apl-page .sm\:mx-6{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem
+  }.si-apl-page .sm\:flex-row{
+    flex-direction: row
+  }.si-apl-page .sm\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+  }}@media (min-width: 768px) {.si-apl-page .md\:order-1{
+    order: 1
+  }.si-apl-page .md\:order-2{
+    order: 2
+  }.si-apl-page .md\:order-3{
+    order: 3
+  }.si-apl-page .md\:col-span-2{
+    grid-column: span 2 / span 2
+  }.si-apl-page .md\:mb-0{
+    margin-bottom: 0px
+  }.si-apl-page .md\:w-1\/2{
+    width: 50%
+  }.si-apl-page .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }.si-apl-page .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }.si-apl-page .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }.si-apl-page .md\:flex-row{
+    flex-direction: row
+  }.si-apl-page .md\:flex-row-reverse{
+    flex-direction: row-reverse
+  }.si-apl-page .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem
+  }.si-apl-page .md\:pl-12{
+    padding-left: 3rem
+  }.si-apl-page .md\:pr-12{
+    padding-right: 3rem
+  }.si-apl-page .md\:pr-8{
+    padding-right: 2rem
+  }.si-apl-page .md\:text-right{
+    text-align: right
+  }.si-apl-page .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem
+  }.si-apl-page .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1
+  }.si-apl-page .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1
+  }}@media (min-width: 1024px) {.si-apl-page .lg\:mx-8{
+    margin-left: 2rem;
+    margin-right: 2rem
+  }.si-apl-page .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }.si-apl-page .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }.si-apl-page .lg\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }.si-apl-page .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem
+  }}
