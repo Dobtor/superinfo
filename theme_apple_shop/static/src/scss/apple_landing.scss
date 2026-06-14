@@ -105,26 +105,85 @@
 
     // ─── ③ Models carousel ──────────────────────────
     .section-models {
-        padding: $apple-sp-3xl 0;
+        padding: $apple-sp-2xl 0;
+        border-bottom: 1px solid $apple-gray-2;
 
-        .section-title {
-            font-family: $apple-font-display;
-            font-size: 40px;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            margin: 0 0 $apple-sp-xs;
+        .categ-nav-track-wrap {
+            overflow-x: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+        }
+
+        .categ-nav-track {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            min-width: max-content;
+            padding: $apple-sp-xs $apple-sp-md;
+
+            @media (max-width: $apple-bp-mobile) {
+                justify-content: flex-start;
+            }
+        }
+
+        .categ-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $apple-sp-sm;
+            padding: $apple-sp-md $apple-sp-xl;
+            border-radius: $apple-radius-lg;
+            text-decoration: none;
             color: $apple-black;
+            transition: background 200ms $apple-ease-default,
+                        color 200ms $apple-ease-default;
+            min-width: 96px;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.04);
+                color: $apple-blue;
+            }
         }
 
-        .section-subtitle {
-            font-size: 17px;
-            color: $apple-gray-5;
-            margin: 0 0 $apple-sp-xl;
+        .categ-nav-img {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: transform 300ms $apple-ease-default;
+            }
+
+            @media (max-width: $apple-bp-mobile) {
+                width: 52px;
+                height: 52px;
+            }
         }
 
-        .models-track-wrap {
-            position: relative;
+        .categ-nav-item:hover .categ-nav-img img {
+            transform: scale(1.08);
         }
+
+        .categ-nav-name {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            color: inherit;
+        }
+    }
+
+    // ─── ③b Sub-category carousel (reuses .section-models styles) ──
+    .section-subcategs {
+        padding-top: 0;
+        border-top: none;
+
+        .models-track-wrap { position: relative; }
 
         .models-track {
             display: flex;
@@ -134,10 +193,7 @@
             scrollbar-width: none;
             scroll-behavior: smooth;
             padding: $apple-sp-xs 0 $apple-sp-md;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
+            &::-webkit-scrollbar { display: none; }
         }
 
         .model-card {
@@ -155,33 +211,14 @@
             backdrop-filter: blur($apple-glass-blur);
             -webkit-backdrop-filter: blur($apple-glass-blur);
             transition: transform 400ms $apple-ease-default,
-                box-shadow 400ms $apple-ease-default,
-                border-color 400ms $apple-ease-default;
+                        box-shadow 400ms $apple-ease-default,
+                        border-color 400ms $apple-ease-default;
 
             &:hover {
                 transform: translateY(-6px);
                 box-shadow: $apple-shadow-card-hv;
                 border-color: rgba(59, 130, 246, 0.25);
-
-                .model-card-image img {
-                    transform: scale(1.06);
-                }
-            }
-
-            .badge-new {
-                position: absolute;
-                top: $apple-sp-md;
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 11px;
-                color: $apple-blue;
-                font-weight: 700;
-                letter-spacing: 1.5px;
-                text-transform: uppercase;
-                animation: zoomIn 300ms $apple-ease-spring;
-                background: rgba(59, 130, 246, 0.10);
-                padding: 2px 10px;
-                border-radius: $apple-radius-pill;
+                .model-card-image img { transform: scale(1.06); }
             }
 
             .model-card-image {
@@ -191,13 +228,11 @@
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
-
                 img {
                     max-width: 100%;
                     max-height: 100%;
                     object-fit: contain;
                     transition: transform 500ms $apple-ease-default;
-                    filter: drop-shadow(0 8px 24px rgba(59, 130, 246, 0.12));
                 }
             }
 
@@ -220,11 +255,7 @@
                 font-size: 14px;
                 margin: 0 0 $apple-sp-md;
                 color: $apple-gray-6;
-
-                .price-suffix {
-                    color: $apple-gray-4;
-                    margin-left: 2px;
-                }
+                .price-suffix { color: $apple-gray-4; margin-left: 2px; }
             }
 
             .model-card-actions {
@@ -253,46 +284,19 @@
             cursor: pointer;
             z-index: 2;
             transition: all 200ms;
-
-            &.disabled {
-                opacity: 0.25;
-                pointer-events: none;
-            }
-
-            &:hover {
-                background: rgba(59, 130, 246, 0.10);
-                border-color: $apple-blue;
-                box-shadow: $apple-glow-sm;
-            }
-
-            .triangle {
-                width: 0;
-                height: 0;
-                border-style: solid;
-            }
+            &.disabled { opacity: 0.25; pointer-events: none; }
+            &:hover { background: rgba(59, 130, 246, 0.10); border-color: $apple-blue; }
+            .triangle { width: 0; height: 0; border-style: solid; }
         }
-
         .track-prev {
             left: -20px;
-
-            .triangle {
-                border-width: 6px 8px 6px 0;
-                border-color: transparent $apple-blue transparent transparent;
-            }
-
+            .triangle { border-width: 6px 8px 6px 0; border-color: transparent $apple-blue transparent transparent; }
         }
-
         .track-next {
             right: -20px;
-
-            .triangle {
-                border-width: 6px 0 6px 8px;
-                border-color: transparent transparent transparent $apple-blue;
-            }
-
+            .triangle { border-width: 6px 0 6px 8px; border-color: transparent transparent transparent $apple-blue; }
         }
 
-        // ── Drag scrollbar ─────────────────────────────
         .models-scrollbar {
             position: relative;
             width: 100%;
@@ -309,26 +313,17 @@
                 left: 0;
                 transform: translateY(-50%);
                 height: 4px;
-                width: 40%;            // overridden by JS
+                width: 40%;
                 background: $apple-blue;
                 border-radius: $apple-radius-pill;
                 cursor: grab;
-                transition: height 150ms $apple-ease-default,
-                            background 150ms $apple-ease-default;
-
-                &:hover,
-                &.dragging {
+                transition: height 150ms, background 150ms;
+                &:hover, &.dragging {
                     height: 6px;
                     background: color-mix(in srgb, var(--o-color-1) 90%, black);
                     cursor: grabbing;
                 }
-
-                // Larger invisible hit area for easier grabbing
-                &::after {
-                    content: '';
-                    position: absolute;
-                    inset: -8px -4px;
-                }
+                &::after { content: ''; position: absolute; inset: -8px -4px; }
             }
         }
     }
