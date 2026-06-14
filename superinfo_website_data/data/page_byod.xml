@@ -9,68 +9,19 @@
             <field name="arch" type="xml">
                 <t name="BYOD 自帶載具計畫" t-name="superinfo_website_data.page_byod_view">
                     <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-
-                            <section class="s_cover o_cc o_cc5 oe_img_bg o_bg_img_center pt176 pb176" data-snippet="s_cover" data-name="頁首"
-                                     style="background-image: url('/superinfo_website_data/static/src/img/content/byod.jpg'); background-size: cover; background-position: center;">
-                                <div class="o_we_bg_filter bg-black-25"/>
-                                <div class="container"><div class="row"><div class="col-lg-8"><h1 class="display-2-fs">BYOD 自帶載具到校學習計畫</h1></div></div></div>
-                            </section>
-
-                            <section class="si-page pt24 pb24" data-name="BYOD 內容">
-
-                                <div class="maincontainer">
-                                    <div class="part2">
-                                        <div class="head3 midgrayword">陪伴孩子的學習工具</div>
-                                        <div class="part-p grayword">時代在走，變化要有！過往的教學方式已經悄悄轉型之中。不論是因為疫情而轉變的學習方式，還是現代人了解與消化知識的管道逐漸多元，「學習」這件事已不再只發生於教室與紙本之間。</div>
-                                    </div>
-                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/byod/0.jpg" alt="BYOD" loading="lazy"/></div>
-                                </div>
-
-                            </section>
-
-                            <section class="pt8 pb40" data-name="培養數位能力">
-                                <div class="container"><div class="si-prose">
-                                    <h3>培養數位能力</h3>
-                                    <p>根據 ISA 預測，未來 90% 以上的工作皆需要依靠數位技能，從小培養數位能力，是眼下教育界重要的發展趨勢。</p>
-                                    <p>iPad 目前是多數學校選擇的數位學習工具之一，學校與政府單位都在為了孩子們的學習工具努力著，但考量現實層面，校內可提供的資源依然有限，自備數位工具（自帶載具）到校學習成為趨勢之一。</p>
-                                    <p>以往經驗來說，校內統一裝置管理除了讓教師課程進行順暢，也能弭平同學間介面、軟體之落差，故政府單位有意推行 BYOD 計畫，讓學習工具可以同時滿足教學與管理需求。</p>
-                                </div></div>
-                            </section>
-
-                            <section class="si-page pt8 pb40" data-name="我們提供的服務">
-                                <div class="container"><div class="si-prose" style="text-align:center"><h3>我們提供的服務</h3><p>由 BYOD 配合之學校聯繫後，提供以下服務：</p></div></div>
-
-                                <div class="maincontainer">
-                                    <div class="part2">
-                                        <div class="head3 midgrayword">機型與配件報價</div>
-                                        <div class="part-p grayword">協助學校評估需求，提供合適的平板電腦機型與配件組合報價。</div>
-                                    </div>
-                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/byod/1.png" alt="機型與配件報價" loading="lazy"/></div>
-                                </div>
-                                <div class="maincontainer">
-                                    <div class="part2"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/byod/2.png" alt="MDM 行動裝置管理" loading="lazy"/></div>
-                                    <div class="part2">
-                                        <div class="head3 midgrayword">MDM 行動裝置管理</div>
-                                        <div class="part-p grayword">提供 MDM 行動裝置管理建議與規劃，協助學校管理學生裝置與應用程式。</div>
-                                    </div>
-                                </div>
-                                <div class="maincontainer">
-                                    <div class="part2">
-                                        <div class="head3 midgrayword">到校工作會議</div>
-                                        <div class="part-p grayword">提供到校工作會議，協助學校設立 BYOD 推動工作小組，並提供相關諮詢與建議。</div>
-                                    </div>
-                                    <div class="part2 reverse-order"><img class="part-img" src="/superinfo_website_data/static/src/img/content/pages/byod/3.png" alt="到校工作會議" loading="lazy"/></div>
-                                </div>
-
-                            </section>
-
+                        <div id="wrap" class="si-page">
+                                            <div class="maincontainer si-bg si-hero" style="background-image:url('/superinfo_website_data/static/src/img/content/pages/byod/header.jpg')"><div class="part1"> <div class="head1 whiteword">BYOD 自帶載具到校學習計畫</div> </div> </div>
+                                            <div class="maincontainer"><div class="part2"> <div class="head2 darkgrayword">陪伴孩子的學習工具</div> <div class="part-p midgrayword" style="font-size: small">
+                                時代在走，變化要有！過往的教學方式已經悄悄的變化轉型之中。不論是因為疫情而轉變的學習方式，還是現代人了解與消化知識的管道逐漸多元，「學習」這件事不再單靠紙本，數位工具成為我們生活中不可或缺的一環！</div> </div> <div class="part2"><img alt="&#x966A;&#x4F34;&#x5B69;&#x5B50;&#x7684;&#x5B78;&#x7FD2;&#x5DE5;&#x5177;" class="part-img" onerror="imgError(this);" src="/superinfo_website_data/static/src/img/content/pages/byod/pic_01.jpg" loading="lazy"/></div> </div>
+                                            <div class="maincontainer si-bg whiteword" style="background-image:url('/superinfo_website_data/static/src/img/content/pages/byod/bg_01.jpg')"><div class="part2"> <div class="head2">培養數位能力</div> <div class="part-p" style="font-size: small">根據 ISA 預測 未來 90% 以上的工作皆需要依靠數位技能，從小培養數位能力，是眼下教育界重要的發展趨勢。</div> <div class="part-p" style="font-size: small">iPad
+                                目前是多數學校選擇的數位學習工具之一，學校與政府單位都在為了孩子們的學習工具努力著，但考量現實層面，校內可提供的資源依然有限，自備數位工具（載具）到校也是多數其他國家目前作法。</div> <div class="part-p" style="font-size: small">以往經驗來說，校內統一裝置管理除了讓教師課程進行順暢，也能弭平同學間介面、軟體之落差，故政府單位有意推行 BYOD
+                                計畫，讓學習工具可以同時滿足教師端、家長端、學生端、管理端的複雜需求。</div> </div> </div>
+                                            <div class="maincontainer"><div class="part1"> <div class="head2 darkgrayword">我們提供的服務</div> <div class="head3 darkgrayword">由 BYOD 配合之學校聯繫後，提供以下服務：</div> </div> <div class="part3"><img alt="&#x5E73;&#x677F;&#x96FB;&#x8166;&#x6A5F;&#x578B;&#x914D;&#x4EF6;&#x7D44;&#x5408;&#x5831;&#x50F9;" class="part-img" onerror="imgError(this);" src="/superinfo_website_data/static/src/img/content/pages/byod/pic_02.png" loading="lazy"/> <div class="subtil grayword" style="padding-bottom: 20px;">平板電腦機型配件組合報價</div> <div class="part-p" style="font-size: small">協助學校評估需求，提供合適的平板電腦機型與配件組合報價。</div> </div> <div class="part3"><img alt="&#x81EA;&#x5E36;&#x8F09;&#x5177;&#x7D0D;&#x7BA1;&#x5EFA;&#x8B70;&#x8207;&#x898F;&#x5283;" class="part-img" onerror="imgError(this);" src="/superinfo_website_data/static/src/img/content/pages/byod/pic_03.png" loading="lazy"/> <div class="subtil grayword" style="padding-bottom: 20px;">自帶載具納管建議與規劃</div> <div class="part-p" style="font-size: small">提供 MDM 行動裝置管理建議與規劃，協助學校管理學生裝置與應用程式。</div> </div> <div class="part3"><img alt="&#x5230;&#x6821;&#x5DE5;&#x4F5C;&#x6703;&#x8B70;&#x8A2D;&#x7ACB;&#x5DE5;&#x4F5C;&#x5C0F;&#x7D44;" class="part-img" onerror="imgError(this);" src="/superinfo_website_data/static/src/img/content/pages/byod/pic_04.png" loading="lazy"/> <div class="subtil grayword" style="padding-bottom: 20px;">到校工作會議設立工作小組</div> <div class="part-p" style="font-size: small">提供到校工作會議，協助學校設立 BYOD 推動工作小組，並提供相關諮詢與建議。</div> </div> </div>
                         </div>
                     </t>
                 </t>
             </field>
         </record>
-
         <record id="page_byod" model="website.page">
             <field name="name">BYOD 自帶載具計畫</field>
             <field name="is_published">True</field>
