@@ -28,11 +28,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             return False
         return bool(categ.exists()) and categ._is_descendant_of_mac_root()
 
-    def _is_mac_product(self, product):
-        if not product:
-            return False
-        return bool(product.exists()) and product.is_mac_product
-
     # ─── / (homepage) → Mac landing ────────────────────────────────────
 
     @http.route('/', auth='public', website=True, sitemap=True)
@@ -129,11 +124,7 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
 
     @http.route()
     def product(self, product, category='', search='', **kwargs):
-        if self._is_mac_product(product):
-            return self._render_mac_configurator(product, **kwargs)
-        return super().product(
-            product, category=category, search=search, **kwargs,
-        )
+        return self._render_mac_configurator(product, **kwargs)
 
     def _render_mac_configurator(self, product, **kwargs):
         attribute_lines = product._get_apple_attribute_groups()
@@ -235,8 +226,8 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
                         optional_product_ids=None, **kwargs):
         Template = request.env['product.template'].sudo()
         tmpl = Template.browse(int(product_template_id)).exists()
-        if not tmpl or not self._is_mac_product(tmpl):
-            return {'error': 'Invalid Mac product'}
+        if not tmpl:
+            return {'error': 'Invalid product'}
 
         # Resolve PTAV recordset
         ptav_ids = [int(i) for i in (product_template_attribute_value_ids or [])]
