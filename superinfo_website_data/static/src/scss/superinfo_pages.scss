@@ -120,7 +120,16 @@ $si-font: "SF Pro TC", "SF Pro Text", "PingFang TC", "Segoe UI", SegoeUI,
         &.reverse-order { order: 1; }
     }
 
-    .part-img { width: 100%; height: auto; display: block; border-radius: 15px; }
+    // 對齊原站 global.css：.part-img 寬度 75%（非滿欄），小圖維持原尺寸不放大、置中
+    .part-img {
+        width: 75%; max-width: 75%; height: auto;
+        margin: 1.5em auto; display: block;
+        border-radius: 15px; text-align: center;
+    }
+    .part-img img {
+        width: auto; max-width: 100%; height: auto;
+        margin: 0 auto; display: block; border-radius: 15px;
+    }
 
     .head1 { font-size: 34px; font-weight: 700; }
     .head2 { font-size: 14px; font-weight: 700; letter-spacing: 3px; margin-bottom: 10px; }
