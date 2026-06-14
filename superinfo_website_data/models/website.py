@@ -54,13 +54,6 @@ MENU_TREE = [
         {"name": "ELECOM", "categ": "categ_acc_elecom"},
         {"name": "其他周邊", "categ": "categ_acc_other"},
     ]},
-    {"name": "最新消息", "url": "/blog"},
-    {"name": "商店資訊", "url": "#", "children": [
-        {"name": "常見問題", "url": "/info/faq"},
-        {"name": "資訊安全", "url": "/info/security"},
-        {"name": "隱私權政策", "url": "/info/privacy"},
-        {"name": "購物須知與服務條款", "url": "/info/terms"},
-    ]},
 ]
 
 
@@ -72,7 +65,12 @@ def _all_names(nodes, acc):
 
 
 # 曾經用過、現已移除的頂層選單名稱（升級時一併清除，避免殘留）
-OBSOLETE_MENU_NAMES = ["商城", "蘋果培訓"]
+# 含「最新消息」「商店資訊」及其子選單（cascade 會刪子，仍列出以防孤兒殘留）
+OBSOLETE_MENU_NAMES = [
+    "商城", "蘋果培訓",
+    "最新消息",
+    "商店資訊", "常見問題", "資訊安全", "隱私權政策", "購物須知與服務條款",
+]
 
 
 class Website(models.Model):

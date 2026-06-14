@@ -73,12 +73,36 @@
                                 <div class="container">
                                     <h3 class="text-center mb-4">Mac Lab 成功實例</h3>
                                     <div class="si-grid si-grid-3">
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/6.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/7.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/8.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/9.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/10.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
-                                        <img src="/superinfo_website_data/static/src/img/content/pages/success/11.jpg" alt="Mac 電腦教室實例" loading="lazy"/>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">南港高中</div>
+                                            <div class="si-subtitle">Mac mini 資訊科技教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/6.jpg" alt="南港高中 Mac mini 資訊科技教室" loading="lazy"/>
+                                        </div>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">東門國小</div>
+                                            <div class="si-subtitle">Mac mini 電腦教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/7.jpg" alt="東門國小 Mac mini 電腦教室" loading="lazy"/>
+                                        </div>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">景美女中</div>
+                                            <div class="si-subtitle">Mac mini 多媒體教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/8.jpg" alt="景美女中 Mac mini 多媒體教室" loading="lazy"/>
+                                        </div>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">景美女中</div>
+                                            <div class="si-subtitle">iMac 教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/9.jpg" alt="景美女中 iMac 教室" loading="lazy"/>
+                                        </div>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">國立臺灣藝術大學</div>
+                                            <div class="si-subtitle">Mac mini 資訊科技教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/10.jpg" alt="國立臺灣藝術大學 Mac mini 資訊科技教室" loading="lazy"/>
+                                        </div>
+                                        <div class="si-school-block">
+                                            <div class="si-brush">國立臺灣科技大學</div>
+                                            <div class="si-subtitle">iMac 電腦教室</div>
+                                            <img src="/superinfo_website_data/static/src/img/content/pages/success/11.jpg" alt="國立臺灣科技大學 iMac 電腦教室" loading="lazy"/>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
