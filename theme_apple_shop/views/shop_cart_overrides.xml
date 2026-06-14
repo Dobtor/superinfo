@@ -15,7 +15,7 @@
         <field name="inherit_id" ref="website_sale.cart_line_product_link"/>
         <field name="arch" type="xml">
             <xpath expr="//a" position="after">
-                <t t-if="line.product_id.product_tmpl_id.is_mac_product">
+                <t>
                     <ul class="apple-spec-list">
                         <t t-foreach="line.product_id.product_template_attribute_value_ids"
                            t-as="ptav">

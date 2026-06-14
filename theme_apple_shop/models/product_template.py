@@ -12,12 +12,6 @@ _logger = logging.getLogger(__name__)
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    is_mac_product = fields.Boolean(
-        compute='_compute_is_mac_product',
-        store=True,
-        index=True,
-        help="True if any of the product's public_categ_ids has mac_role='model'.",
-    )
     mac_color_attribute_id = fields.Many2one(
         'product.attribute',
         string="Mac Color Attribute",
@@ -50,13 +44,6 @@ class ProductTemplate(models.Model):
         help="External URL to the SLA / EULA shown as '查看授權協議' link "
              "next to a software pre-install option (Final Cut Pro / Logic Pro).",
     )
-
-    @api.depends('public_categ_ids', 'public_categ_ids.mac_role')
-    def _compute_is_mac_product(self):
-        for rec in self:
-            rec.is_mac_product = any(
-                c.mac_role == 'model' for c in rec.public_categ_ids
-            )
 
     def _get_apple_attribute_groups(self):
         """Returns this template's attribute_line_ids ordered by

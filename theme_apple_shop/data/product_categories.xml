@@ -6,7 +6,7 @@
         <record id="categ_mac" model="product.public.category">
             <field name="name">Mac</field>
             <field name="sequence">10</field>
-            <field name="mac_role">root</field>
+
             <field name="mac_subtitle">桌上型與筆記型</field>
         </record>
 
@@ -15,7 +15,7 @@
             <field name="name">MacBook Neo</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">10</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">筆記型 — 全新</field>
             <field name="mac_tagline">為輕巧而生</field>
             <field name="mac_landing_order">10</field>
@@ -25,7 +25,7 @@
             <field name="name">MacBook Air</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">20</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">筆記型</field>
             <field name="mac_tagline">輕薄、強大、超長續航</field>
             <field name="mac_landing_order">20</field>
@@ -35,7 +35,7 @@
             <field name="name">MacBook Pro</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">30</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">筆記型</field>
             <field name="mac_tagline">為專業而生</field>
             <field name="mac_landing_order">30</field>
@@ -45,7 +45,7 @@
             <field name="name">iMac</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">40</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">桌上型</field>
             <field name="mac_tagline">驚艷你的全方位桌上型電腦</field>
             <field name="mac_landing_order">40</field>
@@ -55,7 +55,7 @@
             <field name="name">Mac mini</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">50</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">桌上型</field>
             <field name="mac_tagline">迷你體積，威猛實力</field>
             <field name="mac_landing_order">50</field>
@@ -65,7 +65,7 @@
             <field name="name">Mac Studio</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">60</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">桌上型</field>
             <field name="mac_tagline">強大、緊湊、為工作室而生</field>
             <field name="mac_landing_order">60</field>
@@ -75,7 +75,7 @@
             <field name="name">Studio Display</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">70</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">顯示器</field>
             <field name="mac_tagline">耀眼一見的桌上型顯示器</field>
             <field name="mac_landing_order">70</field>
@@ -85,7 +85,7 @@
             <field name="name">Pro Display XDR</field>
             <field name="parent_id" ref="categ_mac"/>
             <field name="sequence">80</field>
-            <field name="mac_role">model</field>
+
             <field name="mac_subtitle">顯示器 — 專業級</field>
             <field name="mac_tagline">為專業工作室打造</field>
             <field name="mac_landing_order">80</field>

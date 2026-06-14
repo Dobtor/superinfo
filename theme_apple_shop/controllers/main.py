@@ -111,7 +111,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         Categ = request.env['product.public.category']
         models = Categ.search([
             ('parent_id', '=', mac_root.id),
-            ('mac_role', '=', 'model'),
         ], order='mac_landing_order, sequence, id')
         return request.render('theme_apple_shop.buy_mac_landing', {
             'mac_root': mac_root,

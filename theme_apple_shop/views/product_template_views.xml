@@ -8,10 +8,9 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                 <page string="Apple Configurator" name="apple_configurator"
-                      invisible="not is_mac_product">
+                      >
                     <group>
                         <group>
-                            <field name="is_mac_product" readonly="1"/>
                             <field name="mac_color_attribute_id"
                                    domain="[('display_type', '=', 'color')]"/>
                         </group>
