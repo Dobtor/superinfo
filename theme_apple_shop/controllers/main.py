@@ -74,7 +74,7 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'theme_apple_shop.categ_mac', raise_if_not_found=False
         )
         if mac_root:
-            return self._render_mac_landing(mac_root)
+            return self._render_category_landing(mac_root)
         return request.redirect('/shop')
 
     # ─── /shop and /shop/category/<categ> ──────────────────────────
@@ -82,9 +82,9 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     @http.route()
     def shop(self, page=0, category=None, search='', min_price=0.0,
              max_price=0.0, ppg=False, **post):
-        # /shop/category/<mac_descendant>  → Apple-style landing
-        if self._is_mac_categ(category):
-            return self._render_mac_landing(category)
+        # Any category page → Apple landing
+        if category and category.exists():
+            return self._render_category_landing(category)
 
         # 無篩選的 /shop 不再強制導 Mac landing：交還 Odoo 原生商店頁。
         # 要把 Mac landing 當商店入口時，請用 /shop/category/mac。
@@ -93,17 +93,24 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             min_price=min_price, max_price=max_price, ppg=ppg, **post,
         )
 
-    def _render_mac_landing(self, mac_root, page_title='選購 Mac'):
+    def _render_category_landing(self, categ, page_title=None):
         Categ = request.env['product.public.category']
-        models = Categ.search([
-            ('parent_id', '=', mac_root.id),
-            ('mac_role', '=', 'model'),
-        ], order='mac_landing_order, sequence, id')
+        top_categories = Categ.search(
+            [('parent_id', '=', False)],
+            order='sequence, id',
+        )
+        subcategories = Categ.search(
+            [('parent_id', '=', categ.id)],
+            order='sequence, id',
+        )
+        title = page_title or ('選購 ' + categ.name)
         return request.render('theme_apple_shop.buy_mac_landing', {
-            'mac_root': mac_root,
-            'mac_models': models,
-            'main_object': mac_root,
-            'page_title': page_title,
+            'mac_root': categ,
+            'current_categ': categ,
+            'top_categories': top_categories,
+            'subcategories': subcategories,
+            'main_object': categ,
+            'page_title': title,
         })
 
     # ─── /shop/<product> ───────────────────────────────────────────
