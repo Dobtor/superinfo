@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── Snippet template (dropped onto page) ─────────────────────── -->
+    <record id="s_apple_categ_carousel" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_carousel</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_carousel pt-3 pb-5">
+                <div class="container">
+                    <div class="apple-categ-carousel-wrapper"
+                         data-categ-id="0"
+                         data-snippet="s_apple_categ_carousel">
+                        <!-- rendered by /theme_apple_shop/snippet/categ_carousel via JS -->
+                        <div class="apple-categ-carousel-loading text-center py-5 text-muted">
+                            載入中…
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Rendered inner content (returned by controller) ──────────── -->
+    <record id="s_apple_categ_carousel_content" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_carousel_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_carousel_content">
+                <div class="models-track-wrap">
+                    <button type="button" class="track-prev" aria-label="Previous">
+                        <span class="triangle"/>
+                    </button>
+                    <div class="models-track section-subcategs"
+                         role="region" aria-label="商品分類">
+                        <t t-foreach="categories" t-as="cat">
+                            <article class="model-card">
+                                <div class="model-card-image">
+                                    <img t-if="cat.mac_hero_image or cat.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{cat.id}/{{ 'mac_hero_image' if cat.mac_hero_image else 'image_1024' }}"
+                                         t-att-alt="cat.name"
+                                         loading="lazy"/>
+                                </div>
+                                <h3 class="model-card-name" t-esc="cat.name"/>
+                                <p class="model-card-tagline" t-esc="cat.mac_tagline or ''"/>
+                                <p t-if="cat.mac_starting_price" class="model-card-price">
+                                    <t t-esc="cat.mac_starting_price"
+                                       t-options="{'widget': 'monetary', 'display_currency': cat.mac_currency_id}"/>
+                                    <span class="price-suffix">起</span>
+                                </p>
+                                <div class="model-card-actions">
+                                    <a t-attf-href="/shop/category/#{slug(cat)}"
+                                       class="btn-secondary">深入了解</a>
+                                    <t t-set="first_prod"
+                                       t-value="request.env['product.template'].sudo().search([
+                                           ('public_categ_ids', '=', cat.id),
+                                           ('is_published', '=', True),
+                                       ], limit=1)"/>
+                                    <a t-if="first_prod"
+                                       t-attf-href="/shop/#{slug(first_prod)}"
+                                       class="btn-primary">選購</a>
+                                </div>
+                            </article>
+                        </t>
+                    </div>
+                    <button type="button" class="track-next" aria-label="Next">
+                        <span class="triangle"/>
+                    </button>
+                </div>
+                <div class="models-scrollbar" role="scrollbar" aria-orientation="horizontal">
+                    <div class="models-scrollbar-thumb"/>
+                </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav snippet template ───────────────────────────────────── -->
+    <record id="s_apple_categ_nav" model="ir.ui.view">
+        <field name="name">Apple Category Nav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_nav py-4">
+                <div class="container">
+                    <div class="apple-categ-nav-wrapper">
+                        <div class="apple-categ-nav-loading text-center py-3 text-muted">載入中…</div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav rendered content (returned by controller) ──────────── -->
+    <record id="s_apple_categ_nav_content" model="ir.ui.view">
+        <field name="name">Apple Category Nav Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_nav_content">
+                <div class="categ-nav-track-wrap">
+                    <div class="categ-nav-track" role="region" aria-label="商品分類">
+                        <t t-foreach="categories" t-as="categ">
+                            <a class="categ-nav-item" t-attf-href="/shop/category/#{slug(categ)}">
+                                <div class="categ-nav-img">
+                                    <img t-if="categ.mac_hero_image or categ.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'mac_hero_image' if categ.mac_hero_image else 'image_1024' }}"
+                                         t-att-alt="categ.name"
+                                         loading="lazy"/>
+                                </div>
+                                <span class="categ-nav-name" t-esc="categ.name"/>
+                            </a>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Register categ nav in editor panel (Products group) ───────────── -->
+    <record id="s_apple_categ_nav_panel" model="ir.ui.view">
+        <field name="name">Apple Categ Nav Panel Registration</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.snippets"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
+                <t t-snippet="theme_apple_shop.s_apple_categ_nav"
+                   string="分類圖示導覽"
+                   group="products"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ── Override the built-in Products snippet to use Apple carousel ── -->
+    <record id="override_s_dynamic_snippet_products" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Override</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.s_dynamic_snippet_products"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-call='website.s_dynamic_snippet_template']" position="replace">
+                <section class="s_apple_categ_carousel pt-3 pb-5">
+                    <div class="container">
+                        <div class="apple-categ-carousel-wrapper"
+                             data-categ-id="0"
+                             data-snippet="s_apple_categ_carousel">
+                            <div class="apple-categ-carousel-loading text-center py-5 text-muted">
+                                載入中…
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

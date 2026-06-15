@@ -33,6 +33,7 @@
         'views/shop_cart_overrides.xml',
         'views/shop_trust_features.xml',
         'views/contactus.xml',
+        'views/snippets.xml',
         # Data — order matters: attributes → categories → products → accessories
         'data/product_attributes.xml',
         'data/product_categories.xml',

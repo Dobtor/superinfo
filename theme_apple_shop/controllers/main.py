@@ -63,6 +63,34 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'main_object': request.website,
         })
 
+    # ─── Snippet: category icon nav content ──────────────────────────
+
+    @http.route('/theme_apple_shop/snippet/categ_nav',
+                type='http', auth='public', website=True)
+    def snippet_categ_nav(self, **kwargs):
+        Categ = request.env['product.public.category']
+        categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
+        return request.render(
+            'theme_apple_shop.s_apple_categ_nav_content',
+            {'categories': categs},
+        )
+
+    # ─── Snippet: category carousel content ───────────────────────────
+
+    @http.route('/theme_apple_shop/snippet/categ_carousel',
+                type='http', auth='public', website=True)
+    def snippet_categ_carousel(self, categ_id='0', **kwargs):
+        Categ = request.env['product.public.category']
+        cid = int(categ_id)
+        if cid:
+            categs = Categ.search([('parent_id', '=', cid)], order='sequence, id')
+        else:
+            categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
+        return request.render(
+            'theme_apple_shop.s_apple_categ_carousel_content',
+            {'categories': categs},
+        )
+
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
 
     @http.route(
@@ -93,7 +121,7 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             min_price=min_price, max_price=max_price, ppg=ppg, **post,
         )
 
-    def _render_category_landing(self, categ, page_title=None):
+    def _render_category_landing(self, categ, page_title=None, is_homepage=False):
         Categ = request.env['product.public.category']
         top_categories = Categ.search(
             [('parent_id', '=', False)],
@@ -103,12 +131,21 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             [('parent_id', '=', categ.id)],
             order='sequence, id',
         )
+        # When no subcategories, fall back to products in this category
+        products = None
+        if not subcategories and not is_homepage:
+            products = request.env['product.template'].sudo().search([
+                ('public_categ_ids', '=', categ.id),
+                ('is_published', '=', True),
+            ], order='name')
         title = page_title or ('選購 ' + categ.name)
         return request.render('theme_apple_shop.buy_mac_landing', {
             'mac_root': categ,
             'current_categ': categ,
             'top_categories': top_categories,
             'subcategories': subcategories,
+            'products': products,
+            'is_homepage': is_homepage,
             'main_object': categ,
             'page_title': title,
         })
