@@ -138,8 +138,6 @@
                                                                 <span class="price-suffix">起</span>
                                                             </p>
                                                             <div class="model-card-actions">
-                                                                <a t-attf-href="/shop/category/#{slug(sub)}"
-                                                                   class="btn-secondary">深入了解</a>
                                                                 <t t-set="first_prod"
                                                                    t-value="request.env['product.template'].sudo().search([
                                                                        ('public_categ_ids', '=', sub.id),
