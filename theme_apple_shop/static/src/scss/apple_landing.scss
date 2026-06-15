@@ -2,21 +2,10 @@
 // /shop/category/mac — Mac landing (Tech Glass)
 // ============================================
 
-.apple-mac-landing {
-    background: $apple-bg-page;
-    color: $apple-black;
-    font-family: $apple-font-text;
-
-    .container {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 $apple-sp-xl;
-    }
-
-    // ─── ① Hero banner ──────────────────────────────
-    .pageBanner {
-        // ── Homepage variant (original style) ──
-        &--home {
+// ─── Hero banner (global — works as snippet anywhere) ───────────
+.pageBanner {
+    // ── Homepage variant ──
+    &--home {
             background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
             padding: $apple-sp-4xl 0 $apple-sp-2xl;
             text-align: center;
@@ -154,41 +143,49 @@
         }
     }
 
-    // ─── ② Localnav ─────────────────────────────────
-    .localnav {
-        position: sticky;
-        top: 0;
-        z-index: $apple-z-localnav;
-        background: rgba(248, 250, 255, 0.90);
-        backdrop-filter: saturate(180%) blur(24px);
-        -webkit-backdrop-filter: saturate(180%) blur(24px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+// ─── Localnav (global — works as snippet anywhere) ──────────────
+.localnav {
+    position: sticky;
+    top: 0;
+    z-index: $apple-z-localnav;
+    background: rgba(248, 250, 255, 0.90);
+    backdrop-filter: saturate(180%) blur(24px);
+    -webkit-backdrop-filter: saturate(180%) blur(24px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 
-        .localnav-list {
-            display: flex;
-            gap: $apple-sp-xl;
-            list-style: none;
-            margin: 0;
-            padding: $apple-sp-md 0;
-            overflow-x: auto;
-            scrollbar-width: none;
+    .localnav-list {
+        display: flex;
+        gap: $apple-sp-xl;
+        list-style: none;
+        margin: 0;
+        padding: $apple-sp-md 0;
+        overflow-x: auto;
+        scrollbar-width: none;
 
-            &::-webkit-scrollbar {
-                display: none;
-            }
+        &::-webkit-scrollbar { display: none; }
 
-            li a {
-                white-space: nowrap;
-                font-size: 14px;
-                color: $apple-gray-5;
-                text-decoration: none;
-                transition: color 200ms $apple-ease-default;
+        li a {
+            white-space: nowrap;
+            font-size: 14px;
+            color: $apple-gray-5;
+            text-decoration: none;
+            transition: color 200ms $apple-ease-default;
 
-                &:hover {
-                    color: $apple-blue;
-                }
-            }
+            &:hover { color: $apple-blue; }
         }
+    }
+}
+
+// ─── Mac landing page wrapper ────────────────────
+.apple-mac-landing {
+    background: $apple-bg-page;
+    color: $apple-black;
+    font-family: $apple-font-text;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 $apple-sp-xl;
     }
 
     // ─── ③ Models carousel ──────────────────────────
