@@ -106,4 +106,16 @@
         <field name="bundle">web.assets_frontend</field>
         <field name="path">theme_apple_shop/static/src/js/apple_contactus.js</field>
     </record>
+
+    <record id="asset_snippet_categ_nav_js" model="ir.asset">
+        <field name="name">Apple Shop Snippet Categ Nav JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_categ_nav.js</field>
+    </record>
+
+    <record id="asset_snippet_categ_carousel_js" model="ir.asset">
+        <field name="name">Apple Shop Snippet Categ Carousel JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_categ_carousel.js</field>
+    </record>
 </odoo>
