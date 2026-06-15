@@ -4,7 +4,7 @@
         Apple-style product attributes.
 
         Six attributes drive the configurator. Each carries:
-        - display_type: radio_card (chip), color (color), radio (others)
+        - display_type: radio (all), color (color)
         - apple_section_order: order in the right panel (lower first)
         - apple_group_label: legend text shown above the group
         Values carry apple_description / apple_sub_label / apple_price_display
@@ -15,7 +15,7 @@
         <!-- ① 晶片 (Chip) — radio_card with starting-price display -->
         <record id="attr_chip" model="product.attribute">
             <field name="name">晶片</field>
-            <field name="display_type">radio_card</field>
+            <field name="display_type">radio</field>
             <field name="create_variant">dynamic</field>
             <field name="apple_section_order">10</field>
             <field name="apple_group_label">晶片。</field>
@@ -199,7 +199,7 @@
         <!-- ⑤ 乙太網路 (Ethernet) — radio_card (Mac mini specific), no per-option price -->
         <record id="attr_ethernet" model="product.attribute">
             <field name="name">乙太網路</field>
-            <field name="display_type">radio_card</field>
+            <field name="display_type">radio</field>
             <field name="create_variant">dynamic</field>
             <field name="apple_section_order">40</field>
             <field name="apple_group_label">乙太網路。</field>

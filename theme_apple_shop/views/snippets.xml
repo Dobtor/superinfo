@@ -19,19 +19,19 @@
                                     <div class="model-card-image" style="background:rgba(59,130,246,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                     <h3 class="model-card-name" style="font-size:16px">分類 A</h3>
                                     <p class="model-card-tagline">說明文字</p>
-                                    <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                 </article>
                                 <article class="model-card" style="flex:0 0 220px">
                                     <div class="model-card-image" style="background:rgba(99,102,241,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                     <h3 class="model-card-name" style="font-size:16px">分類 B</h3>
                                     <p class="model-card-tagline">說明文字</p>
-                                    <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                 </article>
                                 <article class="model-card" style="flex:0 0 220px">
                                     <div class="model-card-image" style="background:rgba(16,185,129,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                     <h3 class="model-card-name" style="font-size:16px">分類 C</h3>
                                     <p class="model-card-tagline">說明文字</p>
-                                    <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                 </article>
                             </div>
                         </div>
@@ -188,19 +188,19 @@
                                         <div class="model-card-image" style="background:rgba(59,130,246,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                         <h3 class="model-card-name" style="font-size:16px">分類 A</h3>
                                         <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                     </article>
                                     <article class="model-card" style="flex:0 0 220px">
                                         <div class="model-card-image" style="background:rgba(99,102,241,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                         <h3 class="model-card-name" style="font-size:16px">分類 B</h3>
                                         <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                     </article>
                                     <article class="model-card" style="flex:0 0 220px">
                                         <div class="model-card-image" style="background:rgba(16,185,129,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
                                         <h3 class="model-card-name" style="font-size:16px">分類 C</h3>
                                         <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary" style="display:block;text-align:center">選購</span></div>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
                                     </article>
                                 </div>
                             </div>
