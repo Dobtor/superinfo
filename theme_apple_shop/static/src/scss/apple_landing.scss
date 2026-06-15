@@ -779,44 +779,52 @@
 
 }
 
-// ─── Global Apple buttons (available site-wide, not just on landing) ──
-.btn-primary {
-    display: inline-block;
-    background: $apple-blue;
-    color: $apple-bg-page !important;
-    padding: 8px 20px;
-    border-radius: $apple-radius-pill;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 200ms $apple-ease-default;
-
-    &:hover {
-        background: $apple-blue-hover;
-        box-shadow: 0 0 16px rgba(59, 130, 246, 0.28);
-        color: $apple-bg-page !important;
-    }
-}
-
-.btn-secondary {
-    display: inline-block;
-    background: transparent;
-    color: $apple-blue !important;
-    padding: 7px 20px;
-    border-radius: $apple-radius-pill;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    border: 1px solid $apple-blue;
-    cursor: pointer;
-    transition: all 200ms $apple-ease-default;
-
-    &:hover {
+// ─── Apple buttons — scoped to Apple components only ──────────────
+// Using a shared mixin via selector list to avoid polluting Odoo's
+// default shop/blog/cms buttons.
+.apple-mac-landing,
+.apple-configurator,
+.s_apple_categ_carousel,
+.s_apple_categ_nav,
+.section-subcategs {
+    .btn-primary {
+        display: inline-block;
         background: $apple-blue;
         color: $apple-bg-page !important;
-        box-shadow: 0 0 14px rgba(59, 130, 246, 0.25);
+        padding: 8px 20px;
+        border-radius: $apple-radius-pill;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all 200ms $apple-ease-default;
+
+        &:hover {
+            background: $apple-blue-hover;
+            box-shadow: 0 0 16px rgba(59, 130, 246, 0.28);
+            color: $apple-bg-page !important;
+        }
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        background: transparent;
+        color: $apple-blue !important;
+        padding: 7px 20px;
+        border-radius: $apple-radius-pill;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid $apple-blue;
+        cursor: pointer;
+        transition: all 200ms $apple-ease-default;
+
+        &:hover {
+            background: $apple-blue;
+            color: $apple-bg-page !important;
+            box-shadow: 0 0 14px rgba(59, 130, 246, 0.25);
+        }
     }
 }
 
