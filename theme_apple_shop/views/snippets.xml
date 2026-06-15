@@ -155,6 +155,98 @@
         </field>
     </record>
 
+    <!-- ── Trust Strip snippet ──────────────────────────────────────────── -->
+    <record id="s_trust_strip" model="ir.ui.view">
+        <field name="name">Apple Trust Strip Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_trust_strip</field>
+        <field name="arch" type="xml">
+            <section class="s_trust_strip as-trust-strip" data-snippet="s_trust_strip" data-name="信賴保證條">
+                <div class="container">
+                    <ul class="as-trust-list">
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>35 年 Apple 授權經銷商</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>Jamf Elite 認證</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>臺北兩間校園體驗中心</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>官方認證工程師</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>LINE / Email / Messenger 客服</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Localnav snippet ───────────────────────────────────────────────── -->
+    <record id="s_localnav" model="ir.ui.view">
+        <field name="name">Apple Localnav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_localnav</field>
+        <field name="arch" type="xml">
+            <section class="s_localnav" data-snippet="s_localnav" data-name="頁內導覽列">
+                <nav class="localnav" aria-label="頁內導覽">
+                    <div class="container">
+                        <ul class="localnav-list">
+                            <li><a href="#section-1">項目一</a></li>
+                            <li><a href="#section-2">項目二</a></li>
+                            <li><a href="#section-3">項目三</a></li>
+                            <li><a href="#section-4">項目四</a></li>
+                            <li><a href="#section-5">項目五</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Homepage Banner snippet ───────────────────────────────────────── -->
+    <record id="s_apple_hero_banner" model="ir.ui.view">
+        <field name="name">Apple Hero Banner Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_hero_banner</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_hero_banner pageBanner pageBanner--home" data-snippet="s_apple_hero_banner" data-name="極電 Hero Banner">
+                <div class="container">
+                    <h1 class="hero-title">極電資訊商店</h1>
+                    <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合適的選擇。</p>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Register trust strip + localnav in Content panel ──────────────── -->
+    <record id="s_trust_strip_panel" model="ir.ui.view">
+        <field name="name">Apple Trust Strip Panel Registration</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website.snippets"/>
+        <field name="arch" type="xml">
+            <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+                <t t-snippet="theme_apple_shop.s_apple_hero_banner"
+                   string="極電 Hero Banner"
+                   group="intro"/>
+                <t t-snippet="theme_apple_shop.s_trust_strip"
+                   string="信賴保證條"
+                   group="content"/>
+                <t t-snippet="theme_apple_shop.s_localnav"
+                   string="頁內導覽列"
+                   group="content"/>
+            </xpath>
+        </field>
+    </record>
+
     <!-- ── Register categ nav in editor panel (Products group) ───────────── -->
     <record id="s_apple_categ_nav_panel" model="ir.ui.view">
         <field name="name">Apple Categ Nav Panel Registration</field>
