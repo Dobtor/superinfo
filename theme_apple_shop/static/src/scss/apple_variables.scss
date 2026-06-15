@@ -10,21 +10,22 @@ $apple-font-text:    -apple-system, "SF Pro Text", "BlinkMacSystemFont",
                      "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
                      "Noto Sans TC", sans-serif;
 
-// ─── Core colours ──────────────────────────────
-$apple-black:        #0f172a;   // slate-900
+// ─── Core colours — follow website editor palette ──────────────
+// o-color-1 = primary blue, 2 = indigo, 3 = emerald, 4 = dark, 5 = page bg
+$apple-black:        var(--o-color-4);
 $apple-white:        #ffffff;
-$apple-gray-1:       rgba(255, 255, 255, 0.80);  // glass surface
-$apple-gray-2:       rgba(15, 23, 42, 0.07);     // divider
-$apple-gray-3:       rgba(15, 23, 42, 0.12);     // border
-$apple-gray-4:       #94a3b8;                    // placeholder (slate-400)
-$apple-gray-5:       #64748b;                    // secondary text (slate-500)
-$apple-gray-6:       #475569;                    // label text (slate-600)
-$apple-blue:         #3b82f6;   // sky blue — primary accent
-$apple-blue-hover:   #2563eb;   // blue-600
-$apple-purple:       #6366f1;   // indigo — secondary accent
+$apple-gray-1:       rgba(255, 255, 255, 0.80);
+$apple-gray-2:       rgba(15, 23, 42, 0.07);
+$apple-gray-3:       rgba(15, 23, 42, 0.12);
+$apple-gray-4:       #94a3b8;
+$apple-gray-5:       #64748b;
+$apple-gray-6:       #475569;
+$apple-blue:         var(--o-color-1);
+$apple-blue-hover:   color-mix(in srgb, var(--o-color-1) 85%, black);
+$apple-purple:       var(--o-color-2);
 $apple-red:          #ef4444;
-$apple-bg-page:      #f8faff;   // cool white page bg
-$apple-bg-section:   #f0f4fe;   // slightly more blue section bg
+$apple-bg-page:      var(--o-color-5);
+$apple-bg-section:   color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%);
 
 // ─── Glass effect tokens ───────────────────────
 $apple-glass-bg:     rgba(255, 255, 255, 0.80);

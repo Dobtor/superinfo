@@ -15,7 +15,7 @@
 
     // ─── ① Hero banner ──────────────────────────────
     .pageBanner {
-        background: linear-gradient(160deg, #f0f6ff 0%, #f8faff 60%, #f4f8ff 100%);
+        background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
         padding: $apple-sp-4xl 0 $apple-sp-2xl;
         text-align: center;
         position: relative;
@@ -42,7 +42,7 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             margin: 0 0 $apple-sp-md;
-            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -319,7 +319,7 @@
                 &:hover,
                 &.dragging {
                     height: 6px;
-                    background: darken(#3b82f6, 8%);
+                    background: color-mix(in srgb, var(--o-color-1) 90%, black);
                     cursor: grabbing;
                 }
 
@@ -443,7 +443,7 @@
     }
 
     .section-store {
-        background: linear-gradient(180deg, #f0f4fe 0%, #f8faff 100%);
+        background: linear-gradient(180deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 100%);
     }
 
     .section-students {

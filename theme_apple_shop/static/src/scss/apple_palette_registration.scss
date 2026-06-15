@@ -1,0 +1,15 @@
+// Registers the 極電資訊 palette in the website editor's 配色 picker.
+// Must load AFTER website/static/src/scss/primary_variables.scss so we can
+// append to an already-defined $o-selected-color-palettes-names.
+
+$o-color-palettes: map-merge($o-color-palettes, (
+    'superinfo': (
+        'o-color-1': #3b82f6,
+        'o-color-2': #6366f1,
+        'o-color-3': #10b981,
+        'o-color-4': #0f172a,
+        'o-color-5': #f8faff,
+    ),
+));
+
+$o-selected-color-palettes-names: 'superinfo';

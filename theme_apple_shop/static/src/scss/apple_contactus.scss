@@ -311,7 +311,7 @@
         svg { transition: transform 200ms $apple-ease-default; }
 
         &:hover {
-            background: darken(#3b82f6, 8%);
+            background: color-mix(in srgb, var(--o-color-1) 90%, black);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(59, 130, 246, 0.30);
             svg { transform: translate(2px, -2px); }
@@ -366,7 +366,7 @@
             font-weight: 600;
             text-decoration: none;
             transition: background 200ms;
-            &:hover { background: darken(#3b82f6, 8%); }
+            &:hover { background: color-mix(in srgb, var(--o-color-1) 90%, black); }
         }
     }
 
@@ -564,7 +564,7 @@
                     transform 200ms $apple-ease-default,
                     box-shadow 200ms $apple-ease-default;
         &:hover {
-            background: darken(#3b82f6, 8%);
+            background: color-mix(in srgb, var(--o-color-1) 90%, black);
             color: #fff;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28);

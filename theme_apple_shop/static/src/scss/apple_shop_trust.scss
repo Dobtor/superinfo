@@ -4,7 +4,7 @@
 
 // ─── ① Compact trust strip (above product grid) ────────────
 .as-trust-strip {
-    background: linear-gradient(90deg, #f0f4fe 0%, #f8faff 50%, #f0f4fe 100%);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 50%, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 100%);
     border-bottom: 1px solid $apple-glass-border;
     padding: $apple-sp-sm 0;
 
@@ -154,7 +154,7 @@
 
     // ─── B2B procurement CTA banner ────────────────────
     .as-b2b-cta {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 60%, #6366f1 100%);
+        background: linear-gradient(135deg, color-mix(in srgb, var(--o-color-1) 70%, black) 0%, var(--o-color-1) 60%, var(--o-color-2) 100%);
         border-radius: $apple-radius-xl;
         padding: $apple-sp-2xl $apple-sp-2xl;
         display: flex;

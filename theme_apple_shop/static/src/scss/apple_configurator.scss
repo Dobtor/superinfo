@@ -99,7 +99,7 @@
         font-weight: 700;
         letter-spacing: -0.03em;
         margin: $apple-sp-2xl 0 $apple-sp-lg;
-        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;

@@ -7,6 +7,15 @@
         <field name="directive">prepend</field>
     </record>
 
+    <!-- Must load after website primary_variables.scss so $o-selected-color-palettes-names exists -->
+    <record id="asset_palette_registration" model="ir.asset">
+        <field name="name">Apple Shop Palette Registration</field>
+        <field name="bundle">web._assets_primary_variables</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_palette_registration.scss</field>
+        <field name="directive">after</field>
+        <field name="target">website/static/src/scss/primary_variables.scss</field>
+    </record>
+
     <record id="asset_variables" model="ir.asset">
         <field name="name">Apple Shop Variables</field>
         <field name="bundle">web.assets_frontend</field>
