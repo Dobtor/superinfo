@@ -15,53 +15,141 @@
 
     // ─── ① Hero banner ──────────────────────────────
     .pageBanner {
-        background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
-        padding: $apple-sp-4xl 0 $apple-sp-2xl;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-
-        // Dual aurora glow behind title
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 320px;
-            background:
-                radial-gradient(ellipse at 30% top, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% top, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-title {
-            font-family: $apple-font-display;
-            font-size: 72px;
-            line-height: 1.0;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin: 0 0 $apple-sp-md;
-            background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        // ── Homepage variant (original style) ──
+        &--home {
+            background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
+            padding: $apple-sp-4xl 0 $apple-sp-2xl;
+            text-align: center;
             position: relative;
+            overflow: hidden;
 
-            @media (max-width: $apple-bp-mobile) {
-                font-size: 44px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 320px;
+                background:
+                    radial-gradient(ellipse at 30% top, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
+                    radial-gradient(ellipse at 70% top, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+                pointer-events: none;
+            }
+
+            .hero-title {
+                font-family: $apple-font-display;
+                font-size: 72px;
+                line-height: 1.0;
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                margin: 0 0 $apple-sp-md;
+                background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                position: relative;
+
+                @media (max-width: $apple-bp-mobile) { font-size: 44px; }
+            }
+
+            .hero-subtitle {
+                font-size: 21px;
+                line-height: 1.4;
+                color: $apple-gray-5;
+                margin: 0;
+                position: relative;
+
+                @media (max-width: $apple-bp-mobile) { font-size: 17px; }
             }
         }
 
-        .hero-subtitle {
-            font-size: 21px;
-            line-height: 1.4;
-            color: $apple-gray-5;
-            margin: 0;
-            position: relative;
+        // ── Category page variant ──
+        &--categ {
+            background: var(--o-color-5);
+            padding: 48px 0 0;
+            text-align: center;
+            overflow: hidden;
 
-            @media (max-width: $apple-bp-mobile) {
+            .container { max-width: 900px; }
+
+            // Breadcrumb as eyebrow
+            .banner-eyebrow {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                .breadcrumb {
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 13px;
+                    color: $apple-gray-5;
+
+                    .breadcrumb-item {
+                        color: $apple-gray-5;
+
+                        a {
+                            color: var(--o-color-1);
+                            text-decoration: none;
+                            &:hover { text-decoration: underline; }
+                        }
+
+                        &.active { color: var(--o-color-4); }
+
+                        + .breadcrumb-item::before {
+                            content: '›';
+                            color: $apple-gray-5;
+                            padding: 0 6px;
+                        }
+                    }
+                }
+            }
+
+            // Big bold headline
+            .banner-headline {
+                font-family: $apple-font-display;
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 1.05;
+                letter-spacing: -0.025em;
+                color: var(--o-color-4);
+                margin: 0 0 24px;
+
+                @media (max-width: $apple-bp-mobile) {
+                    font-size: 36px;
+                    letter-spacing: -0.015em;
+                }
+            }
+
+            // Description paragraph
+            .banner-description {
                 font-size: 17px;
+                line-height: 1.6;
+                color: $apple-gray-5;
+                max-width: 600px;
+                margin: 0 auto 40px;
+                white-space: pre-line;
+
+                @media (max-width: $apple-bp-mobile) {
+                    font-size: 15px;
+                    padding: 0 $apple-sp-lg;
+                }
+            }
+
+            // Hero product image with padding
+            .banner-hero-img {
+                display: flex;
+                justify-content: center;
+                padding: 0 $apple-sp-xl $apple-sp-xl;
+
+                img {
+                    max-width: 420px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+
+                    @media (max-width: $apple-bp-mobile) { max-width: 80vw; }
+                }
             }
         }
     }

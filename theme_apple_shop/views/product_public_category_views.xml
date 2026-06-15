@@ -19,7 +19,14 @@
                         <field name="mac_currency_id" invisible="1"/>
                     </group>
                 </group>
-                <group string="Hero Image">
+                <group string="Banner（分類頁標題）">
+                    <field name="mac_banner_headline" placeholder="用 iPad 大顯身手。"/>
+                    <field name="mac_banner_description" placeholder="描述段落文字..." widget="text"/>
+                </group>
+                <group string="Banner Hero 圖片（大型產品圖）">
+                    <field name="mac_banner_hero" widget="image" nolabel="1"/>
+                </group>
+                <group string="卡片 Hero 圖片（Landing Card 用）">
                     <field name="mac_hero_image" widget="image" nolabel="1"/>
                 </group>
             </xpath>

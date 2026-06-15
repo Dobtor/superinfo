@@ -31,34 +31,58 @@
                         <main class="apple-mac-landing">
                             <div id="oe_structure_buy_mac_landing_1" class="oe_structure oe_empty" />
 
-                            <!-- Breadcrumb (category pages only) -->
-                            <t t-if="not is_homepage">
-                                <nav aria-label="breadcrumb" class="apple-breadcrumb">
+                            <!-- ① Hero banner — homepage vs category -->
+                            <t t-if="is_homepage">
+                                <section class="pageBanner pageBanner--home">
                                     <div class="container">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item">
-                                                <a href="/">首頁</a>
-                                            </li>
-                                            <t t-if="current_categ.parent_id">
-                                                <li class="breadcrumb-item">
-                                                    <a t-attf-href="/shop/category/#{slug(current_categ.parent_id)}"
-                                                       t-esc="current_categ.parent_id.name"/>
-                                                </li>
-                                            </t>
-                                            <li class="breadcrumb-item active" aria-current="page"
-                                                t-esc="current_categ.name"/>
-                                        </ol>
+                                        <h1 class="hero-title" t-esc="page_title"/>
+                                        <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合適的選擇。</p>
                                     </div>
-                                </nav>
+                                </section>
                             </t>
-
-                            <!-- ① Hero banner -->
-                            <section class="pageBanner">
-                                <div class="container">
-                                    <h1 class="hero-title" t-esc="page_title"/>
-                                    <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合適的選擇。</p>
-                                </div>
-                            </section>
+                            <t t-if="not is_homepage">
+                                <section class="pageBanner pageBanner--categ">
+                                    <div class="container">
+                                        <!-- Breadcrumb as eyebrow -->
+                                        <nav aria-label="breadcrumb" class="banner-eyebrow">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item">
+                                                    <a href="/">首頁</a>
+                                                </li>
+                                                <t t-if="current_categ.parent_id">
+                                                    <li class="breadcrumb-item">
+                                                        <a t-attf-href="/shop/category/#{slug(current_categ.parent_id)}"
+                                                           t-esc="current_categ.parent_id.name"/>
+                                                    </li>
+                                                </t>
+                                                <li class="breadcrumb-item active" aria-current="page"
+                                                    t-esc="current_categ.name"/>
+                                            </ol>
+                                        </nav>
+                                        <!-- Big headline -->
+                                        <h1 class="banner-headline"
+                                            t-if="current_categ.mac_banner_headline"
+                                            t-esc="current_categ.mac_banner_headline"/>
+                                        <h1 class="banner-headline banner-headline--default"
+                                            t-if="not current_categ.mac_banner_headline"
+                                            t-esc="page_title"/>
+                                        <!-- Category description (website_description field) -->
+                                        <div class="banner-description"
+                                             t-if="current_categ.website_description"
+                                             t-out="current_categ.website_description"/>
+                                        <!-- Description (admin-filled fallback) -->
+                                        <p class="banner-description"
+                                           t-elif="current_categ.mac_banner_description"
+                                           t-esc="current_categ.mac_banner_description"/>
+                                        <!-- Hero image — fallback chain: mac_banner_hero → image_1024 → hide -->
+                                        <div class="banner-hero-img">
+                                            <img t-attf-src="/web/image/product.public.category/#{current_categ.id}/mac_banner_hero"
+                                                 t-att-alt="current_categ.name"
+                                                 t-attf-onerror="this.src='/web/image/product.public.category/#{current_categ.id}/image_1024';this.onerror=function(){{this.parentElement.style.display='none'}};"/>
+                                        </div>
+                                    </div>
+                                </section>
+                            </t>
 
                             <!-- ② Localnav (sticky on scroll) -->
                             <nav class="localnav" aria-label="Mac landing sections">

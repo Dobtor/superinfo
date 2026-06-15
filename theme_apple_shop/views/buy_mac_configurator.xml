@@ -490,22 +490,6 @@
                         </div>
                     </section>
 
-                    <!-- Compare table -->
-                    <section class="config-compare" t-if="compare_specs">
-                        <div class="container">
-                            <h2 class="section-title">規格一覽</h2>
-                            <table class="compare-table">
-                                <tbody>
-                                    <t t-foreach="compare_specs" t-as="spec">
-                                        <tr>
-                                            <th t-esc="spec.label"/>
-                                            <td><span t-field="spec.value" t-options="{'widget': 'text'}"/></td>
-                                        </tr>
-                                    </t>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
 
                     <!-- Key features -->
                     <t t-if="product.description_ecommerce">
