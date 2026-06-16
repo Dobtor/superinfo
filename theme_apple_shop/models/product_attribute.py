@@ -5,18 +5,6 @@ from odoo import fields, models
 class ProductAttribute(models.Model):
     _inherit = 'product.attribute'
 
-    # Add Apple-specific display types. ondelete=set('radio') is explicit:
-    # if our values are removed, fall back to Odoo's stock 'radio' style.
-    display_type = fields.Selection(
-        selection_add=[
-            ('radio_card', 'Apple Radio Card (大卡片+描述+價格)'),
-            ('toggle_yes_no', 'Apple Yes/No Toggle (預裝軟體)'),
-        ],
-        ondelete={
-            'radio_card': lambda recs: recs.write({'display_type': 'radio'}),
-            'toggle_yes_no': lambda recs: recs.write({'display_type': 'radio'}),
-        },
-    )
     apple_group_label = fields.Char(
         string="Apple Group Label",
         translate=True,

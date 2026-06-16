@@ -22,16 +22,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
 
     # ─── helpers ───────────────────────────────────────────────────
 
-    def _is_mac_categ(self, categ):
-        if not categ:
-            return False
-        return bool(categ.exists()) and categ._is_descendant_of_mac_root()
-
-    def _is_mac_product(self, product):
-        if not product:
-            return False
-        return bool(product.exists()) and product.is_mac_product
-
     # ─── / (homepage) ────────────────────────────────────────────────
     # 不覆寫根路由：首頁交由 Odoo 原生邏輯（網站設定 → 首頁網址）決定，
     # 不綁死成 Mac landing。要把 Mac landing 當首頁時，於後台將首頁網址
@@ -68,6 +58,34 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'main_object': request.website,
         })
 
+    # ─── Snippet: category icon nav content ──────────────────────────
+
+    @http.route('/theme_apple_shop/snippet/categ_nav',
+                type='http', auth='public', website=True)
+    def snippet_categ_nav(self, **kwargs):
+        Categ = request.env['product.public.category']
+        categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
+        return request.render(
+            'theme_apple_shop.s_apple_categ_nav_content',
+            {'categories': categs},
+        )
+
+    # ─── Snippet: category carousel content ───────────────────────────
+
+    @http.route('/theme_apple_shop/snippet/categ_carousel',
+                type='http', auth='public', website=True)
+    def snippet_categ_carousel(self, categ_id='0', **kwargs):
+        Categ = request.env['product.public.category']
+        cid = int(categ_id)
+        if cid:
+            categs = Categ.search([('parent_id', '=', cid)], order='sequence, id')
+        else:
+            categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
+        return request.render(
+            'theme_apple_shop.s_apple_categ_carousel_content',
+            {'categories': categs},
+        )
+
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
 
     @http.route(
@@ -76,10 +94,10 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     )
     def mac_category_landing(self, **kwargs):
         mac_root = request.env.ref(
-            'theme_apple_shop.categ_mac', raise_if_not_found=False
+            'superinfo_website_data.categ_mac', raise_if_not_found=False
         )
         if mac_root:
-            return self._render_mac_landing(mac_root)
+            return self._render_category_landing(mac_root)
         return request.redirect('/shop')
 
     # ─── /shop and /shop/category/<categ> ──────────────────────────
@@ -87,9 +105,9 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     @http.route()
     def shop(self, page=0, category=None, search='', min_price=0.0,
              max_price=0.0, ppg=False, **post):
-        # /shop/category/<mac_descendant>  → Apple-style landing
-        if self._is_mac_categ(category):
-            return self._render_mac_landing(category)
+        # Any category page → Apple landing
+        if category and category.exists():
+            return self._render_category_landing(category)
 
         # 無篩選的 /shop 不再強制導 Mac landing：交還 Odoo 原生商店頁。
         # 要把 Mac landing 當商店入口時，請用 /shop/category/mac。
@@ -98,28 +116,40 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             min_price=min_price, max_price=max_price, ppg=ppg, **post,
         )
 
-    def _render_mac_landing(self, mac_root, page_title='選購 Mac'):
+    def _render_category_landing(self, categ, page_title=None, is_homepage=False):
         Categ = request.env['product.public.category']
-        models = Categ.search([
-            ('parent_id', '=', mac_root.id),
-            ('mac_role', '=', 'model'),
-        ], order='mac_landing_order, sequence, id')
+        top_categories = Categ.search(
+            [('parent_id', '=', False)],
+            order='sequence, id',
+        )
+        subcategories = Categ.search(
+            [('parent_id', '=', categ.id)],
+            order='sequence, id',
+        )
+        # When no subcategories, fall back to products in this category
+        products = None
+        if not subcategories and not is_homepage:
+            products = request.env['product.template'].sudo().search([
+                ('public_categ_ids', '=', categ.id),
+                ('is_published', '=', True),
+            ], order='name')
+        title = page_title or ('選購 ' + categ.name)
         return request.render('theme_apple_shop.buy_mac_landing', {
-            'mac_root': mac_root,
-            'mac_models': models,
-            'main_object': mac_root,
-            'page_title': page_title,
+            'mac_root': categ,
+            'current_categ': categ,
+            'top_categories': top_categories,
+            'subcategories': subcategories,
+            'products': products,
+            'is_homepage': is_homepage,
+            'main_object': categ,
+            'page_title': title,
         })
 
     # ─── /shop/<product> ───────────────────────────────────────────
 
     @http.route()
     def product(self, product, category='', search='', **kwargs):
-        if self._is_mac_product(product):
-            return self._render_mac_configurator(product, **kwargs)
-        return super().product(
-            product, category=category, search=search, **kwargs,
-        )
+        return self._render_mac_configurator(product, **kwargs)
 
     def _render_mac_configurator(self, product, **kwargs):
         attribute_lines = product._get_apple_attribute_groups()
@@ -131,9 +161,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'attribute_lines': attribute_lines,
             'default_ptavs': default_ptavs,
             'optional_products': product.optional_product_ids,
-            'compare_specs': product.mac_compare_spec_ids.sorted(
-                lambda s: (s.sequence, s.id)
-            ),
             'exclusion_table': exclusion_table,
             'color_image_map': color_image_map,
             'main_object': product,
@@ -221,8 +248,8 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
                         optional_product_ids=None, **kwargs):
         Template = request.env['product.template'].sudo()
         tmpl = Template.browse(int(product_template_id)).exists()
-        if not tmpl or not self._is_mac_product(tmpl):
-            return {'error': 'Invalid Mac product'}
+        if not tmpl:
+            return {'error': 'Invalid product'}
 
         # Resolve PTAV recordset
         ptav_ids = [int(i) for i in (product_template_attribute_value_ids or [])]

@@ -31,13 +31,58 @@
                         <main class="apple-mac-landing">
                             <div id="oe_structure_buy_mac_landing_1" class="oe_structure oe_empty" />
 
-                            <!-- ① Hero banner -->
-                            <section class="pageBanner">
-                                <div class="container">
-                                    <h1 class="hero-title" t-esc="page_title or '選購 Mac'"/>
-                                    <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合身的 Mac。</p>
-                                </div>
-                            </section>
+                            <!-- ① Hero banner — homepage vs category -->
+                            <t t-if="is_homepage">
+                                <section class="pageBanner pageBanner--home">
+                                    <div class="container">
+                                        <h1 class="hero-title" t-esc="page_title"/>
+                                        <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合適的選擇。</p>
+                                    </div>
+                                </section>
+                            </t>
+                            <t t-if="not is_homepage">
+                                <section class="pageBanner pageBanner--categ">
+                                    <div class="container">
+                                        <!-- Breadcrumb as eyebrow -->
+                                        <nav aria-label="breadcrumb" class="banner-eyebrow">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item">
+                                                    <a href="/">首頁</a>
+                                                </li>
+                                                <t t-if="current_categ.parent_id">
+                                                    <li class="breadcrumb-item">
+                                                        <a t-attf-href="/shop/category/#{slug(current_categ.parent_id)}"
+                                                           t-esc="current_categ.parent_id.name"/>
+                                                    </li>
+                                                </t>
+                                                <li class="breadcrumb-item active" aria-current="page"
+                                                    t-esc="current_categ.name"/>
+                                            </ol>
+                                        </nav>
+                                        <!-- Big headline -->
+                                        <h1 class="banner-headline"
+                                            t-if="current_categ.mac_banner_headline"
+                                            t-esc="current_categ.mac_banner_headline"/>
+                                        <h1 class="banner-headline banner-headline--default"
+                                            t-if="not current_categ.mac_banner_headline"
+                                            t-esc="page_title"/>
+                                        <!-- Category description (website_description field) -->
+                                        <div class="banner-description"
+                                             t-if="current_categ.website_description"
+                                             t-out="current_categ.website_description"/>
+                                        <!-- Description (admin-filled fallback) -->
+                                        <p class="banner-description"
+                                           t-elif="current_categ.mac_banner_description"
+                                           t-esc="current_categ.mac_banner_description"/>
+                                        <!-- Hero image — fallback chain: mac_banner_hero → image_1024 → hide -->
+                                        <div class="banner-hero-img">
+                                            <img t-attf-src="/web/image/product.public.category/#{current_categ.id}/mac_banner_hero"
+                                                 t-att-alt="current_categ.name"
+                                                 t-attf-onerror="this.src='/web/image/product.public.category/#{current_categ.id}/image_1024';this.onerror=function(){{this.parentElement.style.display='none'}};"/>
+                                        </div>
+                                    </div>
+                                </section>
+                            </t>
 
                             <!-- ② Localnav (sticky on scroll) -->
                             <nav class="localnav" aria-label="Mac landing sections">
@@ -65,64 +110,114 @@
                                 </div>
                             </nav>
 
-                            <!-- ③ Models — 8 cards horizontal scroll -->
-                            <section class="section-models" id="section-models">
-                                <div class="container">
-                                    <h2 class="section-title">各種機型</h2>
-                                    <p class="section-subtitle">挑選你的款式。</p>
-
-                                    <div class="models-track-wrap">
-                                        <button type="button" class="track-prev"
-                                            aria-label="Previous">
-                                            <span class="triangle" />
-                                        </button>
-                                        <div class="models-track" role="region" aria-label="Mac 機型列表">
-                                            <t t-foreach="mac_models" t-as="model">
-                                                <article class="model-card">
-                                                    <t t-if="model.mac_landing_order &lt; 15">
-                                                        <span class="badge-new">NEW</span>
-                                                    </t>
-                                                    <div class="model-card-image">
-                                                        <img t-if="model.mac_hero_image"
-                                                            t-attf-src="/web/image/product.public.category/#{model.id}/mac_hero_image"
-                                                            t-att-alt="model.name"
-                                                            loading="lazy" />
-                                                    </div>
-                                                    <h3 class="model-card-name" t-esc="model.name" />
-                                                    <p class="model-card-tagline"
-                                                        t-esc="model.mac_tagline or ''" />
-                                                    <p class="model-card-price">
-                                                        <t t-esc="model.mac_starting_price"
-                                                            t-options="{'widget': 'monetary',
-                                                                'display_currency': model.mac_currency_id}" />
-                                                        <span class="price-suffix">起</span>
-                                                    </p>
-                                                    <div class="model-card-actions">
-                                                        <a
-                                                            t-attf-href="/shop/category/#{slug(model)}"
-                                                            class="btn-secondary">深入了解</a>
-                                                        <t t-set="first_prod"
-                                                            t-value="request.env['product.template'].sudo().search([
-                                                       ('public_categ_ids', '=', model.id),
-                                                       ('is_published', '=', True),
-                                                   ], limit=1)" />
-                                                        <a t-if="first_prod"
-                                                            t-attf-href="/shop/#{slug(first_prod)}"
-                                                            class="btn-primary">選購</a>
-                                                    </div>
-                                                </article>
-                                            </t>
+                            <!-- ③ Category icon nav (homepage only) -->
+                            <t t-if="is_homepage">
+                                <section class="section-models" id="section-models">
+                                    <div class="container">
+                                        <div class="categ-nav-track-wrap">
+                                            <div class="categ-nav-track" role="region" aria-label="商品分類">
+                                                <t t-foreach="top_categories" t-as="categ">
+                                                    <a class="categ-nav-item"
+                                                       t-attf-href="/shop/category/#{slug(categ)}">
+                                                        <div class="categ-nav-img">
+                                                            <img t-if="categ.mac_hero_image or categ.image_1024"
+                                                                 t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'mac_hero_image' if categ.mac_hero_image else 'image_1024' }}"
+                                                                 t-att-alt="categ.name"
+                                                                 loading="lazy" />
+                                                        </div>
+                                                        <span class="categ-nav-name" t-esc="categ.name" />
+                                                    </a>
+                                                </t>
+                                            </div>
                                         </div>
-                                        <button type="button" class="track-next" aria-label="Next">
-                                            <span class="triangle" />
-                                        </button>
                                     </div>
-                                    <!-- Drag scrollbar -->
-                                    <div class="models-scrollbar" role="scrollbar" aria-controls="section-models" aria-orientation="horizontal">
-                                        <div class="models-scrollbar-thumb" />
+                                </section>
+                            </t>
+
+                            <!-- ③b Sub-category or product cards carousel (category pages only) -->
+                            <t t-if="not is_homepage">
+                                <section class="section-models section-subcategs" id="section-subcategs">
+                                    <div class="container">
+                                        <div class="models-track-wrap">
+                                            <button type="button" class="track-prev" aria-label="Previous">
+                                                <span class="triangle"/>
+                                            </button>
+                                            <div class="models-track" role="region" t-att-aria-label="'選購 ' + (current_categ.name or '')">
+
+                                                <!-- Subcategory cards -->
+                                                <t t-if="subcategories">
+                                                    <t t-foreach="subcategories" t-as="sub">
+                                                        <article class="model-card">
+                                                            <div class="model-card-image">
+                                                                <img t-if="sub.mac_hero_image or sub.image_1024"
+                                                                     t-attf-src="/web/image/product.public.category/#{sub.id}/{{ 'mac_hero_image' if sub.mac_hero_image else 'image_1024' }}"
+                                                                     t-att-alt="sub.name"
+                                                                     loading="lazy"/>
+                                                            </div>
+                                                            <h3 class="model-card-name" t-esc="sub.name"/>
+                                                            <p class="model-card-tagline" t-esc="sub.mac_tagline or ''"/>
+                                                            <p t-if="sub.mac_starting_price" class="model-card-price">
+                                                                <t t-esc="sub.mac_starting_price"
+                                                                   t-options="{'widget': 'monetary', 'display_currency': sub.mac_currency_id}"/>
+                                                                <span class="price-suffix">起</span>
+                                                            </p>
+                                                            <div class="model-card-actions">
+                                                                <t t-set="first_prod"
+                                                                   t-value="request.env['product.template'].sudo().search([
+                                                                       ('public_categ_ids', '=', sub.id),
+                                                                       ('is_published', '=', True),
+                                                                   ], limit=1)"/>
+                                                                <a t-if="first_prod"
+                                                                   t-attf-href="/shop/#{slug(first_prod)}"
+                                                                   class="btn-primary">選購</a>
+                                                            </div>
+                                                        </article>
+                                                    </t>
+                                                </t>
+
+                                                <!-- Empty state -->
+                                                <t t-if="not subcategories and not products">
+                                                    <div class="model-card-empty text-center text-muted py-5 w-100">
+                                                        <p style="font-size:15px;">此分類目前尚無商品</p>
+                                                    </div>
+                                                </t>
+
+                                                <!-- Product cards (leaf category) -->
+                                                <t t-if="products">
+                                                    <t t-foreach="products" t-as="prod">
+                                                        <article class="model-card">
+                                                            <div class="model-card-image">
+                                                                <img t-if="prod.image_1024"
+                                                                     t-attf-src="/web/image/product.template/#{prod.id}/image_1024"
+                                                                     t-att-alt="prod.name"
+                                                                     loading="lazy"/>
+                                                            </div>
+                                                            <h3 class="model-card-name" t-esc="prod.name"/>
+                                                            <p class="model-card-tagline" t-esc="prod.mac_tagline or ''"/>
+                                                            <p t-if="prod.list_price" class="model-card-price">
+                                                                <t t-esc="prod.list_price"
+                                                                   t-options="{'widget': 'monetary', 'display_currency': prod.currency_id}"/>
+                                                                <span class="price-suffix">起</span>
+                                                            </p>
+                                                            <div class="model-card-actions">
+                                                                <a t-attf-href="/shop/#{slug(prod)}"
+                                                                   class="btn-primary">選購</a>
+                                                            </div>
+                                                        </article>
+                                                    </t>
+                                                </t>
+
+                                            </div>
+                                            <button type="button" class="track-next" aria-label="Next">
+                                                <span class="triangle"/>
+                                            </button>
+                                        </div>
+                                        <div class="models-scrollbar" role="scrollbar" aria-controls="section-subcategs" aria-orientation="horizontal">
+                                            <div class="models-scrollbar-thumb"/>
+                                        </div>
                                     </div>
-                                </div>
-                            </section>
+                                </section>
+                            </t>
 
                             <!-- ④ Explore tiles -->
                             <section class="section-explore" id="section-explore">

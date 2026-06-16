@@ -1,17 +1,41 @@
 // ============================================
 // Tech Glass — global element defaults
 // ============================================
-// Site-wide rules applied to EVERY page.
-// Depends on apple_primary_variables (Bootstrap vars) being loaded first.
+// All color values use var(--o-color-N) so they react to the
+// website editor's 配色 picker without needing an asset recompile.
+//
+//  --o-color-1  primary (blue)
+//  --o-color-2  secondary (indigo/purple)
+//  --o-color-3  accent (green)
+//  --o-color-4  dark text / headings
+//  --o-color-5  page background (lightest)
 
-$headings-letter-spacing: -0.025em !default;
-$card-box-shadow:         0 8px 32px rgba(0, 0, 0, 0.45) !default;
+// Custom variable not provided by Bootstrap — defined locally so this file
+// compiles correctly within web.assets_frontend's SCSS context.
+$headings-letter-spacing: -0.02em !default;
+
+// ─── Palette fallback ─────────────────────────
+// --o-color-* are set to `transparent` in Odoo's compiled CSS bundle until
+// the website editor saves a palette. These :root values ensure colors are
+// always visible; the editor palette overrides them at runtime.
+:root {
+    --o-color-1: #2b6cb0;
+    --o-color-2: #4a90d9;
+    --o-color-3: #5da0ef;
+    --o-color-4: #1a2b4a;
+    --o-color-5: #eef4fc;
+    // Override Bootstrap body-bg so it follows the light page-bg, not o-color-4
+    --body-bg: #eef4fc;
+    --body-bg-rgb: 238, 244, 252;
+    --body-color: #1a2b4a;
+    --body-color-rgb: 26, 43, 74;
+}
 
 // ─── Body ─────────────────────────────────────
 body {
     font-family: $font-family-base;
-    color: $body-color;
-    background-color: $body-bg;
+    color: var(--o-color-4);
+    background-color: var(--o-color-5) !important;
     line-height: $line-height-base;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -31,7 +55,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     letter-spacing: $headings-letter-spacing;
-    color: $body-color;
+    color: var(--o-color-4);
 }
 
 @media (max-width: 767px) {
@@ -41,26 +65,22 @@ h1, h2, h3, h4, h5, h6,
 
 p {
     line-height: 1.5;
-    color: $body-color;
-}
-
-small, .small {
-    font-size: $small-font-size;
+    color: var(--o-color-4);
 }
 
 // ─── Links ─────────────────────────────────────
 a {
-    color: $link-color;
+    color: var(--o-color-1);
     text-decoration: none;
     transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-        color: $link-hover-color;
+        color: color-mix(in srgb, var(--o-color-1) 80%, black);
         text-decoration: none;
     }
 
     &:focus-visible {
-        outline: 2px solid $primary;
+        outline: 2px solid var(--o-color-1);
         outline-offset: 2px;
         border-radius: 2px;
     }
@@ -77,97 +97,44 @@ a {
 
     &:focus-visible {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--o-color-1) 30%, transparent);
     }
 }
 
 .btn-primary {
-    background-color: $primary;
-    border-color: $primary;
-    color: #ffffff;
-    font-weight: 600;
+    background-color: var(--o-color-1);
+    border-color: var(--o-color-1);
+    color: var(--o-color-5) !important;
 
     &:hover, &:focus {
-        background-color: $link-hover-color;
-        border-color: $link-hover-color;
-        color: #ffffff;
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.30);
-    }
-    &:disabled, &.disabled {
-        background-color: rgba(59, 130, 246, 0.30);
-        border-color: transparent;
-        color: rgba(240, 240, 248, 0.50);
-        opacity: 1;
-        box-shadow: none;
+        background-color: color-mix(in srgb, var(--o-color-1) 85%, black);
+        border-color: color-mix(in srgb, var(--o-color-1) 85%, black);
+        color: var(--o-color-5) !important;
+        box-shadow: 0 0 20px color-mix(in srgb, var(--o-color-1) 40%, transparent);
     }
 }
 
 .btn-secondary {
     background-color: transparent;
-    border-color: $secondary;
-    color: $secondary;
+    border-color: var(--o-color-2);
+    color: var(--o-color-2) !important;
 
     &:hover, &:focus {
-        background-color: $secondary;
-        border-color: $secondary;
-        color: #fff;
-        box-shadow: 0 0 16px rgba(168, 85, 247, 0.40);
+        background-color: var(--o-color-2);
+        border-color: var(--o-color-2);
+        color: var(--o-color-5) !important;
     }
 }
 
 .btn-outline-primary {
     background-color: transparent;
-    border-color: $primary;
-    color: $primary;
+    border-color: var(--o-color-1);
+    color: var(--o-color-1);
 
     &:hover, &:focus {
-        background-color: $primary;
-        color: #ffffff;
-        box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
+        background-color: var(--o-color-1);
+        color: var(--o-color-5);
     }
-}
-
-.btn-light {
-    background-color: rgba(0, 0, 0, 0.07);
-    border-color: rgba(255, 255, 255, 0.12);
-    color: $body-color;
-    backdrop-filter: blur(8px);
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.14);
-        border-color: rgba(255, 255, 255, 0.20);
-    }
-}
-
-.btn-dark {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.10);
-    color: $body-color;
-    backdrop-filter: blur(8px);
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.10);
-        border-color: rgba(255, 255, 255, 0.16);
-    }
-}
-
-.btn-link {
-    color: $primary;
-    font-weight: $btn-font-weight;
-    text-decoration: none;
-    border: none;
-
-    &:hover { color: $link-hover-color; text-decoration: underline; }
-}
-
-.btn-round {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 // ─── Form controls ─────────────────────────────
@@ -177,126 +144,87 @@ a {
     font-size: 1rem;
     padding: $input-padding-y $input-padding-x;
     border-radius: $input-border-radius;
-    border: 1px solid $input-border-color;
-    background-color: $input-bg;
-    color: $input-color;
-    backdrop-filter: blur(4px);
-    transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow   200ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid color-mix(in srgb, var(--o-color-4) 14%, transparent);
+    background-color: #ffffff;
+    color: var(--o-color-4);
+    transition: border-color 200ms, box-shadow 200ms;
 
     &:focus {
-        border-color: $input-focus-border-color;
-        box-shadow: $input-focus-box-shadow;
+        border-color: var(--o-color-1);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--o-color-1) 18%, transparent);
         outline: 0;
-        background-color: rgba(255, 255, 255, 0.09);
+        background-color: #ffffff;
     }
 
-    &::placeholder { color: $input-placeholder-color; }
-
-    &:disabled {
-        background-color: rgba(255, 255, 255, 0.03);
-        opacity: 0.5;
-    }
+    &::placeholder { color: #94a3b8; }
 }
 
 .form-label {
     font-weight: 500;
-    color: $body-color;
+    color: var(--o-color-4);
     margin-bottom: 0.5rem;
 }
 
-.form-text {
-    color: $text-muted;
-    font-size: $small-font-size;
-}
-
 .form-check-input {
-    border-color: rgba(255, 255, 255, 0.20);
+    border-color: color-mix(in srgb, var(--o-color-4) 20%, transparent);
     background-color: rgba(255, 255, 255, 0.06);
-    border-radius: 4px;
 
     &:checked {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: var(--o-color-1);
+        border-color: var(--o-color-1);
     }
     &:focus {
-        border-color: $primary;
-        box-shadow: $input-focus-box-shadow;
+        border-color: var(--o-color-1);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--o-color-1) 18%, transparent);
     }
 }
 
 // ─── Cards ─────────────────────────────────────
 .card {
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    border: 1px solid color-mix(in srgb, var(--o-color-4) 8%, transparent);
     border-radius: $card-border-radius;
     background: $card-bg;
-    backdrop-filter: blur($apple-glass-blur);
-    -webkit-backdrop-filter: blur($apple-glass-blur);
-    box-shadow: $card-box-shadow;
     overflow: hidden;
-}
-
-.card-body {
-    padding: 1.5rem;
 }
 
 .card-title {
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
-    color: $body-color;
+    color: var(--o-color-4);
 }
 
 // ─── Tables ────────────────────────────────────
 .table {
-    color: $body-color;
-    border-color: $table-border-color;
+    color: var(--o-color-4);
 
     th {
         font-weight: 600;
-        color: $body-color;
-        background: rgba(255, 255, 255, 0.04);
-        border-color: $table-border-color;
+        color: var(--o-color-4);
     }
     td { vertical-align: middle; }
 }
 
 // ─── Modal ─────────────────────────────────────
 .modal-content {
-    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: $modal-content-border-radius;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65);
+    background: rgba(255, 255, 255, 0.97);
 }
-
-.modal-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    padding: 1rem 1.5rem;
-}
-
-.modal-body { padding: 1.5rem; }
 
 // ─── Dropdown ──────────────────────────────────
 .dropdown-menu {
-    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: $dropdown-border-radius;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.98);
     padding: 0.5rem;
 
     .dropdown-item {
         border-radius: $border-radius-sm;
         padding: 0.5rem 0.875rem;
-        color: $body-color;
+        color: var(--o-color-4);
         font-size: 0.9375rem;
-        background: transparent;
 
         &:hover, &:focus {
-            background: rgba(0, 0, 0, 0.07);
-            color: $primary;
+            background: color-mix(in srgb, var(--o-color-1) 8%, transparent);
+            color: var(--o-color-1);
         }
     }
 }
@@ -304,7 +232,7 @@ a {
 // ─── Pagination ────────────────────────────────
 .pagination {
     .page-link {
-        color: $body-color;
+        color: var(--o-color-4);
         border: 1px solid transparent;
         background: transparent;
         margin: 0 2px;
@@ -317,52 +245,38 @@ a {
         transition: all 200ms;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.07);
-            color: $primary;
+            background: color-mix(in srgb, var(--o-color-4) 6%, transparent);
+            color: var(--o-color-1);
         }
     }
     .active .page-link {
-        background: $primary;
-        color: #ffffff;
-        border-color: $primary;
-        box-shadow: 0 0 12px rgba(59, 130, 246, 0.30);
+        background: var(--o-color-1);
+        color: var(--o-color-5);
+        border-color: var(--o-color-1);
     }
-    .disabled .page-link {
-        color: rgba(255, 255, 255, 0.20);
-        background: transparent;
-    }
-}
-
-// ─── Alerts ────────────────────────────────────
-.alert {
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: $alert-border-radius;
-    padding: 1rem 1.25rem;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(8px);
 }
 
 // ─── Horizontal rule ───────────────────────────
 hr {
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-top: 1px solid color-mix(in srgb, var(--o-color-4) 8%, transparent);
     opacity: 1;
     margin: 1.5rem 0;
 }
 
 // ─── Selection ─────────────────────────────────
 ::selection {
-    background: rgba(59, 130, 246, 0.15);
-    color: $body-color;
+    background: color-mix(in srgb, var(--o-color-1) 15%, transparent);
+    color: var(--o-color-4);
 }
 
-// ─── Scrollbars (WebKit) ───────────────────────
+// ─── Scrollbars ────────────────────────────────
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.20);
+    background: color-mix(in srgb, var(--o-color-4) 20%, transparent);
     border-radius: 3px;
-    &:hover { background: rgba(0, 0, 0, 0.30); }
+    &:hover { background: color-mix(in srgb, var(--o-color-4) 30%, transparent); }
 }
 
 // ─── Reduced motion ────────────────────────────

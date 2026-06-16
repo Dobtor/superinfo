@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── Snippet template (dropped onto page) ─────────────────────── -->
+    <record id="s_apple_categ_carousel" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_carousel</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_carousel pt-3 pb-5">
+                <div class="container">
+                    <div class="apple-categ-carousel-wrapper"
+                         data-categ-id="0"
+                         data-snippet="s_apple_categ_carousel">
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="models-track-wrap">
+                            <div class="models-track">
+                                <article class="model-card" style="flex:0 0 220px">
+                                    <div class="model-card-image" style="background:rgba(59,130,246,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                    <h3 class="model-card-name" style="font-size:16px">分類 A</h3>
+                                    <p class="model-card-tagline">說明文字</p>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                </article>
+                                <article class="model-card" style="flex:0 0 220px">
+                                    <div class="model-card-image" style="background:rgba(99,102,241,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                    <h3 class="model-card-name" style="font-size:16px">分類 B</h3>
+                                    <p class="model-card-tagline">說明文字</p>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                </article>
+                                <article class="model-card" style="flex:0 0 220px">
+                                    <div class="model-card-image" style="background:rgba(16,185,129,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                    <h3 class="model-card-name" style="font-size:16px">分類 C</h3>
+                                    <p class="model-card-tagline">說明文字</p>
+                                    <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Rendered inner content (returned by controller) ──────────── -->
+    <record id="s_apple_categ_carousel_content" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_carousel_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_carousel_content">
+                <div class="models-track-wrap">
+                    <button type="button" class="track-prev" aria-label="Previous">
+                        <span class="triangle"/>
+                    </button>
+                    <div class="models-track section-subcategs"
+                         role="region" aria-label="商品分類">
+                        <t t-foreach="categories" t-as="cat">
+                            <article class="model-card">
+                                <div class="model-card-image">
+                                    <img t-if="cat.mac_hero_image or cat.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{cat.id}/{{ 'mac_hero_image' if cat.mac_hero_image else 'image_1024' }}"
+                                         t-att-alt="cat.name"
+                                         loading="lazy"/>
+                                </div>
+                                <h3 class="model-card-name" t-esc="cat.name"/>
+                                <p class="model-card-tagline" t-esc="cat.mac_tagline or ''"/>
+                                <p t-if="cat.mac_starting_price" class="model-card-price">
+                                    <t t-esc="cat.mac_starting_price"
+                                       t-options="{'widget': 'monetary', 'display_currency': cat.mac_currency_id}"/>
+                                    <span class="price-suffix">起</span>
+                                </p>
+                                <div class="model-card-actions">
+                                    <t t-set="first_prod"
+                                       t-value="request.env['product.template'].sudo().search([
+                                           ('public_categ_ids', '=', cat.id),
+                                           ('is_published', '=', True),
+                                       ], limit=1)"/>
+                                    <a t-if="first_prod"
+                                       t-attf-href="/shop/#{slug(first_prod)}"
+                                       class="btn-primary">選購</a>
+                                </div>
+                            </article>
+                        </t>
+                    </div>
+                    <button type="button" class="track-next" aria-label="Next">
+                        <span class="triangle"/>
+                    </button>
+                </div>
+                <div class="models-scrollbar" role="scrollbar" aria-orientation="horizontal">
+                    <div class="models-scrollbar-thumb"/>
+                </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav snippet template ───────────────────────────────────── -->
+    <record id="s_apple_categ_nav" model="ir.ui.view">
+        <field name="name">Apple Category Nav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_nav py-4">
+                <div class="container">
+                    <div class="apple-categ-nav-wrapper">
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="categ-nav-track-wrap">
+                            <div class="categ-nav-track" style="justify-content:center">
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.1);border-radius:50%"/>
+                                    <span class="categ-nav-name">分類 A</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(99,102,241,.1);border-radius:50%"/>
+                                    <span class="categ-nav-name">分類 B</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(16,185,129,.1);border-radius:50%"/>
+                                    <span class="categ-nav-name">分類 C</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.06);border-radius:50%"/>
+                                    <span class="categ-nav-name">分類 D</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav rendered content (returned by controller) ──────────── -->
+    <record id="s_apple_categ_nav_content" model="ir.ui.view">
+        <field name="name">Apple Category Nav Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_nav_content">
+                <div class="categ-nav-track-wrap">
+                    <div class="categ-nav-track" role="region" aria-label="商品分類">
+                        <t t-foreach="categories" t-as="categ">
+                            <a class="categ-nav-item" t-attf-href="/shop/category/#{slug(categ)}">
+                                <div class="categ-nav-img">
+                                    <img t-if="categ.mac_hero_image or categ.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'mac_hero_image' if categ.mac_hero_image else 'image_1024' }}"
+                                         t-att-alt="categ.name"
+                                         loading="lazy"/>
+                                </div>
+                                <span class="categ-nav-name" t-esc="categ.name"/>
+                            </a>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Trust Strip snippet ──────────────────────────────────────────── -->
+    <record id="s_trust_strip" model="ir.ui.view">
+        <field name="name">Apple Trust Strip Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_trust_strip</field>
+        <field name="arch" type="xml">
+            <section class="s_trust_strip as-trust-strip" data-snippet="s_trust_strip" data-name="信賴保證條">
+                <div class="container">
+                    <ul class="as-trust-list">
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>35 年 Apple 授權經銷商</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>Jamf Elite 認證</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>臺北兩間校園體驗中心</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>官方認證工程師</span>
+                        </li>
+                        <li class="as-trust-item">
+                            <span class="as-trust-check" aria-hidden="true">✓</span>
+                            <span>LINE / Email / Messenger 客服</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Localnav snippet ───────────────────────────────────────────────── -->
+    <record id="s_localnav" model="ir.ui.view">
+        <field name="name">Apple Localnav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_localnav</field>
+        <field name="arch" type="xml">
+            <section class="s_localnav" data-snippet="s_localnav" data-name="頁內導覽列">
+                <nav class="localnav" aria-label="頁內導覽">
+                    <div class="container">
+                        <ul class="localnav-list">
+                            <li><a href="#section-1">項目一</a></li>
+                            <li><a href="#section-2">項目二</a></li>
+                            <li><a href="#section-3">項目三</a></li>
+                            <li><a href="#section-4">項目四</a></li>
+                            <li><a href="#section-5">項目五</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Homepage Banner snippet ───────────────────────────────────────── -->
+    <record id="s_apple_hero_banner" model="ir.ui.view">
+        <field name="name">Apple Hero Banner Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_hero_banner</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_hero_banner pageBanner pageBanner--home" data-snippet="s_apple_hero_banner" data-name="極電 Hero Banner">
+                <div class="container">
+                    <h1 class="hero-title">極電資訊商店</h1>
+                    <p class="hero-subtitle">35 年教育科技夥伴，為你找到最合適的選擇。</p>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Register trust strip + localnav in Content panel ──────────────── -->
+    <record id="s_trust_strip_panel" model="ir.ui.view">
+        <field name="name">Apple Trust Strip Panel Registration</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website.snippets"/>
+        <field name="arch" type="xml">
+            <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+                <t t-snippet="theme_apple_shop.s_apple_hero_banner"
+                   string="極電 Hero Banner"
+                   group="intro"/>
+                <t t-snippet="theme_apple_shop.s_trust_strip"
+                   string="信賴保證條"
+                   group="content"/>
+                <t t-snippet="theme_apple_shop.s_localnav"
+                   string="頁內導覽列"
+                   group="content"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ── Register categ nav in editor panel (Products group) ───────────── -->
+    <record id="s_apple_categ_nav_panel" model="ir.ui.view">
+        <field name="name">Apple Categ Nav Panel Registration</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.snippets"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
+                <t t-snippet="theme_apple_shop.s_apple_categ_nav"
+                   string="分類圖示導覽"
+                   group="products"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ── Override the built-in Products snippet to use Apple carousel ── -->
+    <record id="override_s_dynamic_snippet_products" model="ir.ui.view">
+        <field name="name">Apple Category Carousel Override</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.s_dynamic_snippet_products"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-call='website.s_dynamic_snippet_template']" position="replace">
+                <section class="s_apple_categ_carousel pt-3 pb-5">
+                    <div class="container">
+                        <div class="apple-categ-carousel-wrapper"
+                             data-categ-id="0"
+                             data-snippet="s_apple_categ_carousel">
+                            <!-- Static preview shown in editor; replaced by JS in view mode -->
+                            <div class="models-track-wrap">
+                                <div class="models-track">
+                                    <article class="model-card" style="flex:0 0 220px">
+                                        <div class="model-card-image" style="background:rgba(59,130,246,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                        <h3 class="model-card-name" style="font-size:16px">分類 A</h3>
+                                        <p class="model-card-tagline">說明文字</p>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                    </article>
+                                    <article class="model-card" style="flex:0 0 220px">
+                                        <div class="model-card-image" style="background:rgba(99,102,241,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                        <h3 class="model-card-name" style="font-size:16px">分類 B</h3>
+                                        <p class="model-card-tagline">說明文字</p>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                    </article>
+                                    <article class="model-card" style="flex:0 0 220px">
+                                        <div class="model-card-image" style="background:rgba(16,185,129,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
+                                        <h3 class="model-card-name" style="font-size:16px">分類 C</h3>
+                                        <p class="model-card-tagline">說明文字</p>
+                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

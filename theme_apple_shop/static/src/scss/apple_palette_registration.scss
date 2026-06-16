@@ -1,15 +1,57 @@
-// Registers the 極電資訊 palette in the website editor's 配色 picker.
+// Registers 極電資訊 palettes in the website editor's 配色 picker.
 // Must load AFTER website/static/src/scss/primary_variables.scss so we can
 // append to an already-defined $o-selected-color-palettes-names.
 
+// Set the active default palette so o-cc* color combinations compile with
+// real colors instead of `transparent`. Loaded after website primary_variables
+// so this override (no !default) wins.
+$o-user-color-palette: (
+    'o-color-1': #2b6cb0,
+    'o-color-2': #4a90d9,
+    'o-color-3': #5da0ef,
+    'o-color-4': #1a2b4a,
+    'o-color-5': #eef4fc,
+);
+
 $o-color-palettes: map-merge($o-color-palettes, (
+
+    // ── 原始配色（現行）──────────────────────────────────
     'superinfo': (
-        'o-color-1': #3b82f6,
-        'o-color-2': #6366f1,
-        'o-color-3': #10b981,
-        'o-color-4': #0f172a,
-        'o-color-5': #f8faff,
+        'o-color-1': #3b82f6,   // 主藍
+        'o-color-2': #6366f1,   // 靛藍
+        'o-color-3': #10b981,   // 綠
+        'o-color-4': #0f172a,   // 深藍黑
+        'o-color-5': #f8faff,   // 極淡藍白背景
     ),
+
+    // ── 極電藍（截圖配色）────────────────────────────────
+    // 清爽企業藍：標題漸層藍 + 淡藍背景 + 深海軍藍文字
+    'superinfo-blue': (
+        'o-color-1': #2b6cb0,   // 主色：中深度企業藍
+        'o-color-2': #4a90d9,   // 副色：天空藍
+        'o-color-3': #5da0ef,   // 強調：亮藍
+        'o-color-4': #1a2b4a,   // 深色：深海軍藍
+        'o-color-5': #eef4fc,   // 背景：極淡藍白
+    ),
+
+    // ── 極電暖灰（備選）──────────────────────────────────
+    // 更中性、偏蘋果官網的灰白調
+    'superinfo-neutral': (
+        'o-color-1': #0071e3,   // Apple 官網藍
+        'o-color-2': #0077ed,
+        'o-color-3': #30d158,   // Apple 綠
+        'o-color-4': #1d1d1f,   // Apple 深黑
+        'o-color-5': #fbfbfd,   // Apple 背景白
+    ),
+
 ));
 
-$o-selected-color-palettes-names: 'superinfo';
+$o-selected-color-palettes-names: 'superinfo' 'superinfo-blue' 'superinfo-neutral';
+
+// Override Bootstrap variables AFTER website/primary_variables.scss derives them
+// from the palette — this file loads last in web._assets_primary_variables.
+$body-bg:    #eef4fc;   // o-color-5: light page background
+$body-color: #1a2b4a;   // o-color-4: dark text
+$card-bg:    rgba(255, 255, 255, 0.92);
+$link-color:      #2b6cb0;
+$link-hover-color: #1a4a80;

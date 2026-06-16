@@ -2,6 +2,181 @@
 // /shop/category/mac — Mac landing (Tech Glass)
 // ============================================
 
+// ─── Hero banner (global — works as snippet anywhere) ───────────
+.pageBanner {
+    // ── Homepage variant ──
+    &--home {
+            background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
+            padding: $apple-sp-4xl 0 $apple-sp-2xl;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 320px;
+                background:
+                    radial-gradient(ellipse at 30% top, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
+                    radial-gradient(ellipse at 70% top, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+                pointer-events: none;
+            }
+
+            .hero-title {
+                font-family: $apple-font-display;
+                font-size: 72px;
+                line-height: 1.0;
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                margin: 0 0 $apple-sp-md;
+                background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                position: relative;
+
+                @media (max-width: $apple-bp-mobile) { font-size: 44px; }
+            }
+
+            .hero-subtitle {
+                font-size: 21px;
+                line-height: 1.4;
+                color: $apple-gray-5;
+                margin: 0;
+                position: relative;
+
+                @media (max-width: $apple-bp-mobile) { font-size: 17px; }
+            }
+        }
+
+        // ── Category page variant ──
+        &--categ {
+            background: var(--o-color-5);
+            padding: 48px 0 0;
+            text-align: center;
+            overflow: hidden;
+
+            .container { max-width: 900px; }
+
+            // Breadcrumb as eyebrow
+            .banner-eyebrow {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                .breadcrumb {
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 13px;
+                    color: $apple-gray-5;
+
+                    .breadcrumb-item {
+                        color: $apple-gray-5;
+
+                        a {
+                            color: var(--o-color-1);
+                            text-decoration: none;
+                            &:hover { text-decoration: underline; }
+                        }
+
+                        &.active { color: var(--o-color-4); }
+
+                        + .breadcrumb-item::before {
+                            content: '›';
+                            color: $apple-gray-5;
+                            padding: 0 6px;
+                        }
+                    }
+                }
+            }
+
+            // Big bold headline
+            .banner-headline {
+                font-family: $apple-font-display;
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 1.05;
+                letter-spacing: -0.025em;
+                color: var(--o-color-4);
+                margin: 0 0 24px;
+
+                @media (max-width: $apple-bp-mobile) {
+                    font-size: 36px;
+                    letter-spacing: -0.015em;
+                }
+            }
+
+            // Description paragraph
+            .banner-description {
+                font-size: 17px;
+                line-height: 1.6;
+                color: $apple-gray-5;
+                max-width: 600px;
+                margin: 0 auto 40px;
+                white-space: pre-line;
+
+                @media (max-width: $apple-bp-mobile) {
+                    font-size: 15px;
+                    padding: 0 $apple-sp-lg;
+                }
+            }
+
+            // Hero product image with padding
+            .banner-hero-img {
+                display: flex;
+                justify-content: center;
+                padding: 0 $apple-sp-xl $apple-sp-xl;
+
+                img {
+                    max-width: 420px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+
+                    @media (max-width: $apple-bp-mobile) { max-width: 80vw; }
+                }
+            }
+        }
+    }
+
+// ─── Localnav (global — works as snippet anywhere) ──────────────
+.localnav {
+    position: sticky;
+    top: 0;
+    z-index: $apple-z-localnav;
+    background: rgba(248, 250, 255, 0.90);
+    backdrop-filter: saturate(180%) blur(24px);
+    -webkit-backdrop-filter: saturate(180%) blur(24px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    .localnav-list {
+        display: flex;
+        gap: $apple-sp-xl;
+        list-style: none;
+        margin: 0;
+        padding: $apple-sp-md 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar { display: none; }
+
+        li a {
+            white-space: nowrap;
+            font-size: 14px;
+            color: $apple-gray-5;
+            text-decoration: none;
+            transition: color 200ms $apple-ease-default;
+
+            &:hover { color: $apple-blue; }
+        }
+    }
+}
+
+// ─── Mac landing page wrapper ────────────────────
 .apple-mac-landing {
     background: $apple-bg-page;
     color: $apple-black;
@@ -13,118 +188,87 @@
         padding: 0 $apple-sp-xl;
     }
 
-    // ─── ① Hero banner ──────────────────────────────
-    .pageBanner {
-        background: linear-gradient(160deg, color-mix(in srgb, var(--o-color-5) 85%, var(--o-color-1) 15%) 0%, var(--o-color-5) 60%, color-mix(in srgb, var(--o-color-5) 90%, var(--o-color-1) 10%) 100%);
-        padding: $apple-sp-4xl 0 $apple-sp-2xl;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-
-        // Dual aurora glow behind title
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 320px;
-            background:
-                radial-gradient(ellipse at 30% top, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% top, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-title {
-            font-family: $apple-font-display;
-            font-size: 72px;
-            line-height: 1.0;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin: 0 0 $apple-sp-md;
-            background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-
-            @media (max-width: $apple-bp-mobile) {
-                font-size: 44px;
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 21px;
-            line-height: 1.4;
-            color: $apple-gray-5;
-            margin: 0;
-            position: relative;
-
-            @media (max-width: $apple-bp-mobile) {
-                font-size: 17px;
-            }
-        }
-    }
-
-    // ─── ② Localnav ─────────────────────────────────
-    .localnav {
-        position: sticky;
-        top: 0;
-        z-index: $apple-z-localnav;
-        background: rgba(248, 250, 255, 0.90);
-        backdrop-filter: saturate(180%) blur(24px);
-        -webkit-backdrop-filter: saturate(180%) blur(24px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-
-        .localnav-list {
-            display: flex;
-            gap: $apple-sp-xl;
-            list-style: none;
-            margin: 0;
-            padding: $apple-sp-md 0;
-            overflow-x: auto;
-            scrollbar-width: none;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
-            li a {
-                white-space: nowrap;
-                font-size: 14px;
-                color: $apple-gray-5;
-                text-decoration: none;
-                transition: color 200ms $apple-ease-default;
-
-                &:hover {
-                    color: $apple-blue;
-                }
-            }
-        }
-    }
-
     // ─── ③ Models carousel ──────────────────────────
     .section-models {
-        padding: $apple-sp-3xl 0;
+        padding: $apple-sp-2xl 0;
+        border-bottom: 1px solid $apple-gray-2;
 
-        .section-title {
-            font-family: $apple-font-display;
-            font-size: 40px;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            margin: 0 0 $apple-sp-xs;
+        .categ-nav-track-wrap {
+            overflow-x: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+        }
+
+        .categ-nav-track {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            min-width: max-content;
+            padding: $apple-sp-xs $apple-sp-md;
+
+            @media (max-width: $apple-bp-mobile) {
+                justify-content: flex-start;
+            }
+        }
+
+        .categ-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $apple-sp-sm;
+            padding: $apple-sp-md $apple-sp-xl;
+            border-radius: $apple-radius-lg;
+            text-decoration: none;
             color: $apple-black;
+            transition: background 200ms $apple-ease-default,
+                        color 200ms $apple-ease-default;
+            min-width: 96px;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.04);
+                color: $apple-blue;
+            }
         }
 
-        .section-subtitle {
-            font-size: 17px;
-            color: $apple-gray-5;
-            margin: 0 0 $apple-sp-xl;
+        .categ-nav-img {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: transform 300ms $apple-ease-default;
+            }
+
+            @media (max-width: $apple-bp-mobile) {
+                width: 52px;
+                height: 52px;
+            }
         }
 
-        .models-track-wrap {
-            position: relative;
+        .categ-nav-item:hover .categ-nav-img img {
+            transform: scale(1.08);
         }
+
+        .categ-nav-name {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            color: inherit;
+        }
+    }
+
+    // ─── ③b Sub-category carousel (reuses .section-models styles) ──
+    .section-subcategs {
+        padding-top: 0;
+        border-top: none;
+
+        .models-track-wrap { position: relative; }
 
         .models-track {
             display: flex;
@@ -134,10 +278,7 @@
             scrollbar-width: none;
             scroll-behavior: smooth;
             padding: $apple-sp-xs 0 $apple-sp-md;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
+            &::-webkit-scrollbar { display: none; }
         }
 
         .model-card {
@@ -155,33 +296,14 @@
             backdrop-filter: blur($apple-glass-blur);
             -webkit-backdrop-filter: blur($apple-glass-blur);
             transition: transform 400ms $apple-ease-default,
-                box-shadow 400ms $apple-ease-default,
-                border-color 400ms $apple-ease-default;
+                        box-shadow 400ms $apple-ease-default,
+                        border-color 400ms $apple-ease-default;
 
             &:hover {
                 transform: translateY(-6px);
                 box-shadow: $apple-shadow-card-hv;
                 border-color: rgba(59, 130, 246, 0.25);
-
-                .model-card-image img {
-                    transform: scale(1.06);
-                }
-            }
-
-            .badge-new {
-                position: absolute;
-                top: $apple-sp-md;
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 11px;
-                color: $apple-blue;
-                font-weight: 700;
-                letter-spacing: 1.5px;
-                text-transform: uppercase;
-                animation: zoomIn 300ms $apple-ease-spring;
-                background: rgba(59, 130, 246, 0.10);
-                padding: 2px 10px;
-                border-radius: $apple-radius-pill;
+                .model-card-image img { transform: scale(1.06); }
             }
 
             .model-card-image {
@@ -191,13 +313,11 @@
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
-
                 img {
                     max-width: 100%;
                     max-height: 100%;
                     object-fit: contain;
                     transition: transform 500ms $apple-ease-default;
-                    filter: drop-shadow(0 8px 24px rgba(59, 130, 246, 0.12));
                 }
             }
 
@@ -220,11 +340,7 @@
                 font-size: 14px;
                 margin: 0 0 $apple-sp-md;
                 color: $apple-gray-6;
-
-                .price-suffix {
-                    color: $apple-gray-4;
-                    margin-left: 2px;
-                }
+                .price-suffix { color: $apple-gray-4; margin-left: 2px; }
             }
 
             .model-card-actions {
@@ -253,46 +369,19 @@
             cursor: pointer;
             z-index: 2;
             transition: all 200ms;
-
-            &.disabled {
-                opacity: 0.25;
-                pointer-events: none;
-            }
-
-            &:hover {
-                background: rgba(59, 130, 246, 0.10);
-                border-color: $apple-blue;
-                box-shadow: $apple-glow-sm;
-            }
-
-            .triangle {
-                width: 0;
-                height: 0;
-                border-style: solid;
-            }
+            &.disabled { opacity: 0.25; pointer-events: none; }
+            &:hover { background: rgba(59, 130, 246, 0.10); border-color: $apple-blue; }
+            .triangle { width: 0; height: 0; border-style: solid; }
         }
-
         .track-prev {
             left: -20px;
-
-            .triangle {
-                border-width: 6px 8px 6px 0;
-                border-color: transparent $apple-blue transparent transparent;
-            }
-
+            .triangle { border-width: 6px 8px 6px 0; border-color: transparent $apple-blue transparent transparent; }
         }
-
         .track-next {
             right: -20px;
-
-            .triangle {
-                border-width: 6px 0 6px 8px;
-                border-color: transparent transparent transparent $apple-blue;
-            }
-
+            .triangle { border-width: 6px 0 6px 8px; border-color: transparent transparent transparent $apple-blue; }
         }
 
-        // ── Drag scrollbar ─────────────────────────────
         .models-scrollbar {
             position: relative;
             width: 100%;
@@ -309,30 +398,232 @@
                 left: 0;
                 transform: translateY(-50%);
                 height: 4px;
-                width: 40%;            // overridden by JS
+                width: 40%;
                 background: $apple-blue;
                 border-radius: $apple-radius-pill;
                 cursor: grab;
-                transition: height 150ms $apple-ease-default,
-                            background 150ms $apple-ease-default;
-
-                &:hover,
-                &.dragging {
+                transition: height 150ms, background 150ms;
+                &:hover, &.dragging {
                     height: 6px;
                     background: color-mix(in srgb, var(--o-color-1) 90%, black);
                     cursor: grabbing;
                 }
-
-                // Larger invisible hit area for easier grabbing
-                &::after {
-                    content: '';
-                    position: absolute;
-                    inset: -8px -4px;
-                }
+                &::after { content: ''; position: absolute; inset: -8px -4px; }
             }
         }
     }
 
+    // ─── ③c Snippet carousel (.s_apple_categ_carousel) — same styles ──
+    // The snippet content puts .models-track-wrap at top level (no .section-subcategs parent)
+    // so we re-declare the same rules under the snippet class.
+}
+
+.s_apple_categ_nav {
+    .categ-nav-track-wrap {
+        overflow-x: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar { display: none; }
+    }
+
+    .categ-nav-track {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        min-width: max-content;
+        padding: $apple-sp-xs $apple-sp-md;
+        @media (max-width: $apple-bp-mobile) { justify-content: flex-start; }
+    }
+
+    .categ-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $apple-sp-sm;
+        padding: $apple-sp-md $apple-sp-xl;
+        border-radius: $apple-radius-lg;
+        text-decoration: none;
+        color: $apple-black;
+        transition: background 200ms $apple-ease-default, color 200ms $apple-ease-default;
+        min-width: 96px;
+        &:hover {
+            background: rgba(0, 0, 0, 0.04);
+            color: $apple-blue;
+        }
+    }
+
+    .categ-nav-img {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 300ms $apple-ease-default;
+        }
+        @media (max-width: $apple-bp-mobile) { width: 52px; height: 52px; }
+    }
+
+    .categ-nav-item:hover .categ-nav-img img { transform: scale(1.08); }
+
+    .categ-nav-name {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+        color: inherit;
+    }
+}
+
+.s_apple_categ_carousel {
+    .models-track-wrap { position: relative; }
+
+    .models-track {
+        display: flex;
+        gap: $apple-sp-md;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        padding: $apple-sp-xs 0 $apple-sp-md;
+        &::-webkit-scrollbar { display: none; }
+    }
+
+    .model-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
+        border-radius: $apple-radius-lg;
+        padding: $apple-sp-xl $apple-sp-lg;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        backdrop-filter: blur($apple-glass-blur);
+        -webkit-backdrop-filter: blur($apple-glass-blur);
+        transition: transform 400ms $apple-ease-default,
+                    box-shadow 400ms $apple-ease-default,
+                    border-color 400ms $apple-ease-default;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: $apple-shadow-card-hv;
+            border-color: rgba(59, 130, 246, 0.25);
+            .model-card-image img { transform: scale(1.06); }
+        }
+
+        .model-card-image {
+            flex: 0 0 180px;
+            margin: $apple-sp-lg 0 $apple-sp-md;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: transform 500ms $apple-ease-default;
+            }
+        }
+
+        .model-card-name {
+            font-family: $apple-font-display;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 $apple-sp-xs;
+            color: $apple-black;
+        }
+
+        .model-card-tagline {
+            font-size: 13px;
+            color: $apple-gray-5;
+            margin: 0 0 $apple-sp-sm;
+            min-height: 20px;
+        }
+
+        .model-card-price {
+            font-size: 14px;
+            margin: 0 0 $apple-sp-md;
+            color: $apple-gray-6;
+            .price-suffix { color: $apple-gray-4; margin-left: 2px; }
+        }
+
+        .model-card-actions {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: $apple-sp-xs;
+        }
+    }
+
+    .track-prev,
+    .track-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $apple-glass-bg-md;
+        border: 1px solid $apple-glass-border;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 2;
+        transition: all 200ms;
+        &.disabled { opacity: 0.25; pointer-events: none; }
+        &:hover { background: rgba(59, 130, 246, 0.10); border-color: $apple-blue; }
+        .triangle { width: 0; height: 0; border-style: solid; }
+    }
+    .track-prev {
+        left: -20px;
+        .triangle { border-width: 6px 8px 6px 0; border-color: transparent $apple-blue transparent transparent; }
+    }
+    .track-next {
+        right: -20px;
+        .triangle { border-width: 6px 0 6px 8px; border-color: transparent transparent transparent $apple-blue; }
+    }
+
+    .models-scrollbar {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: $apple-radius-pill;
+        margin: $apple-sp-sm auto 0;
+        cursor: pointer;
+        overflow: visible;
+
+        .models-scrollbar-thumb {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 40%;
+            background: $apple-blue;
+            border-radius: $apple-radius-pill;
+            cursor: grab;
+            transition: height 150ms, background 150ms;
+            &:hover, &.dragging {
+                height: 6px;
+                background: color-mix(in srgb, var(--o-color-1) 90%, black);
+                cursor: grabbing;
+            }
+            &::after { content: ''; position: absolute; inset: -8px -4px; }
+        }
+    }
+}
+
+.apple-mac-landing {
     // ─── ④ Tile sections ─────────────────────────────
     .section-explore,
     .section-details,
@@ -571,7 +862,16 @@
         }
     }
 
-    // ─── Buttons ─────────────────────────────────────
+}
+
+// ─── Apple buttons — scoped to Apple components only ──────────────
+// Using a shared mixin via selector list to avoid polluting Odoo's
+// default shop/blog/cms buttons.
+.apple-mac-landing,
+.apple-configurator,
+.s_apple_categ_carousel,
+.s_apple_categ_nav,
+.section-subcategs {
     .btn-primary {
         display: inline-block;
         background: $apple-blue;
@@ -622,5 +922,40 @@
     to {
         opacity: 1;
         transform: translateX(-50%) scale(1);
+    }
+}
+.apple-breadcrumb {
+    background: transparent;
+    padding: $apple-sp-sm 0;
+
+    .breadcrumb {
+        margin: 0;
+        padding: 0;
+        background: none;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        font-size: 13px;
+        color: $apple-gray-5;
+    }
+
+    .breadcrumb-item {
+        display: flex;
+        align-items: center;
+
+        + .breadcrumb-item::before {
+            content: '/';
+            padding: 0 $apple-sp-xs;
+            color: $apple-gray-3;
+        }
+
+        a {
+            color: $apple-blue;
+            text-decoration: none;
+            &:hover { text-decoration: underline; }
+        }
+
+        &.active { color: $apple-gray-5; }
     }
 }

@@ -18,6 +18,7 @@
         'base',
         'website',
         'website_sale',
+        # 'superinfo_website_data',  # uncomment when module is in addons path
     ],
     'data': [
         'security/ir.model.access.xml',
@@ -33,11 +34,10 @@
         'views/shop_cart_overrides.xml',
         'views/shop_trust_features.xml',
         'views/contactus.xml',
-        # Data — order matters: attributes → categories → products → accessories
+        'views/snippets.xml',
+        # Data — base records owned by superinfo_website_data; theme only adds mac_* fields
         'data/product_attributes.xml',
         'data/product_categories.xml',
-        'data/products_accessories.xml',
-        'data/products_mac.xml',
     ],
     'post_init_hook': '_post_init_hook',
     'images': [],

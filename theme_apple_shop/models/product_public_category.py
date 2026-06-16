@@ -41,6 +41,22 @@ class ProductPublicCategory(models.Model):
         compute='_compute_mac_currency',
         help="Currency for mac_starting_price (defaults to company currency).",
     )
+    mac_banner_headline = fields.Char(
+        string="Banner 大標題",
+        translate=True,
+        help="Apple 風格 banner 大標題，例如「用 iPad 大顯身手。」",
+    )
+    mac_banner_description = fields.Text(
+        string="Banner 說明文字",
+        translate=True,
+        help="Banner 下方的描述段落文字。",
+    )
+    mac_banner_hero = fields.Image(
+        string="Banner Hero 圖片",
+        max_width=1600, max_height=900,
+        help="Banner 下方的大型產品 hero 圖片（類似 Apple.com 分類頁）。",
+    )
+
     mac_landing_order = fields.Integer(
         string="Mac Landing Order",
         default=10,

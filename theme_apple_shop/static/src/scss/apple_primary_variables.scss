@@ -1,36 +1,15 @@
 // ============================================
-// Frost Theme — Bootstrap & Odoo primary-variable overrides
+// Apple Shop Theme — Bootstrap primary-variable overrides
 // ============================================
-// Clean cool-white + sky blue. Professional, Apple.com-adjacent.
-// NOTE: $o-color-palettes map-merge removed — DartSass on Odoo 18
-// remote server does not support variable-exists() inside if().
+// Color variables are intentionally NOT set here.
+// Odoo derives $primary/$body-color/$body-bg etc. from $o-user-color-palette
+// via website/static/src/scss/primary_variables.scss (loaded after this file).
+// Setting them here would lock the palette and break the editor color picker.
+//
+// CSS rules that need to react to palette changes must use var(--o-color-N)
+// in apple_theme_defaults.scss instead.
 
-// ─── Odoo website editor palette (o-color-1 ~ 5) ────────────
-$o-user-color-palette: (
-    'o-color-1': #3b82f6,
-    'o-color-2': #6366f1,
-    'o-color-3': #10b981,
-    'o-color-4': #0f172a,
-    'o-color-5': #f8faff,
-) !default;
-
-
-// ─── Bootstrap palette ───────────────────────
-$primary:       #3b82f6;   // sky blue
-$secondary:     #64748b;   // slate
-$success:       #10b981;
-$info:          #06b6d4;
-$warning:       #f59e0b;
-$danger:        #ef4444;
-$light:         #f0f4fe;   // cool light surface
-$dark:          #0f172a;
-
-// ─── Body & text ─────────────────────────────
-$body-color:    #0f172a;
-$body-bg:       #f8faff;
-$text-muted:    #94a3b8;
-
-// ─── Typography ──────────────────────────────
+// ─── Typography (no palette dependency) ──────
 $font-family-base:    -apple-system, "SF Pro Text", "BlinkMacSystemFont",
                       "Helvetica Neue", "Microsoft JhengHei", "微軟正黑體",
                       "Noto Sans TC", "Helvetica", "Arial", sans-serif;
@@ -40,16 +19,11 @@ $headings-font-family: -apple-system, "SF Pro Display", "BlinkMacSystemFont",
                        "Noto Sans TC", sans-serif;
 $headings-font-weight: 700;
 $headings-letter-spacing: -0.02em;
-
 $font-size-base:      1rem;
 $font-weight-base:    400;
 $line-height-base:    1.5;
 $small-font-size:     0.875em;
-
-// ─── Links ───────────────────────────────────
-$link-color:           #3b82f6;
 $link-decoration:      none;
-$link-hover-color:     #2563eb;
 $link-hover-decoration: none;
 
 // ─── Border radii ────────────────────────────
@@ -57,7 +31,6 @@ $border-radius:        12px;
 $border-radius-sm:     8px;
 $border-radius-lg:     18px;
 $border-radius-pill:   980px;
-$border-color:         rgba(15, 23, 42, 0.10);
 
 // ─── Buttons ─────────────────────────────────
 $btn-font-weight:      500;
@@ -75,51 +48,28 @@ $btn-transition:       all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
 // ─── Inputs / forms ──────────────────────────
 $input-bg:             #ffffff;
-$input-border-color:   rgba(15, 23, 42, 0.14);
 $input-border-radius:  $border-radius-sm;
 $input-border-radius-sm: $border-radius-sm;
 $input-border-radius-lg: $border-radius-sm;
 $input-padding-y:      0.5rem;
 $input-padding-x:      0.875rem;
-$input-focus-border-color: #3b82f6;
-$input-focus-box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
-$input-color:          #0f172a;
 $input-placeholder-color: #94a3b8;
 
-// ─── Cards / panels ──────────────────────────
+// ─── Cards ───────────────────────────────────
 $card-bg:              rgba(255, 255, 255, 0.80);
-$card-border-color:    rgba(15, 23, 42, 0.08);
 $card-border-radius:   $border-radius-lg;
-$card-box-shadow:      0 4px 24px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 1);
 
 // ─── Modals / dropdowns ──────────────────────
 $modal-content-border-radius: $border-radius-lg;
 $dropdown-border-radius:      $border-radius;
-$dropdown-link-hover-bg:      rgba(59, 130, 246, 0.07);
-
-// ─── Tables ──────────────────────────────────
-$table-color:          #0f172a;
-$table-border-color:   rgba(15, 23, 42, 0.07);
-$table-striped-bg:     rgba(59, 130, 246, 0.03);
-
-// ─── Navbar ──────────────────────────────────
-$navbar-padding-y:     0.75rem;
-$navbar-light-color:           rgba(15, 23, 42, 0.65);
-$navbar-light-hover-color:     #3b82f6;
-$navbar-light-active-color:    #3b82f6;
-$navbar-light-disabled-color:  rgba(15, 23, 42, 0.30);
-$navbar-dark-color:            rgba(15, 23, 42, 0.65);
-$navbar-dark-hover-color:      #3b82f6;
-$navbar-dark-active-color:     #3b82f6;
-$navbar-dark-disabled-color:   rgba(15, 23, 42, 0.30);
 
 // ─── Pagination ──────────────────────────────
-$pagination-color:           #0f172a;
-$pagination-hover-color:     #3b82f6;
-$pagination-active-bg:       #3b82f6;
 $pagination-border-radius:   50%;
 $pagination-padding-y:       0.5rem;
 $pagination-padding-x:       0.75rem;
 
 // ─── Alert ───────────────────────────────────
 $alert-border-radius:        $border-radius;
+
+// ─── Navbar ──────────────────────────────────
+$navbar-padding-y:     0.75rem;
