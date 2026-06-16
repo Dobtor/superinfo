@@ -22,11 +22,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
 
     # ─── helpers ───────────────────────────────────────────────────
 
-    def _is_mac_categ(self, categ):
-        if not categ:
-            return False
-        return bool(categ.exists()) and categ._is_descendant_of_mac_root()
-
     # ─── / (homepage) ────────────────────────────────────────────────
     # 不覆寫根路由：首頁交由 Odoo 原生邏輯（網站設定 → 首頁網址）決定，
     # 不綁死成 Mac landing。要把 Mac landing 當首頁時，於後台將首頁網址
@@ -99,7 +94,7 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     )
     def mac_category_landing(self, **kwargs):
         mac_root = request.env.ref(
-            'theme_apple_shop.categ_mac', raise_if_not_found=False
+            'superinfo_website_data.categ_mac', raise_if_not_found=False
         )
         if mac_root:
             return self._render_category_landing(mac_root)
@@ -166,9 +161,6 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'attribute_lines': attribute_lines,
             'default_ptavs': default_ptavs,
             'optional_products': product.optional_product_ids,
-            'compare_specs': product.mac_compare_spec_ids.sorted(
-                lambda s: (s.sequence, s.id)
-            ),
             'exclusion_table': exclusion_table,
             'color_image_map': color_image_map,
             'main_object': product,
