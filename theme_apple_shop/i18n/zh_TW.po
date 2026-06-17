@@ -1,0 +1,2033 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* theme_apple_shop
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 22:39+0000\n"
+"PO-Revision-Date: 2026-06-17 22:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_attribute_form_apple
+msgid "(optional) Help popover content"
+msgstr "（選填）說明彈出視窗內容"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "+886 2 1234-5678"
+msgstr "+886 2 1234-5678"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "0% 利率分期，最長 12 個月。減輕個人或學校的一次性採購壓力，讓科技更普及。"
+msgstr "0% 利率分期，最長 12 個月。減輕個人或學校的一次性採購壓力，讓科技更普及。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_ether_10g
+msgid "10 Gigabit 乙太網路"
+msgstr "10 Gigabit 乙太網路"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_sub_label:theme_apple_shop.attr_val_chip_m4
+msgid "10 核心 CPU、10 核心 GPU、16 核心神經網路引擎"
+msgstr "10 核心 CPU、10 核心 GPU、16 核心神經網路引擎"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_sub_label:theme_apple_shop.attr_val_chip_m4_pro
+msgid "12 核心 CPU、16 核心 GPU、16 核心神經網路引擎"
+msgstr "12 核心 CPU、16 核心 GPU、16 核心神經網路引擎"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_128
+msgid "128GB"
+msgstr "128GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_sub_label:theme_apple_shop.attr_val_chip_m4_max
+msgid "14 核心 CPU、32 核心 GPU、16 核心神經網路引擎"
+msgstr "14 核心 CPU、32 核心 GPU、16 核心神經網路引擎"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_16
+msgid "16GB"
+msgstr "16GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_1tb
+msgid "1TB"
+msgstr "1TB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_24
+msgid "24GB"
+msgstr "24GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_256
+msgid "256GB"
+msgstr "256GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_2tb
+msgid "2TB"
+msgstr "2TB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_32
+msgid "32GB"
+msgstr "32GB"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_hero_banner
+msgid "35 年教育科技夥伴，為你找到最合適的選擇。"
+msgstr "35 年教育科技夥伴，為你找到最合適的選擇。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_48
+msgid "48GB"
+msgstr "48GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_4tb
+msgid "4TB"
+msgstr "4TB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_512
+msgid "512GB"
+msgstr "512GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_64
+msgid "64GB"
+msgstr "64GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_sub_label:theme_apple_shop.attr_val_chip_m3
+msgid "8 核心 CPU、10 核心 GPU、16 核心神經網路引擎"
+msgstr "8 核心 CPU、10 核心 GPU、16 核心神經網路引擎"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_mem_8
+msgid "8GB"
+msgstr "8GB"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_storage_8tb
+msgid "8TB"
+msgstr "8TB"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "<span class=\"a11y\">(以新視窗開啟)</span>"
+msgstr "<span class=\"a11y\">(以新視窗開啟)</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid ""
+"<span class=\"ac-map-dot\"/>\n"
+"                                                世新體驗中心"
+msgstr ""
+"<span class=\"ac-map-dot\"/>\n"
+"                                                世新體驗中心"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid ""
+"<span class=\"ac-map-dot\"/>\n"
+"                                                師大體驗中心"
+msgstr ""
+"<span class=\"ac-map-dot\"/>\n"
+"                                                師大體驗中心"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "<span class=\"ac-thanks-step-num\">01</span>"
+msgstr "<span class=\"ac-thanks-step-num\">01</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "<span class=\"ac-thanks-step-num\">02</span>"
+msgstr "<span class=\"ac-thanks-step-num\">02</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "<span class=\"ac-thanks-step-num\">03</span>"
+msgstr "<span class=\"ac-thanks-step-num\">03</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker as-feat-kicker--light\">企業 &amp; 學校採購</span>"
+msgstr "<span class=\"as-feat-kicker as-feat-kicker--light\">企業 &amp; 學校採購</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">全程服務</span>"
+msgstr "<span class=\"as-feat-kicker\">全程服務</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">即時客服</span>"
+msgstr "<span class=\"as-feat-kicker\">即時客服</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">品牌信賴</span>"
+msgstr "<span class=\"as-feat-kicker\">品牌信賴</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">實體門市</span>"
+msgstr "<span class=\"as-feat-kicker\">實體門市</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">專業認證</span>"
+msgstr "<span class=\"as-feat-kicker\">專業認證</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "<span class=\"as-feat-kicker\">工程師團隊</span>"
+msgstr "<span class=\"as-feat-kicker\">工程師團隊</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"as-laser-counter\"><span class=\"as-laser-count\">0</span> / "
+"30</span>"
+msgstr ""
+"<span class=\"as-laser-counter\"><span class=\"as-laser-count\">0</span> / "
+"30</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>35 年 Apple 授權經銷商</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>35 年 Apple 授權經銷商</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>Jamf Elite 認證</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>Jamf Elite 認證</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>LINE / Email / Messenger 客服</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>LINE / Email / Messenger 客服</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>官方認證工程師</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>官方認證工程師</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>臺北兩間校園體驗中心</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                                <span>臺北兩間校園體驗中心</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>35 年 Apple 授權經銷商</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>35 年 Apple 授權經銷商</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>Jamf Elite 認證</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>Jamf Elite 認證</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>LINE / Email / Messenger 客服</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>LINE / Email / Messenger 客服</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>官方認證工程師</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>官方認證工程師</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip
+msgid ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>臺北兩間校園體驗中心</span>"
+msgstr ""
+"<span class=\"as-trust-check\" aria-hidden=\"true\">✓</span>\n"
+"                            <span>臺北兩間校園體驗中心</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"btn-label\">繼續</span>\n"
+"                                                        <span class=\"btn-spinner\" aria-hidden=\"true\"/>"
+msgstr ""
+"<span class=\"btn-label\">繼續</span>\n"
+"                                                        <span class=\"btn-spinner\" aria-hidden=\"true\"/>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.override_s_dynamic_snippet_products
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel
+msgid "<span class=\"btn-primary\">選購</span>"
+msgstr "<span class=\"btn-primary\">選購</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav
+msgid "<span class=\"categ-nav-name\">分類 A</span>"
+msgstr "<span class=\"categ-nav-name\">分類 A</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav
+msgid "<span class=\"categ-nav-name\">分類 B</span>"
+msgstr "<span class=\"categ-nav-name\">分類 B</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav
+msgid "<span class=\"categ-nav-name\">分類 C</span>"
+msgstr "<span class=\"categ-nav-name\">分類 C</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav
+msgid "<span class=\"categ-nav-name\">分類 D</span>"
+msgstr "<span class=\"categ-nav-name\">分類 D</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"col-label\">個人教育優惠</span>"
+msgstr "<span class=\"col-label\">個人教育優惠</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"col-label\">政策採購的最佳夥伴</span>"
+msgstr "<span class=\"col-label\">政策採購的最佳夥伴</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"col-label\">機構批量採購</span>"
+msgstr "<span class=\"col-label\">機構批量採購</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"column form-selector-left-col\">\n"
+"                                                                                <span class=\"form-selector-title\">好，請預先安裝在我的 Mac 上</span>\n"
+"                                                                            </span>"
+msgstr ""
+"<span class=\"column form-selector-left-col\">\n"
+"                                                                                <span class=\"form-selector-title\">好，請預先安裝在我的 Mac 上</span>\n"
+"                                                                            </span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker kicker-secondary\">世新據點</span>"
+msgstr "<span class=\"kicker kicker-secondary\">世新據點</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker kicker-secondary\">師大據點</span>"
+msgstr "<span class=\"kicker kicker-secondary\">師大據點</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker kicker-secondary\">電話諮詢</span>"
+msgstr "<span class=\"kicker kicker-secondary\">電話諮詢</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker\">免費配送到府</span>"
+msgstr "<span class=\"kicker\">免費配送到府</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker\">分期付款</span>"
+msgstr "<span class=\"kicker\">分期付款</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "<span class=\"kicker\">教育優惠價</span>"
+msgstr "<span class=\"kicker\">教育優惠價</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "<span class=\"kicker\">顏色 —</span>"
+msgstr "<span class=\"kicker\">顏色 —</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel_content
+msgid "<span class=\"price-suffix\">起</span>"
+msgstr "<span class=\"price-suffix\">起</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"row\">\n"
+"                                                                            <span class=\"column form-selector-left-col\">\n"
+"                                                                                <span class=\"form-selector-title\">不用了，謝謝</span>\n"
+"                                                                            </span>\n"
+"                                                                            <span class=\"column form-selector-right-col\"/>\n"
+"                                                                        </span>"
+msgstr ""
+"<span class=\"row\">\n"
+"                                                                            <span class=\"column form-selector-left-col\">\n"
+"                                                                                <span class=\"form-selector-title\">不用了，謝謝</span>\n"
+"                                                                            </span>\n"
+"                                                                            <span class=\"column form-selector-right-col\"/>\n"
+"                                                                        </span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"row\">\n"
+"                                                                <span class=\"column form-selector-left-col\">\n"
+"                                                                    <span class=\"form-selector-title\">不用了，謝謝</span>\n"
+"                                                                </span>\n"
+"                                                                <span class=\"column form-selector-right-col\"/>\n"
+"                                                            </span>"
+msgstr ""
+"<span class=\"row\">\n"
+"                                                                <span class=\"column form-selector-left-col\">\n"
+"                                                                    <span class=\"form-selector-title\">不用了，謝謝</span>\n"
+"                                                                </span>\n"
+"                                                                <span class=\"column form-selector-right-col\"/>\n"
+"                                                            </span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span class=\"row\">\n"
+"                                                                <span class=\"column form-selector-left-col\">\n"
+"                                                                    <span class=\"form-selector-title\">新增免費雷射刻字</span>\n"
+"                                                                    <span class=\"form-label-small\">30 字元</span>\n"
+"                                                                </span>\n"
+"                                                                <span class=\"column form-selector-right-col\">\n"
+"                                                                    <span class=\"form-label-small as-laser-free-badge\">免費</span>\n"
+"                                                                </span>\n"
+"                                                            </span>"
+msgstr ""
+"<span class=\"row\">\n"
+"                                                                <span class=\"column form-selector-left-col\">\n"
+"                                                                    <span class=\"form-selector-title\">新增免費雷射刻字</span>\n"
+"                                                                    <span class=\"form-label-small\">30 字元</span>\n"
+"                                                                </span>\n"
+"                                                                <span class=\"column form-selector-right-col\">\n"
+"                                                                    <span class=\"form-label-small as-laser-free-badge\">免費</span>\n"
+"                                                                </span>\n"
+"                                                            </span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "<span class=\"visuallyhidden\">顯示更多資訊</span>"
+msgstr "<span class=\"visuallyhidden\">顯示更多資訊</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span>專業 App。</span>\n"
+"                                                    <span class=\"as-subheading\">讓 Mac 實現更多精彩。</span>"
+msgstr ""
+"<span>專業 App。</span>\n"
+"                                                    <span class=\"as-subheading\">讓 Mac 實現更多精彩。</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "<span>查看授權協議</span>"
+msgstr "<span>查看授權協議</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "<span>送出訊息</span>"
+msgstr "<span>送出訊息</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "<span>選購 Mac</span>"
+msgstr "<span>選購 Mac</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span>配件。</span>\n"
+"                                                            <span class=\"as-subheading\">完善你的桌面。</span>"
+msgstr ""
+"<span>配件。</span>\n"
+"                                                            <span class=\"as-subheading\">完善你的桌面。</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"<span>雷射刻字。</span>\n"
+"                                                        <span class=\"as-subheading\">留下專屬你的印記。</span>"
+msgstr ""
+"<span>雷射刻字。</span>\n"
+"                                                        <span class=\"as-subheading\">留下專屬你的印記。</span>"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_template__apple_panel_section__accessory
+msgid "Accessory (Mouse / Keyboard / Trackpad)"
+msgstr "配件（滑鼠／鍵盤／觸控板）"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "Apple / Jamf Pro 認證工程師"
+msgstr "Apple / Jamf Pro 認證工程師"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_template_form_apple
+msgid "Apple Configurator"
+msgstr "Apple 配置器"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute_value__apple_description
+msgid "Apple Description"
+msgstr "Apple 說明"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_group_label
+msgid "Apple Group Label"
+msgstr "Apple 群組標籤"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_help_text
+msgid "Apple Help Text"
+msgstr "Apple 說明文字"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__apple_license_url
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__apple_license_url
+msgid "Apple License URL"
+msgstr "Apple 授權協議網址"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "Apple Mac Landing"
+msgstr "Apple Mac 著陸頁"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute_value__apple_image
+msgid "Apple Option Image"
+msgstr "Apple 選項圖片"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__apple_panel_section
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__apple_panel_section
+msgid "Apple Panel Section"
+msgstr "Apple 面板區段"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_price_display
+msgid "Apple Price Display"
+msgstr "Apple 價格顯示"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute_value__apple_price_display
+msgid "Apple Price Display Override"
+msgstr "Apple 價格顯示覆寫"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_section_order
+msgid "Apple Section Order"
+msgstr "Apple 區段排序"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute_value__apple_sub_label
+msgid "Apple Sub Label"
+msgstr "Apple 子標籤"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_subheading
+msgid "Apple Subheading"
+msgstr "Apple 副標題"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "Apple 優質教育合作夥伴，所有產品均為原廠公司貨，附完整保固。"
+msgstr "Apple 優質教育合作夥伴，所有產品均為原廠公司貨，附完整保固。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "Apple 原廠授權"
+msgstr "Apple 原廠授權"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "Apple 設備大量部署與 MDM 管理的專業首選，學校 IT 採購的信任夥伴。"
+msgstr "Apple 設備大量部署與 MDM 管理的專業首選，學校 IT 採購的信任夥伴。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_banner_headline
+msgid "Apple 風格 banner 大標題，例如「用 iPad 大顯身手。」"
+msgstr "Apple 風格 banner 大標題，例如「用 iPad 大顯身手。」"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_template__apple_panel_section__applecare
+msgid "AppleCare+ Protection Plan"
+msgstr "AppleCare+ 保護方案"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_product_attribute_value
+msgid "Attribute Value"
+msgstr "屬性值"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_starting_price
+msgid "Auto-computed lowest-priced variant of products in this category."
+msgstr "自動計算此分類中價格最低的商品變體。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_banner_hero
+msgid "Banner Hero 圖片"
+msgstr "Banner Hero 圖片"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "Banner Hero 圖片（大型產品圖）"
+msgstr "Banner Hero 圖片（大型產品圖）"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_banner_hero
+msgid "Banner 下方的大型產品 hero 圖片（類似 Apple.com 分類頁）。"
+msgstr "Banner 下方的大型產品 hero 圖片（類似 Apple.com 分類頁）。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_banner_description
+msgid "Banner 下方的描述段落文字。"
+msgstr "Banner 下方的描述段落文字。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_banner_headline
+msgid "Banner 大標題"
+msgstr "Banner 大標題"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_banner_description
+msgid "Banner 說明文字"
+msgstr "Banner 說明文字"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "Banner（分類頁標題）"
+msgstr "Banner（分類頁標題）"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_template_form_apple
+msgid "Compare Table Specs (shown at bottom of configurator)"
+msgstr "比較表規格（顯示於配置器底部）"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "Configurator subnav"
+msgstr "配置器子導覽"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__create_uid
+msgid "Created by"
+msgstr "建立者"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_currency_id
+msgid "Currency for mac_starting_price (defaults to company currency)."
+msgstr "mac_starting_price 的貨幣（預設為公司貨幣）。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_attribute__apple_decision_desc
+msgid "Decision-Support Description"
+msgstr "決策輔助說明"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__mac_default_ptav_ids
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__mac_default_ptav_ids
+msgid "Default Selected Options"
+msgstr "預設選取選項"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_template_form_apple
+msgid "Default Selected Options (when configurator first loads)"
+msgstr "預設選取選項（配置器首次載入時）"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_decision_desc
+msgid "Description for the help card, e.g. '比較各個選項，看看哪一款最適合你。'"
+msgstr "說明卡片的描述文字，例如「比較各個選項，看看哪一款最適合你。」"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute_value__apple_description
+msgid ""
+"Detailed description shown on the radio_card body, e.g. '10 核心 CPU、10 核心 "
+"GPU、16 核心神經網路引擎'."
+msgstr "顯示於 radio_card 主體的詳細說明，例如「10 核心 CPU、10 核心 GPU、16 核心神經網路引擎」。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "Email"
+msgstr "電子郵件"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__apple_license_url
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__apple_license_url
+msgid ""
+"External URL to the SLA / EULA shown as '查看授權協議' link next to a software "
+"pre-install option (Final Cut Pro / Logic Pro)."
+msgstr "顯示於軟體預先安裝選項（Final Cut Pro／Logic Pro）旁、以「查看授權協議」連結呈現的 SLA／EULA 外部網址。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_subtitle
+msgid "Family tag, e.g. '桌上型' / '筆記型'"
+msgstr "系列標籤，例如「桌上型」／「筆記型」"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_ether_1g
+msgid "Gigabit 乙太網路"
+msgstr "Gigabit 乙太網路"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_hero_image
+msgid "Hero image shown on the /shop/category/mac landing card."
+msgstr "顯示於 /shop/category/mac 著陸卡片的主視覺圖片。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_price_display
+msgid ""
+"How each option's price is displayed in this attribute's group: 'starting' "
+"shows base+price_extra as an absolute 'X 起' (used for chip); 'none' shows "
+"nothing per-option (price is rolled into the summary total)."
+msgstr "此屬性群組中各選項的價格顯示方式：「starting」以 base+price_extra 顯示為絕對值「X 起」（用於晶片）；「none」則每個選項不顯示價格（價格併入總計）。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__id
+msgid "ID"
+msgstr "ID"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute_value__apple_image
+msgid "Image for this option (e.g. colour swatch, chip illustration)."
+msgstr "此選項的圖片（例如顏色色票、晶片示意圖）。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__is_mac_product
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__is_mac_product
+msgid "Is Mac Product"
+msgstr "是否為 Mac 商品"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid ""
+"Jamf Elite 認證工程師提供 MDM 設定、Apple School Manager\n"
+"                                                建置及到校安裝服務。"
+msgstr ""
+"Jamf Elite 認證工程師提供 MDM 設定、Apple School Manager\n"
+"                                                建置及到校安裝服務。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "Jamf Elite 認證經銷商"
+msgstr "Jamf Elite 認證經銷商"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "Jamf Pro 部署與管理"
+msgstr "Jamf Pro 部署與管理"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "Jamf 部署"
+msgstr "Jamf 部署"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "LINE / Email / Messenger"
+msgstr "LINE / Email / Messenger"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_mac_compare_spec__label
+msgid "Left-column label, e.g. '處理器' / '記憶體' / '儲存裝置' / '連接埠'"
+msgstr "左欄標籤，例如「處理器」／「記憶體」／「儲存裝置」／「連接埠」"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_group_label
+msgid ""
+"Legend text shown above this attribute group on the configurator, e.g. "
+"'晶片。各款強大選項任你選擇。'"
+msgstr "顯示於配置器此屬性群組上方的圖例文字，例如「晶片。各款強大選項任你選擇。」"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_chip_m3
+msgid "M3 晶片"
+msgstr "M3 晶片"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_chip_m4_max
+msgid "M4 Max 晶片"
+msgstr "M4 Max 晶片"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_chip_m4_pro
+msgid "M4 Pro 晶片"
+msgstr "M4 Pro 晶片"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_chip_m4
+msgid "M4 晶片"
+msgstr "M4 晶片"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "Mac"
+msgstr "Mac"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_subtitle
+msgid "Mac Card Subtitle"
+msgstr "Mac 卡片副標題"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_tagline
+msgid "Mac Card Tagline"
+msgstr "Mac 卡片標語"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__mac_color_attribute_id
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__mac_color_attribute_id
+msgid "Mac Color Attribute"
+msgstr "Mac 顏色屬性"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_product__mac_compare_spec_ids
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_template__mac_compare_spec_ids
+msgid "Mac Compare Specs"
+msgstr "Mac 比較規格"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_mac_compare_spec
+msgid "Mac Compare Table Row"
+msgstr "Mac 比較表列"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_currency_id
+msgid "Mac Currency"
+msgstr "Mac 貨幣"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_hero_image
+msgid "Mac Landing Card Image"
+msgstr "Mac 著陸卡片圖片"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_landing_order
+msgid "Mac Landing Order"
+msgstr "Mac 著陸頁排序"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_public_category__mac_role__model
+msgid "Mac Model"
+msgstr "Mac 機型"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_role
+msgid "Mac Role"
+msgstr "Mac 角色"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_public_category__mac_role__root
+msgid "Mac Root Category"
+msgstr "Mac 根分類"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_product_public_category__mac_starting_price
+msgid "Mac Starting Price"
+msgstr "Mac 起始價格"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_mac_studio
+msgid "Mac Studio"
+msgstr "Mac Studio"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "Mac landing sections"
+msgstr "Mac 著陸頁區段"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_mac_mini
+msgid "Mac mini"
+msgstr "Mac mini"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "Mac 教室 · iPad 大量部署 · BYOD 計畫"
+msgstr "Mac 教室 · iPad 大量部署 · BYOD 計畫"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_macbook_air
+msgid "MacBook Air"
+msgstr "MacBook Air"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_macbook_neo
+msgid "MacBook Neo"
+msgstr "MacBook Neo"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_macbook_pro
+msgid "MacBook Pro"
+msgstr "MacBook Pro"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_role
+msgid ""
+"Marks records that participate in the Apple-style buy flow. Set 'root' on "
+"the top-level Mac category, 'model' on each individual Mac line (MacBook Air"
+" / Pro / iMac / Mac mini ...)."
+msgstr "標記參與 Apple 風格購買流程的記錄。於最上層 Mac 分類設為「root」，於每個個別 Mac 產品線（MacBook Air／Pro／iMac／Mac mini ...）設為「model」。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel_content
+msgid "Next"
+msgstr "下一個"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_attribute__apple_price_display__none
+msgid "No price column (memory / storage / ethernet)"
+msgstr "無價格欄（記憶體／儲存裝置／乙太網路）"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_help_text
+msgid "Optional help content shown in a popover next to the legend."
+msgstr "顯示於圖例旁彈出視窗的選填說明內容。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_mac_compare_spec__icon
+msgid "Optional icon shown beside the label."
+msgstr "顯示於標籤旁的選填圖示。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute_value__apple_price_display
+msgid ""
+"Optional override for the price label, e.g. 'NT$26,900 起'. If empty, price "
+"is auto-formatted from price_extra."
+msgstr "價格標籤的選填覆寫值，例如「NT$26,900 起」。若留空，價格將依 price_extra 自動格式化。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute_value__apple_sub_label
+msgid "Optional secondary line above price, e.g. '2 個選項'."
+msgstr "價格上方的選填次要文字行，例如「2 個選項」。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_section_order
+msgid ""
+"Order in which this attribute group appears in the right-side configurator "
+"panel. Lower = first."
+msgstr "此屬性群組在右側配置器面板中的顯示順序，數值越小越靠前。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_landing_order
+msgid "Order on the /shop/category/mac landing carousel."
+msgstr "在 /shop/category/mac 著陸輪播中的排序。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__mac_default_ptav_ids
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__mac_default_ptav_ids
+msgid ""
+"Pre-checked options when the configurator first loads. Pick one PTAV from "
+"each attribute_line for a clean default."
+msgstr "配置器首次載入時預先勾選的選項。請從每個 attribute_line 各挑一個 PTAV，以取得乾淨的預設值。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel_content
+msgid "Previous"
+msgstr "上一個"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_attribute__apple_price_display__extra
+msgid "Price extra (+NT$X)"
+msgstr "額外價格（+NT$X）"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_template__apple_panel_section__software
+msgid "Pro App (Final Cut Pro / Logic Pro pre-install)"
+msgstr "專業 App（Final Cut Pro／Logic Pro 預先安裝）"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_studio_display_xdr
+msgid "Pro Display XDR"
+msgstr "Pro Display XDR"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_product_template
+msgid "Product"
+msgstr "商品"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_product_attribute
+msgid "Product Attribute"
+msgstr "產品屬性"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__product_tmpl_id
+msgid "Product Template"
+msgstr "產品範本"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_mac_compare_spec__value
+msgid "Right-column value (multi-line allowed)."
+msgstr "右欄數值（可多行）。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__mac_compare_spec_ids
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__mac_compare_spec_ids
+msgid ""
+"Rows shown in the compare-table section at the bottom of the configurator."
+msgstr "顯示於配置器底部比較表區段的列。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__sequence
+msgid "Sequence"
+msgstr "序號"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_public_category__mac_tagline
+msgid "Short subtitle on the Mac landing card, e.g. '為輕巧而生'"
+msgstr "Mac 著陸卡片上的簡短副標題，例如「為輕巧而生」"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__icon
+msgid "Spec Icon"
+msgstr "規格圖示"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__label
+msgid "Spec Label"
+msgstr "規格標籤"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,field_description:theme_apple_shop.field_mac_compare_spec__value
+msgid "Spec Value"
+msgstr "規格數值"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields.selection,name:theme_apple_shop.selection__product_attribute__apple_price_display__starting
+msgid "Starting price absolute (晶片: NT$X 起)"
+msgstr "起始價格絕對值（晶片：NT$X 起）"
+
+#. module: theme_apple_shop
+#: model:product.public.category,name:theme_apple_shop.categ_studio_display
+msgid "Studio Display"
+msgstr "Studio Display"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_attribute__apple_subheading
+msgid ""
+"Sub-line shown next to the main label, e.g. for 晶片 the legend splits into "
+"'晶片。' (main) + '各款強大選項任你選擇。' (subheading). If empty, falls back to "
+"apple_group_label as a single line."
+msgstr "顯示於主標籤旁的次要文字行，例如「晶片」的圖例會拆成「晶片。」（主）＋「各款強大選項任你選擇。」（副標題）。若留空，則退回以 apple_group_label 單行顯示。"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_theme_utils
+msgid "Theme Utils"
+msgstr "主題"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__is_mac_product
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__is_mac_product
+msgid "True if any of the product's public_categ_ids has mac_role='model'."
+msgstr "若商品的任一 public_categ_ids 其 mac_role='model'，則為 True。"
+
+#. module: theme_apple_shop
+#: model:ir.model,name:theme_apple_shop.model_product_public_category
+msgid "Website Product Category"
+msgstr "網站產品目錄"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__apple_panel_section
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__apple_panel_section
+msgid "Where to render this product on the Mac configurator panel."
+msgstr "此商品要呈現在 Mac 配置器面板的哪個位置。"
+
+#. module: theme_apple_shop
+#: model:ir.model.fields,help:theme_apple_shop.field_product_product__mac_color_attribute_id
+#: model:ir.model.fields,help:theme_apple_shop.field_product_template__mac_color_attribute_id
+msgid ""
+"Which product.attribute drives the colour swatch and main-image swap. Leave "
+"empty if the product has no colour variants."
+msgstr "由哪個 product.attribute 驅動顏色色票與主圖切換。若商品無顏色變體，請留空。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "breadcrumb"
+msgstr "麵包屑導覽"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "info@superinfo.com.tw"
+msgstr "info@superinfo.com.tw"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "you@example.com"
+msgstr "you@example.com"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid ""
+"一次購置 10\n"
+"                                                    台以上享有教育批量優惠。極電資訊提供從詢價、報價到交機的一站式服務，減輕學校行政負擔。"
+msgstr ""
+"一次購置 10\n"
+"                                                    台以上享有教育批量優惠。極電資訊提供從詢價、報價到交機的一站式服務，減輕學校行政負擔。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "世新大學"
+msgstr "世新大學"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "主圖"
+msgstr "主圖"
+
+#. module: theme_apple_shop
+#: model:product.attribute,name:theme_apple_shop.attr_ethernet
+msgid "乙太網路"
+msgstr "乙太網路"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_group_label:theme_apple_shop.attr_ethernet
+msgid "乙太網路。"
+msgstr "乙太網路。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "位於師大校園內，提供在校師生一對一選購諮詢、現場試用及教育優惠認證服務。"
+msgstr "位於師大校園內，提供在校師生一對一選購諮詢、現場試用及教育優惠認證服務。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid ""
+"作為 Jamf Elite 經銷商，極電資訊協助學校完成 MDM 設定、Apple School\n"
+"                                                    Manager 建置，讓每台 Mac 上線即可使用。"
+msgstr ""
+"作為 Jamf Elite 經銷商，極電資訊協助學校完成 MDM 設定、Apple School\n"
+"                                                    Manager 建置，讓每台 Mac 上線即可使用。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "你也可以根據偏好，選購獨立的 Final Cut Pro 和 Logic Pro 預先安裝版本。"
+msgstr "你也可以根據偏好，選購獨立的 Final Cut Pro 和 Logic Pro 預先安裝版本。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"你的全新 Mac 隨附 Apple Creator Studio 的三個月免額外付費試用，\n"
+"                                                        這項多合一訂閱服務包含 Final Cut Pro、Logic Pro、Pixelmator Pro\n"
+"                                                        等強大 app，以及更多精彩功能。"
+msgstr ""
+"你的全新 Mac 隨附 Apple Creator Studio 的三個月免額外付費試用，\n"
+"                                                        這項多合一訂閱服務包含 Final Cut Pro、Logic Pro、Pixelmator Pro\n"
+"                                                        等強大 app，以及更多精彩功能。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "例：學校 Mac 批量採購諮詢"
+msgstr "例：學校 Mac 批量採購諮詢"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip_panel
+msgid "信賴保證條"
+msgstr "信賴保證條"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_kb_cangjie
+msgid "倉頡"
+msgstr "倉頡"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "個人選機"
+msgstr "個人選機"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "傳送訊息"
+msgstr "傳送訊息"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "僅供參考，實際刻字位置與大小以出貨為準"
+msgstr "僅供參考，實際刻字位置與大小以出貨為準"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "僅限文字與數字，不支援 Emoji 或特殊符號"
+msgstr "僅限文字與數字，不支援 Emoji 或特殊符號"
+
+#. module: theme_apple_shop
+#: model:product.attribute,name:theme_apple_shop.attr_storage
+msgid "儲存裝置"
+msgstr "儲存裝置"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_group_label:theme_apple_shop.attr_storage
+msgid "儲存裝置。"
+msgstr "儲存裝置。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "免費配送到府"
+msgstr "免費配送到府"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "全台免運費標準配送。學校大量採購亦可安排集中交機與開箱設定服務。"
+msgstr "全台免運費標準配送。學校大量採購亦可安排集中交機與開箱設定服務。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "公司 / 學校"
+msgstr "公司 / 學校"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "其他"
+msgstr "其他"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "分期付款"
+msgstr "分期付款"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.override_s_dynamic_snippet_products
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel
+msgid "分類 A"
+msgstr "分類 A"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.override_s_dynamic_snippet_products
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel
+msgid "分類 B"
+msgstr "分類 B"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.override_s_dynamic_snippet_products
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel
+msgid "分類 C"
+msgstr "分類 C"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav_panel
+msgid "分類圖示導覽"
+msgstr "分類圖示導覽"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "刻字內容"
+msgstr "刻字內容"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_midnight
+msgid "午夜"
+msgstr "午夜"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "協助學生、教師及學校完成教育身份認證，確保享有最優惠的合法定價。"
+msgstr "協助學生、教師及學校完成教育身份認證，確保享有最優惠的合法定價。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "卡片 Hero 圖片（Landing Card 用）"
+msgstr "卡片 Hero 圖片（Landing Card 用）"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_subheading:theme_apple_shop.attr_chip
+msgid "各款強大選項任你選擇。"
+msgstr "各款強大選項任你選擇。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "各種機型"
+msgstr "各種機型"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "售後持續陪伴"
+msgstr "售後持續陪伴"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "售後服務"
+msgstr "售後服務"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel_content
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_nav_content
+msgid "商品分類"
+msgstr "商品分類"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "商品配置面板"
+msgstr "商品配置面板"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "商店"
+msgstr "商店"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "回到首頁"
+msgstr "回到首頁"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "國立臺灣師範大學"
+msgstr "國立臺灣師範大學"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "填寫以下表單，我們會盡快回覆您。"
+msgstr "填寫以下表單，我們會盡快回覆您。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "多位官方認證工程師隨時為您服務，專業能力有憑有據，售後不用擔心。"
+msgstr "多位官方認證工程師隨時為您服務，專業能力有憑有據，售後不用擔心。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_space_gray
+msgid "太空灰"
+msgstr "太空灰"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "姓名 <span class=\"ac-required\">*</span>"
+msgstr "姓名 <span class=\"ac-required\">*</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "學校 &amp; 政府機關"
+msgstr "學校 &amp; 政府機關"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid ""
+"學校或機構採購需求？我們擁有豐富的共契 BOT、Mac 教室建置與\n"
+"                                    iPad 大量部署執行經驗，全程協助從詢價到交機。"
+msgstr ""
+"學校或機構採購需求？我們擁有豐富的共契 BOT、Mac 教室建置與\n"
+"                                    iPad 大量部署執行經驗，全程協助從詢價到交機。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "學校採購"
+msgstr "學校採購"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "學校集中採購"
+msgstr "學校集中採購"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "學生 &amp; 教職員"
+msgstr "學生 &amp; 教職員"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "學生、教職員、學校及政府機關均可申請 Apple 教育專屬定價，享有比一般零售更優惠的採購條件。"
+msgstr "學生、教職員、學校及政府機關均可申請 Apple 教育專屬定價，享有比一般零售更優惠的採購條件。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "專業部署支援"
+msgstr "專業部署支援"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "專業顧問將根據您的需求提供最適合的建議。"
+msgstr "專業顧問將根據您的需求提供最適合的建議。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "專為學校、縣市政府與教育局設計的採購流程：統一報價、政府電子採購平台下單、集中交機與部署，全程一手包辦。"
+msgstr "專為學校、縣市政府與教育局設計的採購流程：統一報價、政府電子採購平台下單、集中交機與部署，全程一手包辦。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "已加入購物袋"
+msgstr "已加入購物袋"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "師大 &amp; 世新校園體驗中心"
+msgstr "師大 &amp; 世新校園體驗中心"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_mac_studio
+msgid "強大、緊湊、為工作室而生"
+msgstr "強大、緊湊、為工作室而生"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "從個人到整間教室，我們都有辦法"
+msgstr "從個人到整間教室，我們都有辦法"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid ""
+"從輕薄的 MacBook Air 到高效能的 Mac\n"
+"                                                    Pro，比較所有機型，找出最符合你工作與創作需求的選擇。"
+msgstr ""
+"從輕薄的 MacBook Air 到高效能的 Mac\n"
+"                                                    Pro，比較所有機型，找出最符合你工作與創作需求的選擇。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "從選機、部署到售後教育訓練，客製化服務讓科技真正落地在你的學習與工作中。"
+msgstr "從選機、部署到售後教育訓練，客製化服務讓科技真正落地在你的學習與工作中。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "從選機到部署，我們全程陪同。"
+msgstr "從選機到部署，我們全程陪同。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "您很快會收到一封確認信，請確認垃圾郵件夾。"
+msgstr "您很快會收到一封確認信，請確認垃圾郵件夾。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "感謝您的來信。<br/>我們的團隊將於 <strong>1–2 個工作天</strong>內與您聯繫。"
+msgstr "感謝您的來信。<br/>我們的團隊將於 <strong>1–2 個工作天</strong>內與您聯繫。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "感謝您的來信，我們的團隊將於 1–2 個工作天內與您聯繫。"
+msgstr "感謝您的來信，我們的團隊將於 1–2 個工作天內與您聯繫。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "憑學生證或教職員證即可享有 Apple 官方教育定價，搭配極電資訊的選購顧問服務，讓你買對、買好。"
+msgstr "憑學生證或教職員證即可享有 Apple 官方教育定價，搭配極電資訊的選購顧問服務，讓你買對、買好。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "找到我們"
+msgstr "找到我們"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "找到最適合你使用情境的 Mac"
+msgstr "找到最適合你使用情境的 Mac"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "探索這些強大的專業 app 如何助你大展創意。"
+msgstr "探索這些強大的專業 app 如何助你大展創意。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "描述段落文字..."
+msgstr "描述段落文字..."
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_chip_m4_pro
+msgid "擁有所有 M4 具備的先進技術，但威力更增強，可駕馭更繁重的任務。"
+msgstr "擁有所有 M4 具備的先進技術，但威力更增強，可駕馭更繁重的任務。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "放心購買"
+msgstr "放心購買"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "教育優惠"
+msgstr "教育優惠"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "教育優惠價"
+msgstr "教育優惠價"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "教育優惠認證"
+msgstr "教育優惠認證"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "教育優惠，讓每一分預算都用在刀口上"
+msgstr "教育優惠，讓每一分預算都用在刀口上"
+
+#. module: theme_apple_shop
+#: model:product.attribute,name:theme_apple_shop.attr_chip
+msgid "晶片"
+msgstr "晶片"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_group_label:theme_apple_shop.attr_chip
+msgid "晶片。"
+msgstr "晶片。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_attribute_form_apple
+msgid "晶片。各款強大選項任你選擇。"
+msgstr "晶片。各款強大選項任你選擇。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_ether_10g
+msgid "更高的連線頻寬，連結速度最高可達 10Gb。"
+msgstr "更高的連線頻寬，連結速度最高可達 10Gb。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "有任何問題，<br/>我們在這裡。"
+msgstr "有任何問題，<br/>我們在這裡。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "有問題隨時找得到我們。三大通路快速回覆，不讓你空等。"
+msgstr "有問題隨時找得到我們。三大通路快速回覆，不讓你空等。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "服務世新師生與周邊社區，提供 Mac、iPad 完整產品線展示，以及 Jamf 裝置管理示範。"
+msgstr "服務世新師生與周邊社區，提供 Mac、iPad 完整產品線展示，以及 Jamf 裝置管理示範。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_citrus
+msgid "柑橘黃"
+msgstr "柑橘黃"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "查看購物袋"
+msgstr "查看購物袋"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "校園採購方案"
+msgstr "校園採購方案"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "校園體驗中心"
+msgstr "校園體驗中心"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_mac_mini
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_mac_studio
+msgid "桌上型"
+msgstr "桌上型"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "桌上型 / 筆記型"
+msgstr "桌上型 / 筆記型"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip_panel
+msgid "極電 Hero Banner"
+msgstr "極電 Hero Banner"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "極電校園體驗中心"
+msgstr "極電校園體驗中心"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_hero_banner
+msgid "極電資訊商店"
+msgstr "極電資訊商店"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "極電資訊長期配合教育部「生生用平板」及程式教育政策，具備豐富的政府採購資格與執行經驗，是學校信賴的長期夥伴。"
+msgstr "極電資訊長期配合教育部「生生用平板」及程式教育政策，具備豐富的政府採購資格與執行經驗，是學校信賴的長期夥伴。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_ether_1g
+msgid "標準網路功能，連結速度最高可達 1Gb。"
+msgstr "標準網路功能，連結速度最高可達 1Gb。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "此分類目前尚無商品"
+msgstr "此分類目前尚無商品"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_kb_zhuyin
+msgid "注音"
+msgstr "注音"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_space_black
+msgid "深空黑"
+msgstr "深空黑"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_chip_m4
+msgid "澎湃的效能表現，幾乎可助你從容駕馭所有想做的工作。"
+msgstr "澎湃的效能表現，幾乎可助你從容駕馭所有想做的工作。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "為什麼選擇極電資訊"
+msgstr "為什麼選擇極電資訊"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_studio_display_xdr
+msgid "為專業工作室打造"
+msgstr "為專業工作室打造"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_macbook_pro
+msgid "為專業而生"
+msgstr "為專業而生"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_macbook_neo
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "為輕巧而生"
+msgstr "為輕巧而生"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_chip_m4_max
+msgid "為高階用戶與創作者打造的極致效能。"
+msgstr "為高階用戶與創作者打造的極致效能。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "無法親訪？電話諮詢。"
+msgstr "無法親訪？電話諮詢。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "無論個人選機或學校採購規劃，極電資訊的顧問團隊隨時為你解答。"
+msgstr "無論個人選機或學校採購規劃，極電資訊的顧問團隊隨時為你解答。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "無論是個人選機諮詢、學校採購規劃，或是 Jamf 部署支援，歡迎透過以下方式與極電資訊聯繫。"
+msgstr "無論是個人選機諮詢、學校採購規劃，或是 Jamf 部署支援，歡迎透過以下方式與極電資訊聯繫。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "王小明"
+msgstr "王小明"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "生生用平板計畫"
+msgstr "生生用平板計畫"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.product_public_category_form_apple
+msgid "用 iPad 大顯身手。"
+msgstr "用 iPad 大顯身手。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "由你訂製，專屬於你。"
+msgstr "由你訂製，專屬於你。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "確認收件"
+msgstr "確認收件"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_macbook_air
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_macbook_pro
+msgid "筆記型"
+msgstr "筆記型"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_macbook_neo
+msgid "筆記型 — 全新"
+msgstr "筆記型 — 全新"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_kb_simplified
+msgid "簡體中文"
+msgstr "簡體中文"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "結帳"
+msgstr "結帳"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "繼續"
+msgstr "繼續"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "繼續選購 Mac"
+msgstr "繼續選購 Mac"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attr_val_kb_english
+msgid "美式英文"
+msgstr "美式英文"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_studio_display
+msgid "耀眼一見的桌上型顯示器"
+msgstr "耀眼一見的桌上型顯示器"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "聯絡我們"
+msgstr "聯絡我們"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "聯絡採購專員"
+msgstr "聯絡採購專員"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "自 1990 年深耕逾 35 年"
+msgstr "自 1990 年深耕逾 35 年"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "臺北兩間校園門市，親臨體驗、諮詢、維修一站搞定，猶豫也能安心決定。"
+msgstr "臺北兩間校園門市，親臨體驗、諮詢、維修一站搞定，猶豫也能安心決定。"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_blush
+msgid "蜜桃粉"
+msgstr "蜜桃粉"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "親自體驗，再做決定"
+msgstr "親自體驗，再做決定"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "訊息已送出！"
+msgstr "訊息已送出！"
+
+#. module: theme_apple_shop
+#: model:product.attribute,name:theme_apple_shop.attr_memory
+msgid "記憶體"
+msgstr "記憶體"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_group_label:theme_apple_shop.attr_memory
+msgid "記憶體。"
+msgstr "記憶體。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "詢問主旨 <span class=\"ac-required\">*</span>"
+msgstr "詢問主旨 <span class=\"ac-required\">*</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "詢問類型"
+msgstr "詢問類型"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "詳細說明 <span class=\"ac-required\">*</span>"
+msgstr "詳細說明 <span class=\"ac-required\">*</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.override_s_dynamic_snippet_products
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel
+msgid "說明文字"
+msgstr "說明文字"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "請描述您的需求，例如：機型、數量、預算範圍、部署需求等…"
+msgstr "請描述您的需求，例如：機型、數量、預算範圍、部署需求等…"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "買 Mac，選極電資訊，買得安心"
+msgstr "買 Mac，選極電資訊，買得安心"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "購機後提供裝置管理培訓、軟體安裝協助，35 年深耕教育市場，不只賣機器，更是長期夥伴。"
+msgstr "購機後提供裝置管理培訓、軟體安裝協助，35 年深耕教育市場，不只賣機器，更是長期夥伴。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "購機首選，35 年深耕不只是口號"
+msgstr "購機首選，35 年深耕不只是口號"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "購物袋"
+msgstr "購物袋"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "購物袋目前是空的。"
+msgstr "購物袋目前是空的。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "超過三十五年的 Apple 授權經銷商，是您最值得信賴的購機夥伴。"
+msgstr "超過三十五年的 Apple 授權經銷商，是您最值得信賴的購機夥伴。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.shop_trust_features
+msgid "軟硬體諮詢與教育訓練"
+msgstr "軟硬體諮詢與教育訓練"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_macbook_air
+msgid "輕薄、強大、超長續航"
+msgstr "輕薄、強大、超長續航"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_tagline:theme_apple_shop.categ_mac_mini
+msgid "迷你體積，威猛實力"
+msgstr "迷你體積，威猛實力"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "送出即表示您同意我們的"
+msgstr "送出即表示您同意我們的"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "這些預先安裝的創意工具能做些什麼？"
+msgstr "這些預先安裝的創意工具能做些什麼？"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid ""
+"進一步了解\n"
+"                                                            <span class=\"visuallyhidden\">進一步了解 - Creator Studio</span>"
+msgstr ""
+"進一步了解\n"
+"                                                            <span class=\"visuallyhidden\">進一步了解 - Creator Studio</span>"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_subheading:theme_apple_shop.attr_ethernet
+msgid "選取速度。"
+msgstr "選取速度。"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_subheading:theme_apple_shop.attr_memory
+msgid "選擇適合的容量。"
+msgstr "選擇適合的容量。"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_subheading:theme_apple_shop.attr_storage
+msgid "選擇需要的儲存空間大小。"
+msgstr "選擇需要的儲存空間大小。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_apple_categ_carousel_content
+msgid "選購"
+msgstr "選購"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "選購情境"
+msgstr "選購情境"
+
+#. module: theme_apple_shop
+#: model:product.attribute,name:theme_apple_shop.attr_keyboard
+msgid "鍵盤"
+msgstr "鍵盤"
+
+#. module: theme_apple_shop
+#: model:product.attribute,apple_group_label:theme_apple_shop.attr_keyboard
+msgid "鍵盤布局。"
+msgstr "鍵盤布局。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "開始服務"
+msgstr "開始服務"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "關閉"
+msgstr "關閉"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "隱私政策"
+msgstr "隱私政策"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "電子郵件 <span class=\"ac-required\">*</span>"
+msgstr "電子郵件 <span class=\"ac-required\">*</span>"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "電話"
+msgstr "電話"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "電話諮詢"
+msgstr "電話諮詢"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,name:theme_apple_shop.attrval_color_indigo
+msgid "靛藍"
+msgstr "靛藍"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "頁內導覽"
+msgstr "頁內導覽"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_trust_strip_panel
+msgid "頁內導覽列"
+msgstr "頁內導覽列"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "項目一"
+msgstr "項目一"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "項目三"
+msgstr "項目三"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "項目二"
+msgstr "項目二"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "項目五"
+msgstr "項目五"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.s_localnav
+msgid "項目四"
+msgstr "項目四"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "預覽效果"
+msgstr "預覽效果"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_configurator
+msgid "顏色"
+msgstr "顏色"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_thanks_page
+msgid "顧問回覆"
+msgstr "顧問回覆"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_studio_display
+msgid "顯示器"
+msgstr "顯示器"
+
+#. module: theme_apple_shop
+#: model:product.public.category,mac_subtitle:theme_apple_shop.categ_studio_display_xdr
+msgid "顯示器 — 專業級"
+msgstr "顯示器 — 專業級"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.buy_mac_landing
+msgid "首頁"
+msgstr "首頁"
+
+#. module: theme_apple_shop
+#: model:product.attribute.value,apple_description:theme_apple_shop.attr_val_chip_m3
+msgid "高效能與長續航的優異組合。"
+msgstr "高效能與長續航的優異組合。"
+
+#. module: theme_apple_shop
+#: model_terms:ir.ui.view,arch_db:theme_apple_shop.contactus_page
+msgid "，我們不會將您的資料用於行銷以外用途。"
+msgstr "，我們不會將您的資料用於行銷以外用途。"
