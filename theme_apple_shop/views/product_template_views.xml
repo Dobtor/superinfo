@@ -48,6 +48,15 @@
                     </group>
                 </page>
             </xpath>
+
+            <!-- 隱藏標準「電子商務描述」群組(website_sale 加在「銷售」tab 的
+                 description_ecommerce)：本主題改用自訂的 configurator_intro(商品簡介)
+                 與 configurator_detail(商品詳情),配置器版型亦不再 render
+                 description_ecommerce,故於後台一併隱藏避免重複輸入造成混淆。
+                 ※ 僅隱藏不刪資料;theme 依賴 website_sale,此群組必存在於合併後 arch。 -->
+            <group name="ecom_description" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </group>
         </field>
     </record>
 
