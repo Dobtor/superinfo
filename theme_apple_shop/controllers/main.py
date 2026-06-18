@@ -247,7 +247,10 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     )
     def mac_add_to_cart(self, product_template_id,
                         product_template_attribute_value_ids=None,
-                        optional_product_ids=None, **kwargs):
+                        optional_product_ids=None,
+                        pencil_engraving_text=None,
+                        ipad_engraving_text=None,
+                        **kwargs):
         Template = request.env['product.template'].sudo()
         tmpl = Template.browse(int(product_template_id)).exists()
         if not tmpl:
@@ -274,6 +277,19 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
                 lambda p: p.attribute_id.create_variant == 'no_variant'
             ).ids,
         )
+
+        # Save engraving text onto the newly created order line
+        if pencil_engraving_text or ipad_engraving_text:
+            line = order_sudo.order_line.filtered(
+                lambda l: l.product_id.id == variant.id
+            ).sorted('id', reverse=True)[:1]
+            if line:
+                vals = {}
+                if pencil_engraving_text:
+                    vals['pencil_engraving_text'] = pencil_engraving_text[:10]
+                if ipad_engraving_text:
+                    vals['ipad_engraving_text'] = ipad_engraving_text[:30]
+                line.sudo().write(vals)
 
         # Add each optional product (accessory / software / AppleCare) as separate cart line
         for opt_id in (optional_product_ids or []):

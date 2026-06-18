@@ -7,6 +7,14 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
+                <page string="雷射刻字" name="engraving">
+                    <group string="雷射刻字選項">
+                        <group>
+                            <field name="has_pencil_engraving"/>
+                            <field name="has_ipad_engraving"/>
+                        </group>
+                    </group>
+                </page>
                 <page string="Apple Configurator" name="apple_configurator"
                       invisible="not is_mac_product">
                     <group>

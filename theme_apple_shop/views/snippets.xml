@@ -261,46 +261,4 @@
         </field>
     </record>
 
-    <!-- ── Override the built-in Products snippet to use Apple carousel ── -->
-    <record id="override_s_dynamic_snippet_products" model="ir.ui.view">
-        <field name="name">Apple Category Carousel Override</field>
-        <field name="type">qweb</field>
-        <field name="inherit_id" ref="website_sale.s_dynamic_snippet_products"/>
-        <field name="arch" type="xml">
-            <xpath expr="//t[@t-call='website.s_dynamic_snippet_template']" position="replace">
-                <section class="s_apple_categ_carousel pt-3 pb-5">
-                    <div class="container">
-                        <div class="apple-categ-carousel-wrapper"
-                             data-categ-id="0"
-                             data-snippet="s_apple_categ_carousel">
-                            <!-- Static preview shown in editor; replaced by JS in view mode -->
-                            <div class="models-track-wrap">
-                                <div class="models-track">
-                                    <article class="model-card" style="flex:0 0 220px">
-                                        <div class="model-card-image" style="background:rgba(59,130,246,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
-                                        <h3 class="model-card-name" style="font-size:16px">分類 A</h3>
-                                        <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
-                                    </article>
-                                    <article class="model-card" style="flex:0 0 220px">
-                                        <div class="model-card-image" style="background:rgba(99,102,241,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
-                                        <h3 class="model-card-name" style="font-size:16px">分類 B</h3>
-                                        <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
-                                    </article>
-                                    <article class="model-card" style="flex:0 0 220px">
-                                        <div class="model-card-image" style="background:rgba(16,185,129,.08);border-radius:12px;height:120px;margin:16px 0 12px"/>
-                                        <h3 class="model-card-name" style="font-size:16px">分類 C</h3>
-                                        <p class="model-card-tagline">說明文字</p>
-                                        <div class="model-card-actions"><span class="btn-primary">選購</span></div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </xpath>
-        </field>
-    </record>
-
 </odoo>

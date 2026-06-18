@@ -50,6 +50,16 @@ class ProductTemplate(models.Model):
         help="External URL to the SLA / EULA shown as '查看授權協議' link "
              "next to a software pre-install option (Final Cut Pro / Logic Pro).",
     )
+    has_pencil_engraving = fields.Boolean(
+        string="啟用 Apple Pencil 雷射刻字",
+        default=False,
+        help="在商品頁顯示 Apple Pencil 雷射刻字輸入欄位。",
+    )
+    has_ipad_engraving = fields.Boolean(
+        string="啟用 iPad 雷射刻字",
+        default=False,
+        help="在商品頁顯示 iPad 雷射刻字輸入欄位。",
+    )
 
     @api.depends('public_categ_ids', 'public_categ_ids.mac_role')
     def _compute_is_mac_product(self):
