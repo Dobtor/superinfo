@@ -13,6 +13,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='display_type']" position="after">
                 <field name="apple_section_order"/>
+                <field name="apple_show_price"/>
                 <field name="apple_group_label" placeholder="晶片。各款強大選項任你選擇。"/>
                 <field name="apple_help_text" placeholder="(optional) Help popover content"/>
             </xpath>

@@ -45,3 +45,8 @@ class ProductAttribute(models.Model):
         translate=True,
         help="Description for the help card, e.g. '比較各個選項，看看哪一款最適合你。'",
     )
+    apple_show_price = fields.Boolean(
+        string="顯示價格",
+        help="勾選後，前台 configurator 會在此屬性各選項名稱後顯示其 "
+             "default_extra_price（例：＋1980）。未勾選則不顯示。",
+    )

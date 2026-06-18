@@ -603,6 +603,16 @@
         font-weight: 600;
         color: $apple-black;
         line-height: 1.35;
+        // 允許「名稱 ＋金額」在版面不足時自動換行
+        white-space: normal;
+
+        // 附加金額（＋1980）：本身不被拆開，整段一起換到下一行
+        .form-selector-title-extra {
+            white-space: nowrap;
+            margin-inline-start: 4px;
+            font-weight: 600;
+            color: $apple-blue;
+        }
 
         .form-label-small {
             display: block;
