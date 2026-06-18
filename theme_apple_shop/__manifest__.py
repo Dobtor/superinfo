@@ -18,7 +18,6 @@
         'base',
         'website',
         'website_sale',
-        # 'superinfo_website_data',  # uncomment when module is in addons path
     ],
     'data': [
         'security/ir.model.access.xml',
@@ -35,9 +34,9 @@
         'views/shop_trust_features.xml',
         'views/contactus.xml',
         'views/snippets.xml',
-        # Data — base records owned by superinfo_website_data; theme only adds mac_* fields
+        # Data — Mac-configurator-only attributes (chip/memory/storage/ethernet/keyboard).
+        # 顏色擴充與 Mac 分類資料已移至 superinfo_website_data（避免本主題反向依賴資料模組）。
         'data/product_attributes.xml',
-        'data/product_categories.xml',
     ],
     'post_init_hook': '_post_init_hook',
     'images': [],

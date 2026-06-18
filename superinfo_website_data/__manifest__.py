@@ -21,6 +21,9 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         'website',
         'website_sale',
         'website_blog',
+        # 提供 apple_*/mac_* 欄位定義 + Apple 風格商店呈現；
+        # 本模組的 product_mac_apple.xml 會填這些欄位的值。
+        'theme_apple_shop',
     ],
     'data': [
         # 公司 / 網站基本設定
@@ -28,6 +31,8 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         # 商品分類 / 屬性 / 商品
         'data/product_categories.xml',
         'data/product_attributes.xml',
+        # Apple/Mac 主題整合（須在 categ_mac / attr_color 之後載入）
+        'data/product_mac_apple.xml',
         'data/products_iphone.xml',
         'data/products_mac.xml',
         'data/products_ipad.xml',

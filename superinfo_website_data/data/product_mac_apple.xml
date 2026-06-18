@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Apple/Mac 主題整合資料（原本散落在 theme_apple_shop，現集中於此）。
+        本檔設定的 apple_* / mac_* 欄位由 theme_apple_shop 定義，故本模組
+        depends 'theme_apple_shop'，確保欄位於載入此資料前已存在。
+
+        noupdate="0"：apple_*/mac_*/html_color 皆為主題控制的描述性欄位，
+        升級時一律重新套用（既有 DB 也能正確補上，避免 noupdate="1" 被略過）。
+    -->
+    <data noupdate="0">
+
+        <!-- ── 顏色屬性：補上 configurator 用欄位 ── -->
+        <record id="attr_color" model="product.attribute">
+            <field name="apple_section_order">5</field>
+            <field name="apple_group_label">顏色。選擇你喜歡的色調。</field>
+        </record>
+
+        <!-- 既有色值補 html_color（供 Mac 產品色票顯示） -->
+        <record id="attrval_color_silver" model="product.attribute.value">
+            <field name="html_color">#E3E4E5</field>
+        </record>
+        <record id="attrval_color_starlight" model="product.attribute.value">
+            <field name="html_color">#F0E5D2</field>
+        </record>
+        <record id="attrval_color_black" model="product.attribute.value">
+            <field name="html_color">#1A1A1A</field>
+        </record>
+        <record id="attrval_color_spaceblack" model="product.attribute.value">
+            <field name="html_color">#1A1A1A</field>
+        </record>
+        <record id="attrval_color_skyblue" model="product.attribute.value">
+            <field name="html_color">#A8C8E8</field>
+        </record>
+        <record id="attrval_color_lightgold" model="product.attribute.value">
+            <field name="html_color">#F0E5D2</field>
+        </record>
+        <record id="attrval_color_pink" model="product.attribute.value">
+            <field name="html_color">#F4C7BC</field>
+        </record>
+        <record id="attrval_color_yellow" model="product.attribute.value">
+            <field name="html_color">#F6C76C</field>
+        </record>
+        <record id="attrval_color_blue" model="product.attribute.value">
+            <field name="html_color">#4D5779</field>
+        </record>
+        <record id="attrval_color_lavender" model="product.attribute.value">
+            <field name="html_color">#C8B8D8</field>
+        </record>
+
+        <!-- Mac-only 新增色值 -->
+        <record id="attrval_color_midnight" model="product.attribute.value">
+            <field name="name">午夜</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#191970</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="attrval_color_space_gray" model="product.attribute.value">
+            <field name="name">太空灰</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#5C5C5C</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="attrval_color_space_black" model="product.attribute.value">
+            <field name="name">深空黑</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#1A1A1A</field>
+            <field name="sequence">50</field>
+        </record>
+        <record id="attrval_color_blush" model="product.attribute.value">
+            <field name="name">蜜桃粉</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#F4C7BC</field>
+            <field name="sequence">60</field>
+        </record>
+        <record id="attrval_color_citrus" model="product.attribute.value">
+            <field name="name">柑橘黃</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#F6C76C</field>
+            <field name="sequence">70</field>
+        </record>
+        <record id="attrval_color_indigo" model="product.attribute.value">
+            <field name="name">靛藍</field>
+            <field name="attribute_id" ref="attr_color"/>
+            <field name="html_color">#4D5779</field>
+            <field name="sequence">80</field>
+        </record>
+
+        <!-- ── Mac 分類：補上主題欄位 ── -->
+        <record id="categ_mac" model="product.public.category">
+            <field name="mac_role">root</field>
+            <field name="mac_subtitle">桌上型與筆記型</field>
+        </record>
+
+        <record id="categ_mac_imac" model="product.public.category">
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">桌上型</field>
+            <field name="mac_tagline">驚艷你的全方位桌上型電腦</field>
+            <field name="mac_landing_order">40</field>
+        </record>
+
+        <!-- ── Mac 機型子分類（parent → categ_mac） ── -->
+        <record id="categ_macbook_neo" model="product.public.category">
+            <field name="name">MacBook Neo</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">10</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">筆記型 — 全新</field>
+            <field name="mac_tagline">為輕巧而生</field>
+            <field name="mac_landing_order">10</field>
+        </record>
+
+        <record id="categ_macbook_air" model="product.public.category">
+            <field name="name">MacBook Air</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">20</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">筆記型</field>
+            <field name="mac_tagline">輕薄、強大、超長續航</field>
+            <field name="mac_landing_order">20</field>
+        </record>
+
+        <record id="categ_macbook_pro" model="product.public.category">
+            <field name="name">MacBook Pro</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">30</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">筆記型</field>
+            <field name="mac_tagline">為專業而生</field>
+            <field name="mac_landing_order">30</field>
+        </record>
+
+        <record id="categ_mac_mini" model="product.public.category">
+            <field name="name">Mac mini</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">50</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">桌上型</field>
+            <field name="mac_tagline">迷你體積，威猛實力</field>
+            <field name="mac_landing_order">50</field>
+        </record>
+
+        <record id="categ_mac_studio" model="product.public.category">
+            <field name="name">Mac Studio</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">60</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">桌上型</field>
+            <field name="mac_tagline">強大、緊湊、為工作室而生</field>
+            <field name="mac_landing_order">60</field>
+        </record>
+
+        <record id="categ_studio_display" model="product.public.category">
+            <field name="name">Studio Display</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">70</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">顯示器</field>
+            <field name="mac_tagline">耀眼一見的桌上型顯示器</field>
+            <field name="mac_landing_order">70</field>
+        </record>
+
+        <record id="categ_studio_display_xdr" model="product.public.category">
+            <field name="name">Pro Display XDR</field>
+            <field name="parent_id" ref="categ_mac"/>
+            <field name="sequence">80</field>
+            <field name="mac_role">model</field>
+            <field name="mac_subtitle">顯示器 — 專業級</field>
+            <field name="mac_tagline">為專業工作室打造</field>
+            <field name="mac_landing_order">80</field>
+        </record>
+
+    </data>
+</odoo>

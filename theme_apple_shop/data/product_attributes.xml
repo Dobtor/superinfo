@@ -1,88 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!--
-        Mac configurator attributes.
-        - attr_color is owned by superinfo_website_data; we only add apple_* fields.
-        - attr_chip / attr_memory / attr_storage / attr_ethernet / attr_keyboard
-          are Mac-configurator-specific and owned by this theme.
+        Mac configurator-specific attributes, fully owned by this theme:
+        attr_chip / attr_memory / attr_storage / attr_ethernet / attr_keyboard.
+
+        顏色屬性（attr_color）的 apple_*/html_color 擴充、Mac-only 新色，以及
+        Mac 分類，已改由 superinfo_website_data 提供
+        （superinfo_website_data/data/product_mac_apple.xml）。本主題不再引用
+        superinfo_website_data 的任何外部 ID，因此不依賴該資料模組。
     -->
     <data noupdate="1">
-
-        <!-- ── attr_color: update upstream record with configurator fields ── -->
-        <record id="superinfo_website_data.attr_color" model="product.attribute">
-            <field name="apple_section_order">5</field>
-            <field name="apple_group_label">顏色。選擇你喜歡的色調。</field>
-        </record>
-
-        <!-- Add html_color to upstream values used by Mac products -->
-        <record id="superinfo_website_data.attrval_color_silver" model="product.attribute.value">
-            <field name="html_color">#E3E4E5</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_starlight" model="product.attribute.value">
-            <field name="html_color">#F0E5D2</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_black" model="product.attribute.value">
-            <field name="html_color">#1A1A1A</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_spaceblack" model="product.attribute.value">
-            <field name="html_color">#1A1A1A</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_skyblue" model="product.attribute.value">
-            <field name="html_color">#A8C8E8</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_lightgold" model="product.attribute.value">
-            <field name="html_color">#F0E5D2</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_pink" model="product.attribute.value">
-            <field name="html_color">#F4C7BC</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_yellow" model="product.attribute.value">
-            <field name="html_color">#F6C76C</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_blue" model="product.attribute.value">
-            <field name="html_color">#4D5779</field>
-        </record>
-        <record id="superinfo_website_data.attrval_color_lavender" model="product.attribute.value">
-            <field name="html_color">#C8B8D8</field>
-        </record>
-
-        <!-- Mac-specific colors not in superinfo_website_data -->
-        <record id="attrval_color_midnight" model="product.attribute.value">
-            <field name="name">午夜</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#191970</field>
-            <field name="sequence">30</field>
-        </record>
-        <record id="attrval_color_space_gray" model="product.attribute.value">
-            <field name="name">太空灰</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#5C5C5C</field>
-            <field name="sequence">40</field>
-        </record>
-        <record id="attrval_color_space_black" model="product.attribute.value">
-            <field name="name">深空黑</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#1A1A1A</field>
-            <field name="sequence">50</field>
-        </record>
-        <record id="attrval_color_blush" model="product.attribute.value">
-            <field name="name">蜜桃粉</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#F4C7BC</field>
-            <field name="sequence">60</field>
-        </record>
-        <record id="attrval_color_citrus" model="product.attribute.value">
-            <field name="name">柑橘黃</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#F6C76C</field>
-            <field name="sequence">70</field>
-        </record>
-        <record id="attrval_color_indigo" model="product.attribute.value">
-            <field name="name">靛藍</field>
-            <field name="attribute_id" ref="superinfo_website_data.attr_color"/>
-            <field name="html_color">#4D5779</field>
-            <field name="sequence">80</field>
-        </record>
 
         <!-- ① 晶片 -->
         <record id="attr_chip" model="product.attribute">

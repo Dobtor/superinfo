@@ -43,43 +43,43 @@ MANIFEST = Path(__file__).resolve().parent / "apple_assets_manifest.json"
 #   - main_url:  configurator hero image (where available)
 MAC_ASSETS = {
     "macbook-neo": {
-        "category_xml_id": "theme_apple_shop.categ_macbook_neo",
+        "category_xml_id": "superinfo_website_data.categ_macbook_neo",
         "product_xml_id":  "theme_apple_shop.prod_macbook_neo",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-macbook-neo-202603?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=dzRRdVl2UHpmd3BrL2dpaGRDY2RKOFVIc0pMamhtQTdJT2hNaXc2a1F5UWw2T29GWFRmcGlRaHRKa2ZZeG54SDRHeXB5TnVsU3R6Qjd0Y2JzbURyWEVFbjlJVU41dmw4QVZJN1dUaHpNY0IrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
     },
     "macbook-air": {
-        "category_xml_id": "theme_apple_shop.categ_macbook_air",
+        "category_xml_id": "superinfo_website_data.categ_macbook_air",
         "product_xml_id":  "theme_apple_shop.prod_macbook_air",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-macbook-air-202503?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=dzRRdVl2UHpmd3BrL2dpaGRDY2RKN3dnWXpNRUFSbE1veTFaYXZqWDhWZ2w2T29GWFRmcGlRaHRKa2ZZeG54SDRHeXB5TnVsU3R6Qjd0Y2JzbURyWE56dkQ1M2pkMXloY0FLTkxsc2xNQXArYWpGdS9XeFgvbS9ITnNYOEhYaG4",
     },
     "macbook-pro": {
-        "category_xml_id": "theme_apple_shop.categ_macbook_pro",
+        "category_xml_id": "superinfo_website_data.categ_macbook_pro",
         "product_xml_id":  "theme_apple_shop.prod_macbook_pro",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-macbookpro-14-16-202410?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=dzRRdVl2UHpmd3BrL2dpaGRDY2RKL0tDcDdIN2J5MlRJbDZwdXNUam1wUDJ0SUdrYS9VNndoSUR6SjE2NTZ4Q3dzUlMrL0tMOEdKdERZZEhaV2pBNG5MYXhobkxkNHkydGdPaXdJd0ZJRmorbGwzUVNwZEFpcE1WQU1wNTVjU1c",
     },
     "imac": {
-        "category_xml_id": "theme_apple_shop.categ_imac",
+        "category_xml_id": "superinfo_website_data.categ_imac",
         "product_xml_id":  "theme_apple_shop.prod_imac",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-imac-202410?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=SXh2aE4zRm53L0l3NnhGK2wwZFpEeVFpZGxOY0d3emNHMmh4SnZVS1l0QTJzUm9kdjFCbFNETWhUL0NFUjdrYVJRTDhjbFg1ZXlSYWo3eW5aZUZxQjJvbklDSjVXM0pQY3RiODY0MDI2aUU",
     },
     "mac-mini": {
-        "category_xml_id": "theme_apple_shop.categ_mac_mini",
+        "category_xml_id": "superinfo_website_data.categ_mac_mini",
         "product_xml_id":  "theme_apple_shop.prod_mac_mini",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-mac-mini-202410?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=MEl2WkNZRmkzTGhzejQ0SHE3b3FoNnQrZHdkUkkvM25CYTVJYWJQRk41QkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCthSGMrTVBBVlNQbW04TUlaTnlZU3c",
         "main_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-mini-chip-unselect-202601-gallery-1?wid=2880&hei=1845&fmt=p-jpg&qlt=80&.v=d1pXNGRPZVVoYmlPOFhNR3g4R2wxUGFyNWMrRXhVOURuN2tLWDJRa3lPaVFmZjd5T2R4eGRzZEl3a0hpNytPUUxNckZKekhaNGVhZVQvMTRuMXRSYTJ1Y0hhYzFCK0tzV3gwSFNTUHQzNHVYcWVvOFpHTzVHZHNZN2w4d2J4WVE",
     },
     "mac-studio": {
-        "category_xml_id": "theme_apple_shop.categ_mac_studio",
+        "category_xml_id": "superinfo_website_data.categ_mac_studio",
         "product_xml_id":  "theme_apple_shop.prod_mac_studio",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-mac-studio-202503?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=MEl2WkNZRmkzTGhzejQ0SHE3b3FoeEhISXFsMjRaY2x5ZFpwbkptTldIN0RiOENhazh5Y0NacmRZMFN0dVNvZzJTaS9RTTYzTWg5VUhTM1Ara0JyS08zTzhSOUpOUnhYSEV2M3k5UWRwZkk",
     },
     "studio-display": {
-        "category_xml_id": "theme_apple_shop.categ_studio_display",
+        "category_xml_id": "superinfo_website_data.categ_studio_display",
         "product_xml_id":  "theme_apple_shop.prod_studio_display",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-studio-display-202603?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=dVp4cllZZXF6dklEWE1MaXJrMFFsWFE1bTY0LzdtNW13TjROaDVzaTdQTGZPOGdzbXFQKzNyOVN3L2NRSHJCNStFVlF6ZkRtZVJkbnBuR0wwNDgvSnJUbWtka3BEcEp5UWppL0FrTWlvRnQ5c2RrS21IU0RNY2daemxkbzhtY2M",
     },
     "studio-display-xdr": {
-        "category_xml_id": "theme_apple_shop.categ_studio_display_xdr",
+        "category_xml_id": "superinfo_website_data.categ_studio_display_xdr",
         "product_xml_id":  "theme_apple_shop.prod_studio_display_xdr",
         "card_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-card-40-pro-display-202603?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=UlltQkFYZW9PUVNxbGJESDBPdnR0S0c1aUV5YzRFYjJ5VHRxWllYQ2k3WWw2T29GWFRmcGlRaHRKa2ZZeG54SDRHeXB5TnVsU3R6Qjd0Y2JzbURyWEtUTXBibU9zRFdXcHBDby8xSEhEalIrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
     },

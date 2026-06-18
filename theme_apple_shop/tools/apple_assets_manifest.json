@@ -1,35 +1,35 @@
 {
   "mac_categories": {
     "macbook-neo": {
-      "xml_id": "theme_apple_shop.categ_macbook_neo",
+      "xml_id": "superinfo_website_data.categ_macbook_neo",
       "hero": "static/src/img/mac/macbook-neo/card.jpg"
     },
     "macbook-air": {
-      "xml_id": "theme_apple_shop.categ_macbook_air",
+      "xml_id": "superinfo_website_data.categ_macbook_air",
       "hero": "static/src/img/mac/macbook-air/card.jpg"
     },
     "macbook-pro": {
-      "xml_id": "theme_apple_shop.categ_macbook_pro",
+      "xml_id": "superinfo_website_data.categ_macbook_pro",
       "hero": "static/src/img/mac/macbook-pro/card.jpg"
     },
     "imac": {
-      "xml_id": "theme_apple_shop.categ_imac",
+      "xml_id": "superinfo_website_data.categ_imac",
       "hero": "static/src/img/mac/imac/card.jpg"
     },
     "mac-mini": {
-      "xml_id": "theme_apple_shop.categ_mac_mini",
+      "xml_id": "superinfo_website_data.categ_mac_mini",
       "hero": "static/src/img/mac/mac-mini/card.jpg"
     },
     "mac-studio": {
-      "xml_id": "theme_apple_shop.categ_mac_studio",
+      "xml_id": "superinfo_website_data.categ_mac_studio",
       "hero": "static/src/img/mac/mac-studio/card.jpg"
     },
     "studio-display": {
-      "xml_id": "theme_apple_shop.categ_studio_display",
+      "xml_id": "superinfo_website_data.categ_studio_display",
       "hero": "static/src/img/mac/studio-display/card.jpg"
     },
     "studio-display-xdr": {
-      "xml_id": "theme_apple_shop.categ_studio_display_xdr",
+      "xml_id": "superinfo_website_data.categ_studio_display_xdr",
       "hero": "static/src/img/mac/studio-display-xdr/card.jpg"
     }
   },
