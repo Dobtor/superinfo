@@ -1712,7 +1712,9 @@
         outline: none;
 
         &::placeholder {
-            color: $apple-gray-3;
+            // $apple-gray-3 是 12% 透明度的邊框色，當文字幾乎看不見；
+            // 改用主題既有可讀的 placeholder 灰（同 apple_theme_defaults）
+            color: $apple-gray-4;
         }
 
         &:focus {

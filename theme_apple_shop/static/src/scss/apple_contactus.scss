@@ -222,7 +222,7 @@
                         box-shadow 200ms $apple-ease-default;
             resize: vertical;
 
-            &::placeholder { color: $apple-gray-3; }
+            &::placeholder { color: $apple-gray-4; } // 12% 透明度的 gray-3 當文字看不見，改用可讀灰
 
             &:focus {
                 border-color: $apple-blue;

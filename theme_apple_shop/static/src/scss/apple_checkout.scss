@@ -52,7 +52,7 @@ $checkout-pages: (
         transition: border-color 200ms $apple-ease-default,
                     box-shadow 200ms $apple-ease-default !important;
 
-        &::placeholder { color: $apple-gray-3 !important; }
+        &::placeholder { color: $apple-gray-4 !important; } // 12% 透明度的 gray-3 當文字看不見，改用可讀灰
 
         &:focus {
             border-color: $apple-blue !important;
