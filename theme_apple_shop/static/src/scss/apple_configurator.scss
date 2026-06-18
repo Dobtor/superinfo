@@ -393,6 +393,11 @@
 
     // ─── Selection area — pill layout ─────────────
     .rf-bfe-selectionarea {
+        // 父層 .config-panel 因 overflow-y:auto 連帶把 overflow-x 也算成 auto，
+        // 會在 padding box 邊緣裁切。選項卡片若貼齊左緣（gap 0），選取時的
+        // 2px 藍框與外發光 box-shadow 左側會被切掉。給內容區左右內距，讓卡片
+        // 離裁切邊一段距離，邊框/光暈才完整顯示。
+        padding-inline: $apple-sp-sm;
 
         // 每個屬性群組間距縮小
         .rf-bfe-step {
@@ -554,6 +559,8 @@
         &.is-selected>.form-selector-label,
         .form-selector-input:checked+.form-selector-label,
         .form-selector-input:checked~.form-selector-label {
+            // padding 各減 1px 以補償邊框 1px → 2px，整體盒子尺寸不變、內容不位移
+            border: 2px solid $apple-blue;
             padding: calc(#{$apple-sp-md} - 1px) calc(#{$apple-sp-lg} - 1px);
             background: rgba(59, 130, 246, 0.07);
             box-shadow: 0 0 12px rgba(59, 130, 246, 0.18);
