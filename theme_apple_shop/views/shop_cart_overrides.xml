@@ -26,6 +26,22 @@
                         </t>
                     </ul>
                 </t>
+                <t t-if="line.pencil_engraving_text or line.ipad_engraving_text">
+                    <ul class="apple-spec-list" style="margin-top:4px">
+                        <t t-if="line.pencil_engraving_text">
+                            <li class="spec-item">
+                                <span class="spec-label">Apple Pencil 刻字：</span>
+                                <span class="spec-value" t-esc="line.pencil_engraving_text"/>
+                            </li>
+                        </t>
+                        <t t-if="line.ipad_engraving_text">
+                            <li class="spec-item">
+                                <span class="spec-label">iPad 刻字：</span>
+                                <span class="spec-value" t-esc="line.ipad_engraving_text"/>
+                            </li>
+                        </t>
+                    </ul>
+                </t>
             </xpath>
         </field>
     </record>

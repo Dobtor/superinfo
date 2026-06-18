@@ -5,3 +5,4 @@ from . import product_attribute
 from . import product_attribute_value
 from . import mac_compare_spec
 from . import theme_utils
+from . import sale_order_line

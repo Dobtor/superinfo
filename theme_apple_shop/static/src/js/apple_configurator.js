@@ -21,7 +21,7 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
         "change input.optional-toggle-input": "_onSoftwareToggle",
         "change input.tradein-input": "_onTradeinToggle",
         "change input.laser-toggle-input": "_onLaserToggle",
-        "input .laser-input": "_onLaserInput",
+        "input .engraving-input": "_onEngravingInput",
         "click .swatch": "_onSwatchClick",
         "click .add-to-bag": "_onAddToBag",
         "click .help-trigger": "_onHelpClick",
@@ -221,6 +221,23 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
         }
     },
 
+    _onEngravingInput(ev) {
+        const input = ev.currentTarget;
+        const field = input.closest(".as-laser-field");
+        if (field) {
+            const counter = field.querySelector(".engraving-count");
+            if (counter) counter.textContent = [...input.value].length;
+        }
+        // Update inline SVG / span preview
+        if (input.id === "pencil-engraving-input") {
+            const svgText = this.el.querySelector("#pencil-preview-text");
+            if (svgText) svgText.textContent = input.value;
+        } else if (input.id === "ipad-engraving-input") {
+            const span = this.el.querySelector("#ipad-preview-text");
+            if (span) span.textContent = input.value;
+        }
+    },
+
     _onLaserInput(ev) {
         const input = ev.currentTarget;
         // update character counter
@@ -351,12 +368,17 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
                 this.el.querySelectorAll("input.optional-input:checked")
             ).map((i) => parseInt(i.dataset.productId));
 
+            const pencilInput = this.el.querySelector("#pencil-engraving-input");
+            const ipadInput = this.el.querySelector("#ipad-engraving-input");
+
             // Custom endpoint: server resolves dynamic variant from PTAV combo
             // and folds optional products into same sale.order
             const res = await rpc("/shop/buy-mac/cart/add", {
                 product_template_id: this.productTmplId,
                 product_template_attribute_value_ids: ptavIds,
                 optional_product_ids: optionalIds,
+                pencil_engraving_text: pencilInput ? pencilInput.value.trim() : null,
+                ipad_engraving_text: ipadInput ? ipadInput.value.trim() : null,
             });
 
             if (res && res.error) {

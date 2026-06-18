@@ -25,6 +25,7 @@
         # Assets registered via ir.asset (bypasses theme_ prefix limitation)
         'data/assets.xml',
         # Backend views
+        'views/sale_order_views.xml',
         'views/product_attribute_views.xml',
         'views/product_template_views.xml',
         'views/product_public_category_views.xml',

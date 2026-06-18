@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 在銷售訂單明細行加上雷射刻字欄位 -->
+    <record id="sale_order_line_engraving_view" model="ir.ui.view">
+        <field name="name">sale.order.line.engraving</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='product_id']" position="after">
+                <field name="pencil_engraving_text" string="Pencil 刻字" optional="show"/>
+                <field name="ipad_engraving_text" string="iPad 刻字" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
