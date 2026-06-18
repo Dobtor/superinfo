@@ -51,7 +51,7 @@ class ProductTemplate(models.Model):
              "next to a software pre-install option (Final Cut Pro / Logic Pro).",
     )
     configurator_intro = fields.Html(
-        string="配置頁簡介",
+        string="商品簡介",
         sanitize=True,
         help="顯示在商品頁右側 panel 頂部。",
     )
