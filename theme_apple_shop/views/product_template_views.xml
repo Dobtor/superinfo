@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                 <page string="前台描述" name="frontend_description">
-                    <group string="簡介">
+                    <group string="商品簡介">
                         <field name="configurator_intro" nolabel="1"/>
                     </group>
                     <group string="商品詳情">
