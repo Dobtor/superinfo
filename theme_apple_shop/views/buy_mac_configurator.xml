@@ -121,7 +121,7 @@
                                     <div class="rf-bfe-selectionarea">
 
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-                                        <!-- 簡短描述（panel 頂部） -->
+                                        <!-- Intro -->
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <t t-if="product.configurator_intro">
                                             <div class="rf-bfe-step as-product-short-description">
