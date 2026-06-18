@@ -1637,6 +1637,7 @@
         margin-bottom: 2px;
     }
 }
+
 // ─── Laser Engraving Section ────────────────────────────────
 .as-laser-step {
     .as-laser-free-badge {
@@ -1664,8 +1665,15 @@
     }
 
     @keyframes laserDrawerIn {
-        from { opacity: 0; transform: translateY(-8px); }
-        to   { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     // ── Input fields ────────────────────────────
@@ -1700,7 +1708,7 @@
         font-family: $apple-font-text;
         color: $apple-black;
         transition: border-color 200ms $apple-ease-default,
-                    box-shadow 200ms $apple-ease-default;
+            box-shadow 200ms $apple-ease-default;
         outline: none;
 
         &::placeholder {
@@ -1748,9 +1756,9 @@
         height: 160px;
         background: linear-gradient(145deg, #e8e8ed 0%, #d5d5db 60%, #c8c8ce 100%);
         border-radius: 12px;
-        border: 1px solid rgba(0,0,0,0.08);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.12),
-                    inset 0 1px 0 rgba(255,255,255,0.70);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.70);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1761,7 +1769,7 @@
             position: absolute;
             width: 32px;
             height: 38px;
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 4px;
             top: 50%;
             left: 50%;
@@ -1785,7 +1793,7 @@
         letter-spacing: 0.12em;
         color: rgba(0, 0, 0, 0.45);
         // Laser engraving subtle shadow
-        text-shadow: 0 1px 2px rgba(255,255,255,0.40);
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.40);
         transition: color 150ms ease, text-shadow 150ms ease;
         max-width: 240px;
         overflow: hidden;

@@ -50,6 +50,16 @@ class ProductTemplate(models.Model):
         help="External URL to the SLA / EULA shown as '查看授權協議' link "
              "next to a software pre-install option (Final Cut Pro / Logic Pro).",
     )
+    configurator_intro = fields.Html(
+        string="商品簡介",
+        sanitize=True,
+        help="顯示在商品頁右側 panel 頂部。",
+    )
+    configurator_detail = fields.Html(
+        string="商品詳情",
+        sanitize=True,
+        help="顯示在商品頁最下方全寬區塊。",
+    )
     has_pencil_engraving = fields.Boolean(
         string="啟用 Apple Pencil 雷射刻字",
         default=False,

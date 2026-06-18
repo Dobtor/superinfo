@@ -125,6 +125,17 @@
                                     <div class="rf-bfe-selectionarea">
 
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <!-- Intro -->
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+                                        <t t-if="product.configurator_intro">
+                                            <div class="rf-bfe-step as-product-short-description">
+                                                <div class="as-product-description-body"
+                                                     t-field="product.configurator_intro"
+                                                     t-options='{"widget": "html"}'/>
+                                            </div>
+                                        </t>
+
+                                        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <!-- Attribute fieldsets (chip / mem / storage / ethernet) -->
                                         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
                                         <t t-foreach="attribute_lines" t-as="line">
@@ -542,10 +553,10 @@
 
 
                     <!-- Key features -->
-                    <t t-if="product.description_ecommerce">
+                    <t t-if="product.configurator_detail">
                         <section class="config-features">
                             <div class="container">
-                                <div class="features-body" t-field="product.description_ecommerce"/>
+                                <div class="features-body" t-field="product.configurator_detail"/>
                             </div>
                         </section>
                     </t>
