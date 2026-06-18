@@ -76,9 +76,13 @@
                                         <t t-set="color_line"
                                            t-value="product.attribute_line_ids.filtered(
                                                 lambda l: l.attribute_id == product.mac_color_attribute_id)"/>
+                                        <!-- 只取 ptav_active 的值：移除過的色值會被封存(ptav_active=False)而非刪除，
+                                             若不過濾，封存的「幽靈色值」仍會被畫成色票/文字、甚至選成預設又加不進購物車 -->
+                                        <t t-set="color_ptavs"
+                                           t-value="color_line.product_template_value_ids.filtered('ptav_active')"/>
                                         <t t-if="color_line">
                                             <div class="color-swatches" role="radiogroup" aria-label="顏色">
-                                                <t t-foreach="color_line.product_template_value_ids" t-as="cptav">
+                                                <t t-foreach="color_ptavs" t-as="cptav">
                                                     <!--
                                                         顏色 swatch 本身是 <button>，收不進 input.ptav-input:checked，
                                                         導致加購（apple_configurator.js _onAddToBag 與 byod 鏡像 bridge）
@@ -106,7 +110,7 @@
                                             <p class="color-name">
                                                 <span class="kicker">顏色 —</span>
                                                 <span class="active-color-name">
-                                                    <t t-foreach="color_line.product_template_value_ids" t-as="cptav">
+                                                    <t t-foreach="color_ptavs" t-as="cptav">
                                                         <t t-if="cptav in default_ptavs" t-esc="cptav.name"/>
                                                     </t>
                                                 </span>
@@ -143,7 +147,8 @@
                                                         </legend>
 
                                                         <div class="rc-dimension-selector-group form-selector-group">
-                                                            <t t-foreach="line.product_template_value_ids" t-as="ptav">
+                                                            <!-- 同色票區：略過已封存的幽靈色值，否則文字方框會多一列、選到會加不進購物車 -->
+                                                            <t t-foreach="line.product_template_value_ids.filtered('ptav_active')" t-as="ptav">
                                                                 <t t-set="val" t-value="ptav.product_attribute_value_id"/>
                                                                 <t t-set="is_default" t-value="ptav in default_ptavs"/>
                                                                 <t t-set="starting_price" t-value="product.list_price + ptav.price_extra"/>

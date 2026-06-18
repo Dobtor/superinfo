@@ -74,7 +74,8 @@ class ProductTemplate(models.Model):
         """
         self.ensure_one()
         table = {}
-        for ptav in self.attribute_line_ids.product_template_value_ids:
+        # 只算啟用值的排除規則，封存的幽靈 PTAV 不該出現在 configurator
+        for ptav in self.attribute_line_ids.product_template_value_ids.filtered('ptav_active'):
             excl = list(set(
                 ptav.exclude_for.filtered(
                     lambda e: e.product_tmpl_id == self

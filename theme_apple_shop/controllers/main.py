@@ -185,7 +185,8 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         if not color_line:
             return {}
 
-        color_ptavs = color_line.product_template_value_ids
+        # 只取啟用的色值，略過已封存的幽靈 PTAV（與模板色票迴圈一致）
+        color_ptavs = color_line.product_template_value_ids.filtered('ptav_active')
         fallback_url = '/web/image/product.template/%d/image_1024' % product.id
         result = {}
 
@@ -225,7 +226,8 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         per attribute_line as the initial selection."""
         defaults = request.env['product.template.attribute.value']
         for line in product.attribute_line_ids:
-            cheapest = line.product_template_value_ids.sorted(
+            # 略過已封存的幽靈 PTAV，否則預設可能落在買不到的幽靈色值上
+            cheapest = line.product_template_value_ids.filtered('ptav_active').sorted(
                 lambda v: (v.price_extra, v.product_attribute_value_id.sequence)
             )[:1]
             defaults |= cheapest
