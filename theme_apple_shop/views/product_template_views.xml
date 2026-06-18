@@ -7,6 +7,14 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
+                <page string="前台描述" name="frontend_description">
+                    <group string="簡介">
+                        <field name="configurator_intro" nolabel="1"/>
+                    </group>
+                    <group string="商品詳情">
+                        <field name="configurator_detail" nolabel="1"/>
+                    </group>
+                </page>
                 <page string="雷射刻字" name="engraving">
                     <group string="雷射刻字選項">
                         <group>
@@ -42,4 +50,5 @@
             </xpath>
         </field>
     </record>
+
 </odoo>
