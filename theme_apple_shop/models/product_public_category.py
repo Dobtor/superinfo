@@ -5,15 +5,6 @@ from odoo import api, fields, models
 class ProductPublicCategory(models.Model):
     _inherit = 'product.public.category'
 
-    mac_role = fields.Selection(
-        selection=[
-            ('root', 'Mac Root Category'),
-            ('model', 'Mac Model'),
-        ],
-        help="Marks records that participate in the Apple-style buy flow. "
-             "Set 'root' on the top-level Mac category, 'model' on each "
-             "individual Mac line (MacBook Air / Pro / iMac / Mac mini ...).",
-    )
     mac_hero_image = fields.Image(
         string="Mac Landing Card Image",
         max_width=1280, max_height=720,
@@ -72,9 +63,6 @@ class ProductPublicCategory(models.Model):
                  'product_tmpl_ids.product_variant_ids.lst_price')
     def _compute_mac_starting_price(self):
         for rec in self:
-            if rec.mac_role != 'model':
-                rec.mac_starting_price = 0.0
-                continue
             templates = self.env['product.template'].search(
                 [('public_categ_ids', 'in', rec.ids)]
             )
@@ -86,14 +74,3 @@ class ProductPublicCategory(models.Model):
                     prices.append(t.list_price)
             rec.mac_starting_price = min(prices) if prices else 0.0
 
-    def _is_descendant_of_mac_root(self):
-        """True if this category is the Mac root or any of its descendants."""
-        self.ensure_one()
-        node = self
-        for _ in range(10):  # depth guard
-            if node.mac_role == 'root':
-                return True
-            if not node.parent_id:
-                return False
-            node = node.parent_id
-        return False

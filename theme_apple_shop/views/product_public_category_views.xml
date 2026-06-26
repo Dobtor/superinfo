@@ -9,7 +9,6 @@
             <xpath expr="//sheet" position="inside">
                 <group string="Apple Mac Landing">
                     <group>
-                        <field name="mac_role"/>
                         <field name="mac_subtitle" placeholder="桌上型 / 筆記型"/>
                         <field name="mac_tagline" placeholder="為輕巧而生"/>
                         <field name="mac_landing_order"/>
