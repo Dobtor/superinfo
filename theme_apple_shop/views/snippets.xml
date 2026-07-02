@@ -237,6 +237,9 @@
                 <t t-snippet="theme_apple_shop.s_apple_hero_banner"
                    string="極電 Hero Banner"
                    group="intro"/>
+                <t t-snippet="theme_apple_shop.s_apple_categ_carousel"
+                   string="選購分類輪播"
+                   group="content"/>
                 <t t-snippet="theme_apple_shop.s_trust_strip"
                    string="信賴保證條"
                    group="content"/>
