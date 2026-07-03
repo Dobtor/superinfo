@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ══ 首頁（全可編輯畫布）══ -->
+    <template id="homepage_page" name="Custom Homepage">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'homepage'"/>
+            <div id="wrap">
+                <!-- Tailwind + Material Icons（供 si-stitch 系列 snippet 使用） -->
+                <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+                <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+                <script>
+                    tailwind.config = {
+                        corePlugins: { preflight: false },
+                        darkMode: "class",
+                        theme: {
+                            extend: {
+                                colors: {
+                                    "apple-blue": "var(--color-1, #007AFF)",
+                                    "surface": "#f5faff",
+                                    "surface-container": "#e9eef3",
+                                    "surface-container-low": "#eff4f9",
+                                    "surface-container-lowest": "#ffffff",
+                                    "surface-container-high": "#e4e9ee",
+                                    "on-background": "#171c20",
+                                    "on-surface": "#171020",
+                                    "on-surface-variant": "#414755",
+                                    "border-gray": "#E5E7EB",
+                                    "primary": "var(--color-1, #0058bc)",
+                                    "primary-container": "var(--color-1, #0070eb)"
+                                },
+                                spacing: {
+                                    "margin-desktop": "40px",
+                                    "margin-mobile": "16px",
+                                    "container-max": "1200px",
+                                    "section-padding": "80px",
+                                    "gutter": "24px",
+                                    "stack-sm": "8px",
+                                    "stack-md": "16px",
+                                    "stack-lg": "32px"
+                                },
+                                fontFamily: {
+                                    "display-lg": ["Inter"],
+                                    "headline-lg": ["Inter"],
+                                    "headline-md": ["Inter"],
+                                    "body-lg": ["Inter"],
+                                    "body-md": ["Inter"],
+                                    "label-lg": ["Inter"],
+                                    "label-sm": ["Inter"]
+                                },
+                                fontSize: {
+                                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}]
+                                }
+                            }
+                        }
+                    }
+                </script>
+                <style>
+                    .material-symbols-outlined {
+                        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .glass-card {
+                        background: rgba(255,255,255,0.7);
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        border: 1px solid rgba(229,231,235,0.5);
+                    }
+                </style>
+                <!-- 可拖曳編輯區：從 snippet 面板拖入任意區段 -->
+                <div class="oe_structure oe_empty" id="oe_structure_homepage"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ══ Snippet: 我們是誰（Stitch 版）══ -->
+    <template id="s_si_who_we_are" name="SI 我們是誰">
+        <section class="py-section-padding bg-surface" data-snippet="s_si_who_we_are" data-name="SI 我們是誰">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block o_editable">企業 IT 生態合作夥伴</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-background mb-8 o_editable">我們是誰</h2>
+                        <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-6 o_editable">「企業 IT 生態」指的是面向企業客戶我們所扮演的角色。除了 IT 產品增值經銷商外，我們還擔當了 DaaS 租賃商、管理服務商和解決方案提供商的角色。</p>
+                        <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-10 o_editable">我們把多種角色融於一身，幫助企業實現高品質發展，全心專注核心業務，創造更大價值。</p>
+                        <div class="flex gap-4">
+                            <div class="flex-1 p-6 glass-card rounded-xl">
+                                <span class="font-headline-md text-headline-md text-apple-blue block mb-1 o_editable">使命</span>
+                                <p class="text-label-lg font-label-lg text-on-surface-variant o_editable">讓每個組織，每個人輕鬆享受到卓越的 IT 產品和服務</p>
+                            </div>
+                            <div class="flex-1 p-6 glass-card rounded-xl">
+                                <span class="font-headline-md text-headline-md text-apple-blue block mb-1 o_editable">願景</span>
+                                <p class="text-label-lg font-label-lg text-on-surface-variant o_editable">致力於提供卓越的 IT 生態服務，賦能企業，共創未來</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-surface-container-high flex items-center justify-center">
+                            <span class="text-9xl">💼</span>
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 p-8 bg-white shadow-xl rounded-xl border border-border-gray max-w-xs">
+                            <p class="font-headline-md text-headline-md text-on-background italic o_editable">"創造更大價值，賦能企業夥伴。"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ══ Snippet: 核心價值觀（Stitch 版）══ -->
+    <template id="s_si_core_values" name="SI 核心價值觀">
+        <section class="py-section-padding bg-surface-container-lowest" data-snippet="s_si_core_values" data-name="SI 核心價值觀">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="text-center mb-16">
+                    <span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block o_editable">Our Values</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background o_editable">核心價值觀</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+                    <div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+                            <span class="material-symbols-outlined text-apple-blue group-hover:text-white">workspace_premium</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-on-background o_editable">領導力</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant o_editable">責任擔當、忠誠正直。每個人都具備影響他人、激勵他人的能力。</p>
+                    </div>
+                    <div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+                            <span class="material-symbols-outlined text-apple-blue group-hover:text-white">lightbulb</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-on-background o_editable">創造力</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant o_editable">創新進取、創造價值。突破眼界與思維慣性，擁抱新挑戰。</p>
+                    </div>
+                    <div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+                            <span class="material-symbols-outlined text-apple-blue group-hover:text-white">bolt</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-on-background o_editable">執行力</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant o_editable">高效協作、積極主動。富有善意地理解需求，提升整體效率。</p>
+                    </div>
+                    <div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+                            <span class="material-symbols-outlined text-apple-blue group-hover:text-white">trending_up</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-on-background o_editable">自驅力</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant o_editable">好學精進、成長自驅。不斷刷新認知，探索技術與服務的極致。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ══ Snippet: 我們的服務（Stitch 版）══ -->
+    <template id="s_si_services" name="SI 我們的服務">
+        <section class="py-section-padding bg-surface-container" data-snippet="s_si_services" data-name="SI 我們的服務">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="mb-16">
+                    <span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block o_editable">Solution Ecosystem</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background o_editable">我們的服務</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+                        <div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4 bg-surface-container-high flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h3 class="text-white font-headline-md text-headline-md mb-2 o_editable">增值經銷商</h3>
+                                <p class="text-white/80 text-label-sm font-label-sm o_editable">頂級品牌合作，全生命週期服務體系。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+                        <div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4 bg-surface-container-high flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h3 class="text-white font-headline-md text-headline-md mb-2 o_editable">DaaS 租賃商</h3>
+                                <p class="text-white/80 text-label-sm font-label-sm o_editable">助力輕資產運營，靈活的設備訂閱模式。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+                        <div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4 bg-surface-container-high flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h3 class="text-white font-headline-md text-headline-md mb-2 o_editable">管理服務商</h3>
+                                <p class="text-white/80 text-label-sm font-label-sm o_editable">ESC 企業解決方案中心，一站式運維支持。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+                        <div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4 bg-surface-container-high flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h3 class="text-white font-headline-md text-headline-md mb-2 o_editable">解決方案提供商</h3>
+                                <p class="text-white/80 text-label-sm font-label-sm o_editable">定製化智慧教室與企業數位轉型方案。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ══ Snippet: 發展歷程（Stitch 版）══ -->
+    <template id="s_si_history" name="SI 發展歷程">
+        <section class="py-section-padding bg-surface" data-snippet="s_si_history" data-name="SI 發展歷程">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="text-center mb-20">
+                    <span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block o_editable">Milestones</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background o_editable">發展歷程</h2>
+                    <p class="text-on-surface-variant mt-4 o_editable">十年砥礪前行，取得跨越式進展</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-px h-full bg-apple-blue/20 hidden md:block"/>
+                    <div class="space-y-24">
+                        <div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                            <div class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
+                                <h3 class="font-headline-md text-headline-md text-apple-blue mb-2 o_editable">精進 - 2024</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant o_editable">獲評國家高新技術企業與北京市專精特新中小企業，MDaaS 租賃模式獲得權威認可。</p>
+                            </div>
+                            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+                                <span class="text-white font-bold text-sm">24</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-20 order-3"/>
+                        </div>
+                        <div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                            <div class="md:w-1/2 md:pr-20 order-3 md:order-1"/>
+                            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+                                <span class="text-white font-bold text-sm">22</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-20 text-left order-2 md:order-3">
+                                <h3 class="font-headline-md text-headline-md text-apple-blue mb-2 o_editable">蛻變 - 2022</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant o_editable">榮幸加入海開控股，作為國資信息化領域核心力量，開啟規模化發展新征程。</p>
+                            </div>
+                        </div>
+                        <div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                            <div class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
+                                <h3 class="font-headline-md text-headline-md text-apple-blue mb-2 o_editable">升級 - 2020</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant o_editable">強化差異化優勢，推出 MDaaS 企業租賃服務，助力企業輕資產運營。</p>
+                            </div>
+                            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+                                <span class="text-white font-bold text-sm">20</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-20 order-3"/>
+                        </div>
+                        <div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                            <div class="md:w-1/2 md:pr-20 order-3 md:order-1"/>
+                            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+                                <span class="text-white font-bold text-sm">16</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-20 text-left order-2 md:order-3">
+                                <h3 class="font-headline-md text-headline-md text-apple-blue mb-2 o_editable">啟航 - 2016</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant o_editable">正式啟航，與世界頂級品牌建立合作，建立全生命週期服務體系。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ══ 將 snippets 加入編輯器面板 ══ -->
+    <template id="snippets_custom" inherit_id="website.snippets" name="Custom Stitch Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']" position="before">
+            <snippets id="snippet_si_custom" string="自訂區塊（Stitch 風格）">
+                <t t-snippet="custom_homepage.s_si_who_we_are"    t-thumbnail="/custom_homepage/static/src/img/thumb_who.svg"/>
+                <t t-snippet="custom_homepage.s_si_core_values"   t-thumbnail="/custom_homepage/static/src/img/thumb_values.svg"/>
+                <t t-snippet="custom_homepage.s_si_services"      t-thumbnail="/custom_homepage/static/src/img/thumb_services.svg"/>
+                <t t-snippet="custom_homepage.s_si_history"       t-thumbnail="/custom_homepage/static/src/img/thumb_timeline.svg"/>
+            </snippets>
+        </xpath>
+    </template>
+
+</odoo>
