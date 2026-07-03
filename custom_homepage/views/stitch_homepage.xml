@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="stitch_home_content" name="Stitch Homepage Content">
+        <div class="si-stitch-page">
+            <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+            <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+            <script>
+        tailwind.config = {
+        corePlugins: { preflight: false },
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#eff4f9",
+                        "on-surface-variant": "#414755",
+                        "surface-container": "#e9eef3",
+                        "on-background": "#171c20",
+                        "surface": "#f5faff",
+                        "secondary-fixed-dim": "#c3c7cc",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-fixed": "#ffdbcc",
+                        "secondary": "#5b5f63",
+                        "surface-variant": "#dee3e8",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-fixed": "#e0e3e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d5dbdf",
+                        "on-primary-container": "#fefcff",
+                        "apple-blue": "var(--color-1, #007AFF)",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary": "#9e3d00",
+                        "surface-white": "#FFFFFF",
+                        "on-tertiary-container": "#fffbff",
+                        "primary": "var(--color-1, #0058bc)",
+                        "primary-container": "var(--color-1, #0070eb)",
+                        "outline": "#717786",
+                        "on-tertiary-fixed": "#351000",
+                        "surface-container-high": "#e4e9ee",
+                        "border-gray": "#E5E7EB",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "on-secondary-fixed-variant": "#43474c",
+                        "inverse-on-surface": "#ecf1f6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#c64f00",
+                        "surface-tint": "#005bc1",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#dee3e8",
+                        "on-secondary-container": "#5f6368",
+                        "inverse-surface": "#2b3135",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#171020",
+                        "secondary-container": "#dde0e5",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "primary-fixed": "#d8e2ff",
+                        "error-container": "#ffdad6",
+                        "deep-black": "#000000",
+                        "outline-variant": "#c1c6d7",
+                        "on-primary-fixed-variant": "#004493",
+                        "error": "#ba1a1a",
+                        "background": "#f5faff",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f5faff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "container-max": "1200px",
+                        "stack-md": "16px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+            <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        .hero-slide {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            inset: 0;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #007AFF 0%, #007AFF 100%);
+        }
+    
+            .si-stitch-page { font-family: inherit; }
+            </style>
+
+<section class="py-section-padding bg-surface" id="who-we-are">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block">企業 IT 生態合作夥伴</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8">我們是誰</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-6">
+                            「企業 IT 生態」指的是面向企業客戶我們所扮演的角色。除了 IT 產品增值經銷商外，我們還擔當了 DaaS 租賃商、管理服務商和解決方案提供商的角色。
+                        </p>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-10">
+                            我們把多種角色融於一身，幫助企業實現高品質發展，全心專注核心業務，創造更大價值。致力於讓每個組織、每個人輕鬆享受到卓越的 IT 產品和服務。
+                        </p>
+<div class="flex gap-4">
+<div class="flex-1 p-6 glass-card rounded-xl">
+<span class="font-headline-md text-headline-md text-apple-blue block mb-1">使命</span>
+<p class="text-label-lg font-label-lg text-on-surface-variant">讓每個組織，每個人輕鬆享受到卓越的 IT 產品和服務</p>
+</div>
+<div class="flex-1 p-6 glass-card rounded-xl">
+<span class="font-headline-md text-headline-md text-apple-blue block mb-1">願景</span>
+<p class="text-label-lg font-label-lg text-on-surface-variant">致力於提供卓越的 IT 生態服務，賦能企業，共創未來</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A high-key portrait of a smiling female professional in a crisp white shirt, working on a laptop in a bright, modern glass office. The background is softly blurred with hints of greenery and sunlight. The style is clean, corporate, and minimalist, echoing the Lumina Academic System's white and blue aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxk_NHjqBSN1FsmfYISi_-UGO5bRV7NbvbOFuyEYAPs7zhzeozInhdqy7NXNCZPTLUyFXBPLPo7R5ZccwPC7aq5n-mnEF7LjjmwSWXjAzZmYHhUwfZCwQQo9Bd0SqeUevn9rYtQWQQKMyjODdQ8LijPVM-yn_zmpISz1x2zTWQScg3QMRsTjgO4aAm6Iaa74W-OZe7yDF-nrDlE5oTMn_VO8XTf93ng4NZq0UbCRN4Dxap1sEo1D6tYoADiDLeQ-7Rau3e-Kefw"/>
+</div>
+<div class="absolute -bottom-8 -left-8 p-8 bg-white shadow-xl rounded-xl border border-border-gray max-w-xs">
+<p class="font-headline-md text-headline-md text-on-background italic">"創造更大價值，賦能企業夥伴。"</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block">Our Values</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">核心價值觀</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+<div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+<span class="material-symbols-outlined text-apple-blue group-hover:text-white" data-weight="fill">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-background">領導力</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">責任擔當、忠誠正直。每個人都具備影響他人、激勵他人的能力。</p>
+</div>
+<div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+<div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+<span class="material-symbols-outlined text-apple-blue group-hover:text-white" data-weight="fill">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-background">創造力</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">創新進取、創造價值。突破眼界與思維慣性，擁抱新挑戰。</p>
+</div>
+<div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+<div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+<span class="material-symbols-outlined text-apple-blue group-hover:text-white" data-weight="fill">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-background">執行力</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">高效協作、積極主動。富有善意地理解需求，提升整體效率。</p>
+</div>
+<div class="group p-8 rounded-2xl border border-border-gray hover:border-apple-blue transition-all bg-white hover:shadow-lg">
+<div class="w-12 h-12 rounded-full bg-apple-blue/10 flex items-center justify-center mb-6 group-hover:bg-apple-blue transition-colors">
+<span class="material-symbols-outlined text-apple-blue group-hover:text-white" data-weight="fill">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-background">自驅力</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">好學精進、成長自驅。不斷刷新認知，探索技術與服務的極致。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-padding bg-surface-container" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-16">
+<span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block">Solution Ecosystem</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">我們的服務</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist product shot of multiple Apple devices including MacBook Air, iPad, and iPhone arranged artfully on a pristine white surface. High-key lighting, soft shadows, and a dominant white and blue color scheme. Corporate and professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIqCeosvsibinQVKt7O-wsnJ29AV-qsSkV05EI-QOD8injVGFM17HekfWK1B_uHNGAHzb4Ej1TaDYMjpY9ffHqs9pDEB0tA0ps0b64Qnq9m-7raGAE0s-ont8oCvz8axet4vXzMcPMpOJ6201PHYotepONLhSNtbM8SM2TLuD50qkapEPZ7fGCtkxAZRw1R3S_h08Ar0T4gtgJB-tlfNe81YV7iOg5aAm6exbxlk4YMwVKhOuvK0iyRHgutYDQm4jKwi7ZCj5tmA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md mb-2">增值經銷商</h3>
+<p class="text-white/80 text-label-sm font-label-sm">頂級品牌合作，全生命週期服務體系。</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A close-up image showing a digital lease agreement on a tablet screen with an Apple Pencil. The setting is a clean, modern desk with light wood textures. The atmosphere conveys financial flexibility and business agility. Minimalist blue accents and a light-mode color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9uH11JefMyThZ776KyzfRcFDK9z7dz5OZpzHUj7vMPDb60QYKrSbfmiga_cZmSePMPG95d6Pc798k_qo-2rSbRarUPL7YF-u-lAbAgRfBkSvafIGm9n9ogbMN-dQ8GN5KpnGcgqqF5V0UJCmeihUxMqDqhTtudXR0NZRBFCmPNms_k8dtqz7YOOFcTf6itmfuikVePkkw56rSurap7is_rQnf5QyKrmmhGqEdm6LsIcMqbctbvPcbf4KHhAAt5w5IOImY63ZU_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md mb-2">DaaS 租賃商</h3>
+<p class="text-white/80 text-label-sm font-label-sm">助力輕資產運營，靈活的設備訂閱模式。</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="An abstract representation of cloud connectivity and management, featuring clean geometric lines and glowing blue data points in a bright white space. The image symbolizes management services and technical support. Modern, high-end, and academic technological style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGZl9M4Pa5yajn4S9jpgYSjX9jzq1JHy6Zt_UwV2BAjrC4eESg0pO_GSZv7tdmbWqBHtRCP3TMPK8e6VCqOmkDR_18ast1GYvdmKWJ4Ta2m7H3_pTL8AIc8WOvxHp-LzL_IhNKDIy5NlyB270AW9qGlKCc-8uHCd4VcGFa1msh0LMB4ZW4vDWq3k5SQmYXH1yXpF53ed2HOnlVzGyP3s3vYpnx7hgK1_KZsQOpwH6ft4fVCk2CWnDPAmrXZj-Igfjf4LB_7BryrQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md mb-2">管理服務商</h3>
+<p class="text-white/80 text-label-sm font-label-sm">ESC 企業解決方案中心，一站式運維支持。</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-1 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A collaborative workspace where team members are looking at a large display showing complex IT solution diagrams. The environment is a cutting-edge corporate hub with glass walls and natural lighting. Focus on partnership and strategic problem solving. Lumina Academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKYojTu-un3CaYTFpvBMwu1kXDCocLrkhXExfWT9hNg6JRRytw9tspm9ryjLPwny7905zrYldpKOXEalPCUyV3QbKgC2uHLwRLZnFJYBBuHqzyNigYixDkXgvBJauAeh3ytEkuZPOEaXj_HwGRc3wJ_bz26GbHkAMQglxa7dpAtKL_Hhadzhih4Gr5z2kiywMglsihN0sgJAM2N0f8S5McAm30pSl3OpZeHNXnqlhqaRwniCBYnOySphe1LJPmK8NVlJQxCYFA9g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md mb-2">解決方案提供商</h3>
+<p class="text-white/80 text-label-sm font-label-sm">定製化智慧教室與企業數位轉型方案。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-padding bg-surface" id="history">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<span class="text-apple-blue font-label-lg uppercase tracking-widest mb-2 block">Milestones</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">發展歷程</h2>
+<p class="text-on-surface-variant mt-4">十年砥礪前行，取得跨越式進展</p>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 -translate-x-1/2 w-px h-full bg-apple-blue/20 hidden md:block"/>
+<div class="space-y-24">
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
+<h3 class="font-headline-md text-headline-md text-apple-blue mb-2">精進 - 2024</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">獲評國家高新技術企業與北京市專精特新中小企業，MDaaS 租賃模式獲得權威認可。</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+<span class="text-white font-bold text-sm">24</span>
+</div>
+<div class="md:w-1/2 md:pl-20 order-3">
+<div class="w-full h-40 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern office building facade with a clean glass exterior reflecting a bright blue sky. A plaque signifying technology excellence is visible in the foreground. Professional, clean, and inspiring photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-cAlMA7gUv6Z4pk4hWi-O3FKkYk5-dIt7Efou-M-8RlNn52R881toCxXZKOzL5fIoo-utFxMkWPZhngHd7BOEcGSt9r1ivKMZqDesUO_8ngCmO_4yxIzHnOqmuWR793r2_sYr_EWN2mcAONxlmVhlYg0PaXtF4eUHh5Grac0FLMT23fo-NqOLxObh2o7Xyt7JnL9SYFUWPZdVR7JdhLUbPinihLcvklBzrnC1EOSDU0npfkOMszsHDthuFKL31t_jinxeCpMM5g"/>
+</div>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-20 order-3 md:order-1">
+<div class="w-full h-40 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A wide-angle shot of a grand corporate lobby with people walking through, symbolizing a new journey and growth. The architecture is grand and minimalist, with high ceilings and bright lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMc8znz3qCza8d1Y7PgF9YxaVeotC3AhCnHyb8ccAtSqvPwZktzDW1I5MXpg-WBqO4zMz-zdtYF1LwnoDMBi4ad141ucgMaP3aVg7stZR5fQrw-eA8vepeybvNbkXPcTFUG4g-y8qd0EIaPS9vAslKl5MgjMfwQ74jXHMDmOU4bovUJinyWJrRG1BD-X3xWz7Zq8z3TSXGZAmggClgNbsZPoFBl1hJ3A2Tx0XCu-hcqGLK_x1mg7wiCqtsiRulHAM9n55bzofdeA"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+<span class="text-white font-bold text-sm">22</span>
+</div>
+<div class="md:w-1/2 md:pl-20 text-left order-2 md:order-3">
+<h3 class="font-headline-md text-headline-md text-apple-blue mb-2">蛻變 - 2022</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">榮幸加入海開控股，作為國資信息化領域核心力量，開啟規模化發展新征程。</p>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
+<h3 class="font-headline-md text-headline-md text-apple-blue mb-2">升級 - 2020</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">強化差異化優勢，推出 MDaaS 企業租賃服務，助力企業輕資產運營。</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+<span class="text-white font-bold text-sm">20</span>
+</div>
+<div class="md:w-1/2 md:pl-20 order-3">
+<div class="w-full h-40 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of modern hardware being packaged neatly, representing professional supply chain and service delivery. High-key lighting, minimalist and efficient vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdtWvvryOn8BBaENbQztL3b5bTIPOk5RSUlsvNS6aNe7gz7dgOengdmeQUmnpZ_XC3Kq14BsBYq2OFHvqJC2qnwEzMCAVJLYC9JdWXeS03aYzaL4DdNAH8Hb-l7_Y9U7wtUOwwlYGuiwKeaEOPhNvB1wlWX8gIRw2Y4VV9J-qutnf4POftL-uKDw0bu9Y_kYwNCHduNtf77mLKsO6ZHgW_m8zCla9upflUQ-0WtVA2Du2GpQpKQn2gpl0--UVzbFuFsVA82czDSw"/>
+</div>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-20 order-3 md:order-1">
+<div class="w-full h-40 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Two professionals shaking hands in a minimalist, sunlit office space. The image is warm yet clean, symbolizing the start of a partnership and the company's inception. Apple-style corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcxDRN2dN93YqcHrl1Y1xL83nBObt14yQse2ca5GQO1aO7Ej9ZtXNFUZDK3DX8FmvriiKwzyfpVoRFFCkhXyqarVuPWQAgSfISik2S7cvX1w0jukOWNYYVsEUMzq2acccWtt-XZ9GvFX_j5U_VTECXlxpRBBkdFEyoEBU8FuuNJtE8YGJwPct5raGDeq5D6X8zDsij64qt_Ltyu6L2QVImkcELHrYFzj2EtPG4JnAK0OIzAG8_Kk3dJm2LP7pcXHcaYDTU1v1dVQ"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-apple-blue border-4 border-surface shadow-xl z-10 flex items-center justify-center order-1 md:order-2">
+<span class="text-white font-bold text-sm">16</span>
+</div>
+<div class="md:w-1/2 md:pl-20 text-left order-2 md:order-3">
+<h3 class="font-headline-md text-headline-md text-apple-blue mb-2">啟航 - 2016</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">正式啟航，與世界頂級品牌建立合作，建立全生命週期服務體系。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+        </div>
+    </template>
+</odoo>

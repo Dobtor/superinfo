@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ══ Blog 分類：實際案例 ══ -->
+    <record id="blog_cases" model="blog.blog">
+        <field name="name">實際案例</field>
+    </record>
+
+    <!-- ══ Website Pages ══ -->
+    <record id="wp_bot" model="website.page">
+        <field name="name">共契BOT專區</field>
+        <field name="url">/services/bot</field>
+        <field name="view_id" ref="custom_homepage.page_bot"/>
+        <field name="is_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="wp_ipad_deployment" model="website.page">
+        <field name="name">iPad 大量部署</field>
+        <field name="url">/services/ipad-deployment</field>
+        <field name="view_id" ref="custom_homepage.page_ipad_deployment"/>
+        <field name="is_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="wp_byod" model="website.page">
+        <field name="name">BYOD 自帶載具</field>
+        <field name="url">/services/byod</field>
+        <field name="view_id" ref="custom_homepage.page_byod"/>
+        <field name="is_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="wp_mac_classroom" model="website.page">
+        <field name="name">Mac 電腦教室</field>
+        <field name="url">/services/mac-classroom</field>
+        <field name="view_id" ref="custom_homepage.page_mac_classroom"/>
+        <field name="is_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="wp_promise" model="website.page">
+        <field name="name">PROMISE 安心承諾</field>
+        <field name="url">/services/promise</field>
+        <field name="view_id" ref="custom_homepage.page_promise"/>
+        <field name="is_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <!-- ══ 更新選單加入服務子頁 ══ -->
+    <record id="menu_services" model="website.menu">
+        <field name="name">專案服務</field>
+        <field name="url">#</field>
+        <field name="parent_id" ref="custom_homepage.main_menu"/>
+        <field name="sequence">4</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_bot" model="website.menu">
+        <field name="name">共契BOT專區</field>
+        <field name="url">/services/bot</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">1</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_ipad" model="website.menu">
+        <field name="name">iPad 大量部署</field>
+        <field name="url">/services/ipad-deployment</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">2</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_byod" model="website.menu">
+        <field name="name">BYOD 自帶載具</field>
+        <field name="url">/services/byod</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">3</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_mac_classroom" model="website.menu">
+        <field name="name">Mac 電腦教室</field>
+        <field name="url">/services/mac-classroom</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">4</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_cases" model="website.menu">
+        <field name="name">實際案例</field>
+        <field name="url">/blog/shi-ji-an-li-4</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">5</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_promise" model="website.menu">
+        <field name="name">PROMISE 安心承諾</field>
+        <field name="url">/services/promise</field>
+        <field name="parent_id" ref="custom_homepage.menu_services"/>
+        <field name="sequence">6</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+</odoo>
