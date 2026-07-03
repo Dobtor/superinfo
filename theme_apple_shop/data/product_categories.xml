@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <!--
+        Theme-specific fields for product categories.
+        Base category records are owned by superinfo_website_data.
+        We only set mac_subtitle / mac_tagline / mac_landing_order here.
+    -->
 
-        <!-- Mac root category -->
-        <record id="categ_mac" model="product.public.category">
-            <field name="name">Mac</field>
-            <field name="sequence">10</field>
+    <!-- noupdate="0": always re-apply theme fields on upgrade -->
+    <data noupdate="0">
+
+        <!-- Mac root — update superinfo_website_data record -->
+        <record id="superinfo_website_data.categ_mac" model="product.public.category">
             <field name="mac_subtitle">桌上型與筆記型</field>
         </record>
 
-        <!-- 8 model sub-categories -->
+        <!-- iMac — update superinfo_website_data record (their ID: categ_mac_imac) -->
+        <record id="superinfo_website_data.categ_mac_imac" model="product.public.category">
+            <field name="mac_subtitle">桌上型</field>
+            <field name="mac_tagline">驚艷你的全方位桌上型電腦</field>
+            <field name="mac_landing_order">40</field>
+        </record>
+
+        <!-- Sub-categories only in theme (parent → superinfo_website_data.categ_mac) -->
         <record id="categ_macbook_neo" model="product.public.category">
             <field name="name">MacBook Neo</field>
             <field name="parent_id" ref="categ_mac"/>
