@@ -13,10 +13,8 @@ class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
     is_mac_product = fields.Boolean(
-        compute='_compute_is_mac_product',
-        store=True,
-        index=True,
-        help="True if any of the product's public_categ_ids has mac_role='model'.",
+        default=True,
+        help="All products use the Apple configurator style.",
     )
     mac_color_attribute_id = fields.Many2one(
         'product.attribute',
@@ -70,13 +68,6 @@ class ProductTemplate(models.Model):
         default=False,
         help="在商品頁顯示 iPad 雷射刻字輸入欄位。",
     )
-
-    @api.depends('public_categ_ids', 'public_categ_ids.mac_role')
-    def _compute_is_mac_product(self):
-        for rec in self:
-            rec.is_mac_product = any(
-                c.mac_role == 'model' for c in rec.public_categ_ids
-            )
 
     def _get_apple_attribute_groups(self):
         """Returns this template's attribute_line_ids ordered by

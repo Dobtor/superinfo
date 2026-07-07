@@ -1,0 +1,225 @@
+/* =================================================================
+   Design Bridge — makes Odoo's native website building blocks
+   (snippets dragged from the editor: buttons, cards, images,
+   inputs, alerts...) match the Apple/Stitch visual language used
+   across the custom pages (rounded corners, pill buttons,
+   Apple-blue accent, soft shadows).
+   Scoped to web.assets_frontend only — does not touch backend UI.
+   ================================================================= */
+
+:root {
+    --bs-border-radius: 14px;
+    --bs-border-radius-sm: 10px;
+    --bs-border-radius-lg: 20px;
+    --bs-border-radius-xl: 24px;
+    --bs-border-radius-2xl: 32px;
+    --bs-border-radius-pill: 999px;
+}
+
+/* NOTE: the img/svg max-width safety net for .si-stitch-page pages
+   lives in training.css (it already had one, wrapped in :where() to
+   keep its specificity below any Tailwind utility class) — not
+   duplicated here to avoid two rules drifting out of sync. */
+
+/* ---- Buttons (native .btn snippets) ---- */
+.btn {
+    border-radius: 999px;
+    font-weight: 500;
+    padding: 0.7rem 1.75rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary,
+.btn-fill-primary {
+    background-color: var(--color-1, #0071e3);
+    border-color: var(--color-1, #0071e3);
+}
+.btn-primary:hover,
+.btn-fill-primary:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--color-1, #0071e3), transparent 65%);
+}
+.btn-outline-primary {
+    border-color: var(--color-1, #0071e3);
+    color: var(--color-1, #0071e3);
+}
+.btn-outline-primary:hover {
+    background-color: var(--color-1, #0071e3);
+    border-color: var(--color-1, #0071e3);
+}
+.btn-secondary,
+.btn-light {
+    border-radius: 999px;
+}
+.btn-lg { padding: 0.9rem 2.25rem; }
+.btn-sm { padding: 0.45rem 1.25rem; }
+
+/* ---- Cards (native .card / .s_card snippets) ---- */
+.card,
+.s_card,
+.o_card {
+    border: 1px solid #e5e5ea;
+    border-radius: 18px;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    overflow: hidden;
+}
+.card:hover,
+.s_card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+.card-body { padding: 1.75rem; }
+.card-title { font-weight: 700; }
+
+/* ---- Images dropped via snippets ---- */
+.s_image_gallery img,
+.s_picture img,
+.s_media_list img,
+.s_image_text img,
+.s_text_image img,
+figure.figure img {
+    border-radius: 16px;
+}
+
+/* ---- Inputs / forms (native .form-control snippets) ---- */
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border-color: #d2d2d7;
+    padding: 0.7rem 1rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-1, #0071e3);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-1, #0071e3), transparent 80%);
+}
+
+/* ---- Alerts / badges / pills ---- */
+.alert { border-radius: 14px; border: none; }
+.badge { border-radius: 999px; font-weight: 500; }
+
+/* ---- Typography — applies to any block dropped inside the main
+        content well (#wrap), so default snippet text (Title, Text Block,
+        Banner, Cover...) reads like the Stitch pages. Header/footer are
+        siblings of #wrap and are untouched.
+        IMPORTANT: only typographic scale (weight/spacing/line-height) is
+        set here — never `color`. Odoo's native o_cc1-o_cc5 color-combo
+        classes already compute a contrasting text color per section
+        background (dark sections get white text automatically); an
+        ID-selector color override here would beat that cascade and
+        produce unreadable dark-on-dark text. ---- */
+#wrap h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+#wrap h2 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+#wrap h3,
+#wrap h4 {
+    font-weight: 600;
+}
+#wrap p,
+#wrap li {
+    line-height: 1.7;
+}
+#wrap .lead {
+    font-weight: 400;
+}
+#wrap a:not(.btn) {
+    color: var(--color-1, #0071e3);
+}
+
+/* ---- Cover / Banner snippets (.s_cover, .s_banner) ---- */
+.s_cover,
+.s_banner {
+    border-radius: 0;
+}
+.s_cover .o_record_cover_image,
+.s_banner .o_record_cover_image {
+    border-radius: 0;
+}
+
+/* ---- Quotes / blockquotes (.s_quotes, .s_blockquote) ---- */
+#wrap blockquote,
+.s_blockquote {
+    border: none;
+    border-left: 4px solid var(--color-1, #0071e3);
+    background: #f5f5f7;
+    border-radius: 0 14px 14px 0;
+    padding: 1.5rem 2rem;
+    font-style: italic;
+    color: #1d1d1f;
+}
+
+/* ---- Numbers / counters (.s_numbers) ---- */
+.s_numbers .display-1,
+.s_numbers .display-2,
+.s_numbers .display-3,
+.s_numbers .display-4 {
+    color: var(--color-1, #0071e3);
+    font-weight: 800;
+}
+
+/* ---- Feature grids (.s_features, .s_three_columns, .s_comparisons) ---- */
+.s_features .s_features_grid_icon,
+.s_three_columns .s_three_columns_item,
+.s_comparisons .card {
+    border-radius: 18px;
+}
+.s_features_grid_icon {
+    color: var(--color-1, #0071e3);
+}
+
+/* ---- Progress bars ---- */
+.progress {
+    border-radius: 999px;
+    height: 8px;
+}
+.progress-bar {
+    background-color: var(--color-1, #0071e3);
+}
+
+/* ---- Separator / dividers ---- */
+hr { opacity: 0.12; }
+
+/* ---- Section rhythm: give native snippets breathing room consistent
+        with the Stitch pages' 80px section padding, unless the snippet
+        already sets its own spacing utility (p-0, py-0, pt0, pb0). ---- */
+#wrap > section:not([class*="pt0"]):not([class*="pb0"]):not(.s_cover):not(.s_banner) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* ---- Decorative shape dividers (wave/blob/hexagon overlays used by
+        s_kickoff, s_image_hexagonal, s_cover, etc). None of the Stitch
+        pages use these — they read as generic template filler against
+        the flat, sharp-edged Apple aesthetic, so drop them entirely. ---- */
+#wrap .o_we_shape {
+    display: none !important;
+}
+
+/* ---- Grid/composite image snippets (s_image_hexagonal,
+        s_image_text_overlap, s_image_title, s_kickoff...): once the
+        hexagon/wave mask is gone the image needs its own rounded corner
+        treatment instead, matching the si-stitch-page image radius. ---- */
+#wrap .s_image_hexagonal img,
+#wrap .s_image_text_overlap img,
+#wrap .s_image_title,
+#wrap .s_kickoff .o_record_cover_image,
+#wrap .s_image_gallery img,
+#wrap .s_picture img {
+    border-radius: 20px;
+    object-fit: cover;
+}
+#wrap .s_image_text_overlap .card,
+#wrap .s_image_text_overlap > .container > div > div:not(:has(img)) {
+    border-radius: 20px;
+}
+
+/* ---- CTA / embed boxes (s_cta_box and similar dark panels) ---- */
+#wrap .s_cta_box {
+    border-radius: 24px;
+    overflow: hidden;
+}

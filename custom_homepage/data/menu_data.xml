@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 先刪除預設選單，避免重複 -->
+    <record id="main_menu" model="website.menu">
+        <field name="name">網站頂層選單 1</field>
+        <field name="url">/default-main-menu</field>
+        <field name="sequence">0</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_about" model="website.menu">
+        <field name="name">關於我們</field>
+        <field name="url">/aboutus</field>
+        <field name="parent_id" ref="main_menu"/>
+        <field name="sequence">1</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_contact" model="website.menu">
+        <field name="name">聯絡我們</field>
+        <field name="url">/contactus</field>
+        <field name="parent_id" ref="main_menu"/>
+        <field name="sequence">3</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_services" model="website.menu">
+        <field name="name">專案服務</field>
+        <field name="url">#</field>
+        <field name="parent_id" ref="main_menu"/>
+        <field name="sequence">4</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_training" model="website.menu">
+        <field name="name">蘋果培訓</field>
+        <field name="url">#</field>
+        <field name="parent_id" ref="main_menu"/>
+        <field name="sequence">5</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <record id="menu_shop" model="website.menu">
+        <field name="name">商店</field>
+        <field name="url">/shop</field>
+        <field name="parent_id" ref="main_menu"/>
+        <field name="sequence">20</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+</odoo>
