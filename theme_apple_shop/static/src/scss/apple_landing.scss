@@ -31,11 +31,7 @@
                 line-height: 1.0;
                 font-weight: 700;
                 letter-spacing: -0.03em;
-                margin: 0 0 $apple-sp-md;
-                background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
+                @include apple-gradient-text($mb: $apple-sp-md);
                 position: relative;
 
                 @media (max-width: $apple-bp-mobile) { font-size: 44px; }

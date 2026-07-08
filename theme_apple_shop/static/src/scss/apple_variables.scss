@@ -73,6 +73,24 @@ $apple-bp-mobile:  767px;
 $apple-bp-tablet:  991px;
 $apple-bp-desktop: 1199px;
 
+// ─── Gradient text（漸層文字唯一合法入口）───────
+// background-clip: text 只會在「元素框內」畫背景；本主題標題緊排
+// （line-height 1.0–1.05）時，英文字升降部（M/g/t…）的墨跡會超出
+// 元素框 → 超出部分無背景可透出 → 字被裁切（CJK 字形在 em box 內
+// 所以只有英文會斷）。此 mixin 用 padding 撐大畫布、等值負 margin
+// 歸零版面位移。版面外距請透過參數傳入，不要在呼叫端另寫 margin
+//（會整組覆蓋掉這裡的補償值）。
+@mixin apple-gradient-text($mt: 0px, $mr: 0px, $mb: 0px, $ml: 0px) {
+    $ink-v: 0.15em; // 涵蓋 SF Pro/系統字型 ascent+descent 超出 1.0 line-height 的量
+    $ink-h: 0.05em; // 負字距/斜勢字形的水平溢出
+    background: linear-gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: $ink-v $ink-h;
+    margin: calc(#{$mt} - #{$ink-v}) calc(#{$mr} - #{$ink-h}) calc(#{$mb} - #{$ink-v}) calc(#{$ml} - #{$ink-h});
+}
+
 // ─── Z-index ───────────────────────────────────
 $apple-z-localnav:     50;
 $apple-z-subnav:       60;
