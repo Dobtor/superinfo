@@ -15,13 +15,15 @@
         <field name="inherit_id" ref="sale.sale_order_portal_content"/>
         <field name="arch" type="xml">
             <xpath expr="//td[@id='product_name']" position="inside">
-                <div t-if="line.pencil_engraving_text" class="text-muted fst-italic">
-                    <span>Apple Pencil 刻字：</span>
-                    <span t-esc="line.pencil_engraving_text"/>
+                <!-- 標籤淺、內容深：刻字內容是客戶要核對的重點，不弱化；
+                     「」界定內容邊界（刻字對前後空格敏感）；中文不用斜體 -->
+                <div t-if="line.pencil_engraving_text">
+                    <span class="text-muted">Apple Pencil 刻字：</span>
+                    <span>「<t t-out="line.pencil_engraving_text"/>」</span>
                 </div>
-                <div t-if="line.ipad_engraving_text" class="text-muted fst-italic">
-                    <span>iPad 刻字：</span>
-                    <span t-esc="line.ipad_engraving_text"/>
+                <div t-if="line.ipad_engraving_text">
+                    <span class="text-muted">iPad 刻字：</span>
+                    <span>「<t t-out="line.ipad_engraving_text"/>」</span>
                 </div>
             </xpath>
         </field>

@@ -11,14 +11,10 @@
         <field name="inherit_id" ref="sale.report_saleorder_document"/>
         <field name="arch" type="xml">
             <xpath expr="//td[@name='td_name']" position="inside">
-                <div t-if="line.pencil_engraving_text" class="text-muted fst-italic">
-                    <span>Apple Pencil 刻字：</span>
-                    <span t-esc="line.pencil_engraving_text"/>
-                </div>
-                <div t-if="line.ipad_engraving_text" class="text-muted fst-italic">
-                    <span>iPad 刻字：</span>
-                    <span t-esc="line.ipad_engraving_text"/>
-                </div>
+                <!-- 正文黑字（不用灰、不用斜體）：刻字是客製契約內容，
+                     列印/影印須清晰；「」界定內容邊界 -->
+                <div t-if="line.pencil_engraving_text">Apple Pencil 刻字：「<t t-out="line.pencil_engraving_text"/>」</div>
+                <div t-if="line.ipad_engraving_text">iPad 刻字：「<t t-out="line.ipad_engraving_text"/>」</div>
             </xpath>
         </field>
     </record>
