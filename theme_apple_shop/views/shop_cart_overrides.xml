@@ -45,4 +45,27 @@
             </xpath>
         </field>
     </record>
+
+    <!--
+        Checkout / 訂單完成頁（checkout_layout 右側訂單摘要）— 在品名下方
+        顯示雷射刻字內容。/shop/checkout、/shop/payment、/shop/confirmation
+        共用此 layout。
+    -->
+    <record id="checkout_summary_engraving" model="ir.ui.view">
+        <field name="name">Engraving text in checkout order summary</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.checkout_layout"/>
+        <field name="arch" type="xml">
+            <xpath expr="//td[@name='website_sale_cart_summary_product_name']/h6" position="after">
+                <div t-if="line.pencil_engraving_text" class="text-muted fst-italic small">
+                    <span>Apple Pencil 刻字：</span>
+                    <span t-esc="line.pencil_engraving_text"/>
+                </div>
+                <div t-if="line.ipad_engraving_text" class="text-muted fst-italic small">
+                    <span>iPad 刻字：</span>
+                    <span t-esc="line.ipad_engraving_text"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
 </odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        報價單 / 訂單 PDF（sale.report_saleorder_document）— 在明細行
+        品名描述下方顯示雷射刻字內容。客戶下載報價單、訂單確認信附件、
+        /shop/print 皆使用此報表。
+    -->
+    <record id="report_saleorder_document_engraving" model="ir.ui.view">
+        <field name="name">Engraving text on quotation/order PDF lines</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="sale.report_saleorder_document"/>
+        <field name="arch" type="xml">
+            <xpath expr="//td[@name='td_name']" position="inside">
+                <div t-if="line.pencil_engraving_text" class="text-muted fst-italic">
+                    <span>Apple Pencil 刻字：</span>
+                    <span t-esc="line.pencil_engraving_text"/>
+                </div>
+                <div t-if="line.ipad_engraving_text" class="text-muted fst-italic">
+                    <span>iPad 刻字：</span>
+                    <span t-esc="line.ipad_engraving_text"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

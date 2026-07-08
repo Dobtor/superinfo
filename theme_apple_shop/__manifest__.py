@@ -12,7 +12,7 @@
     'author': 'Dobtor SI',
     'website': 'https://www.dobtor.com',
     'category': 'Website',
-    'version': '18.0.2.1.0',
+    'version': '18.0.2.2.0',
     'sequence': 920,
     'depends': [
         'base',
@@ -25,6 +25,9 @@
         'data/assets.xml',
         # Backend views
         'views/sale_order_views.xml',
+        # Portal / PDF report — 刻字顯示（客戶確認頁 + 報價單）
+        'views/sale_portal_templates.xml',
+        'views/sale_report_templates.xml',
         'views/product_attribute_views.xml',
         'views/product_template_views.xml',
         'views/product_public_category_views.xml',

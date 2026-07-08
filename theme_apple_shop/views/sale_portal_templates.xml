@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Portal 訂單/報價頁（/my/orders、/my/quotes）— 在商品名稱欄位下方
+        顯示雷射刻字內容，讓客戶在確認報價/訂單時能核對刻字文字。
+
+        Uses <record model="ir.ui.view"> directly instead of <template>
+        shorthand: theme_ prefixed modules have their <template> elements
+        routed to the theme.ir.ui.view staging table, which is invisible
+        to request.render() until the theme is applied.
+    -->
+    <record id="sale_order_portal_content_engraving" model="ir.ui.view">
+        <field name="name">Engraving text on portal order lines</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="sale.sale_order_portal_content"/>
+        <field name="arch" type="xml">
+            <xpath expr="//td[@id='product_name']" position="inside">
+                <div t-if="line.pencil_engraving_text" class="text-muted fst-italic">
+                    <span>Apple Pencil 刻字：</span>
+                    <span t-esc="line.pencil_engraving_text"/>
+                </div>
+                <div t-if="line.ipad_engraving_text" class="text-muted fst-italic">
+                    <span>iPad 刻字：</span>
+                    <span t-esc="line.ipad_engraving_text"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
