@@ -3,7 +3,9 @@
     'version': '18.0.1.0.0',
     'summary': '自訂網站首頁與服務頁面',
     'category': 'Website',
-    'depends': ['website', 'website_blog'],
+    # views/training_pages.xml 以 inherit_id 覆寫 superinfo_website_data 的
+    # page_*_view，必須宣告依賴以確保載入順序。
+    'depends': ['website', 'website_blog', 'superinfo_website_data'],
     'data': [
         'views/stitch_shared.xml',
         'views/homepage_template.xml',
