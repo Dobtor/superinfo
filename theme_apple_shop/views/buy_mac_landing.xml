@@ -193,7 +193,7 @@
                                                                      loading="lazy"/>
                                                             </div>
                                                             <h3 class="model-card-name" t-esc="prod.name"/>
-                                                            <p class="model-card-tagline" t-esc="prod.mac_tagline or ''"/>
+                                                            <p t-if="prod.description_sale" class="model-card-tagline" t-esc="prod.description_sale"/>
                                                             <p t-if="prod.list_price" class="model-card-price">
                                                                 <t t-esc="prod.list_price"
                                                                    t-options="{'widget': 'monetary', 'display_currency': prod.currency_id}"/>
