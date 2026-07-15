@@ -62,16 +62,16 @@
         </field>
     </record>
 
-    <!-- ── Register in editor panel (Content group) ──────────────────────── -->
+    <!-- ── Register in editor panel (Products group) ─────────────────────── -->
     <record id="s_homepage_product_swiper_panel" model="ir.ui.view">
         <field name="name">Homepage Product Swiper Panel Registration</field>
         <field name="type">qweb</field>
-        <field name="inherit_id" ref="website.snippets"/>
+        <field name="inherit_id" ref="website_sale.snippets"/>
         <field name="arch" type="xml">
-            <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
                 <t t-snippet="custom_homepage.s_homepage_product_swiper"
                    string="商品輪播"
-                   group="content"/>
+                   group="products"/>
             </xpath>
         </field>
     </record>

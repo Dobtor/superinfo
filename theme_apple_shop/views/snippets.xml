@@ -374,12 +374,6 @@
                 <t t-snippet="theme_apple_shop.s_apple_hero_banner"
                    string="極電 Hero Banner"
                    group="intro"/>
-                <t t-snippet="theme_apple_shop.s_apple_categ_carousel"
-                   string="選購分類輪播"
-                   group="content"/>
-                <t t-snippet="theme_apple_shop.s_apple_product_swiper"
-                   string="商品輪播"
-                   group="content"/>
                 <t t-snippet="theme_apple_shop.s_trust_strip"
                    string="信賴保證條"
                    group="content"/>
@@ -390,15 +384,15 @@
         </field>
     </record>
 
-    <!-- ── Register categ nav in editor panel (Products group) ───────────── -->
-    <record id="s_apple_categ_nav_panel" model="ir.ui.view">
-        <field name="name">Apple Categ Nav Panel Registration</field>
+    <!-- ── Register product swiper in editor panel (Products group) ──────── -->
+    <record id="s_apple_product_swiper_panel" model="ir.ui.view">
+        <field name="name">Apple Product Swiper Panel Registration</field>
         <field name="type">qweb</field>
         <field name="inherit_id" ref="website_sale.snippets"/>
         <field name="arch" type="xml">
             <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
-                <t t-snippet="theme_apple_shop.s_apple_categ_nav"
-                   string="分類圖示導覽"
+                <t t-snippet="theme_apple_shop.s_apple_product_swiper"
+                   string="商品輪播"
                    group="products"/>
             </xpath>
         </field>
