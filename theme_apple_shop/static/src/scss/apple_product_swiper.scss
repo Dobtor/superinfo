@@ -1,0 +1,123 @@
+.s_apple_product_swiper {
+    .product-swiper-wrapper {
+        position: relative;
+    }
+
+    .product-swiper {
+        overflow: hidden;
+        padding: $apple-sp-xs 0 $apple-sp-md;
+
+        .swiper-slide {
+            width: 280px;
+            height: auto;
+        }
+    }
+
+    .product-swiper-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 420px;
+        font-size: 15px;
+    }
+
+    // Apple-glass skin over the shared content template's Bootstrap card
+    // markup (.card/.card-body/.card-title/.card-text — see this module's
+    // own s_product_swiper_content, also reused by custom_homepage).
+    .card {
+        background: $apple-glass-bg;
+        border: 1px solid $apple-glass-border;
+        border-radius: $apple-radius-lg;
+        min-height: 420px;
+        text-align: center;
+        position: relative;
+        backdrop-filter: blur($apple-glass-blur);
+        -webkit-backdrop-filter: blur($apple-glass-blur);
+        transition: transform 400ms $apple-ease-default,
+                    box-shadow 400ms $apple-ease-default,
+                    border-color 400ms $apple-ease-default;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: $apple-shadow-card-hv;
+            border-color: rgba(59, 130, 246, 0.25);
+            .card-img-top { transform: scale(1.06); }
+        }
+
+        .card-img-top {
+            height: 180px;
+            margin: $apple-sp-lg 0 $apple-sp-md;
+            object-fit: contain;
+            transition: transform 500ms $apple-ease-default;
+        }
+
+        .card-body {
+            padding: $apple-sp-xl $apple-sp-lg;
+        }
+
+        .card-title {
+            font-family: $apple-font-display;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 $apple-sp-xs;
+            color: $apple-black;
+        }
+
+        .card-text.text-muted.small {
+            font-size: 13px;
+            color: $apple-gray-5;
+            margin: 0 0 $apple-sp-sm;
+            min-height: 20px;
+        }
+
+        .card-text.fw-semibold {
+            font-size: 14px;
+            font-weight: 400 !important;
+            margin: 0 0 $apple-sp-md;
+            color: $apple-gray-6;
+        }
+    }
+
+    // Nav buttons styled to match .s_apple_categ_carousel's track-prev/next
+    // (glass circle + CSS-triangle arrow) instead of Swiper's default chevrons.
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+        background: $apple-glass-bg-md;
+        border: 1px solid $apple-glass-border;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 50%;
+        transition: all 200ms;
+
+        &:hover {
+            background: rgba(59, 130, 246, 0.10);
+            border-color: $apple-blue;
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.25;
+            pointer-events: none;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -20px;
+        &:after { border-width: 6px 8px 6px 0; border-color: transparent $apple-blue transparent transparent; }
+    }
+
+    .swiper-button-next {
+        right: -20px;
+        &:after { border-width: 6px 0 6px 8px; border-color: transparent transparent transparent $apple-blue; }
+    }
+}

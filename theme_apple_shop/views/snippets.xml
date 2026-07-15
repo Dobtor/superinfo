@@ -93,6 +93,143 @@
         </field>
     </record>
 
+    <!-- ── Product Swiper snippet template (dropped onto page) ──────────── -->
+    <!-- Content template, options panel (.s_product_swiper, shared), vendored
+         Swiper.js, and the JS widget/options now live in custom_homepage
+         (theme_apple_shop depends on it — see manifest). This module only
+         keeps its own drop-in template (below, Apple-glass skin markup, same
+         Bootstrap card classes the shared content template renders) and its
+         own SCSS skin (apple_product_swiper.scss). -->
+    <record id="s_apple_product_swiper" model="ir.ui.view">
+        <field name="name">Apple Product Swiper Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_product_swiper</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_product_swiper s_product_swiper pt-3 pb-5" data-categ-id="0">
+                <div class="container">
+                    <div class="product-swiper-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_apple_product_swiper">
+                        <!-- o_not_editable (Odoo's own convention for dynamic
+                             snippets, e.g. website.s_dynamic_snippet_template):
+                             the JS-fetched content below must never be captured
+                             into the saved arch on Save — only this static
+                             preview persists; real content is always re-fetched
+                             fresh on load. -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="product-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(59,130,246,.08);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 A</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(99,102,241,.08);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 B</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(16,185,129,.08);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 C</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Product Swiper rendered content (returned by controller; shared —
+         also used by custom_homepage's s_homepage_product_swiper) ───────── -->
+    <record id="s_product_swiper_content" model="ir.ui.view">
+        <field name="name">Product Swiper Content (shared)</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_product_swiper_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_product_swiper_content">
+                <t t-if="not products">
+                    <div class="product-swiper-empty text-center text-muted">
+                        <p>該類別目前沒有任何產品</p>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div class="product-swiper">
+                        <div class="swiper-wrapper">
+                            <t t-foreach="products" t-as="prod">
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <img t-if="prod.image_1024" class="card-img-top"
+                                             t-attf-src="/web/image/product.template/#{prod.id}/image_1024"
+                                             t-att-alt="prod.name"
+                                             loading="lazy"/>
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <h3 class="card-title h5" t-esc="prod.name"/>
+                                            <p t-if="prod.description_sale" class="card-text text-muted small" t-esc="prod.description_sale"/>
+                                            <p t-if="prod.list_price" class="card-text fw-semibold">
+                                                <t t-esc="prod.list_price"
+                                                   t-options="{'widget': 'monetary', 'display_currency': prod.currency_id}"/>
+                                                <span class="text-muted">起</span>
+                                            </p>
+                                            <a t-attf-href="/shop/#{slug(prod)}" class="btn btn-primary mt-auto">選購</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <button type="button" class="swiper-button-prev" aria-label="Previous"/>
+                    <button type="button" class="swiper-button-next" aria-label="Next"/>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Product Swiper editor options (Category / Slide Per View / Delay) ──
+         Shared: data-selector targets .s_product_swiper, a class every
+         product-swiper snippet carries (this theme's own + custom_homepage's),
+         so this single registration covers every module's instance. ──────── -->
+    <record id="s_product_swiper_options" model="ir.ui.view">
+        <field name="name">Product Swiper Options (shared)</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website.snippet_options"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <div data-js="ProductSwiperCategory" data-selector=".s_product_swiper">
+                    <we-many2one string="商品分類" data-model="product.public.category"
+                                 data-set-categ-id="" data-name="product_swiper_categ_opt"
+                                 data-no-preview="true"/>
+                    <we-select string="每次顯示張數" data-attribute-name="slidesPerView" data-attribute-default-value="4">
+                        <we-button data-select-data-attribute="2">2</we-button>
+                        <we-button data-select-data-attribute="3">3</we-button>
+                        <we-button data-select-data-attribute="4">4</we-button>
+                        <we-button data-select-data-attribute="5">5</we-button>
+                    </we-select>
+                    <we-input string="自動輪播間隔" data-select-data-attribute=""
+                              data-attribute-name="delay"
+                              data-unit="s" data-save-unit="ms" data-step="0.5"
+                              placeholder="關閉"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
     <!-- ── Categ Nav snippet template ───────────────────────────────────── -->
     <record id="s_apple_categ_nav" model="ir.ui.view">
         <field name="name">Apple Category Nav Snippet</field>
@@ -239,6 +376,9 @@
                    group="intro"/>
                 <t t-snippet="theme_apple_shop.s_apple_categ_carousel"
                    string="選購分類輪播"
+                   group="content"/>
+                <t t-snippet="theme_apple_shop.s_apple_product_swiper"
+                   string="商品輪播"
                    group="content"/>
                 <t t-snippet="theme_apple_shop.s_trust_strip"
                    string="信賴保證條"

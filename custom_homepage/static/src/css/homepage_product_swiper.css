@@ -1,0 +1,76 @@
+/* Product Swiper — Swiper.js mechanics only; card/button look already comes
+   from design_bridge.css's native .card / .btn-primary rules. */
+
+.s_homepage_product_swiper .product-swiper-wrapper {
+    position: relative;
+}
+
+.s_homepage_product_swiper .product-swiper {
+    overflow: hidden;
+    padding: 8px 0 16px;
+}
+
+.s_homepage_product_swiper .product-swiper .swiper-slide {
+    width: 280px;
+    height: auto;
+}
+
+.s_homepage_product_swiper .product-swiper-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    font-size: 15px;
+}
+
+/* Nav buttons: glass circle + CSS-triangle arrow, using the site's own
+   --color-1 accent instead of the Apple-shop theme's SCSS variables. */
+.s_homepage_product_swiper .swiper-button-prev,
+.s_homepage_product_swiper .swiper-button-next {
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+.s_homepage_product_swiper .swiper-button-prev:hover,
+.s_homepage_product_swiper .swiper-button-next:hover {
+    background: color-mix(in srgb, var(--color-1, #0071e3) 10%, transparent);
+    border-color: var(--color-1, #0071e3);
+}
+
+.s_homepage_product_swiper .swiper-button-prev:after,
+.s_homepage_product_swiper .swiper-button-next:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.s_homepage_product_swiper .swiper-button-prev.swiper-button-disabled,
+.s_homepage_product_swiper .swiper-button-next.swiper-button-disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.s_homepage_product_swiper .swiper-button-prev {
+    left: -20px;
+}
+.s_homepage_product_swiper .swiper-button-prev:after {
+    border-width: 6px 8px 6px 0;
+    border-color: transparent var(--color-1, #0071e3) transparent transparent;
+}
+
+.s_homepage_product_swiper .swiper-button-next {
+    right: -20px;
+}
+.s_homepage_product_swiper .swiper-button-next:after {
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent var(--color-1, #0071e3);
+}

@@ -65,7 +65,11 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
     def snippet_categ_nav(self, **kwargs):
         Categ = request.env['product.public.category']
         categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
-        return request.render(
+        # inherit_branding=False: this fragment is injected into another
+        # page's DOM via JS — without this, QWeb tags every element with
+        # data-oe-* markers pointing back at THIS template's view, so saving
+        # the host page corrupts the shared template with that page's content.
+        return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
             'theme_apple_shop.s_apple_categ_nav_content',
             {'categories': categs},
         )
@@ -81,9 +85,37 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             categs = Categ.search([('parent_id', '=', cid)], order='sequence, id')
         else:
             categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
-        return request.render(
+        return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
             'theme_apple_shop.s_apple_categ_carousel_content',
             {'categories': categs},
+        )
+
+    # ─── Snippet: product swiper content (shared — also used by
+    # custom_homepage's s_homepage_product_swiper via the same .s_product_swiper
+    # JS widget/endpoint; see custom_homepage's manifest depends comment) ────
+
+    @http.route('/theme_apple_shop/snippet/product_swiper',
+                type='http', auth='public', website=True)
+    def snippet_product_swiper(self, categ_id='0', **kwargs):
+        cid = int(categ_id)
+        products = request.env['product.template'].sudo()
+        if cid:
+            # child_of also matches cid itself, so a leaf category with its
+            # own products keeps working the same as before.
+            categ_ids = request.env['product.public.category'].sudo().search(
+                [('id', 'child_of', cid)]
+            ).ids
+            products = products.search([
+                ('public_categ_ids', 'in', categ_ids),
+                ('is_published', '=', True),
+            ], order='name')
+        # inherit_branding=False: this fragment is injected into the host
+        # page's DOM via JS — without this, QWeb tags every element with
+        # data-oe-* markers pointing back at THIS template's view, so saving
+        # the host page corrupts this shared template with that page's content.
+        return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
+            'theme_apple_shop.s_product_swiper_content',
+            {'products': products},
         )
 
     # ─── /shop/category/mac  (friendly slug without ID suffix) ───────
