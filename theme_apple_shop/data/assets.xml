@@ -118,4 +118,37 @@
         <field name="bundle">web.assets_frontend</field>
         <field name="path">theme_apple_shop/static/src/js/snippet_categ_carousel.js</field>
     </record>
+
+    <!-- Product swiper (shared — also used by custom_homepage's own snippet,
+         which depends on this module for these assets). -->
+    <record id="asset_swiper_css" model="ir.asset">
+        <field name="name">Swiper CSS (vendored)</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/lib/swiper/swiper-bundle.min.css</field>
+    </record>
+
+    <record id="asset_swiper_js" model="ir.asset">
+        <field name="name">Swiper JS (vendored)</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/lib/swiper/swiper-bundle.min.js</field>
+    </record>
+
+    <record id="asset_product_swiper_scss" model="ir.asset">
+        <field name="name">Apple Shop Product Swiper SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/scss/apple_product_swiper.scss</field>
+    </record>
+
+    <record id="asset_snippet_product_swiper_js" model="ir.asset">
+        <field name="name">Product Swiper JS (shared)</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_product_swiper.js</field>
+    </record>
+
+    <!-- Editor-only: website builder options panel widget (category picker) -->
+    <record id="asset_snippet_product_swiper_options_js" model="ir.asset">
+        <field name="name">Product Swiper Options JS (shared)</field>
+        <field name="bundle">website.assets_wysiwyg</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_product_swiper_options.js</field>
+    </record>
 </odoo>

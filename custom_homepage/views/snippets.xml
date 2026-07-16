@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Content template + editor options (category/slides-per-view/delay)
+         are shared and live in theme_apple_shop (this module depends on it —
+         see manifest). This file only keeps its own drop-in template (below,
+         Bootstrap card markup — styled for free by design_bridge.css) and its
+         own panel registration. -->
+
+    <!-- ── Product Swiper snippet template (dropped onto page) ───────────── -->
+    <record id="s_homepage_product_swiper" model="ir.ui.view">
+        <field name="name">Homepage Product Swiper Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">custom_homepage.s_homepage_product_swiper</field>
+        <field name="arch" type="xml">
+            <section class="s_homepage_product_swiper s_product_swiper pt-3 pb-5" data-categ-id="0">
+                <div class="container">
+                    <div class="product-swiper-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_homepage_product_swiper">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see theme_apple_shop/snippet_product_swiper.js). -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="product-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(0,113,227,.08);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 A</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(0,113,227,.05);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 B</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <div class="ratio ratio-1x1 mb-3" style="background:rgba(0,113,227,.03);border-radius:12px;"/>
+                                            <h3 class="card-title h5">商品 C</h3>
+                                            <p class="card-text text-muted small">說明文字</p>
+                                            <span class="btn btn-primary mt-auto">選購</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Register in editor panel (Products group) ─────────────────────── -->
+    <record id="s_homepage_product_swiper_panel" model="ir.ui.view">
+        <field name="name">Homepage Product Swiper Panel Registration</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website_sale.snippets"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
+                <t t-snippet="custom_homepage.s_homepage_product_swiper"
+                   string="商品輪播"
+                   group="products"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -26,3 +26,7 @@ server/
 
 .crawl/
 .playwright-mcp/
+
+# Claude Code local (machine-specific) settings — .claude/skills and CLAUDE.md stay tracked
+.claude/*
+CLAUDE.md
