@@ -47,6 +47,6 @@ class ProductAttribute(models.Model):
     )
     apple_show_price = fields.Boolean(
         string="顯示價格",
-        help="勾選後，前台 configurator 會在此屬性各選項名稱後顯示其 "
-             "default_extra_price（例：＋1980）。未勾選則不顯示。",
+        help="勾選後，前台 configurator 會在此屬性各選項名稱後顯示該商品實際設定的 "
+             "price_extra（例：＋1980）。未勾選則不顯示。",
     )

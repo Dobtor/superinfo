@@ -180,8 +180,8 @@
                                                                             <span class="column form-selector-left-col rf-bfe-selector-left-col">
                                                                                 <span class="form-selector-title">
                                                                                     <t t-esc="val.name"/>
-                                                                                    <t t-if="attr.apple_show_price and val.default_extra_price">
-                                                                                        <span class="form-selector-title-extra">+NT$ <t t-esc="int(val.default_extra_price)"/></span>
+                                                                                    <t t-if="attr.apple_show_price and ptav.price_extra">
+                                                                                        <span class="form-selector-title-extra">+NT$ <t t-esc="int(ptav.price_extra)"/></span>
                                                                                     </t>
                                                                                     <t t-if="val.apple_description">
                                                                                         <div class="form-label-small" t-esc="val.apple_description"/>
