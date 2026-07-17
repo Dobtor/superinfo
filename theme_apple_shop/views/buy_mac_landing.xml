@@ -40,45 +40,20 @@
                                     </div>
                                 </section>
                             </t>
+                            <!-- Now the s_apple_categ_banner snippet (was hardcoded
+                                 here verbatim) — same markup/classes/style, but a
+                                 real editable/movable snippet. Its JS auto-detects
+                                 current_categ from the URL by default (unchanged
+                                 behaviour), unless an editor picks a specific
+                                 category via the "指定分類" option. -->
                             <t t-if="not is_homepage">
-                                <section class="pageBanner pageBanner--categ">
+                                <section class="s_apple_categ_banner s_categ_banner pageBanner pageBanner--categ" data-categ-id="0">
                                     <div class="container">
-                                        <!-- Breadcrumb as eyebrow -->
-                                        <nav aria-label="breadcrumb" class="banner-eyebrow">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item">
-                                                    <a href="/">首頁</a>
-                                                </li>
-                                                <t t-if="current_categ.parent_id">
-                                                    <li class="breadcrumb-item">
-                                                        <a t-attf-href="/shop/category/#{slug(current_categ.parent_id)}"
-                                                           t-esc="current_categ.parent_id.name"/>
-                                                    </li>
-                                                </t>
-                                                <li class="breadcrumb-item active" aria-current="page"
-                                                    t-esc="current_categ.name"/>
-                                            </ol>
-                                        </nav>
-                                        <!-- Big headline -->
-                                        <h1 class="banner-headline"
-                                            t-if="current_categ.mac_banner_headline"
-                                            t-esc="current_categ.mac_banner_headline"/>
-                                        <h1 class="banner-headline banner-headline--default"
-                                            t-if="not current_categ.mac_banner_headline"
-                                            t-esc="page_title"/>
-                                        <!-- Category description (website_description field) -->
-                                        <div class="banner-description"
-                                             t-if="current_categ.website_description"
-                                             t-out="current_categ.website_description"/>
-                                        <!-- Description (admin-filled fallback) -->
-                                        <p class="banner-description"
-                                           t-elif="current_categ.mac_banner_description"
-                                           t-esc="current_categ.mac_banner_description"/>
-                                        <!-- Hero image — fallback chain: mac_banner_hero → image_1024 → hide -->
-                                        <div class="banner-hero-img">
-                                            <img t-attf-src="/web/image/product.public.category/#{current_categ.id}/mac_banner_hero"
-                                                 t-att-alt="current_categ.name"
-                                                 t-attf-onerror="this.src='/web/image/product.public.category/#{current_categ.id}/image_1024';this.onerror=function(){{this.parentElement.style.display='none'}};"/>
+                                        <div class="categ-banner-wrapper oe_unremovable oe_unmovable o_not_editable"
+                                             data-snippet="s_apple_categ_banner">
+                                            <!-- Static preview shown in editor; replaced by JS in view mode -->
+                                            <h1 class="banner-headline" style="pointer-events:none">分類名稱</h1>
+                                            <p class="banner-description" style="pointer-events:none">分類描述文字...</p>
                                         </div>
                                     </div>
                                 </section>
@@ -110,29 +85,18 @@
                                 </div>
                             </nav>
 
-                            <!-- ③ Category icon nav (homepage only) -->
-                            <t t-if="is_homepage">
-                                <section class="section-models" id="section-models">
-                                    <div class="container">
-                                        <div class="categ-nav-track-wrap">
-                                            <div class="categ-nav-track" role="region" aria-label="商品分類">
-                                                <t t-foreach="top_categories" t-as="categ">
-                                                    <a class="categ-nav-item"
-                                                       t-attf-href="/shop/category/#{slug(categ)}">
-                                                        <div class="categ-nav-img">
-                                                            <img t-if="categ.mac_hero_image or categ.image_1024"
-                                                                 t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'mac_hero_image' if categ.mac_hero_image else 'image_1024' }}"
-                                                                 t-att-alt="categ.name"
-                                                                 loading="lazy" />
-                                                        </div>
-                                                        <span class="categ-nav-name" t-esc="categ.name" />
-                                                    </a>
-                                                </t>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </t>
+                            <!-- ③ Category nav — used to be hardcoded here (gated on
+                                 is_homepage, which nothing ever actually sets to True
+                                 since custom_homepage took over the real site homepage
+                                 — that gate was already dead code). Now an always-shown
+                                 oe_structure drop zone; editors place either "分類圖示
+                                 導覽" (s_apple_categ_nav) or "分類照片導覽"
+                                 (s_apple_categ_nav_photo) here via the builder. -->
+                            <section id="section-models">
+                                <div class="container">
+                                    <div id="oe_structure_buy_mac_landing_homepage_nav" class="oe_structure oe_empty"/>
+                                </div>
+                            </section>
 
                             <!-- ③b Sub-category or product cards carousel (category pages only) -->
                             <t t-if="not is_homepage">
@@ -149,8 +113,8 @@
                                                     <t t-foreach="subcategories" t-as="sub">
                                                         <article class="model-card">
                                                             <div class="model-card-image">
-                                                                <img t-if="sub.mac_hero_image or sub.image_1024"
-                                                                     t-attf-src="/web/image/product.public.category/#{sub.id}/{{ 'mac_hero_image' if sub.mac_hero_image else 'image_1024' }}"
+                                                                <img t-if="sub.hero_image or sub.image_1024"
+                                                                     t-attf-src="/web/image/product.public.category/#{sub.id}/{{ 'hero_image' if sub.hero_image else 'image_1024' }}"
                                                                      t-att-alt="sub.name"
                                                                      loading="lazy"/>
                                                             </div>

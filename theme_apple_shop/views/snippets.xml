@@ -57,8 +57,8 @@
                         <t t-foreach="categories" t-as="cat">
                             <article class="model-card">
                                 <div class="model-card-image">
-                                    <img t-if="cat.mac_hero_image or cat.image_1024"
-                                         t-attf-src="/web/image/product.public.category/#{cat.id}/{{ 'mac_hero_image' if cat.mac_hero_image else 'image_1024' }}"
+                                    <img t-if="cat.hero_image or cat.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{cat.id}/{{ 'hero_image' if cat.hero_image else 'image_1024' }}"
                                          t-att-alt="cat.name"
                                          loading="lazy"/>
                                 </div>
@@ -230,32 +230,72 @@
         </field>
     </record>
 
+    <!-- ── Categ Nav editor options (which top-level categories to show) ──
+         Shared: data-selector targets .s_categ_nav (this theme's own
+         s_apple_categ_nav and custom_homepage's s_homepage_categ_nav). ──── -->
+    <record id="s_categ_nav_options" model="ir.ui.view">
+        <field name="name">Category Nav Options (shared)</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website.snippet_options"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <div data-js="CategNavSelect" data-selector=".s_categ_nav, .s_categ_nav_photo">
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ── Categ Banner editor options (which single category to show) ────
+         Reuses ProductSwiperCategory (theme_apple_shop/snippet_product_
+         swiper_options.js) — same "write picked record id to data-categ-id"
+         behaviour, generic enough for any single-category picker. ───────── -->
+    <record id="s_categ_banner_options" model="ir.ui.view">
+        <field name="name">Category Banner Options</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="website.snippet_options"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <div data-js="ProductSwiperCategory" data-selector=".s_categ_banner">
+                    <we-many2one string="指定分類（留空則自動偵測目前頁面）"
+                                 data-model="product.public.category"
+                                 data-set-categ-id="" data-name="categ_banner_categ_opt"
+                                 data-no-preview="true"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
     <!-- ── Categ Nav snippet template ───────────────────────────────────── -->
     <record id="s_apple_categ_nav" model="ir.ui.view">
         <field name="name">Apple Category Nav Snippet</field>
         <field name="type">qweb</field>
         <field name="key">theme_apple_shop.s_apple_categ_nav</field>
         <field name="arch" type="xml">
-            <section class="s_apple_categ_nav py-4">
+            <section class="s_apple_categ_nav s_categ_nav py-4">
                 <div class="container">
-                    <div class="apple-categ-nav-wrapper">
+                    <div class="categ-nav-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_apple_categ_nav">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see snippet_categ_nav.js). -->
                         <!-- Static preview shown in editor; replaced by JS in view mode -->
                         <div class="categ-nav-track-wrap">
                             <div class="categ-nav-track" style="justify-content:center">
                                 <span class="categ-nav-item" style="pointer-events:none">
-                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.1);border-radius:50%"/>
+                                    <div class="categ-nav-icon-circle"/>
                                     <span class="categ-nav-name">分類 A</span>
                                 </span>
                                 <span class="categ-nav-item" style="pointer-events:none">
-                                    <div class="categ-nav-img" style="background:rgba(99,102,241,.1);border-radius:50%"/>
+                                    <div class="categ-nav-icon-circle"/>
                                     <span class="categ-nav-name">分類 B</span>
                                 </span>
                                 <span class="categ-nav-item" style="pointer-events:none">
-                                    <div class="categ-nav-img" style="background:rgba(16,185,129,.1);border-radius:50%"/>
+                                    <div class="categ-nav-icon-circle"/>
                                     <span class="categ-nav-name">分類 C</span>
                                 </span>
                                 <span class="categ-nav-item" style="pointer-events:none">
-                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.06);border-radius:50%"/>
+                                    <div class="categ-nav-icon-circle"/>
                                     <span class="categ-nav-name">分類 D</span>
                                 </span>
                             </div>
@@ -266,7 +306,8 @@
         </field>
     </record>
 
-    <!-- ── Categ Nav rendered content (returned by controller) ──────────── -->
+    <!-- ── Categ Nav rendered content (returned by controller; shared —
+         also used by custom_homepage's s_homepage_categ_nav) ────────────── -->
     <record id="s_apple_categ_nav_content" model="ir.ui.view">
         <field name="name">Apple Category Nav Content</field>
         <field name="type">qweb</field>
@@ -277,9 +318,9 @@
                     <div class="categ-nav-track" role="region" aria-label="商品分類">
                         <t t-foreach="categories" t-as="categ">
                             <a class="categ-nav-item" t-attf-href="/shop/category/#{slug(categ)}">
-                                <div class="categ-nav-img">
-                                    <img t-if="categ.mac_hero_image or categ.image_1024"
-                                         t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'mac_hero_image' if categ.mac_hero_image else 'image_1024' }}"
+                                <div class="categ-nav-icon-circle">
+                                    <img t-if="categ.nav_icon"
+                                         t-attf-src="/web/image/product.public.category/#{categ.id}/nav_icon"
                                          t-att-alt="categ.name"
                                          loading="lazy"/>
                                 </div>
@@ -288,6 +329,155 @@
                         </t>
                     </div>
                 </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav (photo) snippet template — extracted from the old
+         hardcoded homepage-only block in buy_mac_landing.xml; same visual
+         style (plain 64×64 photo box), now a placeable/configurable snippet. -->
+    <record id="s_apple_categ_nav_photo" model="ir.ui.view">
+        <field name="name">Apple Category Nav Photo Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav_photo</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_nav_photo s_categ_nav_photo py-4">
+                <div class="container">
+                    <div class="categ-nav-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_apple_categ_nav_photo">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see snippet_categ_nav_photo.js). -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="categ-nav-track-wrap">
+                            <div class="categ-nav-track" style="justify-content:center">
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.1)"/>
+                                    <span class="categ-nav-name">分類 A</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(99,102,241,.1)"/>
+                                    <span class="categ-nav-name">分類 B</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(16,185,129,.1)"/>
+                                    <span class="categ-nav-name">分類 C</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(59,130,246,.06)"/>
+                                    <span class="categ-nav-name">分類 D</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Categ Nav (photo) rendered content (returned by controller; shared —
+         also used by custom_homepage's s_homepage_categ_nav_photo) ─────── -->
+    <record id="s_apple_categ_nav_photo_content" model="ir.ui.view">
+        <field name="name">Apple Category Nav Photo Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_nav_photo_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_nav_photo_content">
+                <div class="categ-nav-track-wrap">
+                    <div class="categ-nav-track" role="region" aria-label="商品分類">
+                        <t t-foreach="categories" t-as="categ">
+                            <a class="categ-nav-item" t-attf-href="/shop/category/#{slug(categ)}">
+                                <div class="categ-nav-img">
+                                    <img t-if="categ.hero_image or categ.image_1024"
+                                         t-attf-src="/web/image/product.public.category/#{categ.id}/{{ 'hero_image' if categ.hero_image else 'image_1024' }}"
+                                         t-att-alt="categ.name"
+                                         loading="lazy"/>
+                                </div>
+                                <span class="categ-nav-name" t-esc="categ.name"/>
+                            </a>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </field>
+    </record>
+
+    <!-- ── Category Banner snippet template (dropped onto page) ─────────── -->
+    <!-- Extracted from the old hardcoded "not is_homepage" banner block in
+         buy_mac_landing.xml (now embedded there in place of that block, so
+         every category page keeps auto-showing its own banner by default —
+         see buy_mac_landing.xml comment). Same classes/markup, unchanged
+         style; the editor's "指定分類" option can override which category's
+         banner shows instead of auto-detecting from the current page URL. -->
+    <record id="s_apple_categ_banner" model="ir.ui.view">
+        <field name="name">Apple Category Banner Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_banner</field>
+        <field name="arch" type="xml">
+            <section class="s_apple_categ_banner s_categ_banner pageBanner pageBanner--categ" data-categ-id="0">
+                <div class="container">
+                    <div class="categ-banner-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_apple_categ_banner">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see snippet_categ_banner.js). -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <h1 class="banner-headline" style="pointer-events:none">分類名稱</h1>
+                        <p class="banner-description" style="pointer-events:none">分類描述文字...</p>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Category Banner rendered content (returned by controller) ────── -->
+    <record id="s_apple_categ_banner_content" model="ir.ui.view">
+        <field name="name">Apple Category Banner Content</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_apple_shop.s_apple_categ_banner_content</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_apple_shop.s_apple_categ_banner_content">
+                <t t-if="current_categ">
+                    <!-- Breadcrumb as eyebrow -->
+                    <nav aria-label="breadcrumb" class="banner-eyebrow">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/">首頁</a>
+                            </li>
+                            <t t-if="current_categ.parent_id">
+                                <li class="breadcrumb-item">
+                                    <a t-attf-href="/shop/category/#{slug(current_categ.parent_id)}"
+                                       t-esc="current_categ.parent_id.name"/>
+                                </li>
+                            </t>
+                            <li class="breadcrumb-item active" aria-current="page"
+                                t-esc="current_categ.name"/>
+                        </ol>
+                    </nav>
+                    <!-- Big headline -->
+                    <h1 class="banner-headline"
+                        t-if="current_categ.mac_banner_headline"
+                        t-esc="current_categ.mac_banner_headline"/>
+                    <h1 class="banner-headline banner-headline--default"
+                        t-if="not current_categ.mac_banner_headline"
+                        t-esc="current_categ.name"/>
+                    <!-- Category description (website_description field) -->
+                    <div class="banner-description"
+                         t-if="current_categ.website_description"
+                         t-out="current_categ.website_description"/>
+                    <!-- Description (admin-filled fallback) -->
+                    <p class="banner-description"
+                       t-elif="current_categ.mac_banner_description"
+                       t-esc="current_categ.mac_banner_description"/>
+                    <!-- Hero image — fallback chain: banner_image → image_1024 → hide -->
+                    <div class="banner-hero-img">
+                        <img t-attf-src="/web/image/product.public.category/#{current_categ.id}/banner_image"
+                             t-att-alt="current_categ.name"
+                             t-attf-onerror="this.src='/web/image/product.public.category/#{current_categ.id}/image_1024';this.onerror=function(){{this.parentElement.style.display='none'}};"/>
+                    </div>
+                </t>
             </t>
         </field>
     </record>
@@ -384,7 +574,7 @@
         </field>
     </record>
 
-    <!-- ── Register product swiper in editor panel (Products group) ──────── -->
+    <!-- ── Register product swiper + categ nav in editor panel (Products group) ── -->
     <record id="s_apple_product_swiper_panel" model="ir.ui.view">
         <field name="name">Apple Product Swiper Panel Registration</field>
         <field name="type">qweb</field>
@@ -393,6 +583,15 @@
             <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
                 <t t-snippet="theme_apple_shop.s_apple_product_swiper"
                    string="商品輪播"
+                   group="products"/>
+                <t t-snippet="theme_apple_shop.s_apple_categ_nav"
+                   string="分類圖示導覽"
+                   group="products"/>
+                <t t-snippet="theme_apple_shop.s_apple_categ_nav_photo"
+                   string="分類照片導覽"
+                   group="products"/>
+                <t t-snippet="theme_apple_shop.s_apple_categ_banner"
+                   string="分類 Banner"
                    group="products"/>
             </xpath>
         </field>

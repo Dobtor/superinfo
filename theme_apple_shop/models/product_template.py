@@ -124,7 +124,7 @@ class ProductTemplate(models.Model):
             if not categ:
                 continue
             updates = {}
-            for field, key in (('mac_hero_image', 'hero'),):
+            for field, key in (('hero_image', 'hero'),):
                 rel = info.get(key)
                 if not rel:
                     continue

@@ -62,6 +62,88 @@
         </field>
     </record>
 
+    <!-- ── Category Icon Nav snippet template (dropped onto page) ────────── -->
+    <record id="s_homepage_categ_nav" model="ir.ui.view">
+        <field name="name">Homepage Category Icon Nav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">custom_homepage.s_homepage_categ_nav</field>
+        <field name="arch" type="xml">
+            <section class="s_homepage_categ_nav s_categ_nav py-4">
+                <div class="container">
+                    <div class="categ-nav-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_homepage_categ_nav">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see theme_apple_shop/snippet_categ_nav.js). -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="categ-nav-track-wrap">
+                            <div class="categ-nav-track" style="justify-content:center">
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-icon-circle"/>
+                                    <span class="categ-nav-name">分類 A</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-icon-circle"/>
+                                    <span class="categ-nav-name">分類 B</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-icon-circle"/>
+                                    <span class="categ-nav-name">分類 C</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-icon-circle"/>
+                                    <span class="categ-nav-name">分類 D</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
+    <!-- ── Category Photo Nav snippet template (dropped onto page) ───────── -->
+    <record id="s_homepage_categ_nav_photo" model="ir.ui.view">
+        <field name="name">Homepage Category Photo Nav Snippet</field>
+        <field name="type">qweb</field>
+        <field name="key">custom_homepage.s_homepage_categ_nav_photo</field>
+        <field name="arch" type="xml">
+            <section class="s_homepage_categ_nav_photo s_categ_nav_photo py-4">
+                <div class="container">
+                    <div class="categ-nav-wrapper oe_unremovable oe_unmovable o_not_editable"
+                         data-snippet="s_homepage_categ_nav_photo">
+                        <!-- o_not_editable: JS-fetched content below must never be
+                             persisted into the saved arch — only this static
+                             preview persists; real content is always re-fetched
+                             on load (see theme_apple_shop/snippet_categ_nav_photo.js). -->
+                        <!-- Static preview shown in editor; replaced by JS in view mode -->
+                        <div class="categ-nav-track-wrap">
+                            <div class="categ-nav-track" style="justify-content:center">
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(0,113,227,.08)"/>
+                                    <span class="categ-nav-name">分類 A</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(0,113,227,.05)"/>
+                                    <span class="categ-nav-name">分類 B</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(0,113,227,.03)"/>
+                                    <span class="categ-nav-name">分類 C</span>
+                                </span>
+                                <span class="categ-nav-item" style="pointer-events:none">
+                                    <div class="categ-nav-img" style="background:rgba(0,113,227,.06)"/>
+                                    <span class="categ-nav-name">分類 D</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </field>
+    </record>
+
     <!-- ── Register in editor panel (Products group) ─────────────────────── -->
     <record id="s_homepage_product_swiper_panel" model="ir.ui.view">
         <field name="name">Homepage Product Swiper Panel Registration</field>
@@ -71,6 +153,12 @@
             <xpath expr="//t[@t-snippet='website_sale.s_dynamic_snippet_products']" position="before">
                 <t t-snippet="custom_homepage.s_homepage_product_swiper"
                    string="商品輪播"
+                   group="products"/>
+                <t t-snippet="custom_homepage.s_homepage_categ_nav"
+                   string="分類圖示導覽"
+                   group="products"/>
+                <t t-snippet="custom_homepage.s_homepage_categ_nav_photo"
+                   string="分類照片導覽"
                    group="products"/>
             </xpath>
         </field>

@@ -113,6 +113,18 @@
         <field name="path">theme_apple_shop/static/src/js/snippet_categ_nav.js</field>
     </record>
 
+    <record id="asset_snippet_categ_nav_photo_js" model="ir.asset">
+        <field name="name">Apple Shop Snippet Categ Nav Photo JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_categ_nav_photo.js</field>
+    </record>
+
+    <record id="asset_snippet_categ_banner_js" model="ir.asset">
+        <field name="name">Apple Shop Snippet Categ Banner JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_categ_banner.js</field>
+    </record>
+
     <record id="asset_snippet_categ_carousel_js" model="ir.asset">
         <field name="name">Apple Shop Snippet Categ Carousel JS</field>
         <field name="bundle">web.assets_frontend</field>
@@ -150,5 +162,11 @@
         <field name="name">Product Swiper Options JS (shared)</field>
         <field name="bundle">website.assets_wysiwyg</field>
         <field name="path">theme_apple_shop/static/src/js/snippet_product_swiper_options.js</field>
+    </record>
+
+    <record id="asset_snippet_categ_nav_options_js" model="ir.asset">
+        <field name="name">Category Nav Options JS (shared)</field>
+        <field name="bundle">website.assets_wysiwyg</field>
+        <field name="path">theme_apple_shop/static/src/js/snippet_categ_nav_options.js</field>
     </record>
 </odoo>

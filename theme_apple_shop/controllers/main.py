@@ -58,13 +58,22 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
             'main_object': request.website,
         })
 
-    # ─── Snippet: category icon nav content ──────────────────────────
+    # ─── Snippet: category nav content (icon + photo variants share this) ──
+
+    def _get_categ_nav_categories(self, categ_ids):
+        Categ = request.env['product.public.category']
+        # Empty categ_ids (never customised) defaults to the first 3
+        # top-level categories — matches the options panel's own default
+        # checkbox state (see snippet_categ_nav_options.js).
+        ids = [int(i) for i in categ_ids.split(',') if i.strip().isdigit()]
+        if ids:
+            return Categ.search([('id', 'in', ids)], order='sequence, id')
+        return Categ.search([('parent_id', '=', False)], order='sequence, id', limit=3)
 
     @http.route('/theme_apple_shop/snippet/categ_nav',
                 type='http', auth='public', website=True)
-    def snippet_categ_nav(self, **kwargs):
-        Categ = request.env['product.public.category']
-        categs = Categ.search([('parent_id', '=', False)], order='sequence, id')
+    def snippet_categ_nav(self, categ_ids='', **kwargs):
+        categs = self._get_categ_nav_categories(categ_ids)
         # inherit_branding=False: this fragment is injected into another
         # page's DOM via JS — without this, QWeb tags every element with
         # data-oe-* markers pointing back at THIS template's view, so saving
@@ -72,6 +81,31 @@ class AppleShop(WebsiteSaleComboConfiguratorController, WebsiteSaleProductConfig
         return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
             'theme_apple_shop.s_apple_categ_nav_content',
             {'categories': categs},
+        )
+
+    @http.route('/theme_apple_shop/snippet/categ_nav_photo',
+                type='http', auth='public', website=True)
+    def snippet_categ_nav_photo(self, categ_ids='', **kwargs):
+        categs = self._get_categ_nav_categories(categ_ids)
+        return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
+            'theme_apple_shop.s_apple_categ_nav_photo_content',
+            {'categories': categs},
+        )
+
+    # ─── Snippet: category banner content ─────────────────────────────
+    # Extracted from the old hardcoded "not is_homepage" banner block in
+    # buy_mac_landing.xml — same markup/classes, now fetched via JS so it can
+    # be re-targeted to a specific category from the editor options panel.
+
+    @http.route('/theme_apple_shop/snippet/categ_banner',
+                type='http', auth='public', website=True)
+    def snippet_categ_banner(self, categ_id='0', **kwargs):
+        cid = int(categ_id)
+        categ = request.env['product.public.category'].browse(cid) if cid else \
+            request.env['product.public.category']
+        return request.env['ir.qweb'].with_context(inherit_branding=False)._render(
+            'theme_apple_shop.s_apple_categ_banner_content',
+            {'current_categ': categ},
         )
 
     # ─── Snippet: category carousel content ───────────────────────────
