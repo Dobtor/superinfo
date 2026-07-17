@@ -24,6 +24,7 @@
             'custom_homepage/static/src/css/design_bridge.css',
             'custom_homepage/static/src/css/training.css',
             'custom_homepage/static/src/css/homepage_product_swiper.css',
+            'custom_homepage/static/src/css/homepage_categ_nav.css',
         ],
     },
     'installable': True,

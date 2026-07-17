@@ -5,10 +5,11 @@ from odoo import api, fields, models
 class ProductPublicCategory(models.Model):
     _inherit = 'product.public.category'
 
-    mac_hero_image = fields.Image(
-        string="Mac Landing Card Image",
+    hero_image = fields.Image(
+        string="分類代表照片",
         max_width=1280, max_height=720,
-        help="Hero image shown on the /shop/category/mac landing card.",
+        help="商品實拍照片，用於分類輪播卡片、子分類卡片、照片版分類導覽列等處。"
+             "與線條小圖示（nav_icon）分開管理。",
     )
     mac_tagline = fields.Char(
         string="Mac Card Tagline",
@@ -42,7 +43,7 @@ class ProductPublicCategory(models.Model):
         translate=True,
         help="Banner 下方的描述段落文字。",
     )
-    mac_banner_hero = fields.Image(
+    banner_image = fields.Image(
         string="Banner Hero 圖片",
         max_width=1600, max_height=900,
         help="Banner 下方的大型產品 hero 圖片（類似 Apple.com 分類頁）。",
@@ -52,6 +53,12 @@ class ProductPublicCategory(models.Model):
         string="Mac Landing Order",
         default=10,
         help="Order on the /shop/category/mac landing carousel.",
+    )
+    nav_icon = fields.Image(
+        string="分類導覽圖示",
+        max_width=256, max_height=256,
+        help="用於商品分類圖示導覽列的極簡線條小圖示（例如筆電/平板/手機輪廓），"
+             "與 Landing Card 用的商品實拍照片（hero_image）分開管理。",
     )
 
     def _compute_mac_currency(self):

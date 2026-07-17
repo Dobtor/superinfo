@@ -1,0 +1,116 @@
+/* Category Icon Nav — thin-border circle around a small line-icon
+   (product.public.category.nav_icon), label below. */
+
+.s_homepage_categ_nav .categ-nav-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 8px 16px;
+}
+
+.s_homepage_categ_nav .categ-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 200ms ease;
+    min-width: 96px;
+}
+.s_homepage_categ_nav .categ-nav-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.s_homepage_categ_nav .categ-nav-icon-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid #d2d2d7;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 200ms ease;
+}
+.s_homepage_categ_nav .categ-nav-icon-circle img {
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+}
+.s_homepage_categ_nav .categ-nav-item:hover .categ-nav-icon-circle {
+    border-color: var(--color-1, #0071e3);
+}
+
+.s_homepage_categ_nav .categ-nav-name {
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .s_homepage_categ_nav .categ-nav-icon-circle {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+/* Category Photo Nav — plain photo box (no circle border), label below.
+   (product.public.category.hero_image) */
+
+.s_homepage_categ_nav_photo .categ-nav-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 8px 16px;
+}
+
+.s_homepage_categ_nav_photo .categ-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 200ms ease;
+    min-width: 96px;
+}
+.s_homepage_categ_nav_photo .categ-nav-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.s_homepage_categ_nav_photo .categ-nav-img {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s_homepage_categ_nav_photo .categ-nav-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 300ms ease;
+}
+.s_homepage_categ_nav_photo .categ-nav-item:hover .categ-nav-img img {
+    transform: scale(1.08);
+}
+
+.s_homepage_categ_nav_photo .categ-nav-name {
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .s_homepage_categ_nav_photo .categ-nav-img {
+        width: 52px;
+        height: 52px;
+    }
+}
