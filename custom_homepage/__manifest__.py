@@ -14,7 +14,6 @@
         'views/homepage_template.xml',
         'views/service_pages.xml',
         'views/training_pages.xml',
-        'views/stitch_homepage.xml',
         'views/snippets.xml',
         'data/menu_data.xml',
         'data/pages_data.xml',
