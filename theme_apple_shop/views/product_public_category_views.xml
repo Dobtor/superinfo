@@ -22,13 +22,13 @@
                     <field name="mac_banner_headline" placeholder="用 iPad 大顯身手。"/>
                     <field name="mac_banner_description" placeholder="描述段落文字..." widget="text"/>
                 </group>
-                <group string="Banner Hero 圖片（大型產品圖）">
+                <group string="大型產品圖">
                     <field name="banner_image" widget="image" nolabel="1"/>
                 </group>
-                <group string="分類代表照片（輪播卡片／子分類卡片／照片版導覽列共用）">
+                <group string="分類代表照片">
                     <field name="hero_image" widget="image" nolabel="1"/>
                 </group>
-                <group string="分類導覽圖示（極簡線條小圖示，用於圖示導覽列 snippet）">
+                <group string="分類導覽圖示">
                     <field name="nav_icon" widget="image" nolabel="1"/>
                 </group>
             </xpath>
