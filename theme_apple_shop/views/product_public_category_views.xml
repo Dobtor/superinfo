@@ -18,7 +18,7 @@
                         <field name="mac_currency_id" invisible="1"/>
                     </group>
                 </group>
-                <group string="Banner（分類頁標題）">
+                <group string="Banner">
                     <field name="mac_banner_headline" placeholder="用 iPad 大顯身手。"/>
                     <field name="mac_banner_description" placeholder="描述段落文字..." widget="text"/>
                 </group>
