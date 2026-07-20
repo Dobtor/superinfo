@@ -16,7 +16,7 @@
                         theme: {
                             extend: {
                                 colors: {
-                                    "apple-blue": "var(--color-1, #007AFF)",
+                                    "apple-blue": "var(--o-color-1, #007AFF)",
                                     "surface": "#f5faff",
                                     "surface-container": "#e9eef3",
                                     "surface-container-low": "#eff4f9",
@@ -26,8 +26,8 @@
                                     "on-surface": "#171020",
                                     "on-surface-variant": "#414755",
                                     "border-gray": "#E5E7EB",
-                                    "primary": "var(--color-1, #0058bc)",
-                                    "primary-container": "var(--color-1, #0070eb)"
+                                    "primary": "var(--o-color-1, #0058bc)",
+                                    "primary-container": "var(--o-color-1, #0070eb)"
                                 },
                                 spacing: {
                                     "margin-desktop": "40px",

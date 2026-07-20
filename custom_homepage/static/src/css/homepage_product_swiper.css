@@ -41,8 +41,8 @@
 
 .s_homepage_product_swiper .swiper-button-prev:hover,
 .s_homepage_product_swiper .swiper-button-next:hover {
-    background: color-mix(in srgb, var(--color-1, #0071e3) 10%, transparent);
-    border-color: var(--color-1, #0071e3);
+    background: color-mix(in srgb, var(--o-color-1, #0071e3) 10%, transparent);
+    border-color: var(--o-color-1, #0071e3);
 }
 
 .s_homepage_product_swiper .swiper-button-prev:after,
@@ -64,7 +64,7 @@
 }
 .s_homepage_product_swiper .swiper-button-prev:after {
     border-width: 6px 8px 6px 0;
-    border-color: transparent var(--color-1, #0071e3) transparent transparent;
+    border-color: transparent var(--o-color-1, #0071e3) transparent transparent;
 }
 
 .s_homepage_product_swiper .swiper-button-next {
@@ -72,5 +72,5 @@
 }
 .s_homepage_product_swiper .swiper-button-next:after {
     border-width: 6px 0 6px 8px;
-    border-color: transparent transparent transparent var(--color-1, #0071e3);
+    border-color: transparent transparent transparent var(--o-color-1, #0071e3);
 }

@@ -42,7 +42,7 @@
     object-fit: contain;
 }
 .s_homepage_categ_nav .categ-nav-item:hover .categ-nav-icon-circle {
-    border-color: var(--color-1, #0071e3);
+    border-color: var(--o-color-1, #0071e3);
 }
 
 .s_homepage_categ_nav .categ-nav-name {

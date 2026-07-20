@@ -20,15 +20,15 @@ $headings-letter-spacing: -0.02em !default;
 // always visible; the editor palette overrides them at runtime.
 :root {
     --o-color-1: #2b6cb0;
-    --o-color-2: #4a90d9;
-    --o-color-3: #5da0ef;
-    --o-color-4: #1a2b4a;
-    --o-color-5: #eef4fc;
+    --o-color-2: #666666;
+    --o-color-3: #999999;
+    --o-color-4: #000000;
+    --o-color-5: #ffffff;
     // Override Bootstrap body-bg so it follows the light page-bg, not o-color-4
-    --body-bg: #eef4fc;
-    --body-bg-rgb: 238, 244, 252;
-    --body-color: #1a2b4a;
-    --body-color-rgb: 26, 43, 74;
+    --body-bg: #ffffff;
+    --body-bg-rgb: 255, 255, 255;
+    --body-color: #000000;
+    --body-color-rgb: 0, 0, 0;
 }
 
 // ─── Body ─────────────────────────────────────
@@ -55,7 +55,9 @@ h1, h2, h3, h4, h5, h6,
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     letter-spacing: $headings-letter-spacing;
-    color: var(--o-color-4);
+    // No color here — inherit from the surrounding container (usually body's
+    // var(--o-color-4), but a dark-background box's own text color must win;
+    // an element-type rule here would always beat that inherited value).
 }
 
 @media (max-width: 767px) {
@@ -65,7 +67,7 @@ h1, h2, h3, h4, h5, h6,
 
 p {
     line-height: 1.5;
-    color: var(--o-color-4);
+    // No color here — same reasoning as headings above.
 }
 
 // ─── Links ─────────────────────────────────────
