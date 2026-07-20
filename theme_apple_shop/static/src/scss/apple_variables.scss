@@ -34,11 +34,11 @@ $apple-glass-border: rgba(15, 23, 42, 0.08);
 $apple-glass-blur:   16px;
 $apple-glass-hover:  rgba(255, 255, 255, 0.95);
 
-// ─── Glow / shadow effects ─────────────────────
-$apple-glow-sm:      0 0 12px rgba(59, 130, 246, 0.18);
-$apple-glow-md:      0 0 24px rgba(59, 130, 246, 0.22);
-$apple-glow-lg:      0 0 40px rgba(59, 130, 246, 0.15);
-$apple-glow-purple:  0 0 20px rgba(99, 102, 241, 0.20);
+// ─── Glow / shadow effects — follow website editor palette ──
+$apple-glow-sm:      0 0 12px color-mix(in srgb, var(--o-color-1) 18%, transparent);
+$apple-glow-md:      0 0 24px color-mix(in srgb, var(--o-color-1) 22%, transparent);
+$apple-glow-lg:      0 0 40px color-mix(in srgb, var(--o-color-1) 15%, transparent);
+$apple-glow-purple:  0 0 20px color-mix(in srgb, var(--o-color-2) 20%, transparent);
 
 // ─── Spacing rhythm ────────────────────────────
 $apple-sp-xxs: 4px;

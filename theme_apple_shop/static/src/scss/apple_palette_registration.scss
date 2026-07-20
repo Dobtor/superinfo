@@ -7,10 +7,10 @@
 // so this override (no !default) wins.
 $o-user-color-palette: (
     'o-color-1': #2b6cb0,
-    'o-color-2': #4a90d9,
-    'o-color-3': #5da0ef,
-    'o-color-4': #1a2b4a,
-    'o-color-5': #eef4fc,
+    'o-color-2': #666666,
+    'o-color-3': #999999,
+    'o-color-4': #000000,
+    'o-color-5': #ffffff,
 );
 
 $o-color-palettes: map-merge($o-color-palettes, (
@@ -44,14 +44,26 @@ $o-color-palettes: map-merge($o-color-palettes, (
         'o-color-5': #fbfbfd,   // Apple 背景白
     ),
 
+    'superinfo-mono': (
+        'o-color-1': #2b6cb0,   // 主色：原本的企業藍（按鈕/連結/發光）
+        'o-color-2': #666666,   // 副色：深灰
+        'o-color-3': #999999,   // 強調：中灰
+        'o-color-4': #000000,   // 深色：標題/內文文字（純黑）
+        'o-color-5': #ffffff,   // 背景：純白
+    ),
+
 ));
 
-$o-selected-color-palettes-names: 'superinfo' 'superinfo-blue' 'superinfo-neutral';
+// NOTE: must be a comma-separated list (not space-separated) — the website
+// editor's palette-picker JS does `getCSSVariableValue('palette-names').split(', ')`,
+// so a space-separated Sass list compiles to one unsplittable CSS string and
+// only renders a single merged swatch button instead of one button per name.
+$o-selected-color-palettes-names: 'superinfo-mono', 'superinfo', 'superinfo-blue', 'superinfo-neutral';
 
 // Override Bootstrap variables AFTER website/primary_variables.scss derives them
 // from the palette — this file loads last in web._assets_primary_variables.
-$body-bg:    #eef4fc;   // o-color-5: light page background
-$body-color: #1a2b4a;   // o-color-4: dark text
+$body-bg:    #ffffff;   // o-color-5: light page background
+$body-color: #000000;   // o-color-4: dark text
 $card-bg:    rgba(255, 255, 255, 0.92);
 $link-color:      #2b6cb0;
 $link-hover-color: #1a4a80;

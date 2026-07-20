@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Must load after website primary_variables.scss: extends
+         $o-base-website-values-palette and $o-theme-font-configs, both of
+         which only exist once that file has run. -->
     <record id="asset_primary_variables" model="ir.asset">
         <field name="name">Apple Shop Primary Variables</field>
-        <field name="bundle">web.assets_primary_variables</field>
+        <field name="bundle">web._assets_primary_variables</field>
         <field name="path">theme_apple_shop/static/src/scss/apple_primary_variables.scss</field>
-        <field name="directive">prepend</field>
+        <field name="directive">after</field>
+        <field name="target">website/static/src/scss/primary_variables.scss</field>
     </record>
 
     <!-- Must load after website primary_variables.scss so $o-selected-color-palettes-names exists -->

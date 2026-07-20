@@ -146,7 +146,7 @@
                     "secondary-fixed-dim": "#c3c7cc",
                     "on-tertiary-container": "#fffbff",
                     "surface-container-low": "#eff4f9",
-                    "apple-blue": "var(--color-1, #007AFF)",
+                    "apple-blue": "var(--o-color-1, #007AFF)",
                     "apple-green": "#34C759", // Strategic brand addition for Sustainability
                     "secondary": "#5b5f63",
                     "deep-black": "#000000",
@@ -180,10 +180,10 @@
                     "on-secondary": "#ffffff",
                     "error": "#ba1a1a",
                     "surface-container": "#e9eef3",
-                    "primary-container": "var(--color-1, #0070eb)",
+                    "primary-container": "var(--o-color-1, #0070eb)",
                     "on-primary-fixed-variant": "#004493",
                     "inverse-primary": "#adc6ff",
-                    "primary": "var(--color-1, #0058bc)",
+                    "primary": "var(--o-color-1, #0058bc)",
                     "on-primary-container": "#fefcff",
                     "on-primary": "#ffffff",
                     "surface-bright": "#f5faff",
@@ -565,7 +565,7 @@
                         "secondary-fixed-dim": "#c3c7cc",
                         "on-tertiary-container": "#fffbff",
                         "surface-container-low": "#eff4f9",
-                        "apple-blue": "var(--color-1, #007AFF)",
+                        "apple-blue": "var(--o-color-1, #007AFF)",
                         "secondary": "#5b5f63",
                         "deep-black": "#000000",
                         "on-tertiary-fixed-variant": "#7c2e00",
@@ -598,10 +598,10 @@
                         "on-secondary": "#ffffff",
                         "error": "#ba1a1a",
                         "surface-container": "#e9eef3",
-                        "primary-container": "var(--color-1, #0070eb)",
+                        "primary-container": "var(--o-color-1, #0070eb)",
                         "on-primary-fixed-variant": "#004493",
                         "inverse-primary": "#adc6ff",
-                        "primary": "var(--color-1, #0058bc)",
+                        "primary": "var(--o-color-1, #0058bc)",
                         "on-primary-container": "#fefcff",
                         "on-primary": "#ffffff",
                         "surface-bright": "#f5faff",
@@ -696,12 +696,12 @@
 </p>
 </div>
 <div class="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
-<div class="p-8 rounded-3xl bg-surface-container-low border border-border-gray">
+<div class="p-8 rounded-3xl bg-white/70 backdrop-blur-md border border-border-gray">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-4">memory</span>
 <h3 class="font-headline-md text-headline-md mb-2">Apple Silicon 驅動</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">強大的神經網路引擎為即時語音轉文字、人物偵測等複雜輔助功能提供算力支持。</p>
 </div>
-<div class="p-8 rounded-3xl bg-surface-container-low border border-border-gray">
+<div class="p-8 rounded-3xl bg-white/70 backdrop-blur-md border border-border-gray">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-4">psychology</span>
 <h3 class="font-headline-md text-headline-md mb-2">先進 AI 與 ML</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">機器學習模型能自動為影像加上描述，並為患有言語喪失風險的人士合成「個人聲音」。</p>
@@ -726,7 +726,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">為App Store 產品真面新增輔助功能資訊區
 塊，讓用戶下載前即可了解應用程式是否適合自己使用。</p>
 </div>
-<div class="mt-8 bg-surface-container-low rounded-2xl p-6 border border-border-gray">
+<div class="mt-8 bg-white/70 backdrop-blur-md rounded-3xl p-6 border border-border-gray">
 <div class="flex justify-between items-center mb-2 border-b border-border-gray pb-2">
 <span class="font-label-lg">VoiceOver 支持</span>
 <span class="material-symbols-outlined text-apple-blue">check_circle</span>
@@ -740,7 +740,7 @@
 <div class="col-span-12 md:col-span-5 bg-deep-black text-surface-white bento-item p-8 flex flex-col">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-4">zoom_in</span>
 <h3 class="font-headline-md text-headline-md mb-4">Mac 版放大鏡</h3>
-<p class="font-body-md text-body-md text-on-secondary-container">專為視力障礙者設計的探索與互動工具，提供更直覺的視覺輔助螘驗。</p>
+<p class="font-body-md text-body-md text-white/70">專為視力障礙者設計的探索與互動工具，提供更直覺的視覺輔助螘驗。</p>
 <div class="mt-auto pt-8">
 <div class="w-full h-32 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all">
 <img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast close-up of a MacBook screen showing a sophisticated magnifier tool highlighting complex code and text. The aesthetic is clean, professional, and corporate with a focus on precision and clarity. Soft, cool lighting emphasizes the metallic texture of the laptop and the vibrant blue accents of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqolLocndqHNaiNj5Ce55Iankvgx-yg4BmMw1SiEBk-YKhyILhmgx0qh0DKREeFMQMOOYMQxcJ2QZzQWkxpGQKzFXeafFHaThlFBKCH6Sfj67vPsv4PYcrle8G5XsCYJTExn47-50KUshTE_kY6WLnR4JuKeAre8_gsN1ctl-45JJHyEmRGQkUDo_NA0GZXDOUGjOYmEd0S_m3058hXgFYXa5qYH0UJeZE9kaDBi80-WS7H9J22Q3hkYVOmgWxUdMjf5auxAePpQ"/>
@@ -842,7 +842,7 @@
 </div>
 </div>
 </div>
-<div class="rounded-3xl bg-surface-container-low p-8 border border-border-gray">
+<div class="rounded-3xl bg-white/70 backdrop-blur-md p-8 border border-border-gray">
 <img class="w-full h-48 object-cover rounded-xl mb-6" data-alt="A detailed close-up shot of an iPad screen showing the Eye Tracking settings menu. A user's eye is reflected subtly on the glossy screen surface, highlighting the interaction between human and machine. The color palette is composed of soft whites, light grays, and the signature Apple blue, conveying a sense of advanced accessible technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq6RbWBMulNrk3g83-E1TXvK8JFWOhghgJiYiJznAhb9b5-aCdJdBZMPziQ8kDc_QID-jwOkMDG3P3hFH1GVS82mVbiDwil0nuZ3IpHUlwbqY3GqhOdOXPCzHtH0f0YaxHbWfHZOKzvyxGDEc25sOY7Nkgu4x1HXHfdxfB3_agNPjReCODAeNXv-PapaDUOAvQr9dWI7H4dwS-LjcR5zyhXQuOaGXkiYsfkJGrne0QFl1fazRxho2mFEox8PQ4rrik5_lXuqBkWg"/>
 <h4 class="font-headline-md text-headline-md mb-2">專注於體驗的設計</h4>
 <p class="font-body-md text-on-surface-variant">我們不只是添加功能，而是重新構思交互的可能性。每一項輔助技術都深度整合於系統層面。</p>
@@ -982,7 +982,7 @@
                     "secondary-fixed-dim": "#c3c7cc",
                     "on-tertiary-container": "#fffbff",
                     "surface-container-low": "#eff4f9",
-                    "apple-blue": "var(--color-1, #007AFF)",
+                    "apple-blue": "var(--o-color-1, #007AFF)",
                     "secondary": "#5b5f63",
                     "deep-black": "#000000",
                     "on-tertiary-fixed-variant": "#7c2e00",
@@ -1015,10 +1015,10 @@
                     "on-secondary": "#ffffff",
                     "error": "#ba1a1a",
                     "surface-container": "#e9eef3",
-                    "primary-container": "var(--color-1, #0070eb)",
+                    "primary-container": "var(--o-color-1, #0070eb)",
                     "on-primary-fixed-variant": "#004493",
                     "inverse-primary": "#adc6ff",
-                    "primary": "var(--color-1, #0058bc)",
+                    "primary": "var(--o-color-1, #0058bc)",
                     "on-primary-container": "#fefcff",
                     "on-primary": "#ffffff",
                     "surface-bright": "#f5faff",
@@ -1284,7 +1284,7 @@
                     "secondary-fixed-dim": "#c3c7cc",
                     "on-tertiary-container": "#fffbff",
                     "surface-container-low": "#eff4f9",
-                    "apple-blue": "var(--color-1, #007AFF)",
+                    "apple-blue": "var(--o-color-1, #007AFF)",
                     "secondary": "#5b5f63",
                     "deep-black": "#000000",
                     "on-tertiary-fixed-variant": "#7c2e00",
@@ -1317,10 +1317,10 @@
                     "on-secondary": "#ffffff",
                     "error": "#ba1a1a",
                     "surface-container": "#e9eef3",
-                    "primary-container": "var(--color-1, #0070eb)",
+                    "primary-container": "var(--o-color-1, #0070eb)",
                     "on-primary-fixed-variant": "#004493",
                     "inverse-primary": "#adc6ff",
-                    "primary": "var(--color-1, #0058bc)",
+                    "primary": "var(--o-color-1, #0058bc)",
                     "on-primary-container": "#fefcff",
                     "on-primary": "#ffffff",
                     "surface-bright": "#f5faff",
@@ -1463,21 +1463,21 @@
 <h2 class="font-headline-lg text-headline-lg text-deep-black">高殘值優勢</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray hover:border-apple-blue transition-colors">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray hover:border-apple-blue transition-colors">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-6" data-icon="update">update</span>
 <h4 class="font-headline-md text-headline-md mb-4">可持續更新</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">
                         持續多年的 OS 軟體更新支援與極高的系統穩定性，確保您的設備在多年後依然能夠流暢運行最新教學軟體。
                     </p>
 </div>
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray hover:border-apple-blue transition-colors">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray hover:border-apple-blue transition-colors">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-6" data-icon="currency_exchange">currency_exchange</span>
 <h4 class="font-headline-md text-headline-md mb-4">回收成本</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">
                         透過 Apple Trade-in 換購計劃，當您準備升級至新一代設備時，既有的 Apple 設備能提供可觀的折抵價值，大幅降低後續採購成本。
                     </p>
 </div>
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray hover:border-apple-blue transition-colors">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray hover:border-apple-blue transition-colors">
 <span class="material-symbols-outlined text-apple-blue text-4xl mb-6" data-icon="verified">verified</span>
 <h4 class="font-headline-md text-headline-md mb-4">長期價值</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">
@@ -1591,7 +1591,7 @@
 <div class="space-y-stack-lg">
 <h2 class="font-headline-lg text-headline-lg text-deep-black text-center mb-12">成本效益分析</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray">
 <div class="w-12 h-12 bg-apple-blue rounded-full flex items-center justify-center text-white mb-6">
 <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
 </div>
@@ -1600,7 +1600,7 @@
                                 評估不僅限於標價。我們協助您計算包括維護、軟體、支援與電力在內的總持有成本 (TCO)。
                             </p>
 </div>
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray">
 <div class="w-12 h-12 bg-apple-blue rounded-full flex items-center justify-center text-white mb-6">
 <span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
 </div>
@@ -1609,7 +1609,7 @@
                                 提供多樣化的融資與租賃選項，配合學校的會計年度預算，讓技術更新更加輕鬆。
                             </p>
 </div>
-<div class="p-8 bg-surface-container-low rounded-xl border border-border-gray">
+<div class="p-8 bg-white/70 backdrop-blur-md rounded-3xl border border-border-gray">
 <div class="w-12 h-12 bg-apple-blue rounded-full flex items-center justify-center text-white mb-6">
 <span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
 </div>
@@ -1664,7 +1664,7 @@
                 "secondary-fixed-dim": "#c3c7cc",
                 "on-tertiary-container": "#fffbff",
                 "surface-container-low": "#eff4f9",
-                "apple-blue": "var(--color-1, #007AFF)",
+                "apple-blue": "var(--o-color-1, #007AFF)",
                 "secondary": "#5b5f63",
                 "deep-black": "#000000",
                 "on-tertiary-fixed-variant": "#7c2e00",
@@ -1697,10 +1697,10 @@
                 "on-secondary": "#ffffff",
                 "error": "#ba1a1a",
                 "surface-container": "#e9eef3",
-                "primary-container": "var(--color-1, #0070eb)",
+                "primary-container": "var(--o-color-1, #0070eb)",
                 "on-primary-fixed-variant": "#004493",
                 "inverse-primary": "#adc6ff",
-                "primary": "var(--color-1, #0058bc)",
+                "primary": "var(--o-color-1, #0058bc)",
                 "on-primary-container": "#fefcff",
                 "on-primary": "#ffffff",
                 "surface-bright": "#f5faff",
@@ -1845,17 +1845,17 @@
 <h2 class="font-headline-lg text-headline-lg text-deep-black">Deep Freeze 冰點還原</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="software-card bg-surface-container-low p-stack-lg rounded-2xl border border-border-gray h-full flex flex-col items-center text-center">
+<div class="software-card bg-white/70 backdrop-blur-md p-stack-lg rounded-3xl border border-border-gray h-full flex flex-col items-center text-center">
 <span class="material-symbols-outlined text-apple-blue text-[48px] mb-stack-md" data-icon="ac_unit">ac_unit</span>
 <h3 class="font-headline-md text-headline-md mb-stack-sm">系統凍結</h3>
 <p class="font-body-md text-body-md text-secondary">保護作業系統免受未經授權的更改，確保每次重啟都是乾淨的初始狀態。</p>
 </div>
-<div class="software-card bg-surface-container-low p-stack-lg rounded-2xl border border-border-gray h-full flex flex-col items-center text-center">
+<div class="software-card bg-white/70 backdrop-blur-md p-stack-lg rounded-3xl border border-border-gray h-full flex flex-col items-center text-center">
 <span class="material-symbols-outlined text-apple-blue text-[48px] mb-stack-md" data-icon="restore">restore</span>
 <h3 class="font-headline-md text-headline-md mb-stack-sm">自動還原</h3>
 <p class="font-body-md text-body-md text-secondary">自動移除病毒、惡意軟體或意外的系統設定更改，將維護成本降至最低。</p>
 </div>
-<div class="software-card bg-surface-container-low p-stack-lg rounded-2xl border border-border-gray h-full flex flex-col items-center text-center">
+<div class="software-card bg-white/70 backdrop-blur-md p-stack-lg rounded-3xl border border-border-gray h-full flex flex-col items-center text-center">
 <span class="material-symbols-outlined text-apple-blue text-[48px] mb-stack-md" data-icon="settings_suggest">settings_suggest</span>
 <h3 class="font-headline-md text-headline-md mb-stack-sm">統一管理</h3>
 <p class="font-body-md text-body-md text-secondary">透過中央管理介面，輕鬆控管全校電腦，實現跨教室的一鍵部署。</p>
@@ -2014,7 +2014,7 @@
                     "secondary-fixed-dim": "#c3c7cc",
                     "on-tertiary-container": "#fffbff",
                     "surface-container-low": "#eff4f9",
-                    "apple-blue": "var(--color-1, #007AFF)",
+                    "apple-blue": "var(--o-color-1, #007AFF)",
                     "secondary": "#5b5f63",
                     "deep-black": "#000000",
                     "on-tertiary-fixed-variant": "#7c2e00",
@@ -2047,10 +2047,10 @@
                     "on-secondary": "#ffffff",
                     "error": "#ba1a1a",
                     "surface-container": "#e9eef3",
-                    "primary-container": "var(--color-1, #0070eb)",
+                    "primary-container": "var(--o-color-1, #0070eb)",
                     "on-primary-fixed-variant": "#004493",
                     "inverse-primary": "#adc6ff",
-                    "primary": "var(--color-1, #0058bc)",
+                    "primary": "var(--o-color-1, #0058bc)",
                     "on-primary-container": "#fefcff",
                     "on-primary": "#ffffff",
                     "surface-bright": "#f5faff",
@@ -2355,9 +2355,9 @@
                         "on-surface-variant": "#414755",
                         "outline": "#717786",
                         "outline-variant": "#c1c6d7",
-                        "primary": "var(--color-1, #0058bc)",
+                        "primary": "var(--o-color-1, #0058bc)",
                         "on-primary": "#ffffff",
-                        "primary-container": "var(--color-1, #0070eb)",
+                        "primary-container": "var(--o-color-1, #0070eb)",
                         "on-primary-container": "#fefcff",
                         "secondary": "#5b5f63",
                         "on-secondary": "#ffffff",
@@ -2373,7 +2373,7 @@
                         "on-error-container": "#93000a",
                         "background": "#f5faff",
                         "on-background": "#171c20",
-                        "apple-blue": "var(--color-1, #007AFF)",
+                        "apple-blue": "var(--o-color-1, #007AFF)",
                         "deep-black": "#000000",
                         "surface-white": "#FFFFFF",
                         "border-gray": "#E5E7EB",
@@ -2496,7 +2496,7 @@
 <h2 class="font-headline-lg text-headline-lg text-deep-black">核心教育應用程式</h2>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<div class="lg:col-span-6 bg-surface-container-low rounded-3xl p-stack-lg bento-hover border border-border-gray">
+<div class="lg:col-span-6 bg-white/70 backdrop-blur-md rounded-3xl p-stack-lg bento-hover border border-border-gray">
 <div class="flex items-center gap-4 mb-6">
 <div class="w-12 h-12 bg-apple-blue rounded-xl flex items-center justify-center">
 <span class="material-symbols-outlined text-surface-white">school</span>
@@ -2523,7 +2523,7 @@
 </ul>
 <img alt="Classroom App Interface" class="rounded-xl shadow-lg border border-border-gray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5-2dpmQMtF2Ir5EAyEzSyTgFdb8XfvHcjLYzkndjEEKlDUjbBfaO7FPNicAxYl_ChHr-zf1bbl1Hg6QMOzniOxAOeEsYWRguprlVCCQh-ypZXRFA3JSaCRYZtGE6xSy25OCy0dRt6e8gbsREdLksqjwe25o79E62f-gJa8d_Fy6xTmYV7dgvaqC6MwGBKPXXMfeIC9kxbeiY28PMaYTKyuRx4EGOAiEbn15S8myIYnum4-DwAt5NhYaUU19XP_8ZdRQkIjDyfrA"/>
 </div>
-<div class="lg:col-span-6 bg-surface-container-low rounded-3xl p-stack-lg bento-hover border border-border-gray flex flex-col">
+<div class="lg:col-span-6 bg-white/70 backdrop-blur-md rounded-3xl p-stack-lg bento-hover border border-border-gray flex flex-col">
 <div class="flex items-center gap-4 mb-6">
 <div class="w-12 h-12 bg-deep-black rounded-xl flex items-center justify-center">
 <span class="material-symbols-outlined text-surface-white">assignment</span>
@@ -2647,25 +2647,25 @@
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-20">
 <div class="group text-center">
-<div class="aspect-square bg-surface-container-low rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
+<div class="aspect-square bg-white/70 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
 <span class="material-symbols-outlined text-apple-blue text-6xl mb-4">science</span>
 <span class="font-headline-md text-headline-md text-lg">科學探索</span>
 </div>
 </div>
 <div class="group text-center">
-<div class="aspect-square bg-surface-container-low rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
+<div class="aspect-square bg-white/70 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
 <span class="material-symbols-outlined text-apple-blue text-6xl mb-4">language</span>
 <span class="font-headline-md text-headline-md text-lg">語言學習</span>
 </div>
 </div>
 <div class="group text-center">
-<div class="aspect-square bg-surface-container-low rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
+<div class="aspect-square bg-white/70 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
 <span class="material-symbols-outlined text-apple-blue text-6xl mb-4">calculate</span>
 <span class="font-headline-md text-headline-md text-lg">數學應用</span>
 </div>
 </div>
 <div class="group text-center">
-<div class="aspect-square bg-surface-container-low rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
+<div class="aspect-square bg-white/70 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center border border-border-gray group-hover:border-apple-blue group-hover:shadow-xl transition-all duration-300 mb-6">
 <span class="material-symbols-outlined text-apple-blue text-6xl mb-4">palette</span>
 <span class="font-headline-md text-headline-md text-lg">創意藝術</span>
 </div>
@@ -2771,7 +2771,7 @@
                         "surface-dim": "#d5dbdf",
                         "surface-bright": "#f5faff",
                         "tertiary-fixed": "#ffdbcc",
-                        "apple-blue": "var(--color-1, #007AFF)",
+                        "apple-blue": "var(--o-color-1, #007AFF)",
                         "on-primary-fixed-variant": "#004493",
                         "on-tertiary-container": "#fffbff",
                         "on-secondary-fixed-variant": "#43474c",
@@ -2791,13 +2791,13 @@
                         "tertiary-container": "#c64f00",
                         "deep-black": "#000000",
                         "on-error-container": "#93000a",
-                        "primary": "var(--color-1, #0058bc)",
+                        "primary": "var(--o-color-1, #0058bc)",
                         "background": "#f5faff",
                         "on-surface": "#171c20",
                         "secondary": "#5b5f63",
                         "tertiary-fixed-dim": "#ffb595",
                         "secondary-container": "#dde0e5",
-                        "primary-container": "var(--color-1, #0070eb)",
+                        "primary-container": "var(--o-color-1, #0070eb)",
                         "surface-container-high": "#e4e9ee",
                         "primary-fixed": "#d8e2ff",
                         "on-error": "#ffffff",
@@ -2922,7 +2922,7 @@
 <h2 class="font-headline-lg text-headline-lg mt-2">核心管理與內容採購</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-7 bg-surface-container-low rounded-3xl p-10 border border-outline-variant/20 group overflow-hidden relative">
+<div class="md:col-span-7 bg-white/70 backdrop-blur-md rounded-3xl p-10 border border-outline-variant/20 group overflow-hidden relative">
 <div class="flex flex-col md:flex-row gap-8 items-center h-full">
 <div class="flex-1 flex flex-col gap-6">
 <h3 class="font-headline-lg text-headline-lg">裝置管理功能 (MDM)</h3>
@@ -3089,7 +3089,7 @@
                         "secondary-fixed-dim": "#c3c7cc",
                         "on-tertiary-container": "#fffbff",
                         "surface-container-low": "#eff4f9",
-                        "apple-blue": "var(--color-1, #007AFF)",
+                        "apple-blue": "var(--o-color-1, #007AFF)",
                         "secondary": "#5b5f63",
                         "deep-black": "#000000",
                         "on-tertiary-fixed-variant": "#7c2e00",
@@ -3122,10 +3122,10 @@
                         "on-secondary": "#ffffff",
                         "error": "#ba1a1a",
                         "surface-container": "#e9eef3",
-                        "primary-container": "var(--color-1, #0070eb)",
+                        "primary-container": "var(--o-color-1, #0070eb)",
                         "on-primary-fixed-variant": "#004493",
                         "inverse-primary": "#adc6ff",
-                        "primary": "var(--color-1, #0058bc)",
+                        "primary": "var(--o-color-1, #0058bc)",
                         "on-primary-container": "#fefcff",
                         "on-primary": "#ffffff",
                         "surface-bright": "#f5faff",
@@ -3409,7 +3409,7 @@
             "colors": {
                     "on-background": "#171c20",
                     "surface-white": "#FFFFFF",
-                    "apple-blue": "var(--color-1, #007AFF)",
+                    "apple-blue": "var(--o-color-1, #007AFF)",
                     "on-primary-fixed-variant": "#004493",
                     "on-secondary": "#ffffff",
                     "on-tertiary-fixed": "#351000",
@@ -3428,7 +3428,7 @@
                     "on-secondary-container": "#5f6368",
                     "surface-container-high": "#e4e9ee",
                     "secondary": "#5b5f63",
-                    "primary": "var(--color-1, #0058bc)",
+                    "primary": "var(--o-color-1, #0058bc)",
                     "tertiary-fixed-dim": "#ffb595",
                     "surface-variant": "#dee3e8",
                     "surface-container-highest": "#dee3e8",
@@ -3440,7 +3440,7 @@
                     "error-container": "#ffdad6",
                     "on-secondary-fixed-variant": "#43474c",
                     "tertiary-fixed": "#ffdbcc",
-                    "primary-container": "var(--color-1, #0070eb)",
+                    "primary-container": "var(--o-color-1, #0070eb)",
                     "background": "#f5faff",
                     "secondary-container": "#dde0e5",
                     "inverse-primary": "#adc6ff",
@@ -3741,7 +3741,7 @@
                 "secondary-fixed-dim": "#c3c7cc",
                 "on-tertiary-container": "#fffbff",
                 "surface-container-low": "#eff4f9",
-                "apple-blue": "var(--color-1, #007AFF)",
+                "apple-blue": "var(--o-color-1, #007AFF)",
                 "secondary": "#5b5f63",
                 "deep-black": "#000000",
                 "on-tertiary-fixed-variant": "#7c2e00",
@@ -3774,10 +3774,10 @@
                 "on-secondary": "#ffffff",
                 "error": "#ba1a1a",
                 "surface-container": "#e9eef3",
-                "primary-container": "var(--color-1, #0070eb)",
+                "primary-container": "var(--o-color-1, #0070eb)",
                 "on-primary-fixed-variant": "#004493",
                 "inverse-primary": "#adc6ff",
-                "primary": "var(--color-1, #0058bc)",
+                "primary": "var(--o-color-1, #0058bc)",
                 "on-primary-container": "#fefcff",
                 "on-primary": "#ffffff",
                 "surface-bright": "#f5faff",
@@ -3932,22 +3932,22 @@
 <p class="text-secondary max-w-2xl mx-auto mt-4">幫助孩子建立健康的數位習慣。透過「螢幕使用時間」功能，您可以掌握並管理孩子的學習動態，實現理想的數位平衡。</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<div class="group p-8 bg-surface-container-lowest rounded-2xl border border-border-gray text-center hover:shadow-xl transition-all">
+<div class="group p-8 bg-white/80 backdrop-blur-md rounded-3xl border border-border-gray text-center hover:shadow-xl transition-all">
 <span class="material-symbols-outlined text-apple-blue text-5xl mb-6 inline-block" data-icon="analytics">analytics</span>
 <h4 class="font-headline-md text-headline-md mb-4 text-deep-black">持續追蹤</h4>
 <p class="text-secondary text-sm">透過詳細的每週報告，深入了解各類 App 的使用佔比，協助優化學習安排。</p>
 </div>
-<div class="group p-8 bg-surface-container-lowest rounded-2xl border border-border-gray text-center hover:shadow-xl transition-all">
+<div class="group p-8 bg-white/80 backdrop-blur-md rounded-3xl border border-border-gray text-center hover:shadow-xl transition-all">
 <span class="material-symbols-outlined text-apple-blue text-5xl mb-6 inline-block" data-icon="bedtime">bedtime</span>
 <h4 class="font-headline-md text-headline-md mb-4 text-deep-black">休息一下</h4>
 <p class="text-secondary text-sm">設定「停用時間」，在睡前或用餐時自動關閉 App 通訊，守護珍貴的家庭時光。</p>
 </div>
-<div class="group p-8 bg-surface-container-lowest rounded-2xl border border-border-gray text-center hover:shadow-xl transition-all">
+<div class="group p-8 bg-white/80 backdrop-blur-md rounded-3xl border border-border-gray text-center hover:shadow-xl transition-all">
 <span class="material-symbols-outlined text-apple-blue text-5xl mb-6 inline-block" data-icon="timer">timer</span>
 <h4 class="font-headline-md text-headline-md mb-4 text-deep-black">安排時間</h4>
 <p class="text-secondary text-sm">為娛樂或社交應用程式設定每日使用上限，讓時間管理的主導權回到孩子手中。</p>
 </div>
-<div class="group p-8 bg-surface-container-lowest rounded-2xl border border-border-gray text-center hover:shadow-xl transition-all">
+<div class="group p-8 bg-white/80 backdrop-blur-md rounded-3xl border border-border-gray text-center hover:shadow-xl transition-all">
 <span class="material-symbols-outlined text-apple-blue text-5xl mb-6 inline-block" data-icon="lock">lock</span>
 <h4 class="font-headline-md text-headline-md mb-4 text-deep-black">選擇適當內容</h4>
 <p class="text-secondary text-sm">過濾不適宜的網頁內容與 App 商店項目，為孩子打造一個安全純淨的探索環境。</p>
@@ -3959,7 +3959,7 @@
 <div class="mb-16 text-center">
 <p class="text-apple-blue font-label-lg text-label-lg mb-2">ACCESSIBILITY &amp; TOOLS</p>
 <h2 class="font-headline-lg text-headline-lg mb-4">全方位學習輔助</h2>
-<p class="text-on-secondary-container opacity-80 max-w-2xl mx-auto">內建的強大功能不僅能提高生產力，更能有效減少環境干擾。</p>
+<p class="text-white opacity-80 max-w-2xl mx-auto">內建的強大功能不僅能提高生產力，更能有效減少環境干擾。</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="p-8 rounded-2xl bg-surface-white/5 border border-surface-white/10 hover:bg-surface-white/10 transition-colors">

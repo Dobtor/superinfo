@@ -30,6 +30,6 @@ body.apple-mode nav.o_main_navbar {
     .nav-link,
     .o_menu_sections > li > a {
         color: rgba(240, 240, 248, 0.80) !important;
-        &:hover { color: #00c8ff !important; }
+        &:hover { color: var(--o-color-1) !important; }
     }
 }
