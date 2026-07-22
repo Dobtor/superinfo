@@ -26,11 +26,6 @@
       <field name="attribute_id" ref="attr_color"/>
       <field name="value_ids" eval="[(6,0,[ref('attrval_color_lavender'),ref('attrval_color_sage'),ref('attrval_color_mistblue'),ref('attrval_color_white'),ref('attrval_color_black')])]"/>
     </record>
-    <record id="pal_color_721" model="product.template.attribute.line">
-      <field name="product_tmpl_id" ref="product_721"/>
-      <field name="attribute_id" ref="attr_color"/>
-      <field name="value_ids" eval="[(6,0,[ref('attrval_color_blue'),ref('attrval_color_starlight')])]"/>
-    </record>
     <record id="pal_color_594" model="product.template.attribute.line">
       <field name="product_tmpl_id" ref="product_594"/>
       <field name="attribute_id" ref="attr_color"/>
