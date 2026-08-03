@@ -473,6 +473,23 @@
                 color: $apple-blue;
             }
         }
+
+        // 不可選狀態（矩陣不供應 → server 端 render 成 disabled input）：
+        // input 是隱藏的，光靠 disabled 使用者看不出差別、會以為按鈕壞掉，
+        // 比照 Apple 官網用降透明度＋虛線框＋禁用游標明示「此組合不供應」
+        .rc-dimension-selector-row.form-selector:has(input:disabled) {
+            .form-selector-label {
+                opacity: 0.35;
+                cursor: not-allowed;
+                border-style: dashed;
+
+                // 蓋掉 hover 的藍框效果，不可選就不要給「可以點」的暗示
+                &:hover {
+                    border-color: $apple-gray-3;
+                    background: transparent;
+                }
+            }
+        }
     }
 
     // ─── Step container ────────────────────────────
