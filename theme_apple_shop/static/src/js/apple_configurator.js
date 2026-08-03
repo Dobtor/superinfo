@@ -45,6 +45,8 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
         this.currencySymbol = this.el.dataset.currencySymbol || "NT$";
         this._priceDisplays = this.el.querySelectorAll('[data-display="total"]');
         this._mainImage = this.el.querySelector(".main-image");
+        // 問價請求的序號，用於丟棄亂序返回的舊結果（見 _recalcPrice）
+        this._priceToken = 0;
     },
 
     _buildExclusionTable() {
@@ -75,27 +77,101 @@ publicWidget.registry.AppleConfigurator = publicWidget.Widget.extend({
 
     // ─── Price recalculation ─────────────────────────
 
-    _recalcPrice(skipAnimation) {
-        let total = this.basePrice;
-        let extras = 0;
+    /**
+     * 變體價一律向後端問（原生 combination_info），不在前端加總 price_extra。
+     * 原因：商品的成交價不一定等於「各選項固定加價之和」——同一組容量升級在
+     * 不同記憶體下的價差可以不同，這種交互定價只有後端查表算得出來，前端相加
+     * 必然算錯（且會與結帳金額不一致）。沒有交互定價的商品，該端點回傳的就是
+     * 原生線性價，行為與改版前相同。
+     */
+    async _recalcPrice(skipAnimation) {
+        const ptavIds = Array.from(
+            this.el.querySelectorAll("input.ptav-input:checked")
+        )
+            .map((inp) => parseInt(inp.dataset.ptavId))
+            .filter((id) => !isNaN(id));
 
-        // Sum selected PTAV price_extra
-        this.el.querySelectorAll("input.ptav-input:checked").forEach((inp) => {
-            extras += parseFloat(inp.dataset.priceExtra || 0);
-        });
-
-        // Sum selected optional products
+        // 加購商品是各自獨立的訂單明細，不屬於變體定價，仍在前端加總
+        let optionalTotal = 0;
         this.el.querySelectorAll("input.optional-input:checked").forEach((inp) => {
-            extras += parseFloat(inp.dataset.price || 0);
+            optionalTotal += parseFloat(inp.dataset.price || 0);
         });
 
-        total += extras;
+        // 連續點選會併發多個請求，只認最後一次發出的那個的結果
+        const token = ++this._priceToken;
+        let variantPrice = null;
+        let combinationPossible = true;
+        if (this.productTmplId && ptavIds.length) {
+            try {
+                const info = await rpc("/website_sale/get_combination_info", {
+                    product_template_id: this.productTmplId,
+                    product_id: false,
+                    combination: ptavIds,
+                    add_qty: 1,
+                });
+                if (token !== this._priceToken) {
+                    return;     // 已有更晚發出的請求，本次結果作廢
+                }
+                if (info) {
+                    // 不可售的組合（變體封存／被排除）後端不給價，
+                    // 此時 info.price 會是回退的原生價，顯示出來會誤導 → 不採用
+                    combinationPossible = info.is_combination_possible !== false;
+                    if (combinationPossible && typeof info.price === "number") {
+                        variantPrice = info.price;
+                    }
+                }
+            } catch (e) {
+                variantPrice = null;    // 落回線性估算，不讓價格欄空白
+            }
+        }
+
+        // 按鈕狀態要跟著組合可售性走：自刻頁面的按鈕不吃原生變體狀態，
+        // 少了這一步，不可售組合按下去只會撞訂單層的 ValidationError
+        this._setAddToBagEnabled(combinationPossible);
+
+        if (!combinationPossible) {
+            this._setPriceUnavailable();
+            return;
+        }
+
+        const total = variantPrice === null
+            ? this._linearFallback()
+            : variantPrice + optionalTotal;
 
         if (skipAnimation) {
             this._setPrice(total);
         } else {
             this._animatePriceUpdate(total);
         }
+    },
+
+    _setAddToBagEnabled(enabled) {
+        const btn = this.el.querySelector(".add-to-bag");
+        if (!btn) {
+            return;
+        }
+        btn.disabled = !enabled;
+        btn.classList.toggle("disabled", !enabled);
+        btn.setAttribute("aria-disabled", String(!enabled));
+    },
+
+    /** 不供應的組合顯示破折號：語言中性，且與「0 元」明確區分。 */
+    _setPriceUnavailable() {
+        this._priceDisplays.forEach((el) => {
+            el.textContent = "—";
+        });
+    },
+
+    /** 後端問價失敗時的估算：基本價 ＋ Σ 固定加價（改版前的算法）。 */
+    _linearFallback() {
+        let total = this.basePrice;
+        this.el.querySelectorAll("input.ptav-input:checked").forEach((inp) => {
+            total += parseFloat(inp.dataset.priceExtra || 0);
+        });
+        this.el.querySelectorAll("input.optional-input:checked").forEach((inp) => {
+            total += parseFloat(inp.dataset.price || 0);
+        });
+        return total;
     },
 
     _setPrice(total) {
