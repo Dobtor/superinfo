@@ -13,7 +13,7 @@
 s_cards_grid / s_image_text / s_numbers / s_key_benefits / s_process_steps /
 s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
 """,
-    'author': 'Dobtor SI',
+    'author': 'Dobtor S.I.',
     'website': 'https://www.dobtor.com',
     'category': 'Website',
     'version': '18.0.1.0.0',
@@ -65,7 +65,7 @@ s_features / s_faq_collapse / s_comparisons / s_text_block / s_call_to_action。
         ],
     },
     'images': ['static/description/cover.png'],
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
     'installable': True,
     'application': False,
     'auto_install': False,

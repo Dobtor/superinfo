@@ -9,7 +9,7 @@
         - Reuses Odoo native cart / checkout / payment / confirmation flow
         Module uninstall reverts all routes to Odoo defaults.
     """,
-    'author': 'Dobtor SI',
+    'author': 'Dobtor S.I.',
     'website': 'https://www.dobtor.com',
     'category': 'Website',
     'version': '18.0.2.4.0',
@@ -45,7 +45,7 @@
     'post_init_hook': '_post_init_hook',
     'images': [],
     'demo': [],
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
     'installable': True,
     'application': True,
     'auto_install': False,

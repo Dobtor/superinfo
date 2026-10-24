@@ -1,5 +1,8 @@
 {
     'name': 'Custom Homepage',
+    'author': 'Dobtor S.I.',
+    'website': 'https://www.dobtor.com',
+    'license': 'OPL-1',
     'version': '18.0.1.0.0',
     'summary': '自訂網站首頁與服務頁面',
     'category': 'Website',
